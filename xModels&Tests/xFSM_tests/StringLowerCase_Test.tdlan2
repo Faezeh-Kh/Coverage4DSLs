@@ -6,16 +6,16 @@ Package testSuite {
 	FSM FSMNewState(_name = "toLowerCase");
 	
 	Test Description test1 uses configuration lowerCaseConfiguration{
-		tester.genericGate sends FSMNewState (unprocessedString = "MY NAME IS FAEZEH") to k3fsm.genericGate;
+		tester.genericGate sends FSMNewState (unprocessedString = "TEST EXECUTION") to k3fsm.genericGate;
 		tester.genericGate sends runModel to k3fsm.genericGate;
 		tester.genericGate sends getModelState to k3fsm.genericGate;
-		k3fsm.genericGate sends FSMNewState (producedString = "my name is faezeh") to tester.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "test execution") to tester.genericGate;
 	}
 	Test Description test2 uses configuration lowerCaseConfiguration{
-		tester.genericGate sends FSMNewState (unprocessedString = "my name is faezeh") to k3fsm.genericGate;
+		tester.genericGate sends FSMNewState (unprocessedString = "test execution") to k3fsm.genericGate;
 		tester.genericGate sends runModel to k3fsm.genericGate;
 		tester.genericGate sends getModelState to k3fsm.genericGate;
-		k3fsm.genericGate sends FSMNewState (producedString = "my name is faezeh") to tester.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "test execution") to tester.genericGate;
 	}
 	Test Description test3 uses configuration lowerCaseConfiguration{
 		tester.genericGate sends FSMNewState (unprocessedString = " ") to k3fsm.genericGate;
@@ -24,10 +24,10 @@ Package testSuite {
 		k3fsm.genericGate sends FSMNewState (producedString = " ") to tester.genericGate;
 	}
 	Test Description test4 uses configuration lowerCaseConfiguration{
-		tester.genericGate sends FSMNewState (unprocessedString = "My naMe IS FaezeH") to k3fsm.genericGate;
+		tester.genericGate sends FSMNewState (unprocessedString = "teSt exEcuTiON") to k3fsm.genericGate;
 		tester.genericGate sends runModel to k3fsm.genericGate;
 		tester.genericGate sends getModelState to k3fsm.genericGate;
-		k3fsm.genericGate sends FSMNewState (producedString = "my name is faezeh") to tester.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "test execution") to tester.genericGate;
 	}
 	Test Description test5 uses configuration lowerCaseConfiguration{
 		tester.genericGate sends FSMNewState (unprocessedString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ") to k3fsm.genericGate;
