@@ -15,7 +15,7 @@ Package testConfiguration {
 	Annotation DSLName ;
 	Test Configuration genericConfiguration {
 		create Tester tester of type TestSystem ;
-		create SUT xminijava of type MUT with { MUTPath : 'TODO: Put the address of the Model-Under Test here' ; DSLName : 'org.imt.xminijava.Xminijava' ; } ;
+		create SUT xminijava of type MUT with { MUTPath : 'TODO: Put the address of the Model-Under Test here' ; DSLName : 'xminijava.DSL' ; } ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
 	}
@@ -25,7 +25,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -34,7 +34,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -43,7 +43,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -52,7 +52,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -61,7 +61,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test5.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -70,7 +70,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test6.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -79,7 +79,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test7.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -88,7 +88,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test8.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -97,7 +97,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test9.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -106,7 +106,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test10.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -115,7 +115,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test11.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -124,7 +124,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test12.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -133,7 +133,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test13.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -142,7 +142,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test14.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -153,7 +153,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -162,7 +162,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -171,7 +171,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -180,7 +180,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -191,7 +191,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -200,7 +200,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -209,7 +209,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -218,7 +218,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -229,7 +229,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -238,7 +238,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -247,7 +247,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -256,7 +256,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -265,7 +265,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test5.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -274,7 +274,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test6.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -283,7 +283,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test7.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -292,7 +292,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test8.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -301,7 +301,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test9.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -310,7 +310,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test10.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -319,7 +319,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test11.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -330,7 +330,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -339,7 +339,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -348,7 +348,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -357,7 +357,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -366,7 +366,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test5.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -375,7 +375,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test6.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -384,7 +384,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test7.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -393,7 +393,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test8.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -402,7 +402,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test9.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -411,7 +411,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test10.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -420,7 +420,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test11.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -429,7 +429,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test12.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -438,7 +438,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test13.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -447,7 +447,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test14.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -456,7 +456,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test15.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -465,7 +465,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test16.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -474,7 +474,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test17.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -483,7 +483,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test18.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -492,7 +492,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test19.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -503,7 +503,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -512,7 +512,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -521,7 +521,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -530,7 +530,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -539,7 +539,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test5.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -548,7 +548,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test6.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -557,7 +557,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test7.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -566,7 +566,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test8.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -575,7 +575,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test9.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -584,7 +584,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test10.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -593,7 +593,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test11.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -602,7 +602,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test12.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -611,7 +611,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test13.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -620,7 +620,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test14.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -629,7 +629,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test15.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -638,7 +638,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test16.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -647,7 +647,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test17.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -656,7 +656,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test18.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -665,7 +665,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test19.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -674,7 +674,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test20.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -683,7 +683,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test21.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -692,7 +692,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test22.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -701,7 +701,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test23.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -710,7 +710,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test24.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -719,7 +719,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test25.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;

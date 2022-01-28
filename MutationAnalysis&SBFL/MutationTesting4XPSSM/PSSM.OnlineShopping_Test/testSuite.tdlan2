@@ -570,7 +570,7 @@ Package testSuite {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : '/xPSSM_models/OnlineShopping.xmi' ; 
-			DSLName : 'org.imt.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'xpssm.DSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;

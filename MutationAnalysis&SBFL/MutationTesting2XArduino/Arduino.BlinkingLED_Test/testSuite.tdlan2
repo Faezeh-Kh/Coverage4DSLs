@@ -273,7 +273,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT arduino of type MUT with { 
 			MUTPath : '/Arduino.BlinkingLED_Mutants/model/blinkingLED.model' ; 
-			DSLName : 'org.imt.arduino.reactiveArduino' ;
+			DSLName : 'arduino.DSL' ;
 		} ;
 		connect tester.reactiveGate to arduino.reactiveGate ;
 		connect tester.oclGate to arduino.oclGate ;

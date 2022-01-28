@@ -23,7 +23,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : 'TODO: Path to the MUT' ; 
-			DSLName : 'org.imt.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'xpssm.DSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;
@@ -34,7 +34,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : '/xPSSM_models/BankATM.model' ; 
-			DSLName : 'org.imt.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'xpssm.DSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;
@@ -45,7 +45,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : '/xPSSM_models/JavaEJB.model' ; 
-			DSLName : 'org.imt.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'xpssm.DSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;
@@ -56,7 +56,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : '/xPSSM_models/JavaThreadLifeCycle.model' ; 
-			DSLName : 'org.imt.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'xpssm.DSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;
@@ -67,7 +67,7 @@ Package testConfiguration {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : '/xPSSM_models/OnlineShopping.model' ; 
-			DSLName : 'org.imt.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'xpssm.DSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;

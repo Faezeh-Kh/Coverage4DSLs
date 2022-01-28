@@ -9,74 +9,74 @@ Package TestSuite {
 		tester.genericGate sends getModelState to xminijava.genericGate;
 		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
 	}
-//	Test Description test2 uses configuration BinarySearchConfiguration2{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
-//	}
-//	Test Description test3 uses configuration BinarySearchConfiguration3{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
-//	}
-//	Test Description test4 uses configuration BinarySearchConfiguration4{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
-//	}
-//	Test Description test5 uses configuration BinarySearchConfiguration5{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
-//	}
-//	Test Description test6 uses configuration BinarySearchConfiguration6{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
-//	}
-//	Test Description test7 uses configuration BinarySearchConfiguration7{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
-//	}
-//	Test Description test8 uses configuration BinarySearchConfiguration8{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
-//	}
-//	Test Description test9 uses configuration BinarySearchConfiguration9{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
-//	}
-//	Test Description test10 uses configuration BinarySearchConfiguration10{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
-//	}
-//	
-//	IntegerValue divResult (value = ?);
-//	
-//	Test Description test11 uses configuration BinarySearchConfiguration11{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = divResult (value = "0")) to tester.genericGate;
-//	}
-//	Test Description test12 uses configuration BinarySearchConfiguration12{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = divResult (value = "0")) to tester.genericGate;
-//	}
-//	Test Description test13 uses configuration BinarySearchConfiguration13{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = divResult (value = "1")) to tester.genericGate;
-//	}
-//	Test Description test14 uses configuration BinarySearchConfiguration14{
-//		tester.genericGate sends runModel to xminijava.genericGate;
-//		tester.genericGate sends getModelState to xminijava.genericGate;
-//		xminijava.genericGate sends BSResultBinding (value = divResult (value = "0")) to tester.genericGate;
-//	}
+	Test Description test2 uses configuration BinarySearchConfiguration2{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
+	}
+	Test Description test3 uses configuration BinarySearchConfiguration3{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
+	}
+	Test Description test4 uses configuration BinarySearchConfiguration4{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
+	}
+	Test Description test5 uses configuration BinarySearchConfiguration5{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
+	}
+	Test Description test6 uses configuration BinarySearchConfiguration6{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
+	}
+	Test Description test7 uses configuration BinarySearchConfiguration7{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
+	}
+	Test Description test8 uses configuration BinarySearchConfiguration8{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
+	}
+	Test Description test9 uses configuration BinarySearchConfiguration9{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "false")) to tester.genericGate;
+	}
+	Test Description test10 uses configuration BinarySearchConfiguration10{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = resultValue (value = "true")) to tester.genericGate;
+	}
+	
+	IntegerValue divResult (value = ?);
+	
+	Test Description test11 uses configuration BinarySearchConfiguration11{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = divResult (value = "0")) to tester.genericGate;
+	}
+	Test Description test12 uses configuration BinarySearchConfiguration12{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = divResult (value = "0")) to tester.genericGate;
+	}
+	Test Description test13 uses configuration BinarySearchConfiguration13{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = divResult (value = "1")) to tester.genericGate;
+	}
+	Test Description test14 uses configuration BinarySearchConfiguration14{
+		tester.genericGate sends runModel to xminijava.genericGate;
+		tester.genericGate sends getModelState to xminijava.genericGate;
+		xminijava.genericGate sends BSResultBinding (value = divResult (value = "0")) to tester.genericGate;
+	}
 	//data types
 	Type Program ( _name of type EString , imports of type _Import , classes of type TypeDeclaration , state of type State with { dynamic ;
 	} ) ;
@@ -103,7 +103,7 @@ Package TestSuite {
 	Type TypedDeclaration extends NamedElement ( typeRef of type TypeRef ) ;
 	Type Symbol extends TypedDeclaration ( ) ;
 	Type VariableDeclaration extends Symbol();
-	//Type VariableDeclaration extends Assignee () ;
+	Type VariableDeclaration extends Assignee () ;
 	Type Assignment extends Statement ( assignee of type Assignee , value of type Expression ) ;
 	Type Assignee ( ) ;
 	Type Expression ( ) ;
@@ -258,12 +258,12 @@ Package TestSuite {
 	}
 	Annotation MUTPath ;
 	Annotation DSLName ;
-	//test configurations for binary search models	
+	test configurations for binary search models	
 	Test Configuration BinarySearchConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test1.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -272,7 +272,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test2.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -281,7 +281,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test3.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -290,7 +290,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test4.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -299,7 +299,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test5.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -308,7 +308,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test6.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -317,7 +317,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test7.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -326,7 +326,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test8.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -335,7 +335,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test9.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -344,7 +344,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test10.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -353,7 +353,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test11.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -362,7 +362,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test12.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -371,7 +371,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test13.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -380,7 +380,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test14.xminijava' ; 
-			DSLName : 'org.imt.xminijava.Xminijava' ;
+			DSLName : 'xminijava.DSL' ;
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
