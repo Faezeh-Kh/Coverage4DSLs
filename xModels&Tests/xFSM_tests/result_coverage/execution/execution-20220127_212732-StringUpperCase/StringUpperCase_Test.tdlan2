@@ -1,0 +1,50 @@
+Package testSuite {
+	Import all from common ;
+	Import all from k3fsmSpecificTypes ;
+	Import all from testConfiguration ;
+	
+	FSM FSMNewState(_name = "toUpperCase");
+	
+	Test Description test1 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = "my name is faezeh") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "MY NAME IS FAEZEH") to tester.genericGate;
+	}
+	Test Description test2 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = "MY NAME IS FAEZEH") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "MY NAME IS FAEZEH") to tester.genericGate;
+	}
+	Test Description test3 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = " ") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = " ") to tester.genericGate;
+	}
+	Test Description test4 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = "My naMe IS FaezeH") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "MY NAME IS FAEZEH") to tester.genericGate;
+	}
+	Test Description test5 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = "abcdefghijklmnopqrstuvwxyz") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ") to tester.genericGate;
+	}
+	Test Description test6 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ") to tester.genericGate;
+	}
+	Test Description test7 uses configuration upperCaseConfiguration{
+		tester.genericGate sends FSMNewState (unprocessedString = "AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTUUVVWWXXYYZZ") to k3fsm.genericGate;
+		tester.genericGate sends runModel to k3fsm.genericGate;
+		tester.genericGate sends getModelState to k3fsm.genericGate;
+		k3fsm.genericGate sends FSMNewState (producedString = "AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPPQQRRSSTTUUVVWWXXYYZZ") to tester.genericGate;
+	}
+}

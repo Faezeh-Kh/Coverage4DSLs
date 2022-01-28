@@ -1,0 +1,122 @@
+package org.imt.pssm.reactive.interpreter;
+
+import com.google.common.base.Objects;
+import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
+import java.util.ArrayList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.imt.pssm.reactive.model.statemachines.AttributeValue;
+import org.imt.pssm.reactive.model.statemachines.CallEventOccurrence;
+import org.imt.pssm.reactive.model.statemachines.EventOccurrence;
+import org.imt.pssm.reactive.model.statemachines.IntegerAttribute;
+import org.imt.pssm.reactive.model.statemachines.IntegerAttributeValue;
+import org.imt.pssm.reactive.model.statemachines.IntegerComparisonExpression;
+import org.imt.pssm.reactive.model.statemachines.IntegerComparisonOperator;
+import org.imt.pssm.reactive.model.statemachines.IntegerConstraint;
+import org.imt.pssm.reactive.model.statemachines.SignalEventOccurrence;
+import org.imt.pssm.reactive.model.statemachines.StateMachine;
+import org.imt.pssm.reactive.model.statemachines.Transition;
+
+@Aspect(className = IntegerComparisonExpression.class)
+@SuppressWarnings("all")
+public class IntegerComparisonExpressionAspect {
+  public static boolean evaluate(final IntegerComparisonExpression _self) {
+    final org.imt.pssm.reactive.interpreter.IntegerComparisonExpressionAspectIntegerComparisonExpressionAspectProperties _self_ = org.imt.pssm.reactive.interpreter.IntegerComparisonExpressionAspectIntegerComparisonExpressionAspectContext.getSelf(_self);
+    Object result = null;
+    // #DispatchPointCut_before# boolean evaluate()
+    if (_self instanceof org.imt.pssm.reactive.model.statemachines.IntegerComparisonExpression){
+    	result = org.imt.pssm.reactive.interpreter.IntegerComparisonExpressionAspect._privk3_evaluate(_self_, (org.imt.pssm.reactive.model.statemachines.IntegerComparisonExpression)_self);
+    };
+    return (boolean)result;
+  }
+  
+  protected static boolean _privk3_evaluate(final IntegerComparisonExpressionAspectIntegerComparisonExpressionAspectProperties _self_, final IntegerComparisonExpression _self) {
+    final IntegerAttribute operand1 = _self.getOperand1();
+    final IntegerAttribute operand2 = _self.getOperand2();
+    int operand1value = 0;
+    int operand2value = 0;
+    boolean operand1found = false;
+    boolean operand2found = false;
+    EObject _eContainer = _self.eContainer();
+    EObject _eContainer_1 = ((IntegerConstraint) _eContainer).eContainer();
+    final StateMachine stateMachine = TransitionAspect.getRootStateMachine(((Transition) _eContainer_1));
+    ArrayList<AttributeValue> values = new ArrayList<AttributeValue>();
+    for (int i = (StateMachineAspect.receivedEvents(stateMachine).size() - 1); (i >= 0); i--) {
+      {
+        final EventOccurrence eventOcc = StateMachineAspect.receivedEvents(stateMachine).get(i);
+        if ((eventOcc instanceof SignalEventOccurrence)) {
+          values.addAll(((SignalEventOccurrence)eventOcc).getAttributeValues());
+        } else {
+          if ((eventOcc instanceof CallEventOccurrence)) {
+            EList<AttributeValue> _inParameterValues = ((CallEventOccurrence)eventOcc).getInParameterValues();
+            final ArrayList<AttributeValue> result = new ArrayList<AttributeValue>(_inParameterValues);
+            result.addAll(((CallEventOccurrence)eventOcc).getOutParameterValues());
+            result.add(((CallEventOccurrence)eventOcc).getReturnValue());
+            values.addAll(result);
+          }
+        }
+        if ((!operand1found)) {
+          final Function1<AttributeValue, Boolean> _function = (AttributeValue v) -> {
+            return Boolean.valueOf(((v instanceof IntegerAttributeValue) && Objects.equal(((IntegerAttributeValue) v).getAttribute(), operand1)));
+          };
+          final AttributeValue eventAttributeValue = IterableExtensions.<AttributeValue>findFirst(values, _function);
+          if ((eventAttributeValue != null)) {
+            operand1value = (((IntegerAttributeValue) eventAttributeValue).getValue()).intValue();
+            operand1found = true;
+          }
+        }
+        if ((!operand2found)) {
+          final Function1<AttributeValue, Boolean> _function_1 = (AttributeValue v) -> {
+            return Boolean.valueOf(((v instanceof IntegerAttributeValue) && Objects.equal(((IntegerAttributeValue) v).getAttribute(), operand2)));
+          };
+          final AttributeValue eventAttributeValue_1 = IterableExtensions.<AttributeValue>findFirst(values, _function_1);
+          if ((eventAttributeValue_1 != null)) {
+            operand2value = (((IntegerAttributeValue) eventAttributeValue_1).getValue()).intValue();
+            operand2found = true;
+          }
+        }
+        if ((operand1found && operand2found)) {
+          i = (-1);
+        }
+      }
+    }
+    IntegerComparisonOperator _operator = _self.getOperator();
+    boolean _equals = Objects.equal(_operator, IntegerComparisonOperator.GREATER);
+    if (_equals) {
+      return (operand1value > operand2value);
+    } else {
+      IntegerComparisonOperator _operator_1 = _self.getOperator();
+      boolean _equals_1 = Objects.equal(_operator_1, IntegerComparisonOperator.GREATER_EQUALS);
+      if (_equals_1) {
+        return (operand1value >= operand2value);
+      } else {
+        IntegerComparisonOperator _operator_2 = _self.getOperator();
+        boolean _equals_2 = Objects.equal(_operator_2, IntegerComparisonOperator.EQUALS);
+        if (_equals_2) {
+          return (operand1value == operand2value);
+        } else {
+          IntegerComparisonOperator _operator_3 = _self.getOperator();
+          boolean _equals_3 = Objects.equal(_operator_3, IntegerComparisonOperator.NOT_EQUALS);
+          if (_equals_3) {
+            return (operand1value != operand2value);
+          } else {
+            IntegerComparisonOperator _operator_4 = _self.getOperator();
+            boolean _equals_4 = Objects.equal(_operator_4, IntegerComparisonOperator.SMALLER_EQUALS);
+            if (_equals_4) {
+              return (operand1value <= operand2value);
+            } else {
+              IntegerComparisonOperator _operator_5 = _self.getOperator();
+              boolean _equals_5 = Objects.equal(_operator_5, IntegerComparisonOperator.SMALLER);
+              if (_equals_5) {
+                return (operand1value < operand2value);
+              }
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+}
