@@ -10,13 +10,36 @@ with blocks {
 	cdt2 "Changes delay time from micro to mili" {
 		modify one Delay where {unit = 'MicroSecond'} with {unit = 'MilliSecond'}
 	}
-	cmgr "Changes ModuleGet reference to another module" {
+	cbmgr "Changes BooleanModuleGet reference to another module" {
 		m = select one Module
-		modify one ModuleGet where {module <> m} with {module = m}
+		modify one BooleanModuleGet where {module <> m} with {module = m}
+	}
+	cimgr "Changes IntegerModuleGet reference to another module" {
+		m = select one Module
+		modify one IntegerModuleGet where {module <> m} with {module = m}
 	}
 	cmir "Changes ModuleInstruction reference to another module" {
 		m = select one Module
 		modify one ModuleInstruction where {module <> m} with {module = m}
+	}
+	cmar "Changes ModuleAssignment reference to another module" {
+		m = select one Module
+		modify one ModuleAssignment where {module <> m} with {module = m}
+	}
+	cvar "Changes VariableAssignment reference to another variable" {
+		v = select one Variable
+		modify one VariableAssignment where {variable <> v} with {variable = v}
+	}
+	civr "Changes IntegerVariableRef reference to another integer variable" {
+		v = select one IntegerVariable
+		modify one IntegerVariableRef where {variable <> v} with {variable = v}
+	}
+	cbvr "Changes BooleanVariableRef reference to another boolean variable" {
+		v = select one BooleanVariable
+		modify one BooleanVariableRef where {variable <> v} with {variable = v}
+	}
+	cri "Changes Repeat iteration number with a random number"{
+		modify one Repeat with {iteration = random-int}
 	}
 	cbio_minus "Changes Binary integer expression operator: minus" {
 		modify one BinaryIntegerExpression where {
@@ -121,9 +144,9 @@ with blocks {
 		modify one BooleanVariable where {initialValue = true} with {initialValue = false}
 	}
 	cic "Changes the value of integer constant"{
-		modify one IntegerConstant with {value = random-int}
+		modify one IntegerConstant with {value = random-int(2,4)}
 	}
 	civ "Changes the value of integer variable"{
-		modify one IntegerVariable with {initialValue = random-int}
+		modify one IntegerVariable with {initialValue = random-int(2,4)}
 	}
 }
