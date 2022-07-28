@@ -12,7 +12,6 @@ class BinarySearchTest {
 	void test1_Exists() {
 		binarySearch.Init(20);
 		assertEquals(true, binarySearch.Search(20));
-		assertEquals(true, binarySearch.Search(38));
 	}
 
 	@Test
@@ -25,7 +24,6 @@ class BinarySearchTest {
 	void test3_NotExists() {
 		binarySearch.Init(20);
 		assertEquals(false, binarySearch.Search(19));
-		assertEquals(false, binarySearch.Search(40));
 	}
 	
 	@Test
