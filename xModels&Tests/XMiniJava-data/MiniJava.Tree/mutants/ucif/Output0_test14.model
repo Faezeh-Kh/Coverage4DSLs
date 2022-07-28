@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xminiJava:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xminiJava="http://org.imt.minijava.xminijava/xminiJava/" name="org.cambridge.minijava.models">
+<xminiJava:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xminiJava="http://anonymous.minijava.xminijava/xminiJava/" name="org.cambridge.minijava.models">
   <classes xsi:type="xminiJava:Class" name="Main">
     <members xsi:type="xminiJava:Method" name="main" access="public" static="true">
       <typeRef xsi:type="xminiJava:VoidTypeRef"/>

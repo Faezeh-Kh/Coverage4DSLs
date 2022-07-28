@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DSLSpecificCoverage:DomainSpecificCoverage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DSLSpecificCoverage="https://anonymous.tdl.coverage/DSLSpecificCoverage"
+    name="MiniJavaCoverage">
+  <contexts>
+    <metaclass
+        href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//Program"/>
+    <rules xsi:type="DSLSpecificCoverage:EClassIgnorance"
+        ignoreSubclasses="true"/>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//Method"/>
+    <rules xsi:type="DSLSpecificCoverage:EClassIgnorance"
+        ignoreSubclasses="true"/>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//MethodCall"/>
+    <rules xsi:type="DSLSpecificCoverage:EObjectIgnorance"
+        condition="EXCLUSION">
+      <containerContext
+          href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//Block"/>
+    </rules>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//Member"/>
+    <rules xsi:type="DSLSpecificCoverage:ContainerCoverageInference"
+        multiplicity="ONE">
+      <containementReference
+          href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//TypeDeclaration/members"/>
+      <containerContext
+          href="../../anonymous.xminijava.model/model/XMiniJava.ecore#//Class"/>
+    </rules>
+  </contexts>
+</DSLSpecificCoverage:DomainSpecificCoverage>

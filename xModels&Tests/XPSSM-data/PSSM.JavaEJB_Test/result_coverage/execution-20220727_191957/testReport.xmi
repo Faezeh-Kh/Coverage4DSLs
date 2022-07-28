@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<TDLTestReport:TestSuiteResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestReport="https://org.imt.tdl.testResult/TDLTestReport">
+<TDLTestReport:TestSuiteResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestReport="https://anonymous.tdl.testResult/TDLTestReport">
   <testSuite href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#/"/>
   <testCaseResults>
     <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.0"/>

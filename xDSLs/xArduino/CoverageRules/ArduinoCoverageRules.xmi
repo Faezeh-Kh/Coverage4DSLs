@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DSLSpecificCoverage:DomainSpecificCoverage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DSLSpecificCoverage="https://anonymous.tdl.coverage/DSLSpecificCoverage"
+    name="ArduinoCoverage">
+  <contexts>
+    <metaclass
+        href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Sketch"/>
+    <rules xsi:type="DSLSpecificCoverage:ContainerCoverageInference"
+        multiplicity="ONE">
+      <containementReference
+          href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Project/sketches"/>
+      <containerContext
+          href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Project"/>
+    </rules>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Block"/>
+    <rules xsi:type="DSLSpecificCoverage:ContainerCoverageInference"
+        multiplicity="ONE">
+      <containementReference
+          href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Sketch/block"/>
+      <containerContext
+          href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Sketch"/>
+    </rules>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Instruction"/>
+    <rules xsi:type="DSLSpecificCoverage:ContainerCoverageInference"
+        multiplicity="ONE">
+      <containementReference
+          href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Block/instructions"/>
+      <containerContext
+          href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Block"/>
+    </rules>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Board"/>
+    <rules xsi:type="DSLSpecificCoverage:EClassIgnorance"
+        ignoreSubclasses="true"/>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Pin"/>
+    <rules xsi:type="DSLSpecificCoverage:EClassIgnorance"
+        ignoreSubclasses="true"/>
+  </contexts>
+  <contexts>
+    <metaclass
+        href="../../anonymous.arduino.reactive.model/model/arduino.ecore#//Module"/>
+    <rules xsi:type="DSLSpecificCoverage:EClassIgnorance"
+        ignoreSubclasses="true"/>
+  </contexts>
+</DSLSpecificCoverage:DomainSpecificCoverage>
