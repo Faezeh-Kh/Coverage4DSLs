@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <TDLTestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestCoverage="http://anonymous.tdl.coverage/TDLTestCoverage" coveragePercentage="100.0">
-  <testSuite href="/Arduino.triggerFan_Test/gemoc-gen/execution/execution-20220727_134601/testSuite.tdlan2#/"/>
+  <testSuite href="/Arduino.triggerFan_Test/result_coverage/execution-20220727_134601/testSuite.tdlan2#/"/>
   <testCaseCoverages coveragePercentage="47.83">
-    <testCase href="/Arduino.triggerFan_Test/gemoc-gen/execution/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.9"/>
+    <testCase href="/Arduino.triggerFan_Test/result_coverage/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.9"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.triggerFan/triggerFan.model#_Uck-QLvpEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>
@@ -149,7 +149,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="56.52">
-    <testCase href="/Arduino.triggerFan_Test/gemoc-gen/execution/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.10"/>
+    <testCase href="/Arduino.triggerFan_Test/result_coverage/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.10"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.triggerFan/triggerFan.model#_Uck-QLvpEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>
@@ -296,7 +296,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="60.87">
-    <testCase href="/Arduino.triggerFan_Test/gemoc-gen/execution/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.11"/>
+    <testCase href="/Arduino.triggerFan_Test/result_coverage/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.11"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.triggerFan/triggerFan.model#_Uck-QLvpEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>
@@ -443,7 +443,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="78.26">
-    <testCase href="/Arduino.triggerFan_Test/gemoc-gen/execution/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.12"/>
+    <testCase href="/Arduino.triggerFan_Test/result_coverage/execution-20220727_134601/testSuite.tdlan2#//@packagedElement.12"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.triggerFan/triggerFan.model#_Uck-QLvpEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>

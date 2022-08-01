@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <TDLTestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestCoverage="http://anonymous.tdl.coverage/TDLTestCoverage" coveragePercentage="100.0">
-  <testSuite href="/Arduino.ServoIrButton_Test/gemoc-gen/execution/execution-20220727_134253/testSuite.tdlan2#/"/>
+  <testSuite href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220727_134253/testSuite.tdlan2#/"/>
   <testCaseCoverages coveragePercentage="82.35">
-    <testCase href="/Arduino.ServoIrButton_Test/gemoc-gen/execution/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.4"/>
+    <testCase href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.4"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.ServoIrbutton/servoIrbutton.model#_WDu3YLvrEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>
@@ -119,7 +119,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="82.35">
-    <testCase href="/Arduino.ServoIrButton_Test/gemoc-gen/execution/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.5"/>
+    <testCase href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.5"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.ServoIrbutton/servoIrbutton.model#_WDu3YLvrEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>
@@ -236,7 +236,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="100.0">
-    <testCase href="/Arduino.ServoIrButton_Test/gemoc-gen/execution/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.6"/>
+    <testCase href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.6"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.ServoIrbutton/servoIrbutton.model#_WDu3YLvrEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>
@@ -353,7 +353,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="100.0">
-    <testCase href="/Arduino.ServoIrButton_Test/gemoc-gen/execution/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.7"/>
+    <testCase href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220727_134253/testSuite.tdlan2#//@packagedElement.7"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/Arduino.ServoIrbutton/servoIrbutton.model#_WDu3YLvrEey6kqvve9HPhQ"/>
     </tcObjectCoverageStatus>

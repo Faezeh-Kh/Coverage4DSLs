@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <TDLTestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestCoverage="http://anonymous.tdl.coverage/TDLTestCoverage" coveragePercentage="100.0">
-  <testSuite href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#/"/>
+  <testSuite href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#/"/>
   <testCaseCoverages coveragePercentage="11.48">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.0"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.0"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -188,7 +188,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="21.31">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.1"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.1"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -374,7 +374,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="27.87">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.2"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.2"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -560,7 +560,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="31.15">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.3"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.3"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -746,7 +746,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="31.15">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.4"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.4"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -932,7 +932,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="31.15">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.5"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.5"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -1118,7 +1118,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="31.15">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.6"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.6"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -1304,7 +1304,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="31.15">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.7"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.7"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -1490,7 +1490,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="31.15">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.8"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.8"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -1676,7 +1676,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.9"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.9"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -1862,7 +1862,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.10"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.10"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -2048,7 +2048,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.11"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.11"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -2234,7 +2234,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.12"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.12"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -2420,7 +2420,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.13"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.13"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -2606,7 +2606,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.14"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.14"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -2792,7 +2792,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.15"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.15"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -2978,7 +2978,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.16"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.16"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -3164,7 +3164,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.17"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.17"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -3350,7 +3350,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.18"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.18"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -3536,7 +3536,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.19"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.19"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -3722,7 +3722,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.20"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.20"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
@@ -3908,7 +3908,7 @@
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <testCaseCoverages coveragePercentage="37.7">
-    <testCase href="/PSSM.JavaEJB_Test/gemoc-gen/execution/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.21"/>
+    <testCase href="/PSSM.JavaEJB_Test/result_coverage/execution-20220727_191957/testSuite.tdlan2#//@packagedElement.21"/>
     <tcObjectCoverageStatus>
       <modelObject href="platform:/resource/PSSM.JavaEJB/JavaEJB.model#/"/>
     </tcObjectCoverageStatus>
