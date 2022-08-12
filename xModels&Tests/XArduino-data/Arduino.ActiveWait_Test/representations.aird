@@ -7,7 +7,16 @@
   <semanticResources>generated/common.tdlan2</semanticResources>
   <semanticResources>generated/testConfiguration.tdlan2</semanticResources>
   <semanticResources>platform:/resource/Arduino.ActiveWait/activeWait.model</semanticResources>
-  <semanticResources>result_coverage/execution/execution-20220727_132434/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution/execution-20220727_132434/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution/execution-20220727_132434/testSuite.tdlan2</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200408/modelUnderTest.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200408/modelUnderTest_test4.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200408/testCoverage.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200408/testReport.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200408/testSuite.tdlan2</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220813_000342/testSuite.tdlan2</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220813_000342/testReport.xmi</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220813_000724/testSuite.tdlan2</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220813_000724/testReport.xmi</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220813_001142/testSuite.tdlan2</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220813_001142/testReport.xmi</semanticResources>
 </viewpoint:DAnalysis>

@@ -5,48 +5,59 @@
       <module xsi:type="arduino:LED" name="LED1"/>
     </digitalPins>
     <digitalPins name="sensor_pin">
-      <module xsi:type="arduino:InfraRedSensor" name="IRSensor1"/>
+      <module xsi:type="arduino:InfraRedSensor" name="irSensor1"/>
     </digitalPins>
     <digitalPins name="buzzer_pin">
-      <module xsi:type="arduino:Buzzer" name="Alarm1"/>
+      <module xsi:type="arduino:Buzzer" name="alarm1"/>
     </digitalPins>
     <digitalPins name="button_pin">
-      <module xsi:type="arduino:PushButton" name="Button1"/>
+      <module xsi:type="arduino:PushButton" name="button1"/>
     </digitalPins>
   </boards>
   <sketches name="sketch" board="//@boards.0">
     <block>
       <instructions xsi:type="arduino:While">
         <block>
-          <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
+          <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
             <operand xsi:type="arduino:IntegerConstant" value="1"/>
           </instructions>
-          <instructions xsi:type="arduino:Delay" value="1000"/>
-          <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
-            <operand xsi:type="arduino:IntegerConstant"/>
+          <instructions xsi:type="arduino:While">
+            <block>
+              <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
+                <operand xsi:type="arduino:IntegerConstant" value="1"/>
+              </instructions>
+              <instructions xsi:type="arduino:Delay" value="1000"/>
+              <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
+                <operand xsi:type="arduino:IntegerConstant"/>
+              </instructions>
+              <instructions xsi:type="arduino:Delay" value="1000"/>
+            </block>
+            <condition xsi:type="arduino:BinaryBooleanExpression" operator="equal">
+              <left xsi:type="arduino:IntegerConstant" value="1"/>
+              <right xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.1/@module"/>
+            </condition>
           </instructions>
-          <instructions xsi:type="arduino:Delay" value="1000"/>
+          <instructions xsi:type="arduino:If">
+            <block>
+              <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
+                <operand xsi:type="arduino:IntegerConstant"/>
+              </instructions>
+            </block>
+            <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.2/@module"/>
+          </instructions>
         </block>
-        <condition xsi:type="arduino:BinaryBooleanExpression" operator="equal">
+        <condition xsi:type="arduino:BinaryBooleanExpression" operator="sup">
           <left xsi:type="arduino:IntegerConstant" value="1"/>
           <right xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.3/@module"/>
         </condition>
       </instructions>
-      <instructions xsi:type="arduino:While">
+      <instructions xsi:type="arduino:If">
         <block>
-          <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
-            <operand xsi:type="arduino:IntegerConstant" value="1"/>
-          </instructions>
-          <instructions xsi:type="arduino:Delay" value="1000"/>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
             <operand xsi:type="arduino:IntegerConstant"/>
           </instructions>
-          <instructions xsi:type="arduino:Delay" value="1000"/>
         </block>
-        <condition xsi:type="arduino:BinaryBooleanExpression" operator="sup">
-          <left xsi:type="arduino:IntegerConstant" value="1"/>
-          <right xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.1/@module"/>
-        </condition>
+        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.0/@module"/>
       </instructions>
     </block>
   </sketches>

@@ -1,6 +1,6 @@
 package org.cambridge.minijava.models.linkedList.test6;
 
-import anonymous.minijava.models.Person;
+import org.imt.minijava.models.Person;
 
 class Main{
     public static void main(String[] a){

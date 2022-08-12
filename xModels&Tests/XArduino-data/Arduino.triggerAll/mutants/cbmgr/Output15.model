@@ -56,7 +56,7 @@
             </block>
           </instructions>
         </block>
-        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.6/@module"/>
+        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@analogPins.0/@module"/>
       </instructions>
       <instructions xsi:type="arduino:If">
         <block>
@@ -67,7 +67,7 @@
             <operand xsi:type="arduino:IntegerConstant"/>
           </instructions>
         </block>
-        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@analogPins.0/@module"/>
+        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.5/@module"/>
       </instructions>
       <instructions xsi:type="arduino:If">
         <block>

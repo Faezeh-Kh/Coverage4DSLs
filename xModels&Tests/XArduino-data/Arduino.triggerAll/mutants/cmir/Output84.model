@@ -44,7 +44,7 @@
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
                 <operand xsi:type="arduino:IntegerConstant" value="1"/>
               </instructions>
-              <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@analogPins.0/@module">
+              <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
                 <operand xsi:type="arduino:IntegerConstant"/>
               </instructions>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
@@ -60,7 +60,7 @@
       </instructions>
       <instructions xsi:type="arduino:If">
         <block>
-          <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.3/@module">
+          <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@analogPins.0/@module">
             <operand xsi:type="arduino:IntegerConstant" value="90"/>
           </instructions>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.3/@module">

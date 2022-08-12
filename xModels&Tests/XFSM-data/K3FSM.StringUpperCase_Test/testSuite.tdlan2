@@ -4,7 +4,7 @@ Package testSuite {
 		create Tester tester of type TestSystem ;
 		create SUT k3fsm of type MUT with { 
 			MUTPath : '/K3FSM.StringUpperCase/StringToUpperCase.model' ; 
-			DSLName : 'fsm.DSL' ;
+			DSLName : 'org.eclipse.gemoc.example.k3fsm.K3fsm' ;
 		} ;
 		connect tester.genericGate to k3fsm.genericGate ;
 		connect tester.oclGate to k3fsm.oclGate ;

@@ -214,7 +214,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test1.xminijava' ; 
-			DSLName : 'anonymous.xminijava.Xminijava' ; 
+			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -223,7 +223,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test2.xminijava' ; 
-			DSLName : 'anonymous.xminijava.Xminijava' ; 
+			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -232,7 +232,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test3.xminijava' ; 
-			DSLName : 'anonymous.xminijava.Xminijava' ; 
+			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;
@@ -241,7 +241,7 @@ Package TestSuite {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
 			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test4.xminijava' ; 
-			DSLName : 'anonymous.xminijava.Xminijava' ; 
+			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
 		connect tester.oclGate to xminijava.oclGate ;

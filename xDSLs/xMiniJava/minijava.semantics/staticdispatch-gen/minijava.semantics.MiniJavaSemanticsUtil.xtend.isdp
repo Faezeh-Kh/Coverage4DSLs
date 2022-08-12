@@ -1,0 +1,30 @@
+	// BeginInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.StringValueAspect
+		if (_self instanceof xminiJava.StringValue){
+			result = minijava.semantics.StringValueAspect.copy((xminiJava.StringValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.StringValueAspect
+	// BeginInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.ObjectRefValueAspect
+		if (_self instanceof xminiJava.ObjectRefValue){
+			result = minijava.semantics.ObjectRefValueAspect.copy((xminiJava.ObjectRefValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.ObjectRefValueAspect
+	// BeginInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.BooleanValueAspect
+		if (_self instanceof xminiJava.BooleanValue){
+			result = minijava.semantics.BooleanValueAspect.copy((xminiJava.BooleanValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.BooleanValueAspect
+	// BeginInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.NullValueAspect
+		if (_self instanceof xminiJava.NullValue){
+			result = minijava.semantics.NullValueAspect.copy((xminiJava.NullValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.NullValueAspect
+	// BeginInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.IntegerValueAspect
+		if (_self instanceof xminiJava.IntegerValue){
+			result = minijava.semantics.IntegerValueAspect.copy((xminiJava.IntegerValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.IntegerValueAspect
+	// BeginInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.ArrayRefValueAspect
+		if (_self instanceof xminiJava.ArrayRefValue){
+			result = minijava.semantics.ArrayRefValueAspect.copy((xminiJava.ArrayRefValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueAspect#Value copy() from minijava.semantics.ArrayRefValueAspect

@@ -363,7 +363,7 @@ Package testSuite {
 		create Tester tester of type TestSystem ;
 		create SUT statemachine of type MUT with { 
 			MUTPath : '/PSSM.JavaEJB/JavaEJB.model' ; 
-			DSLName : 'anonymous.pssm.reactive.ReactivePSSM' ;
+			DSLName : 'PSSMDSL' ;
 		} ;
 		//connect tester.genericGate to statemachine.genericGate;
 		connect tester.oclGate to statemachine.oclGate ;

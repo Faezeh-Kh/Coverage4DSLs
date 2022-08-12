@@ -1,0 +1,20 @@
+	// BeginInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.IntegerValueToStringAspect
+		if (_self instanceof xminiJava.IntegerValue){
+			result = minijava.semantics.IntegerValueToStringAspect.customToString((xminiJava.IntegerValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.IntegerValueToStringAspect
+	// BeginInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.BooleanValueToStringAspect
+		if (_self instanceof xminiJava.BooleanValue){
+			result = minijava.semantics.BooleanValueToStringAspect.customToString((xminiJava.BooleanValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.BooleanValueToStringAspect
+	// BeginInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.StringValueToStringAspect
+		if (_self instanceof xminiJava.StringValue){
+			result = minijava.semantics.StringValueToStringAspect.customToString((xminiJava.StringValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.StringValueToStringAspect
+	// BeginInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.ObjectRefValueToStringAspect
+		if (_self instanceof xminiJava.ObjectRefValue){
+			result = minijava.semantics.ObjectRefValueToStringAspect.customToString((xminiJava.ObjectRefValue)_self);
+		} else
+		// EndInjectInto minijava.semantics.ValueToStringAspect#String customToString() from minijava.semantics.ObjectRefValueToStringAspect

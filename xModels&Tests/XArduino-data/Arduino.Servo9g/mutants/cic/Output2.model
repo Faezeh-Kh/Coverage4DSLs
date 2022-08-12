@@ -22,7 +22,7 @@
             <operand xsi:type="arduino:IntegerConstant" value="90"/>
           </instructions>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
-            <operand xsi:type="arduino:IntegerConstant" value="2"/>
+            <operand xsi:type="arduino:IntegerConstant" value="3"/>
           </instructions>
         </elseBlock>
       </instructions>

@@ -34,7 +34,7 @@
               </instructions>
             </block>
             <condition xsi:type="arduino:BinaryBooleanExpression" operator="AND">
-              <left xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.1/@module"/>
+              <left xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.3/@module"/>
               <right xsi:type="arduino:BinaryBooleanExpression" operator="infOrEqual">
                 <left xsi:type="arduino:IntegerVariableRef" variable="//@sketches.0/@block/@instructions.0/@variable"/>
                 <right xsi:type="arduino:IntegerConstant" value="18"/>
@@ -55,7 +55,7 @@
             </condition>
           </instructions>
         </block>
-        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.3/@module"/>
+        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.0/@module"/>
       </instructions>
     </block>
   </sketches>

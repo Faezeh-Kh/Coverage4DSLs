@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<TDLTestReport:TestSuiteResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestReport="https://anonymous.tdl.testResult/TDLTestReport">
+<TDLTestReport:TestSuiteResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestReport="https://org.imt.tdl.testResult/TDLTestReport">
   <testSuite href="/MiniJava.BinarySearch_Test/result_coverage/execution-20220728_152049/testSuite.tdlan2#/"/>
   <testCaseResults>
     <testCase href="/MiniJava.BinarySearch_Test/result_coverage/execution-20220728_152049/testSuite.tdlan2#//@packagedElement.3"/>

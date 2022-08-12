@@ -1,0 +1,155 @@
+	// BeginInjectInto pssm.semantics.VertexAspect#boolean isExitable(Transition) from pssm.semantics.StateAspect
+		if (_self instanceof statemachines.State){
+			result = pssm.semantics.StateAspect.isExitable((statemachines.State)_self,exitingTransition);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#boolean isExitable(Transition) from pssm.semantics.StateAspect
+	// BeginInjectInto pssm.semantics.ConstraintAspect#boolean evaluate(EventOccurrence) from pssm.semantics.StringConstraintAspect
+		if (_self instanceof statemachines.StringConstraint){
+			result = pssm.semantics.StringConstraintAspect.evaluate((statemachines.StringConstraint)_self,eventOccurrence);
+		} else
+		// EndInjectInto pssm.semantics.ConstraintAspect#boolean evaluate(EventOccurrence) from pssm.semantics.StringConstraintAspect
+	// BeginInjectInto pssm.semantics.ConstraintAspect#boolean evaluate(EventOccurrence) from pssm.semantics.BooleanConstraintAspect
+		if (_self instanceof statemachines.BooleanConstraint){
+			result = pssm.semantics.BooleanConstraintAspect.evaluate((statemachines.BooleanConstraint)_self,eventOccurrence);
+		} else
+		// EndInjectInto pssm.semantics.ConstraintAspect#boolean evaluate(EventOccurrence) from pssm.semantics.BooleanConstraintAspect
+	// BeginInjectInto pssm.semantics.BehaviorAspect#void execute(EventOccurrence) from pssm.semantics.OperationBehaviorAspect
+		if (_self instanceof statemachines.OperationBehavior){
+			pssm.semantics.OperationBehaviorAspect.execute((statemachines.OperationBehavior)_self,eventOccurrence);
+		} else
+		// EndInjectInto pssm.semantics.BehaviorAspect#void execute(EventOccurrence) from pssm.semantics.OperationBehaviorAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#String getString() from pssm.semantics.IntegerAttributeValueAspect
+		if (_self instanceof statemachines.IntegerAttributeValue){
+			result = pssm.semantics.IntegerAttributeValueAspect.getString((statemachines.IntegerAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#String getString() from pssm.semantics.IntegerAttributeValueAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			pssm.semantics.PseudostateAspect.enter((statemachines.Pseudostate)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.PseudostateAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#String getString() from pssm.semantics.StringAttributeValueAspect
+		if (_self instanceof statemachines.StringAttributeValue){
+			result = pssm.semantics.StringAttributeValueAspect.getString((statemachines.StringAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#String getString() from pssm.semantics.StringAttributeValueAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#Attribute get_attribute() from pssm.semantics.IntegerAttributeValueAspect
+		if (_self instanceof statemachines.IntegerAttributeValue){
+			result = pssm.semantics.IntegerAttributeValueAspect.get_attribute((statemachines.IntegerAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#Attribute get_attribute() from pssm.semantics.IntegerAttributeValueAspect
+	// BeginInjectInto pssm.semantics.StateAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.FinalStateAspect
+		if (_self instanceof statemachines.FinalState){
+			pssm.semantics.FinalStateAspect.enter((statemachines.FinalState)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
+		} else
+		// EndInjectInto pssm.semantics.StateAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.FinalStateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.StateAspect
+		if (_self instanceof statemachines.State){
+			pssm.semantics.StateAspect.enter((statemachines.State)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.StateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#boolean isEnterable(Transition) from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			result = pssm.semantics.PseudostateAspect.isEnterable((statemachines.Pseudostate)_self,enteringTransition);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#boolean isEnterable(Transition) from pssm.semantics.PseudostateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.FinalStateAspect
+		if (_self instanceof statemachines.FinalState){
+			pssm.semantics.FinalStateAspect.enter((statemachines.FinalState)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#void enter(Transition,EventOccurrence,Region) from pssm.semantics.FinalStateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#boolean isExitable(Transition) from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			result = pssm.semantics.PseudostateAspect.isExitable((statemachines.Pseudostate)_self,exitingTransition);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#boolean isExitable(Transition) from pssm.semantics.PseudostateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#void exit(Transition,EventOccurrence,Region) from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			pssm.semantics.PseudostateAspect.exit((statemachines.Pseudostate)_self,exitingTransition,eventOccurrence,leastCommonAncestor);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#void exit(Transition,EventOccurrence,Region) from pssm.semantics.PseudostateAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#void set_value(int) from pssm.semantics.IntegerAttributeValueAspect
+		if (_self instanceof statemachines.IntegerAttributeValue){
+			pssm.semantics.IntegerAttributeValueAspect.set_value((statemachines.IntegerAttributeValue)_self,value);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#void set_value(int) from pssm.semantics.IntegerAttributeValueAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#int get_value() from pssm.semantics.IntegerAttributeValueAspect
+		if (_self instanceof statemachines.IntegerAttributeValue){
+			result = pssm.semantics.IntegerAttributeValueAspect.get_value((statemachines.IntegerAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#int get_value() from pssm.semantics.IntegerAttributeValueAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#boolean contains(Vertex) from pssm.semantics.StateAspect
+		if (_self instanceof statemachines.State){
+			result = pssm.semantics.StateAspect.contains((statemachines.State)_self,vertex);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#boolean contains(Vertex) from pssm.semantics.StateAspect
+	// BeginInjectInto pssm.semantics.EventOccurrenceAspect#String getParameters() from pssm.semantics.SignalEventOccurrenceAspect
+		if (_self instanceof statemachines.SignalEventOccurrence){
+			result = pssm.semantics.SignalEventOccurrenceAspect.getParameters((statemachines.SignalEventOccurrence)_self);
+		} else
+		// EndInjectInto pssm.semantics.EventOccurrenceAspect#String getParameters() from pssm.semantics.SignalEventOccurrenceAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#void set_value(int) from pssm.semantics.BooleanAttributeValueAspect
+		if (_self instanceof statemachines.BooleanAttributeValue){
+			pssm.semantics.BooleanAttributeValueAspect.set_value((statemachines.BooleanAttributeValue)_self,value);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#void set_value(int) from pssm.semantics.BooleanAttributeValueAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#void exit(Transition,EventOccurrence,Region) from pssm.semantics.StateAspect
+		if (_self instanceof statemachines.State){
+			pssm.semantics.StateAspect.exit((statemachines.State)_self,exitingTransition,eventOccurrence,leastCommonAncestor);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#void exit(Transition,EventOccurrence,Region) from pssm.semantics.StateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#boolean isEnterable(Transition) from pssm.semantics.StateAspect
+		if (_self instanceof statemachines.State){
+			result = pssm.semantics.StateAspect.isEnterable((statemachines.State)_self,enteringTransition);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#boolean isEnterable(Transition) from pssm.semantics.StateAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#String getString() from pssm.semantics.BooleanAttributeValueAspect
+		if (_self instanceof statemachines.BooleanAttributeValue){
+			result = pssm.semantics.BooleanAttributeValueAspect.getString((statemachines.BooleanAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#String getString() from pssm.semantics.BooleanAttributeValueAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#int get_value() from pssm.semantics.BooleanAttributeValueAspect
+		if (_self instanceof statemachines.BooleanAttributeValue){
+			result = pssm.semantics.BooleanAttributeValueAspect.get_value((statemachines.BooleanAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#int get_value() from pssm.semantics.BooleanAttributeValueAspect
+	// BeginInjectInto pssm.semantics.EventOccurrenceAspect#String getParameters() from pssm.semantics.CallEventOccurrenceAspect
+		if (_self instanceof statemachines.CallEventOccurrence){
+			result = pssm.semantics.CallEventOccurrenceAspect.getParameters((statemachines.CallEventOccurrence)_self);
+		} else
+		// EndInjectInto pssm.semantics.EventOccurrenceAspect#String getParameters() from pssm.semantics.CallEventOccurrenceAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#boolean isActive() from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			result = pssm.semantics.PseudostateAspect.isActive((statemachines.Pseudostate)_self);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#boolean isActive() from pssm.semantics.PseudostateAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#Attribute get_attribute() from pssm.semantics.BooleanAttributeValueAspect
+		if (_self instanceof statemachines.BooleanAttributeValue){
+			result = pssm.semantics.BooleanAttributeValueAspect.get_attribute((statemachines.BooleanAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#Attribute get_attribute() from pssm.semantics.BooleanAttributeValueAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#Region getContainingRegion() from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			result = pssm.semantics.PseudostateAspect.getContainingRegion((statemachines.Pseudostate)_self);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#Region getContainingRegion() from pssm.semantics.PseudostateAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#void terminate() from pssm.semantics.StateAspect
+		if (_self instanceof statemachines.State){
+			pssm.semantics.StateAspect.terminate((statemachines.State)_self);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#void terminate() from pssm.semantics.StateAspect
+	// BeginInjectInto pssm.semantics.ConstraintAspect#boolean evaluate(EventOccurrence) from pssm.semantics.IntegerConstraintAspect
+		if (_self instanceof statemachines.IntegerConstraint){
+			result = pssm.semantics.IntegerConstraintAspect.evaluate((statemachines.IntegerConstraint)_self,eventOccurrence);
+		} else
+		// EndInjectInto pssm.semantics.ConstraintAspect#boolean evaluate(EventOccurrence) from pssm.semantics.IntegerConstraintAspect
+	// BeginInjectInto pssm.semantics.AttributeValueAspect#Attribute get_attribute() from pssm.semantics.StringAttributeValueAspect
+		if (_self instanceof statemachines.StringAttributeValue){
+			result = pssm.semantics.StringAttributeValueAspect.get_attribute((statemachines.StringAttributeValue)_self);
+		} else
+		// EndInjectInto pssm.semantics.AttributeValueAspect#Attribute get_attribute() from pssm.semantics.StringAttributeValueAspect
+	// BeginInjectInto pssm.semantics.VertexAspect#State getParentState() from pssm.semantics.PseudostateAspect
+		if (_self instanceof statemachines.Pseudostate){
+			result = pssm.semantics.PseudostateAspect.getParentState((statemachines.Pseudostate)_self);
+		} else
+		// EndInjectInto pssm.semantics.VertexAspect#State getParentState() from pssm.semantics.PseudostateAspect

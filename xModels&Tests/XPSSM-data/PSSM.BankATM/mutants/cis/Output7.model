@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<statemachines:CustomSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:statemachines="http://anonymous.pssm.reactive/statemachines/" xsi:schemaLocation="http://anonymous.pssm.reactive/statemachines/ ../../../model/statemachines.ecore">
+<statemachines:CustomSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:statemachines="http://pssm/statemachines/" xsi:schemaLocation="http://pssm/statemachines/ ../../../model/statemachines.ecore">
   <statemachine name="BankATM">
     <regions name="mainRegion">
       <vertice xsi:type="statemachines:Pseudostate" name="initial1" outgoingTransitions="//@statemachine/@regions.0/@transitions.0 //@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.0"/>

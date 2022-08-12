@@ -81,12 +81,12 @@
             <operand xsi:type="arduino:IntegerConstant"/>
           </instructions>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.4/@module">
-            <operand xsi:type="arduino:IntegerConstant" value="2"/>
+            <operand xsi:type="arduino:IntegerConstant" value="60"/>
           </instructions>
         </block>
         <condition xsi:type="arduino:BinaryBooleanExpression" operator="sup">
           <left xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@analogPins.0/@module"/>
-          <right xsi:type="arduino:IntegerConstant" value="128"/>
+          <right xsi:type="arduino:IntegerConstant" value="2"/>
         </condition>
       </instructions>
     </block>

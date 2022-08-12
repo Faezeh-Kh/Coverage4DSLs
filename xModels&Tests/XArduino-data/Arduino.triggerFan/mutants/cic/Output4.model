@@ -36,7 +36,7 @@
                 <operand xsi:type="arduino:IntegerConstant" value="1"/>
               </instructions>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.5/@module">
-                <operand xsi:type="arduino:IntegerConstant" value="3"/>
+                <operand xsi:type="arduino:IntegerConstant"/>
               </instructions>
             </block>
             <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.4/@module"/>
@@ -55,13 +55,13 @@
                     <operand xsi:type="arduino:IntegerConstant"/>
                   </instructions>
                   <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.1/@module">
-                    <operand xsi:type="arduino:IntegerConstant" value="60"/>
+                    <operand xsi:type="arduino:IntegerConstant" value="2"/>
                   </instructions>
                 </block>
               </instructions>
             </block>
             <condition xsi:type="arduino:BinaryBooleanExpression" operator="sup">
-              <left xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.4/@module"/>
+              <left xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@analogPins.0/@module"/>
               <right xsi:type="arduino:IntegerConstant" value="128"/>
             </condition>
           </instructions>

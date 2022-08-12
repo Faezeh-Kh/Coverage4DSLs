@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<TDLTestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestCoverage="http://anonymous.tdl.coverage/TDLTestCoverage" coveragePercentage="100.0">
+<TDLTestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TDLTestCoverage="http://coverage.metamodel/TestCoverage" coveragePercentage="100.0">
   <testSuite href="/MiniJava.BinarySearch_Test/result_coverage/execution-20220728_152049/testSuite.tdlan2#/"/>
   <testCaseCoverages coveragePercentage="94.34">
     <testCase href="/MiniJava.BinarySearch_Test/result_coverage/execution-20220728_152049/testSuite.tdlan2#//@packagedElement.3"/>

@@ -1,4 +1,4 @@
-package anonymous.minijava.models;
+package org.imt.minijava.models;
 
 public class Person {
     int Age ;          

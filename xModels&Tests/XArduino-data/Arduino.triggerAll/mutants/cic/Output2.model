@@ -36,7 +36,7 @@
           <instructions xsi:type="arduino:Repeat" iteration="2">
             <block>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.1/@module">
-                <operand xsi:type="arduino:IntegerConstant" value="1"/>
+                <operand xsi:type="arduino:IntegerConstant" value="3"/>
               </instructions>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.1/@module">
                 <operand xsi:type="arduino:IntegerConstant"/>
@@ -61,7 +61,7 @@
       <instructions xsi:type="arduino:If">
         <block>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.3/@module">
-            <operand xsi:type="arduino:IntegerConstant" value="3"/>
+            <operand xsi:type="arduino:IntegerConstant" value="90"/>
           </instructions>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.3/@module">
             <operand xsi:type="arduino:IntegerConstant"/>

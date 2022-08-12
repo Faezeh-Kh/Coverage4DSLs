@@ -4,7 +4,10 @@
   <semanticResources>1/testSuite_selected.tdlan2</semanticResources>
   <semanticResources>1/testSuite_selected_amplified.tdlan2</semanticResources>
   <semanticResources>platform:/resource/Arduino.triggerAll/triggerAll.model</semanticResources>
-  <semanticResources>result_coverage/execution-20220727_134423/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220727_134423/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220727_134423/testSuite.tdlan2</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200113/modelUnderTest.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200113/modelUnderTest_test2.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200113/modelUnderTest_test3.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200113/testCoverage.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200113/testReport.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200113/testSuite.tdlan2</semanticResources>
 </viewpoint:DAnalysis>

@@ -1,103 +1,63 @@
 <?xml version="1.0" encoding="ASCII"?>
-<arduino:Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://www.obeo.fr/arduino" xsi:schemaLocation="http://www.obeo.fr/arduino ../../../model/arduino.ecore">
-  <boards xsi:type="arduino:ArduinoBoard"
-      name="board">
-    <digitalPins
-        name="led_pin">
-      <module
-          xsi:type="arduino:LED"
-          name="LED1"/>
+<arduino:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduino="http://www.obeo.fr/arduino" xmi:id="_7Ka1YBgdEe2XwezYsr8gMg">
+  <boards xsi:type="arduino:ArduinoBoard" xmi:id="_7Ka1YRgdEe2XwezYsr8gMg" name="board">
+    <digitalPins xmi:id="_7Ka1YhgdEe2XwezYsr8gMg" name="led_pin">
+      <module xsi:type="arduino:LED" xmi:id="_7Ka1YxgdEe2XwezYsr8gMg" name="LED1"/>
     </digitalPins>
-    <digitalPins
-        name="sensor_pin">
-      <module
-          xsi:type="arduino:InfraRedSensor"
-          name="IRSensor1"/>
+    <digitalPins xmi:id="_7Ka1ZBgdEe2XwezYsr8gMg" name="sensor_pin">
+      <module xsi:type="arduino:InfraRedSensor" xmi:id="_7Ka1ZRgdEe2XwezYsr8gMg" name="irSensor1"/>
     </digitalPins>
-    <digitalPins
-        name="buzzer_pin">
-      <module
-          xsi:type="arduino:Buzzer"
-          name="Alarm1"/>
+    <digitalPins xmi:id="_7Ka1ZhgdEe2XwezYsr8gMg" name="alarm_pin">
+      <module xsi:type="arduino:Buzzer" xmi:id="_7Ka1ZxgdEe2XwezYsr8gMg" name="alarm1"/>
     </digitalPins>
-    <digitalPins
-        name="button_pin">
-      <module
-          xsi:type="arduino:PushButton"
-          name="Button1"/>
+    <digitalPins xmi:id="_7Ka1aBgdEe2XwezYsr8gMg" name="button_pin">
+      <module xsi:type="arduino:PushButton" xmi:id="_7Ka1aRgdEe2XwezYsr8gMg" name="button1"/>
     </digitalPins>
   </boards>
-  <sketches
-      name="sketch"
-      board="//@boards.0">
-    <block>
-      <instructions
-          xsi:type="arduino:While">
-        <block>
-          <instructions
-              xsi:type="arduino:ModuleAssignment"
-              module="//@boards.0/@digitalPins.2/@module">
-            <operand
-                xsi:type="arduino:IntegerConstant"
-                value="1"/>
+  <sketches xmi:id="_7Ka1ahgdEe2XwezYsr8gMg" name="sketch" board="_7Ka1YRgdEe2XwezYsr8gMg">
+    <block xmi:id="_7Ka1axgdEe2XwezYsr8gMg">
+      <instructions xsi:type="arduino:While" xmi:id="_7Ka1bBgdEe2XwezYsr8gMg">
+        <block xmi:id="_7Ka1bRgdEe2XwezYsr8gMg">
+          <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1bhgdEe2XwezYsr8gMg" module="_7Ka1YxgdEe2XwezYsr8gMg">
+            <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1bxgdEe2XwezYsr8gMg" value="1"/>
           </instructions>
-          <instructions
-              xsi:type="arduino:Delay"
-              value="1000"/>
-          <instructions
-              xsi:type="arduino:ModuleAssignment"
-              module="//@boards.0/@digitalPins.2/@module">
-            <operand
-                xsi:type="arduino:IntegerConstant"/>
+          <instructions xsi:type="arduino:While" xmi:id="_7Ka1cBgdEe2XwezYsr8gMg">
+            <block xmi:id="_7Ka1cRgdEe2XwezYsr8gMg">
+              <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1chgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg">
+                <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1cxgdEe2XwezYsr8gMg" value="1"/>
+              </instructions>
+              <instructions xsi:type="arduino:Delay" xmi:id="_7Ka1dBgdEe2XwezYsr8gMg" value="1000"/>
+              <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1dRgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg">
+                <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1dhgdEe2XwezYsr8gMg"/>
+              </instructions>
+              <instructions xsi:type="arduino:Delay" xmi:id="_7Ka1dxgdEe2XwezYsr8gMg" value="1000"/>
+            </block>
+            <condition xsi:type="arduino:BinaryBooleanExpression" xmi:id="_7Ka1eBgdEe2XwezYsr8gMg" operator="equal">
+              <left xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1eRgdEe2XwezYsr8gMg" value="1"/>
+              <right xsi:type="arduino:IntegerModuleGet" xmi:id="_7Ka1ehgdEe2XwezYsr8gMg" module="_7Ka1ZRgdEe2XwezYsr8gMg"/>
+            </condition>
           </instructions>
-          <instructions
-              xsi:type="arduino:Delay"
-              value="1000"/>
+          <instructions xsi:type="arduino:If" xmi:id="_7Ka1exgdEe2XwezYsr8gMg">
+            <block xmi:id="_7Ka1fBgdEe2XwezYsr8gMg">
+              <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1fRgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg">
+                <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1fhgdEe2XwezYsr8gMg"/>
+              </instructions>
+            </block>
+            <condition xsi:type="arduino:BooleanModuleGet" xmi:id="_7Ka1fxgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg"/>
+          </instructions>
         </block>
-        <condition
-            xsi:type="arduino:BinaryBooleanExpression"
-            operator="equal">
-          <left
-              xsi:type="arduino:IntegerConstant"
-              value="1"/>
-          <right
-              xsi:type="arduino:IntegerModuleGet"
-              module="//@boards.0/@digitalPins.3/@module"/>
+        <condition xsi:type="arduino:BinaryBooleanExpression" xmi:id="_7Ka1gBgdEe2XwezYsr8gMg" operator="equal">
+          <left xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1gRgdEe2XwezYsr8gMg" value="1"/>
+          <right xsi:type="arduino:IntegerModuleGet" xmi:id="_7Ka1ghgdEe2XwezYsr8gMg" module="_7Ka1aRgdEe2XwezYsr8gMg"/>
         </condition>
       </instructions>
-      <instructions
-          xsi:type="arduino:While">
-        <block>
-          <instructions
-              xsi:type="arduino:ModuleAssignment"
-              module="//@boards.0/@digitalPins.0/@module">
-            <operand
-                xsi:type="arduino:IntegerConstant"
-                value="1"/>
+      <instructions xsi:type="arduino:If" xmi:id="_7Ka1gxgdEe2XwezYsr8gMg">
+        <block xmi:id="_7Ka1hBgdEe2XwezYsr8gMg">
+          <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1hRgdEe2XwezYsr8gMg" module="_7Ka1YxgdEe2XwezYsr8gMg">
+            <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1hhgdEe2XwezYsr8gMg"/>
           </instructions>
-          <instructions
-              xsi:type="arduino:Delay"
-              value="1000"/>
-          <instructions
-              xsi:type="arduino:ModuleAssignment"
-              module="//@boards.0/@digitalPins.0/@module">
-            <operand
-                xsi:type="arduino:IntegerConstant"/>
-          </instructions>
-          <instructions
-              xsi:type="arduino:Delay"
-              value="1000"/>
         </block>
-        <condition
-            xsi:type="arduino:BinaryBooleanExpression"
-            operator="equal">
-          <left
-              xsi:type="arduino:IntegerConstant"
-              value="1"/>
-          <right
-              xsi:type="arduino:IntegerModuleGet"
-              module="//@boards.0/@digitalPins.1/@module"/>
-        </condition>
+        <condition xsi:type="arduino:BooleanModuleGet" xmi:id="_7Ka1hxgdEe2XwezYsr8gMg" module="_7Ka1YxgdEe2XwezYsr8gMg"/>
       </instructions>
     </block>
   </sketches>

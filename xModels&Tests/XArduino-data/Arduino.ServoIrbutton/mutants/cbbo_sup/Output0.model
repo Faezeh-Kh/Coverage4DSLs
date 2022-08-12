@@ -33,9 +33,9 @@
                 </operand>
               </instructions>
             </block>
-            <condition xsi:type="arduino:BinaryBooleanExpression" operator="sup">
+            <condition xsi:type="arduino:BinaryBooleanExpression" operator="AND">
               <left xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.1/@module"/>
-              <right xsi:type="arduino:BinaryBooleanExpression" operator="infOrEqual">
+              <right xsi:type="arduino:BinaryBooleanExpression" operator="sup">
                 <left xsi:type="arduino:IntegerVariableRef" variable="//@sketches.0/@block/@instructions.0/@variable"/>
                 <right xsi:type="arduino:IntegerConstant" value="18"/>
               </right>

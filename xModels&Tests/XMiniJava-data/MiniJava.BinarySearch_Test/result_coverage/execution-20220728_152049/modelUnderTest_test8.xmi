@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xminiJava:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xminiJava="http://anonymous.minijava.xminijava/xminiJava/" name="org.cambridge.minijava.models.binarySearch.test8">
+<xminiJava:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xminiJava="http://minijava.xminijava/xminiJava/" name="org.cambridge.minijava.models.binarySearch.test8">
   <classes xsi:type="xminiJava:Class" name="BinarySearch" accessLevel="public">
     <members xsi:type="xminiJava:Field" name="number">
       <typeRef xsi:type="xminiJava:ArrayTypeRef">

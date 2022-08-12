@@ -1,0 +1,40 @@
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.IfStatementAspect
+		if (_self instanceof xminiJava.IfStatement){
+			minijava.semantics.IfStatementAspect.evaluateStatement((xminiJava.IfStatement)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.IfStatementAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.ExpressionStatementAspect
+		if (_self instanceof xminiJava.Expression){
+			minijava.semantics.ExpressionStatementAspect.evaluateStatement((xminiJava.Expression)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.ExpressionStatementAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.ForStatementAspect
+		if (_self instanceof xminiJava.ForStatement){
+			minijava.semantics.ForStatementAspect.evaluateStatement((xminiJava.ForStatement)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.ForStatementAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.PrintStatementAspect
+		if (_self instanceof xminiJava.PrintStatement){
+			minijava.semantics.PrintStatementAspect.evaluateStatement((xminiJava.PrintStatement)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.PrintStatementAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.AssigmentAspect
+		if (_self instanceof xminiJava.Assignment){
+			minijava.semantics.AssigmentAspect.evaluateStatement((xminiJava.Assignment)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.AssigmentAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.WhileStatementAspect
+		if (_self instanceof xminiJava.WhileStatement){
+			minijava.semantics.WhileStatementAspect.evaluateStatement((xminiJava.WhileStatement)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.WhileStatementAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.ReturnAspect
+		if (_self instanceof xminiJava.Return){
+			minijava.semantics.ReturnAspect.evaluateStatement((xminiJava.Return)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.ReturnAspect
+	// BeginInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.BlockAspect
+		if (_self instanceof xminiJava.Block){
+			minijava.semantics.BlockAspect.evaluateStatement((xminiJava.Block)_self,state);
+		} else
+		// EndInjectInto minijava.semantics.StatementAspect#void evaluateStatement(State) from minijava.semantics.BlockAspect

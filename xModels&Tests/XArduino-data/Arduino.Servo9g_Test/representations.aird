@@ -5,7 +5,12 @@
   <semanticResources>generated/common.tdlan2</semanticResources>
   <semanticResources>generated/testConfiguration.tdlan2</semanticResources>
   <semanticResources>platform:/resource/Arduino.Servo9g/servo9g.model</semanticResources>
-  <semanticResources>result_coverage/execution/execution-20220727_134048/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution/execution-20220727_134048/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution/execution-20220727_134048/testSuite.tdlan2</semanticResources>
+  <semanticResources>platform:/Arduino.Servo9g_Test/result_coverage/execution-20220727_134048/testSuite.tdlan2</semanticResources>
+  <semanticResources>platform:/Arduino.Servo9g_Test/result_coverage/execution-20220727_134048/testSuite.tdlan2</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200257/modelUnderTest.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200257/modelUnderTest_test2.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200257/modelUnderTest_test3.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200257/testCoverage.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200257/testReport.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220809_200257/testSuite.tdlan2</semanticResources>
 </viewpoint:DAnalysis>

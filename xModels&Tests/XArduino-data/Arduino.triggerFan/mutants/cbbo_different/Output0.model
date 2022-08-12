@@ -61,7 +61,7 @@
               </instructions>
             </block>
             <condition xsi:type="arduino:BinaryBooleanExpression" operator="Different">
-              <left xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.4/@module"/>
+              <left xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@analogPins.0/@module"/>
               <right xsi:type="arduino:IntegerConstant" value="128"/>
             </condition>
           </instructions>
