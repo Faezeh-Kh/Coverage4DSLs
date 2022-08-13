@@ -4,7 +4,7 @@ This repository contains the tool and the evaluation data of our paper titled "F
 ## Content Overview
 1.	*Tool*: a set of eclipse plugins
 - **coverage_Tool**: the coverage computation tool (`coverage.computation` plugin) and the textual syntax of the DSL-Specific Coverage metalanguage.
-- **faultLocalization_Tool**: the fault localization tool (`faultLocalization` plugin) and a tool for evaluating the effectiveness of the supported SBFL techniques (`sbfl.evaluation` plugin)
+- **faultLocalization_Tool**: the fault localization tool (`faultLocalization` plugin)
 - **testing_tool**: the plugins of the testing framework of Khorram et al. [[1]](https://faezeh-kh.github.io/publication/sosym22/) that we used for the definition and execution of the test cases on executable models.
 2.	*xDSLs*: the implementation of four Executable Domain-Specific Languages (xDSLs) of our case study, including:
     
@@ -75,16 +75,16 @@ After downloading GEMOC Studio, unzip the folder and run it:
     <img src="Screenshots/importProjects.png"  width="70%" height="70%">
 </p>
   
-**NOTE**: In our case study, we experimented our tool on two xDSLs. In this document, we will show how to run the experiment for xArduino as it was also the running example of the paper. Nevertheless, you can follow the same steps for the xPSSM.
+**NOTE**: In our case study, we experimented our tool on four xDSLs. In this document, we will show how to run the experiment for xArduino as it was also the running example of the paper. Nevertheless, you can follow the same steps for the other xDSLs.
 
 ## Usage
-1.	Import the xArduino implementation from the `xdsls/xArduino` directory in the same way described in the previous step. At the end, your project explorer should be as following picture:
+1.	Import the xArduino implementation from the `xDSLs/xArduino` directory in the same way described in the previous step. At the end, your project explorer should be as following picture:
 
 <p align="center">
     <img src="Screenshots/projectExplorer.png"  width="40%" height="50%">
 </p>
 
-2. To deploy the tool and the xArduino DSL, we should run this workspace using `Eclipse Application` run configuration. To do this, follow: Run -> Run Configurations, then choose `Eclipse Application` from the list of available configurations and double click to create an instance of it. You can optionally change the default name and the `workspace data location` of this configuration instance. Finally, press `Run` to open a new Eclipse instance.
+1. To deploy the tool and the xArduino DSL, we should run this workspace using `Eclipse Application` run configuration. To do this, follow: Run -> Run Configurations, then choose `Eclipse Application` from the list of available configurations and double click to create an instance of it. You can optionally change the default name and the `workspace data location` of this configuration instance. Finally, press `Run` to open a new Eclipse instance.
 
     <p align="center">
         <img src="Screenshots/runConfiguration.png"  width="70%" height="60%">
@@ -92,7 +92,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
     **Note**: The `workspace data location` defines the path to the workspace of the newly opened Eclipse instance.  
 
-3. In the new Eclipse instance, import those projects from the `xmodels&tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `XArduino-data` directory as follows:
+2. In the new Eclipse instance, import those projects from the `xmodels&tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `XArduino-data` directory as follows:
 - `Arduino.RunningExample` project containing:
 
     a) `runningExample.model`: a sample Arduino model
