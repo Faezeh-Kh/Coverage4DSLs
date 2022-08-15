@@ -12,7 +12,7 @@
             class="faultLocalization.ui.TDLSBFLView"
             icon="icons/faultLocalization.jpg"
             id="rt.ui.sbflView"
-            name="FaultLocalization"
+            name="Fault Localization"
             restorable="true">
       </view>
    </extension>
