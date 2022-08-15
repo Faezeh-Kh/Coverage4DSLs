@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: arduino.xdsl
+Bundle-Name: arduinoDSL
 Bundle-SymbolicName: arduino.xdsl;singleton:=true
 Automatic-Module-Name: arduino.xdsl
 Bundle-Version: 1.0.0
