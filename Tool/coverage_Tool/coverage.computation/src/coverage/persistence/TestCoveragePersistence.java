@@ -136,24 +136,15 @@ public class TestCoveragePersistence implements IEngineAddon{
 	//save the model under test if it is not saved or if it is different from the current saved file
 	private void copyMUTResource (Resource resource, String testID) {
 		URI modelURI = null;
-		if (MUTResource == null) {
-			modelURI = URI.createURI(pathToReportsFiles + "/modelUnderTest.xmi", false);
-		}
-		//the test case uses a different model under test
-		else if (!EcoreUtil.equals(MUTResource.getContents().get(0), resource.getContents().get(0))) {
-			modelURI = URI.createURI(pathToReportsFiles + "/modelUnderTest_" + testID + ".xmi", false);
-		}
-		//the model under test is already copied, so do nothing
-		else {return;}
-		
-		this.MUTResource = (new ResourceSetImpl()).createResource(modelURI);
-		this.MUTResource.getContents().addAll(EcoreUtil.copyAll(resource.getContents()));
+		modelURI = URI.createURI(pathToReportsFiles + "/modelUnderTest_" + testID + ".xmi", false);
+		MUTResource = (new ResourceSetImpl()).createResource(modelURI);
+		MUTResource.getContents().addAll(EcoreUtil.copyAll(resource.getContents()));
 	    try {
-	    	this.MUTResource.save(null);
+	    	MUTResource.save(null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	    TreeIterator<EObject> modelContents = this.MUTResource.getAllContents();
+	    TreeIterator<EObject> modelContents = MUTResource.getAllContents();
 		while (modelContents.hasNext()) {
 			modelObjects.add(modelContents.next());
 		}
