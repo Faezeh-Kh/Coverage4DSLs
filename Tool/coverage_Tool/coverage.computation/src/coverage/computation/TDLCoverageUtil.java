@@ -296,6 +296,9 @@ public class TDLCoverageUtil {
 	}
 	
 	private Resource loadDSLSpecificCoverageFile() {
+//		ResourceSet resourceSet = new ResourceSetImpl();
+//		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("cov", new XMIResourceFactoryImpl());
+//		resourceSet.getPackageRegistry().put(DSLSpecificCoveragePackage.eNS_URI, DSLSpecificCoveragePackage.eINSTANCE);
 		String coverageFilePath = getCoverageFilePath();
 		if (coverageFilePath != null) {
 			Resource coverageFileResource = (new ResourceSetImpl()).getResource(URI.createURI(coverageFilePath), true);
