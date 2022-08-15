@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<DSLSpecificCoverage:DomainSpecificCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSLSpecificCoverage="https://org.imt.tdl.coverage/DSLSpecificCoverage" name="PSSMCoverage">
+<DSLSpecificCoverage:DomainSpecificCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSLSpecificCoverage="https://coverage/DSLSpecificCoverage" name="PSSMCoverage">
   <contexts>
     <metaclass href="http://pssm/statemachines/#//CustomSystem"/>
     <rules xsi:type="DSLSpecificCoverage:CoverageByContainment" multiplicity="ONE">
