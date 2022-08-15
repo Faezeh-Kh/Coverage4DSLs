@@ -154,25 +154,25 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
 
 6. Our tool also provides a set of graphical views to display the results. You can open each one of them from the `Window` menu -> `Show View` -> `Other` -> `TDL`.
    <p align="center">
-        <img src="Screenshots/views.png" width="40%" height="40%">
+        <img src="Screenshots/views.png" width="30%" height="40%">
     </p>
 - *Test Results*
     <p align="center">
-        <img src="Screenshots/testResultView.png">
+        <img src="Screenshots/testResultView.png" width="70%" height="40%">
     </p>
 - *Coverage*
     <p align="center">
-        <img src="Screenshots/testCoverageView.png">
+        <img src="Screenshots/testCoverageView.png" width="70%" height="40%">
     </p>
 - *Fault Localization*: At first that no SBFL technique is selected, the `Susp` and `Rank` columns are empty.
   
     <p align="center">
-        <img src="Screenshots/flView-initial.png">
+        <img src="Screenshots/flView-initial.png" width="70%" height="40%">
     </p>
 
     Once you select a technique from the list (e.g., here we selected `phi` technique), the suspiciousness score and the rank of each model element will be calculated and immediately shown in the view. Here based on `phi` technique, the score of the defected element is 1.0 and its rank is 1.
     <p align="center">
-        <img src="Screenshots/flView-final.png">
+        <img src="Screenshots/flView-final.png" width="70%" height="40%">
     </p>
 
 ## Acknowledgment
