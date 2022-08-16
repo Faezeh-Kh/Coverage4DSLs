@@ -213,7 +213,7 @@ Package TestSuite {
 	Test Configuration LinearSearchConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test1.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linearSearch_models.xmi/LinearSearch_test1.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -222,7 +222,7 @@ Package TestSuite {
 	Test Configuration LinearSearchConfiguration2 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test2.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linearSearch_models.xmi/LinearSearch_test2.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -231,7 +231,7 @@ Package TestSuite {
 	Test Configuration LinearSearchConfiguration3 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test3.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linearSearch_models.xmi/LinearSearch_test3.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -240,7 +240,7 @@ Package TestSuite {
 	Test Configuration LinearSearchConfiguration4 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linearSearch_junitTests_xminijava/LinearSearch_test4.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linearSearch_models.xmi/LinearSearch_test4.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;

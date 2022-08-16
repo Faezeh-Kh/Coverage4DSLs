@@ -262,7 +262,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test1.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test1.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -271,7 +271,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration2 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test2.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test2.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -280,7 +280,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration3 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test3.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test3.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -289,7 +289,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration4 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test4.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test4.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -298,7 +298,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration5 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test5.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test5.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -307,7 +307,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration6 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test6.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test6.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -316,7 +316,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration7 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test7.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test7.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -325,7 +325,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration8 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test8.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test8.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -334,7 +334,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration9 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test9.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test9.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -343,7 +343,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration10 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test10.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test10.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -352,7 +352,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration11 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test11.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test11.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -361,7 +361,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration12 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test12.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test12.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -370,7 +370,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration13 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test13.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test13.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -379,7 +379,7 @@ Package TestSuite {
 	Test Configuration BinarySearchConfiguration14 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test14.xminijava' ; 
+			MUTPath : '/xMiniJava_models/binarySearch_models.xmi/BinarySearch_test14.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;

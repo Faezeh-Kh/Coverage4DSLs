@@ -287,7 +287,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test1.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test1.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -296,7 +296,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration2 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test2.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test2.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -305,7 +305,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration3 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test3.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test3.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -314,7 +314,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration4 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test4.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test4.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -323,7 +323,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration5 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test5.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test5.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -332,7 +332,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration6 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test6.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test6.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -341,7 +341,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration7 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test7.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test7.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -350,7 +350,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration8 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test8.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test8.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -359,7 +359,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration9 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test9.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test9.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -368,7 +368,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration10 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test10.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test10.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -377,7 +377,7 @@ Package TestSuite {
 	Test Configuration LinkedListConfiguration11 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/linkedList_junitTests_xminijava/LinkedList_test11.xminijava' ; 
+			MUTPath : '/xMiniJava_models/linkedList_models.xmi/LinkedList_test11.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;

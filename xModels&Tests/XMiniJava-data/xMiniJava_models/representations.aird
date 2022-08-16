@@ -17,7 +17,6 @@
   <semanticResources>gemoc-gen/execution/execution-20211130_110315/Factorial_test1.xminijava</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20211130_205405/Person_test1.xminijava</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20211130_210513/LinkedList_test1.xminijava</semanticResources>
-  <semanticResources>linkedList_junitTests_xminijava/Person.xminijava</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20211130_210710/LinkedList_test1.xminijava</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20211130_212003/Factorial_test1.xminijava</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20211201_110839/Factorial_test1.xminijava</semanticResources>
@@ -117,4 +116,83 @@
   <semanticResources>xminijava-classes-xmi/LinkedList.model</semanticResources>
   <semanticResources>xminijava-classes-xmi/Person.model</semanticResources>
   <semanticResources>xminijava-classes-xmi/Tree.model</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test1.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test10.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test11.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test12.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test13.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test14.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test2.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test3.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test4.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test5.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test6.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test7.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test8.xmi</semanticResources>
+  <semanticResources>binarySearch_models.xmi/BinarySearch_test9.xmi</semanticResources>
+  <semanticResources>factorial_models.xmi/Factorial_test1.xmi</semanticResources>
+  <semanticResources>factorial_models.xmi/Factorial_test2.xmi</semanticResources>
+  <semanticResources>factorial_models.xmi/Factorial_test3.xmi</semanticResources>
+  <semanticResources>factorial_models.xmi/Factorial_test4.xmi</semanticResources>
+  <semanticResources>linearSearch_models.xmi/LinearSearch_test1.xmi</semanticResources>
+  <semanticResources>linearSearch_models.xmi/LinearSearch_test2.xmi</semanticResources>
+  <semanticResources>linearSearch_models.xmi/LinearSearch_test3.xmi</semanticResources>
+  <semanticResources>linearSearch_models.xmi/LinearSearch_test4.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test1.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test10.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test11.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test2.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test3.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test4.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test5.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test6.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test7.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test8.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/LinkedList_test9.xmi</semanticResources>
+  <semanticResources>linkedList_models.xmi/Person.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test1.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test10.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test11.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test12.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test13.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test14.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test15.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test16.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test17.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test18.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test19.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test2.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test3.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test4.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test5.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test6.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test7.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test8.xmi</semanticResources>
+  <semanticResources>person_models.xmi/Person_test9.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test1.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test10.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test11.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test12.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test13.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test14.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test15.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test16.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test17.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test18.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test19.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test2.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test20.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test21.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test22.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test23.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test24.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test25.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test3.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test4.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test5.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test6.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test7.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test8.xmi</semanticResources>
+  <semanticResources>tree_models.xmi/Tree_test9.xmi</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220816_104933/LinearSearch_test1.xmi</semanticResources>
 </viewpoint:DAnalysis>

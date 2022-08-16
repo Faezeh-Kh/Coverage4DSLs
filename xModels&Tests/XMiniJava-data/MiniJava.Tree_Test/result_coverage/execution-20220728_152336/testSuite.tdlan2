@@ -367,7 +367,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test1.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test1.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -376,7 +376,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration2 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test2.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test2.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -385,7 +385,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration3 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test3.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test3.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -394,7 +394,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration4 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test4.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test4.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -403,7 +403,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration5 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test5.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test5.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -412,7 +412,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration6 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test6.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test6.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -421,7 +421,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration7 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test7.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test7.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -430,7 +430,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration8 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test8.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test8.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -439,7 +439,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration9 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test9.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test9.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -448,7 +448,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration10 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test10.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test10.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -457,7 +457,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration11 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test11.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test11.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -466,7 +466,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration12 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test12.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test12.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -475,7 +475,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration13 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test13.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test13.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -484,7 +484,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration14 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test14.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test14.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -493,7 +493,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration15 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test15.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test15.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -502,7 +502,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration16 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test16.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test16.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -511,7 +511,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration17 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test17.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test17.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -520,7 +520,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration18 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test18.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test18.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -529,7 +529,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration19 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test19.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test19.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -538,7 +538,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration20 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test20.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test20.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -547,7 +547,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration21 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test21.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test21.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -556,7 +556,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration22 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test22.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test22.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -565,7 +565,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration23 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test23.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test23.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -574,7 +574,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration24 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test24.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test24.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -583,7 +583,7 @@ Package TestSuite {
 	Test Configuration TreeConfiguration25 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/tree_junitTests_xminijava/Tree_test25.xminijava' ; 
+			MUTPath : '/xMiniJava_models/tree_models.xmi/Tree_test25.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;

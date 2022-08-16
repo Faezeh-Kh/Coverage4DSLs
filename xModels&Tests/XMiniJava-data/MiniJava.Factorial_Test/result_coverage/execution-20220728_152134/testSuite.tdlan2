@@ -213,7 +213,7 @@ Package TestSuite {
 	Test Configuration FactorialConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test1.xminijava' ; 
+			MUTPath : '/xMiniJava_models/factorial_models.xmi/Factorial_test1.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -222,7 +222,7 @@ Package TestSuite {
 	Test Configuration FactorialConfiguration2 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test2.xminijava' ; 
+			MUTPath : '/xMiniJava_models/factorial_models.xmi/Factorial_test2.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -231,7 +231,7 @@ Package TestSuite {
 	Test Configuration FactorialConfiguration3 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test3.xminijava' ; 
+			MUTPath : '/xMiniJava_models/factorial_models.xmi/Factorial_test3.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -240,7 +240,7 @@ Package TestSuite {
 	Test Configuration FactorialConfiguration4 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/factorial_junitTests_xminijava/Factorial_test4.xminijava' ; 
+			MUTPath : '/xMiniJava_models/factorial_models.xmi/Factorial_test4.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;

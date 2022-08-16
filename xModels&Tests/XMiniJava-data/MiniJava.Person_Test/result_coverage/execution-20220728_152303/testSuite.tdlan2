@@ -291,7 +291,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration1 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test1.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test1.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -300,7 +300,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration2 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test2.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test2.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -309,7 +309,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration3 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test3.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test3.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -318,7 +318,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration4 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test4.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test4.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -327,7 +327,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration5 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test5.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test5.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -336,7 +336,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration6 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test6.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test6.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -345,7 +345,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration7 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test7.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test7.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -354,7 +354,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration8 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test8.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test8.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -363,7 +363,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration9 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test9.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test9.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -372,7 +372,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration10 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test10.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test10.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -381,7 +381,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration11 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test11.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test11.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -390,7 +390,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration12 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test12.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test12.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -399,7 +399,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration13 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test13.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test13.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -408,7 +408,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration14 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test14.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test14.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -417,7 +417,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration15 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test15.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test15.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -426,7 +426,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration16 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test16.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test16.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -435,7 +435,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration17 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test17.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test17.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -444,7 +444,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration18 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test18.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test18.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
@@ -453,7 +453,7 @@ Package TestSuite {
 	Test Configuration PersonConfiguration19 {
 		create Tester tester of type TestSystem ;
 		create SUT xminijava of type MUT with { 
-			MUTPath : '/xMiniJava_models/person_junitTests_xminijava/Person_test19.xminijava' ; 
+			MUTPath : '/xMiniJava_models/person_models.xmi/Person_test19.xmi' ; 
 			DSLName : 'MinijavaDSL' ; 
 		} ;
 		connect tester.genericGate to xminijava.genericGate ;
