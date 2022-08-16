@@ -4,7 +4,6 @@
 package coverage.dsl.xtext.scoping;
 
 import java.util.Collection;
-
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.BasicEList;
