@@ -174,6 +174,3 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
     <p align="center">
         <img src="Screenshots/flView-final.png" width="70%" height="40%">
     </p>
-
-## Acknowledgment
-This project is funded by the [EU H2020 research project Lowcomote](https://www.lowcomote.eu/).
