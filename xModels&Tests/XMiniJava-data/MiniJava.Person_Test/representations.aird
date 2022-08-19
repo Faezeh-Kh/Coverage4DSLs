@@ -20,26 +20,26 @@
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test17.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test18.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test19.xminijava</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test10.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test11.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test12.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test13.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test14.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test15.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test16.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test17.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test18.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test19.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test2.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test3.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test4.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test5.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test6.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test7.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test8.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/modelUnderTest_test9.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152303/testSuite.tdlan2</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test1.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test10.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test11.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test12.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test13.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test14.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test15.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test16.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test17.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test18.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test19.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test2.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test3.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test4.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test5.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test6.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test7.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test8.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test9.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/testCoverage.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/testReport.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191347/testSuite.tdlan2</semanticResources>
 </viewpoint:DAnalysis>

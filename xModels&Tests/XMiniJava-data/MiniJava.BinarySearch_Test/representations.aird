@@ -15,21 +15,21 @@
   <semanticResources>platform:/resource/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test12.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test13.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/binarySearch_junitTests_xminijava/BinarySearch_test14.xminijava</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test10.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test11.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test12.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test13.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test14.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test2.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test3.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test4.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test5.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test6.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test7.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test8.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/modelUnderTest_test9.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220728_152049/testSuite.tdlan2</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test1.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test10.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test11.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test12.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test13.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test14.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test2.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test3.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test4.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test5.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test6.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test7.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test8.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/modelUnderTest_test9.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/testCoverage.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/testReport.xmi</semanticResources>
+  <semanticResources>result_coverage/execution-20220819_191112/testSuite.tdlan2</semanticResources>
 </viewpoint:DAnalysis>
