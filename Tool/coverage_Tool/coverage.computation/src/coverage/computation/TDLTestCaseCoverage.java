@@ -135,7 +135,7 @@ public class TDLTestCaseCoverage {
 	public void setObjectNotCoverable(EObject object) {
 		int objectIndex = modelObjects.indexOf(object);
 		if (objectIndex != -1){
-			tcObjectCoverageStatus.set(objectIndex, TDLCoverageUtil.NOT_COVERABLE);
+			tcObjectCoverageStatus.set(objectIndex, TDLCoverageUtil.NOT_TRACED);
 		}
 	}
 	
@@ -144,7 +144,7 @@ public class TDLTestCaseCoverage {
 		for (int i=0; i<tcObjectCoverageStatus.size(); i++) {
 			if (tcObjectCoverageStatus.get(i) == TDLCoverageUtil.NOT_COVERED &&
 					!TDLCoverageUtil.getInstance().isClassCoverable(modelObjects.get(i).eClass())) {
-				tcObjectCoverageStatus.set(i, TDLCoverageUtil.NOT_COVERABLE);
+				tcObjectCoverageStatus.set(i, TDLCoverageUtil.NOT_TRACED);
 			}
 		}
 	}
@@ -153,7 +153,7 @@ public class TDLTestCaseCoverage {
 		numOfCoveredObjs = 0;
 		numOfNotCoverableElements = 0;
 		for (String coverage:tcObjectCoverageStatus) {
-			if (coverage == TDLCoverageUtil.NOT_COVERABLE) {
+			if (coverage == TDLCoverageUtil.NOT_TRACED) {
 				numOfNotCoverableElements++;
 			}
 			else if (coverage == TDLCoverageUtil.COVERED) {

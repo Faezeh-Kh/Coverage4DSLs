@@ -99,7 +99,7 @@ public class TDLCoverageView extends ViewPart{
         coverageFilterCombo.add("Covered");
         coverageFilterCombo.add("Not-Covered");
         coverageFilterCombo.add("Covered & Not-Covered");
-        coverageFilterCombo.add("Not Coverable");
+        coverageFilterCombo.add("Not Traced");
         coverageFilterCombo.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -277,7 +277,7 @@ public class TDLCoverageView extends ViewPart{
 					if (colText == TDLCoverageUtil.COVERED) {
 						return GREEN;
 					}
-					else if (colText == TDLCoverageUtil.NOT_COVERABLE) {
+					else if (colText == TDLCoverageUtil.NOT_TRACED) {
 						return YELLOW;
 					}
 					else if (colText == TDLCoverageUtil.NOT_COVERED) {
@@ -328,7 +328,7 @@ public class TDLCoverageView extends ViewPart{
 					else if (columnText == TDLCoverageUtil.NOT_COVERED) {
 						columnText = "NC";
 					}
-					else if (columnText == TDLCoverageUtil.NOT_COVERABLE) {
+					else if (columnText == TDLCoverageUtil.NOT_TRACED) {
 						columnText = "-";
 					}
 					break;
@@ -382,10 +382,10 @@ private class CoverageFilter extends ViewerFilter {
 					return  (coverage == TDLCoverageUtil.COVERED || coverage == TDLCoverageUtil.NOT_COVERED);
 				}
 			}
-			else if (coverageFilterIndex == 4) {//elements that are not coverable
+			else if (coverageFilterIndex == 4) {//elements that are not Traced
 				if (element instanceof ObjectCoverageStatus) {
 					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
-					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOT_COVERABLE;
+					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOT_TRACED;
 				}
 			}
 			return false;

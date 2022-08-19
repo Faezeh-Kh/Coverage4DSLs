@@ -6,19 +6,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -36,25 +36,25 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -63,7 +63,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -72,7 +72,7 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
@@ -81,19 +81,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -111,25 +111,25 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -138,7 +138,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -147,7 +147,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
@@ -156,19 +156,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -186,25 +186,25 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -213,7 +213,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -222,7 +222,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
@@ -231,19 +231,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -261,25 +261,25 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -288,7 +288,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -297,26 +297,26 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#/"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -334,25 +334,25 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -361,7 +361,7 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@condition/@left"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -370,7 +370,7 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ActiveWait_Test/result_coverage/execution-20220809_200408/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
 </TDLTestCoverage:TestSuiteCoverage>

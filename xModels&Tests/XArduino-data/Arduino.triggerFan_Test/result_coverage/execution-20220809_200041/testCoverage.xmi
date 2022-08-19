@@ -6,49 +6,49 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -66,7 +66,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -78,13 +78,13 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -105,25 +105,25 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -132,7 +132,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -144,7 +144,7 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
@@ -153,49 +153,49 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test2.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test2.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -213,7 +213,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -225,13 +225,13 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -252,25 +252,25 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -279,7 +279,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -291,7 +291,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
@@ -300,49 +300,49 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test3.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test3.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test3.xmi#//@boards.0/@digitalPins.4"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -360,7 +360,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -372,13 +372,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -399,25 +399,25 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -426,7 +426,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -438,7 +438,7 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
@@ -447,49 +447,49 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test4.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test4.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test4.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest_test4.xmi#//@boards.0/@analogPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -507,7 +507,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -519,13 +519,13 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -546,25 +546,25 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -573,7 +573,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -585,56 +585,56 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
   </testCaseCoverages>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#/"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.4/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@digitalPins.5/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@boards.0/@analogPins.0/@module"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -652,7 +652,7 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -664,13 +664,13 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -691,25 +691,25 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.2"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@block/@instructions.0/@block/@instructions.3/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -718,7 +718,7 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@left"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.2/@condition/@right"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -730,7 +730,7 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.triggerFan_Test/result_coverage/execution-20220809_200041/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
 </TDLTestCoverage:TestSuiteCoverage>

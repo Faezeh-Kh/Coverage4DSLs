@@ -21,19 +21,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.1/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -213,13 +213,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test2.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test2.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -399,13 +399,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test2.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test2.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -585,7 +585,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test4.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -777,7 +777,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -963,7 +963,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -1149,7 +1149,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -1335,7 +1335,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -1521,7 +1521,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -1707,7 +1707,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -1893,7 +1893,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -2079,7 +2079,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -2265,7 +2265,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -2451,7 +2451,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test5.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -2637,7 +2637,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -2823,7 +2823,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -3009,7 +3009,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -3195,7 +3195,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -3381,7 +3381,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.4"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -3561,7 +3561,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test2.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -3747,7 +3747,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
@@ -3933,7 +3933,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.2/@entry"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/PSSM.JavaEJB_Test/result_coverage/execution-20220815_162851/modelUnderTest_test1.xmi#//@statemachine/@regions.0/@vertice.3"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">

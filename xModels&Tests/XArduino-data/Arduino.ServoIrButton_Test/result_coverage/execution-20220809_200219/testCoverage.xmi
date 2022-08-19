@@ -6,31 +6,31 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -42,7 +42,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@variable"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -60,19 +60,19 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -81,13 +81,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -99,13 +99,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -123,31 +123,31 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -159,7 +159,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.0/@variable"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -177,19 +177,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -198,13 +198,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -216,13 +216,13 @@
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -240,31 +240,31 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -276,7 +276,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.0/@variable"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -294,19 +294,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -315,13 +315,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -333,13 +333,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -357,31 +357,31 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test4.xmi#/"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test4.xmi#//@boards.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.3"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -393,7 +393,7 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.0/@variable"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -411,19 +411,19 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -432,13 +432,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@left"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest_test2.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right/@right"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -450,13 +450,13 @@
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1"/>
     </tcObjectCoverageStatus>
-    <tcObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
       <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1/@operand"/>
     </tcObjectCoverageStatus>
     <tcObjectCoverageStatus>
@@ -472,31 +472,31 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#/"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.0/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.1/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.2/@module"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@boards.0/@digitalPins.3/@module"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -508,7 +508,7 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.0/@variable"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -526,19 +526,19 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.1/@operand/@right"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -547,13 +547,13 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@left"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.0/@condition/@right/@right"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
@@ -565,13 +565,13 @@
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.0/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1"/>
   </tsObjectCoverageStatus>
-  <tsObjectCoverageStatus coverageStatus="NOTCOVERABLE">
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
     <modelObject href="/Arduino.ServoIrButton_Test/result_coverage/execution-20220809_200219/modelUnderTest.xmi#//@sketches.0/@block/@instructions.1/@block/@instructions.1/@block/@instructions.1/@operand"/>
   </tsObjectCoverageStatus>
   <tsObjectCoverageStatus>

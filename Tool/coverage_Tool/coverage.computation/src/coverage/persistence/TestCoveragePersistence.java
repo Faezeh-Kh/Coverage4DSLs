@@ -105,8 +105,8 @@ public class TestCoveragePersistence implements IEngineAddon{
 		else if (coverage == TDLCoverageUtil.NOT_COVERED) {
 			return CoverageStatus.NOTCOVERED;
 		}
-		else if (coverage == TDLCoverageUtil.NOT_COVERABLE) {
-			return CoverageStatus.NOTCOVERABLE;
+		else if (coverage == TDLCoverageUtil.NOT_TRACED) {
+			return CoverageStatus.NOTTRACED;
 		}
 		return null;
 	}
