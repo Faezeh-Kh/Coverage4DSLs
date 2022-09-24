@@ -1,12 +1,40 @@
 # From Coverage Computation to Fault Localization for Executable DSLs
-This repository contains the tool and the evaluation data of our paper titled "From Coverage Computation to Fault Localization: A Generic Framework for Domain-Specific Languages", submitted to SLE 2022.
+This repository contains the tool and the evaluation data of our paper titled "From Coverage Computation to Fault Localization: A Generic Framework for Domain-Specific Languages", recently accepted at SLE 2022.
 
-## Content Overview
+## Introduction
+A multitude of Domain-Specific Languages (DSLs) are available nowadays to describe the dynamic aspects of systems as *behavioral models*
+(such as state machines, activity diagrams, and process models).
+For such DSLs, the modeling environment should not only support creating and executing behavioral models, but also dynamic Verification and Validation (V&V) techniques to assess as early as possible the correctness of the developed models. As these techniques need model execution, we focus in this paper on DSLs with operational semantics, referred to as *executable DSLs (xDSLs)*.
+
+A very prominent dynamic V&V technique is testing, which involves executing systems and observing whether they act as expected. 
+Some testing approaches are already proposed for xDSLs which allow defining test suites for executable models.
+To test models efficiently, we need both to evaluate the quality of the defined test cases, and to localize the model's faults when test cases fail.
+Both of these concerns can be addressed by measuring the *coverage* of each executed test case, i.e., the model elements involved in the test case execution. 
+In the realm of programming languages, both coverage metrics and coverage-based fault localization techniques, such as Spectrum-Based Fault Localization (SBFL), have existed for a long time.
+However, to our knowledge, these concerns are still understudied when it comes to xDSLs, for which coverage tools still have to be manually developed.
+
+In this paper, we propose a generic framework for coverage computation and fault localization of domain-specific models which is applicable to a wide range of xDSLs.
+Considering a test suite for an executable model, we analyze the model's execution traces to extract its covered elements which compose the coverage matrix for the test suite.
+In addition, our proposed framework allows the language engineers (who are in charge of designing xDSLs) to customize the generic coverage measurements for their xDSLs. 
+Finally, we investigate the application of the computed coverage measurements for fault localization in executable models based on SBFL techniques. In particular, we reuse an existing collection of SBFL techniques for calculating the suspiciousness-based ranking of elements of executable models.
+
+<p align="center">
+    <img src="Screenshots/Overview.jpg"  width="100%" height="80%">
+</p>
+
+This repository contains our provided tool built atop the Eclipse GEMOC Studio.
+We also conducted an empirical evaluation of our approach for four different xDSLs to assess its applicability. 
+In total, we wrote 294 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
+We injected faults into these executable models using [WODEL model mutation tool](https://gomezabajo.github.io/Wodel/) and we executed our approach for 1261 mutants of the executable models.
+We observed that meaningful coverage matrices can be automatically constructed for the test suites of all examined mutants and that it allows the application of existing SBFL techniques for successfully tracking the faulty model elements, thus demonstrating the usefulness of the generically computed coverage measurements.
+
+## Overview
 1.	*Tool*: a set of eclipse plugins
 - **coverage_Tool**: the coverage computation tool (`coverage.computation` plugin) and the textual syntax of the DSL-Specific Coverage metalanguage.
 - **faultLocalization_Tool**: the fault localization tool (`faultLocalization` plugin).
-- **testing_tool**: the plugins of the testing framework of Khorram et al. [[1]](https://faezeh-kh.github.io/publication/sosym22/) that we used for the definition and execution of the test cases on the executable models.
-2.	*xDSLs*: the implementation of four Executable Domain-Specific Languages (xDSLs) of our case study, including:
+- **testing_tool**: the plugins of our testing framework that are used for the definition and execution of the test cases for executable models (To access the latest version of them, use the [main repository](https://gitlab.univ-nantes.fr/naomod/faezeh-public/xtdl)).
+- **evaluation_tool**: a tool for evaluating both coverage and fault localization tools.
+2. *xDSLs*: the implementation of four Executable Domain-Specific Languages (xDSLs) of our case study, including:
     
     2.1. **xFSM** (taken from [GEMOC official samples](https://github.com/eclipse/gemoc-studio/tree/master/official_samples/K3FSM))
 
@@ -174,3 +202,10 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
     <p align="center">
         <img src="Screenshots/flView-final.png" width="70%" height="40%">
     </p>
+
+## Replicating Evaluation
+
+
+## Acknowledgment
+This work has received funding from the [EU H2020 research project Lowcomote](https://www.lowcomote.eu/), under the Marie Sk\l{}odowska Curie grant agreement No 813884.
+It is also partially funded by the Austrian Science Fund (P 30525-N31) and by the Austrian Federal Ministry for Digital and Economic Affairs and the National Foundation for Research, Technology and Development (CDG).
