@@ -33,7 +33,6 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - **coverage_Tool**: the coverage computation tool (`coverage.computation` plugin) and the textual syntax of the DSL-Specific Coverage metalanguage.
 - **faultLocalization_Tool**: the fault localization tool (`faultLocalization` plugin).
 - **testing_tool**: the plugins of our testing framework that are used for the definition and execution of the test cases for executable models (To access the latest version of them, use the [main repository](https://gitlab.univ-nantes.fr/naomod/faezeh-public/xtdl)).
-- **evaluation_tool**: a tool for evaluating both coverage and fault localization tools.
 2. *xDSLs*: the implementation of four Executable Domain-Specific Languages (xDSLs) of our case study, including:
     
     2.1. **xFSM** (taken from [GEMOC official samples](https://github.com/eclipse/gemoc-studio/tree/master/official_samples/K3FSM))
@@ -59,9 +58,10 @@ We observed that meaningful coverage matrices can be automatically constructed f
 
     **NOTE**: There are also Excel files containing data related to the evaluation of the `fault localization` component.
 
-1. *Data4CodeCover*: the equivalent java implementation of the xMiniJava models (taken from [here](https://www.cambridge.org/resources/052182060X/#programs)), and the JUnit tests corresponding to the xMiniJava tests. This data is used to compute the statement coverage of the JUnit tests with [CodeCover](http://codecover.org/index.html) tool.
-   
-2. An Excel file containing detailed data of the paper’s evaluation.
+4. *Evaluation*: 
+- a tool for evaluating both coverage and fault localization tools (`org.imt.sbfl.evaluation` plugin) to answer the first and the third research questions of the paper.
+- *Data4CodeCover*: the equivalent java implementation of the xMiniJava models (taken from [here](https://www.cambridge.org/resources/052182060X/#programs)), and the JUnit tests corresponding to the xMiniJava tests. This data is used to compute the statement coverage of the JUnit tests with [CodeCover](http://codecover.org/index.html) tool to answer the second research question of the paper.
+- An Excel file containing detailed data of the paper’s evaluation.
 
 ## Setup
 **Requirements**: 
@@ -99,7 +99,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
     
     You may receive an error as "Cannot perform the operation" for two plugins: `converters to/from TDL` and `TDL graphical editor`. In this case, Eclipse will suggest skipping their installation and installing everything else. You can continue with this option as these two plugins are not necessary for our tool.
 
-4.	An empty workspace will be shown. Import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the *Tool* directory) -> `Select Folder` -> `Finish`.
+4.	An empty workspace will be shown. Import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Tool** directory) -> `Select Folder` -> `Finish`.
 
 <p align="center">
     <img src="Screenshots/importProjects.png"  width="70%" height="70%">
@@ -202,9 +202,6 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
     <p align="center">
         <img src="Screenshots/flView-final.png" width="70%" height="40%">
     </p>
-
-## Replicating Evaluation
-
 
 ## Acknowledgment
 This work has received funding from the [EU H2020 research project Lowcomote](https://www.lowcomote.eu/), under the Marie Sk\l{}odowska Curie grant agreement No 813884.

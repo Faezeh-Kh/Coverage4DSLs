@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Evaluation
-Bundle-SymbolicName: org.imt.tdl.sbfl.evaluation;singleton:=true
+Bundle-SymbolicName: org.imt.sle22.evaluation;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.imt.tdl.sbfl.evaluation
 Export-Package: org.imt.tdl.sbfl.evaluation
 Require-Bundle: org.imt.tdl.testResult;bundle-version="1.0.0",
- org.imt.tdl.coverage;bundle-version="1.0.0",
+ coverage.computation;bundle-version="1.0.0",
  org.imt.k3tdl.tdlInterpreter;bundle-version="1.0.0",
- org.imt.tdl.faultLocalization;bundle-version="1.0.0",
+ faultLocalization;bundle-version="1.0.0",
  org.eclipse.core.resources;bundle-version="3.15.0",
  org.eclipse.emf.transaction;bundle-version="1.9.1",
  wodel.models;bundle-version="1.0.0",

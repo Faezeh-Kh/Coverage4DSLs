@@ -8,8 +8,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import coverage.computation.TDLCoverageUtil;
-import coverage.computation.TDLTestCaseCoverage;
 
 import DSLSpecificCoverage.ConditionType;
 import DSLSpecificCoverage.CoverageByContent;
@@ -19,6 +17,8 @@ import DSLSpecificCoverage.Ignore;
 import DSLSpecificCoverage.ConditionalIgnore;
 import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.Rule;
+import coverage.computation.TDLCoverageUtil;
+import coverage.computation.TDLTestCaseCoverage;
 
 public class DSLSpecificCoverageExecutor {
 

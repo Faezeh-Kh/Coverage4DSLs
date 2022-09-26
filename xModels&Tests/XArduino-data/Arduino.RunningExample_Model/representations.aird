@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_FLMycHJJEeyz5PVJGU_TdA" version="14.5.1.202106111100">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_FLMycHJJEeyz5PVJGU_TdA" version="15.0.0.202201261500">
   <semanticResources>gemoc-gen/execution/execution-20220115_102121/sensor_led.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220118_191345/sensorLed_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220801_185330/sensorLed_withDefect.model</semanticResources>
@@ -8,4 +8,10 @@
   <semanticResources>gemoc-gen/execution/execution-20220813_193901/runningExample_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193906/runningExample_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193911/runningExample_withDefect.model</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220926_175630/runningExample_withDefect.model</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220926_175641/runningExample_withDefect.model</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220926_175646/runningExample_withDefect.model</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220926_175651/runningExample_withDefect.model</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220926_175701/runningExample_withDefect.model</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20220926_175722/runningExample_withDefect.model</semanticResources>
 </viewpoint:DAnalysis>
