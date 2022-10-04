@@ -16,12 +16,12 @@
   </boards>
   <sketches xmi:id="_7Ka1ahgdEe2XwezYsr8gMg" name="sketch" board="_7Ka1YRgdEe2XwezYsr8gMg">
     <block xmi:id="_7Ka1axgdEe2XwezYsr8gMg">
-      <instructions xsi:type="arduino:While" xmi:id="_7Ka1bBgdEe2XwezYsr8gMg">
+      <instructions xsi:type="arduino:If" xmi:id="_7Ka1bBgdEe2XwezYsr8gMg">
         <block xmi:id="_7Ka1bRgdEe2XwezYsr8gMg">
           <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1bhgdEe2XwezYsr8gMg" module="_7Ka1YxgdEe2XwezYsr8gMg">
             <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1bxgdEe2XwezYsr8gMg" value="1"/>
           </instructions>
-          <instructions xsi:type="arduino:While" xmi:id="_7Ka1cBgdEe2XwezYsr8gMg">
+          <instructions xsi:type="arduino:If" xmi:id="_7Ka1cBgdEe2XwezYsr8gMg">
             <block xmi:id="_7Ka1cRgdEe2XwezYsr8gMg">
               <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1chgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg">
                 <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1cxgdEe2XwezYsr8gMg" value="1"/>
@@ -37,27 +37,16 @@
               <right xsi:type="arduino:IntegerModuleGet" xmi:id="_7Ka1ehgdEe2XwezYsr8gMg" module="_7Ka1ZRgdEe2XwezYsr8gMg"/>
             </condition>
           </instructions>
-          <instructions xsi:type="arduino:If" xmi:id="_7Ka1exgdEe2XwezYsr8gMg">
-            <block xmi:id="_7Ka1fBgdEe2XwezYsr8gMg">
-              <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1fRgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg">
-                <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1fhgdEe2XwezYsr8gMg"/>
-              </instructions>
-            </block>
-            <condition xsi:type="arduino:BooleanModuleGet" xmi:id="_7Ka1fxgdEe2XwezYsr8gMg" module="_7Ka1ZxgdEe2XwezYsr8gMg"/>
-          </instructions>
         </block>
         <condition xsi:type="arduino:BinaryBooleanExpression" xmi:id="_7Ka1gBgdEe2XwezYsr8gMg" operator="equal">
           <left xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1gRgdEe2XwezYsr8gMg" value="1"/>
           <right xsi:type="arduino:IntegerModuleGet" xmi:id="_7Ka1ghgdEe2XwezYsr8gMg" module="_7Ka1aRgdEe2XwezYsr8gMg"/>
         </condition>
-      </instructions>
-      <instructions xsi:type="arduino:If" xmi:id="_7Ka1gxgdEe2XwezYsr8gMg">
-        <block xmi:id="_7Ka1hBgdEe2XwezYsr8gMg">
-          <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_7Ka1hRgdEe2XwezYsr8gMg" module="_7Ka1YxgdEe2XwezYsr8gMg">
-            <operand xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1hhgdEe2XwezYsr8gMg"/>
+        <elseBlock xmi:id="_Th0v0EPpEe2nWKIwdiJvKw">
+          <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_UkkmQEPpEe2nWKIwdiJvKw" module="_7Ka1YxgdEe2XwezYsr8gMg">
+            <operand xsi:type="arduino:IntegerConstant" xmi:id="_UkkmQUPpEe2nWKIwdiJvKw"/>
           </instructions>
-        </block>
-        <condition xsi:type="arduino:BooleanModuleGet" xmi:id="_7Ka1hxgdEe2XwezYsr8gMg" module="_7Ka1YxgdEe2XwezYsr8gMg"/>
+        </elseBlock>
       </instructions>
     </block>
   </sketches>

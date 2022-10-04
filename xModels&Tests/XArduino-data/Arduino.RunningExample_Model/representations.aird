@@ -3,9 +3,9 @@
   <semanticResources>gemoc-gen/execution/execution-20220115_102121/sensor_led.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220118_191345/sensorLed_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220801_185330/sensorLed_withDefect.model</semanticResources>
-  <semanticResources>runningExample_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193849/runningExample_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193901/runningExample_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193906/runningExample_withDefect.model</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193911/runningExample_withDefect.model</semanticResources>
+  <semanticResources>runningExample_withDefect.model</semanticResources>
 </viewpoint:DAnalysis>
