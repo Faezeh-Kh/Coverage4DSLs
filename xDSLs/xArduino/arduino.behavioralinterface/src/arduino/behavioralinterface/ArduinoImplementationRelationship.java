@@ -24,7 +24,7 @@ public class ArduinoImplementationRelationship extends SimpleImplementationRelat
 		result.put("IRSensor_notDetected", "arduino.semantics.InfraRedSensorAspect.notDetect");
 		result.put("soundSensor_detected", "arduino.semantics.SoundSensorAspect.detect");
 		//Exposed rules
-		result.put("Pin_level_changed", "arduino.DigitalPin.changeLevel");
+		result.put("pin_level_changed", "arduino.DigitalPin.changeLevel");
 		return result;
 	}
 	private static Set<String> computeRunToCompletionMap(List<Event> events) {
