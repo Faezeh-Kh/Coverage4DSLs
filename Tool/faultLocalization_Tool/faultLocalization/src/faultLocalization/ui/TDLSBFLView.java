@@ -5,10 +5,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.presentation.EcoreEditor;
 import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
@@ -17,6 +22,7 @@ import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.ITableColorProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
@@ -25,25 +31,34 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.swt.widgets.TreeItem;
+import org.eclipse.ui.IEditorDescriptor;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ViewPart;
-import org.imt.tdl.testResult.TDLTestResultUtil;
-
 import coverage.computation.TDLCoverageUtil;
 import faultLocalization.SBFLMeasures;
 import faultLocalization.SuspiciousnessRanking;
+import org.imt.tdl.testResult.TDLTestResultUtil;
 
 public class TDLSBFLView extends ViewPart{
-
-	public static final String ID = "rt.ui.sbflView"; //$NON-NLS-1$
+	
+	public static final String ID = "org.imt.tdl.rt.ui.sbflView"; //$NON-NLS-1$
 	
 	private TreeViewer m_treeViewer;
 	
@@ -57,6 +72,9 @@ public class TDLSBFLView extends ViewPart{
 	
 	@Override
 	public void createPartControl(Composite parent) {
+		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTsCoveragePercentage() == 0) {
+			TDLCoverageUtil.getInstance().runCoverageComputation();
+		}
 		SuspiciousnessRanking suspComputing = new SuspiciousnessRanking();
 		suspComputing.calculateMeasures();
 		
@@ -176,6 +194,36 @@ public class TDLSBFLView extends ViewPart{
 	    final Tree addressTree = new Tree(sbflInfo, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
 		addressTree.setHeaderVisible(true);
 		addressTree.setLinesVisible(true);
+		addressTree.addListener(SWT.MouseDown, new Listener() {
+			@Override
+			public void handleEvent(Event event) {
+				Point point = new Point(event.x, event.y);
+				TreeItem item = addressTree.getItem(point);
+				if (item == null || item.getData() == null) {
+					//do nothing
+				}
+				else if (item.getData() instanceof SBFLMeasures sbflMeasure) {
+					EObject eobjectToOpen = sbflMeasure.getModelObject();		
+					IFile fileToOpen = ResourcesPlugin.getWorkspace().getRoot().getFile(
+							new Path(eobjectToOpen.eResource().getURI().toPlatformString(true)));
+					IEditorDescriptor desc = PlatformUI.getWorkbench().getEditorRegistry().
+							getDefaultEditor(fileToOpen.getName());
+					IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+					try {
+						IEditorPart editor = page.openEditor(new FileEditorInput(fileToOpen), desc.getId());
+						TreeViewer tviewer = (TreeViewer)((EcoreEditor) editor).getViewer();
+						ResourceSet resSet =(ResourceSet) tviewer.getInput();
+						EObject eobjectToOpen2 = resSet.getResources().get(0).getEObject(
+								eobjectToOpen.eResource().getURIFragment(eobjectToOpen));
+						tviewer.setSelection(new StructuredSelection(eobjectToOpen2));
+						
+					} catch (PartInitException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		});
 		m_treeViewer = new TreeViewer(addressTree);
 
 		TreeColumn metaclassColumn = new TreeColumn(addressTree, SWT.LEFT);
@@ -258,8 +306,8 @@ public class TDLSBFLView extends ViewPart{
 			if (parentElement instanceof List<?>) {
 				return ((List<?>) parentElement).toArray();
 			}
-			if (parentElement instanceof SuspiciousnessRanking) {
-				return ((SuspiciousnessRanking) parentElement).getElementsSBFLMeasures().toArray();
+			if (parentElement instanceof SuspiciousnessRanking suspRanking) {
+				return suspRanking.getElementsSBFLMeasures().toArray();
 			}
 			return new Object[0]; 
 		}
@@ -280,8 +328,8 @@ public class TDLSBFLView extends ViewPart{
 			if (element instanceof List<?>) {
 				return ((List<?>) element).size() > 0;
 			}
-			if (element instanceof SuspiciousnessRanking) {
-				return ((SuspiciousnessRanking) element).getElementsSBFLMeasures().size() > 0;
+			if (element instanceof SuspiciousnessRanking suspRanking) {
+				return suspRanking.getElementsSBFLMeasures().size() > 0;
 			}
 			return false;
 		}
@@ -321,8 +369,7 @@ public class TDLSBFLView extends ViewPart{
 
 		@Override
 		public Color getBackground(Object element, int columnIndex) {
-			if (element instanceof SBFLMeasures) {
-				SBFLMeasures sbflMeasures = (SBFLMeasures) element;
+			if (element instanceof SBFLMeasures sbflMeasures) {
 				if (columnIndex > 1 && columnIndex < sbflMeasures.getCoverage().size() + 2) {
 					//the test case coverages
 					String tcEntry = sbflMeasures.getCoverage().get(columnIndex-2);
@@ -345,16 +392,14 @@ public class TDLSBFLView extends ViewPart{
 		@Override
 		public String getColumnText(Object element, int columnIndex) {
 			String columnText = "";
-			if (element instanceof String) {
-				String result = (String) element;
+			if (element instanceof String result) {
 				switch (columnIndex) {
 				case 0:
 					columnText = result;
 					break;
 				}
 			}
-			if (element instanceof SBFLMeasures) {
-				SBFLMeasures sbflMeasures = (SBFLMeasures) element;
+			if (element instanceof SBFLMeasures sbflMeasures) {
 				int sbflOperandsStartIndex = (sbflMeasures.getCoverage().size() + 2);
 				if (columnIndex == 0 && sbflMeasures.getMetaclass() != null) {
 					columnText = sbflMeasures.getMetaclass().getName();
@@ -452,13 +497,10 @@ private class ElementFilter extends ViewerFilter {
 		if (elementFilterIndex == -1 || elementFilterIndex == 0) {
 			return true;
 		}else {
-			if (element instanceof SBFLMeasures) {
-				SBFLMeasures parameters = (SBFLMeasures) element;
+			if (element instanceof SBFLMeasures parameters) {
 				if (parameters.getMetaclass() == null) {
 					return false;
 				}else {
-					int index = elementFilterIndex;
-					List<String> filters = classFilters;
 					String filter = classFilters.get(elementFilterIndex-1);
 					String objectType = parameters.getMetaclass().getName();
 					if (objectType.equals(filter)) {
