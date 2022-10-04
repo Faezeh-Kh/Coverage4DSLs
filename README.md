@@ -68,7 +68,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - *Operating System*: Windows 10
 - Java 16
 - GEMOC Studio Version 3.5.0: https://gemoc.org/download.html
-- TDL: https://tdl.etsi.org/eclipse/latest/
+- TDL: https://tdl.etsi.org/eclipse/latest/ (TDL Metamodel Version 1.4.0)
 
 After downloading GEMOC Studio, unzip the folder and run it:
 1.	Run `GemocStudio` application
@@ -134,7 +134,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
 - `Arduino.RunningExample_Test` project containing:
 
-    a)	`testSuite.tdlan2`: a test suite for the model comprising 6 test cases, one of those briefly drawn in the following Figure and completely shown in the next tool screenshot using TDL textual syntax.
+    a)	`testSuite.tdlan2`: a test suite for the model comprising 4 test cases, one of those briefly drawn in the following Figure and completely shown in the next tool screenshot using TDL textual syntax.
     
     <p align="center">
         <img src="Screenshots/xArduino-test.jpg"  width="40%" height="40%">
