@@ -25,7 +25,7 @@ Finally, we investigate the application of the computed coverage measurements fo
 This repository contains our provided tool built atop the Eclipse GEMOC Studio.
 We also conducted an empirical evaluation of our approach for four different xDSLs to assess its applicability. 
 In total, we wrote 294 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
-We injected faults into these executable models using [WODEL model mutation tool](https://gomezabajo.github.io/Wodel/) and we executed our approach for 1261 mutants of the executable models.
+We injected faults into these executable models using [WODEL model mutation tool](https://gomezabajo.github.io/Wodel/) and we executed our approach for 1252 mutants of the executable models.
 We observed that meaningful coverage matrices can be automatically constructed for the test suites of all examined mutants and that it allows the application of existing SBFL techniques for successfully tracking the faulty model elements, thus demonstrating the usefulness of the generically computed coverage measurements.
 
 ## Overview
