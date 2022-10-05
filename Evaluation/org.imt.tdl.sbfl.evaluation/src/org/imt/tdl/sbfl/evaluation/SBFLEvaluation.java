@@ -1,6 +1,7 @@
 package org.imt.tdl.sbfl.evaluation;
 
 import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -29,11 +30,11 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.etsi.mts.tdl.Package;
 import org.etsi.mts.tdl.TestDescription;
-import org.imt.tdl.coverage.ObjectCoverageStatus;
-import org.imt.tdl.coverage.TDLCoverageUtil;
-import org.imt.tdl.coverage.TDLTestSuiteCoverage;
-import org.imt.tdl.faultLocalization.SBFLMeasures;
-import org.imt.tdl.faultLocalization.SuspiciousnessRanking;
+import coverage.computation.ObjectCoverageStatus;
+import coverage.computation.TDLCoverageUtil;
+import coverage.computation.TDLTestSuiteCoverage;
+import faultLocalization.SBFLMeasures;
+import faultLocalization.SuspiciousnessRanking;
 import org.imt.tdl.testResult.TDLTestSuiteResult;
 
 import appliedMutations.InformationChanged;
