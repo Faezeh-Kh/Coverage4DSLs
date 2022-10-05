@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TestCoverage="http://coverage.metamodel/TestCoverage" coveragePercentage="100.0">
+  <testSuite href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/testSuite.tdlan2#/"/>
+  <testCaseCoverages coveragePercentage="65.0">
+    <testCase href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/testSuite.tdlan2#//@packagedElement.4"/>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="75.0">
+    <testCase href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/testSuite.tdlan2#//@packagedElement.5"/>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#//@boards.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.3"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#//@sketches.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="90.0">
+    <testCase href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/testSuite.tdlan2#//@packagedElement.6"/>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#//@boards.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#//@boards.0/@digitalPins.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#//@boards.0/@digitalPins.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#//@sketches.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="100.0">
+    <testCase href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/testSuite.tdlan2#//@packagedElement.7"/>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test4.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test4.xmi#//@boards.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#//@boards.0/@digitalPins.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi#//@boards.0/@digitalPins.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi#//@boards.0/@digitalPins.3"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3/@module"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test4.xmi#//@sketches.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTTRACED">
+      <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#/"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.0/@module"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.1/@module"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.2/@module"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@boards.0/@digitalPins.3/@module"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@block/@instructions.1"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@condition/@right"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@condition/@right"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@elseBlock/@instructions.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOTTRACED">
+    <modelObject href="/Arduino.RunningExample_Test/result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi#//@sketches.0/@block/@instructions.0/@block/@instructions.1/@elseBlock/@instructions.0/@operand"/>
+  </tsObjectCoverageStatus>
+</TestCoverage:TestSuiteCoverage>

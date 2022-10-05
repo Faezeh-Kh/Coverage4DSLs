@@ -5,69 +5,37 @@ Package TestSuite {
 	PushButton button (_name = "button1");
 	DigitalPin alarm_pin (_name = "alarm_pin", level =?);
 	//test cases
+	
 	Test Description test1 uses configuration sensorLedConfiguration{
 		tester.reactiveGate sends button_pressed (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
 	}
 	
 	Test Description test2 uses configuration sensorLedConfiguration{
 		tester.reactiveGate sends button_pressed (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
-		tester.reactiveGate sends IRSensor_detected (sensor = IRSensor) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
-		terminate;
+		arduino.reactiveGate sends pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
+		tester.reactiveGate sends button_released (button = button) to arduino.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = led_pin (level = '0')) to tester.reactiveGate;
 	}
 	
 	Test Description test3 uses configuration sensorLedConfiguration{
 		tester.reactiveGate sends button_pressed (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
 		tester.reactiveGate sends IRSensor_detected (sensor = IRSensor) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
 		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
-		terminate;
+		arduino.reactiveGate sends pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
 	}
 	
 	Test Description test4 uses configuration sensorLedConfiguration{
 		tester.reactiveGate sends button_pressed (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
 		tester.reactiveGate sends IRSensor_detected (sensor = IRSensor) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
 		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
-		tester.reactiveGate sends IRSensor_notDetected (sensor = IRSensor) to arduino.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
 		tester.reactiveGate sends button_released (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '0')) to tester.reactiveGate;
-		terminate;
-	}
-	
-	Test Description test5 uses configuration sensorLedConfiguration{
-		tester.reactiveGate sends button_pressed (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
-		tester.reactiveGate sends IRSensor_detected (sensor = IRSensor) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
-		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
-		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
-		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
-		terminate;
-	}
-	
-	Test Description test6 uses configuration sensorLedConfiguration{
-		tester.reactiveGate sends button_pressed (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '1')) to tester.reactiveGate;
-		tester.reactiveGate sends IRSensor_detected (sensor = IRSensor) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
-		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
-		component tester waits for '1000';
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '1')) to tester.reactiveGate;
-		tester.reactiveGate sends IRSensor_notDetected (sensor = IRSensor) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = alarm_pin (level = '0')) to tester.reactiveGate;
-		tester.reactiveGate sends button_released (button = button) to arduino.reactiveGate;
-		arduino.reactiveGate sends Pin_level_changed (pin = led_pin (level = '0')) to tester.reactiveGate;
+		arduino.reactiveGate sends pin_level_changed (pin = led_pin (level = '0')) to tester.reactiveGate;
 	}
 	//data types
 	Type Board extends NamedElement ( project of type Project ) with {
@@ -280,14 +248,14 @@ Package TestSuite {
 		AcceptedEvent ;
 	} ;
 	IRSensor_notDetected IRSensor_notDetected ( sensor = ? ) ;
-	Type Pin_level_changed ( pin of type Pin ) with {
+	Type pin_level_changed ( pin of type Pin ) with {
 		ExposedEvent ;
 	} ;
-	Pin_level_changed Pin_level_changed ( pin = ? ) ;
+	pin_level_changed pin_level_changed ( pin = ? ) ;
 	
 	//test configuration
 	Gate Type genericGateType accepts modelExecutionCommand ;
-	Gate Type reactiveGateType accepts _run, button_pressed , button_released , IRSensor_detected , IRSensor_notDetected , Pin_level_changed ;
+	Gate Type reactiveGateType accepts _run, button_pressed , button_released , IRSensor_detected , IRSensor_notDetected , pin_level_changed ;
 	Gate Type oclGateType accepts OCL ;
 	Component Type TestSystem having {
 		gate genericGate of type genericGateType ;

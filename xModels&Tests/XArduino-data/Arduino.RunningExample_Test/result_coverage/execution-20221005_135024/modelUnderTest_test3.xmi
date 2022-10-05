@@ -16,19 +16,19 @@
   </boards>
   <sketches name="sketch" board="//@boards.0">
     <block>
-      <instructions xsi:type="arduino:While">
+      <instructions xsi:type="arduino:If">
         <block>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
             <operand xsi:type="arduino:IntegerConstant" value="1"/>
           </instructions>
-          <instructions xsi:type="arduino:While">
+          <instructions xsi:type="arduino:If">
             <block>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
                 <operand xsi:type="arduino:IntegerConstant" value="1"/>
               </instructions>
               <instructions xsi:type="arduino:Delay" value="1000"/>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
-                <operand xsi:type="arduino:IntegerConstant"/>
+                <operand xsi:type="arduino:IntegerConstant" value="1"/>
               </instructions>
               <instructions xsi:type="arduino:Delay" value="1000"/>
             </block>
@@ -36,28 +36,22 @@
               <left xsi:type="arduino:IntegerConstant" value="1"/>
               <right xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.1/@module"/>
             </condition>
-          </instructions>
-          <instructions xsi:type="arduino:If">
-            <block>
+            <elseBlock>
               <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.2/@module">
                 <operand xsi:type="arduino:IntegerConstant"/>
               </instructions>
-            </block>
-            <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.2/@module"/>
+            </elseBlock>
           </instructions>
         </block>
         <condition xsi:type="arduino:BinaryBooleanExpression" operator="equal">
           <left xsi:type="arduino:IntegerConstant" value="1"/>
           <right xsi:type="arduino:IntegerModuleGet" module="//@boards.0/@digitalPins.3/@module"/>
         </condition>
-      </instructions>
-      <instructions xsi:type="arduino:If">
-        <block>
+        <elseBlock>
           <instructions xsi:type="arduino:ModuleAssignment" module="//@boards.0/@digitalPins.0/@module">
             <operand xsi:type="arduino:IntegerConstant"/>
           </instructions>
-        </block>
-        <condition xsi:type="arduino:BooleanModuleGet" module="//@boards.0/@digitalPins.0/@module"/>
+        </elseBlock>
       </instructions>
     </block>
   </sketches>

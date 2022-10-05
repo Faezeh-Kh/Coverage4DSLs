@@ -36,6 +36,11 @@
               <left xsi:type="arduino:IntegerConstant" xmi:id="_7Ka1eRgdEe2XwezYsr8gMg" value="1"/>
               <right xsi:type="arduino:IntegerModuleGet" xmi:id="_7Ka1ehgdEe2XwezYsr8gMg" module="_7Ka1ZRgdEe2XwezYsr8gMg"/>
             </condition>
+            <elseBlock xmi:id="_RBo2gESjEe2M68ktjbqJFg">
+              <instructions xsi:type="arduino:ModuleAssignment" xmi:id="_R8nRAESjEe2M68ktjbqJFg" module="_7Ka1ZxgdEe2XwezYsr8gMg">
+                <operand xsi:type="arduino:IntegerConstant" xmi:id="_R8nRAUSjEe2M68ktjbqJFg"/>
+              </instructions>
+            </elseBlock>
           </instructions>
         </block>
         <condition xsi:type="arduino:BinaryBooleanExpression" xmi:id="_7Ka1gBgdEe2XwezYsr8gMg" operator="equal">
