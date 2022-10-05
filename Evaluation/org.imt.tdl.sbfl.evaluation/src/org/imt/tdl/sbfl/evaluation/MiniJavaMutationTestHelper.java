@@ -2,6 +2,7 @@ package org.imt.tdl.sbfl.evaluation;
 
 import java.io.IOException;
 
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -10,13 +11,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.etsi.mts.tdl.Annotation;
 import org.etsi.mts.tdl.ComponentInstance;
 import org.etsi.mts.tdl.TestDescription;
-import org.imt.minijava.xminiJava.ArrayTypeRef;
-import org.imt.minijava.xminiJava.Class;
-import org.imt.minijava.xminiJava.Member;
-import org.imt.minijava.xminiJava.Method;
-import org.imt.minijava.xminiJava.Program;
-import org.imt.minijava.xminiJava.StringTypeRef;
-import org.imt.minijava.xminiJava.TypeDeclaration;
+import xminiJava.ArrayTypeRef;
+import xminiJava.Class;
+import xminiJava.Member;
+import xminiJava.Method;
+import xminiJava.Program;
+import xminiJava.StringTypeRef;
+import xminiJava.TypeDeclaration;
 
 public class MiniJavaMutationTestHelper {
 

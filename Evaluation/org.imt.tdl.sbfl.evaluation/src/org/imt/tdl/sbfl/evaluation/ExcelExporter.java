@@ -1,6 +1,7 @@
 package org.imt.tdl.sbfl.evaluation;
 
 import java.io.FileNotFoundException;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.imt.tdl.faultLocalization.SBFLMeasures;
+import faultLocalization.SBFLMeasures;
 
 public class ExcelExporter {
 

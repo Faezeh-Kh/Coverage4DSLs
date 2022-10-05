@@ -7,19 +7,19 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.imt.tdl.sbfl.evaluation
 Export-Package: org.imt.tdl.sbfl.evaluation
 Require-Bundle: org.imt.tdl.testResult;bundle-version="1.0.0",
- org.imt.tdl.coverage;bundle-version="1.0.0",
+ coverage.computation;bundle-version="1.0.0",
  org.imt.k3tdl.tdlInterpreter;bundle-version="1.0.0",
- org.imt.tdl.faultLocalization;bundle-version="1.0.0",
+ faultLocalization;bundle-version="1.0.0",
  org.eclipse.core.resources;bundle-version="3.15.0",
  org.eclipse.emf.transaction;bundle-version="1.9.1",
  wodel.models;bundle-version="1.0.0",
  org.eclipse.emf.compare;bundle-version="3.5.3",
  org.eclipse.emf.compare.rcp;bundle-version="2.5.2",
  org.eclipse.ui;bundle-version="3.119.0",
- org.imt.xminijava.model,
  org.imt.tdl.configuration,
  org.eclipse.gmf.runtime.emf.core,
- org.eclipse.gemoc.trace.commons.model
+ org.eclipse.gemoc.trace.commons.model,
+ minijava.abstractsyntax;bundle-version="1.0.0"
 Bundle-ClassPath: lib/commons-codec-1.15.jar,
  lib/commons-collections4-4.4.jar,
  lib/commons-compress-1.21.jar,

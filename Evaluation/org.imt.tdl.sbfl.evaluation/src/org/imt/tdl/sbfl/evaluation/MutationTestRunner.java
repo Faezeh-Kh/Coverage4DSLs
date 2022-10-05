@@ -1,14 +1,15 @@
 package org.imt.tdl.sbfl.evaluation;
 
 import org.etsi.mts.tdl.Annotation;
+
 import org.etsi.mts.tdl.ComponentInstance;
 import org.etsi.mts.tdl.Package;
 import org.etsi.mts.tdl.TestDescription;
 import org.imt.k3tdl.k3dsa.TestConfigurationAspect;
 import org.imt.k3tdl.k3dsa.TestDescriptionAspect;
-import org.imt.tdl.coverage.TDLCoverageUtil;
-import org.imt.tdl.coverage.TDLTestCaseCoverage;
-import org.imt.tdl.coverage.TDLTestSuiteCoverage;
+import coverage.computation.TDLCoverageUtil;
+import coverage.computation.TDLTestCaseCoverage;
+import coverage.computation.TDLTestSuiteCoverage;
 import org.imt.tdl.testResult.TDLTestCaseResult;
 import org.imt.tdl.testResult.TDLTestResultUtil;
 import org.imt.tdl.testResult.TDLTestSuiteResult;
