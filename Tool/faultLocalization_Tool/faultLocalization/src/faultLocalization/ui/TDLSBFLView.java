@@ -82,18 +82,18 @@ public class TDLSBFLView extends ViewPart{
 		
 		Composite contents = new Group(parent, SWT.FILL);
 	    GridLayout layout = new GridLayout();
-		contents.setLayout(layout);
 		layout.numColumns = 2;
-		layout.verticalSpacing = 9;
+		//if the graphical view does not show the filters in small windows, uncomment the following code
+//		layout.makeColumnsEqualWidth = true;
+		contents.setLayout(layout);
 	    GridData gd = new GridData(GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);
 	    gd.horizontalAlignment = SWT.FILL;
 	    contents.setLayoutData(gd);
 	    
-	    Group filter = new Group(contents, SWT.FILL);
+	    Group filter = new Group(contents, SWT.NULL);
 	    layout = new GridLayout();
+	    //layout.verticalSpacing = 9;
 	    filter.setLayout(layout);
-	    layout.numColumns = 1;
-	    layout.verticalSpacing = 9;
 		filter.setText("Filters");
 		gd = new GridData(GridData.FILL_HORIZONTAL);
 		gd.horizontalAlignment = SWT.FILL;
@@ -101,11 +101,10 @@ public class TDLSBFLView extends ViewPart{
 		gd.widthHint = 100;
 		filter.setLayoutData(gd);
 		
-        Group elementFilter = new Group(filter, SWT.FILL);
+        Group elementFilter = new Group(filter, SWT.NULL);
 	    layout = new GridLayout();
+//	    layout.verticalSpacing = 9;
 	    elementFilter.setLayout(layout);
-	    layout.numColumns = 1;
-	    layout.verticalSpacing = 9;
 	    elementFilter.setText("Type of Model Element");
 		gd = new GridData(GridData.FILL_HORIZONTAL);
 		gd.horizontalAlignment = SWT.FILL;
@@ -135,11 +134,10 @@ public class TDLSBFLView extends ViewPart{
 			}
 		});
 		
-        Group techniqueFilter = new Group(filter, SWT.FILL);
+        Group techniqueFilter = new Group(filter, SWT.NULL);
 	    layout = new GridLayout();
-	    techniqueFilter.setLayout(layout);
-	    layout.numColumns = 1;
 	    layout.verticalSpacing = 9;
+	    techniqueFilter.setLayout(layout);
 	    techniqueFilter.setText("SBFL Technique");
 		gd = new GridData(GridData.FILL_HORIZONTAL);
 		gd.horizontalAlignment = SWT.FILL;
@@ -182,10 +180,9 @@ public class TDLSBFLView extends ViewPart{
 			}
 		});
         
-		Group sbflInfo = new Group(contents, SWT.FILL);
+		Group sbflInfo = new Group(contents, SWT.NULL);
 		FillLayout fill = new FillLayout(SWT.VERTICAL);
 		sbflInfo.setLayout(fill);
-		layout.numColumns = 1;
 		layout.verticalSpacing = 9;
 		sbflInfo.setText("SBFL Information");
 		gd = new GridData(GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);
