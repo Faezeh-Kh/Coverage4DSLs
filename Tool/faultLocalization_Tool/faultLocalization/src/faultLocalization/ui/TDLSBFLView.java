@@ -51,14 +51,16 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ViewPart;
+import org.eclipse.xtext.ui.editor.XtextEditor;
+import org.imt.tdl.testResult.TDLTestResultUtil;
+
 import coverage.computation.TDLCoverageUtil;
 import faultLocalization.SBFLMeasures;
 import faultLocalization.SuspiciousnessRanking;
-import org.imt.tdl.testResult.TDLTestResultUtil;
 
 public class TDLSBFLView extends ViewPart{
 	
-	public static final String ID = "org.imt.tdl.rt.ui.sbflView"; //$NON-NLS-1$
+	public static final String ID = "rt.ui.sbflView"; //$NON-NLS-1$
 	
 	private TreeViewer m_treeViewer;
 	
@@ -145,7 +147,6 @@ public class TDLSBFLView extends ViewPart{
 		gd.widthHint = 100;
 		techniqueFilter.setLayoutData(gd);
         final Combo technqiueFilterCombo = new Combo(techniqueFilter, SWT.NONE);
-        technqiueFilterCombo.add("All");
         technqiueFilterCombo.add(SuspiciousnessRanking.ARITHMETICMEAN);
         technqiueFilterCombo.add(SuspiciousnessRanking.BARINEL);
         technqiueFilterCombo.add(SuspiciousnessRanking.BARONIETAL);
@@ -194,7 +195,7 @@ public class TDLSBFLView extends ViewPart{
 	    final Tree addressTree = new Tree(sbflInfo, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
 		addressTree.setHeaderVisible(true);
 		addressTree.setLinesVisible(true);
-		addressTree.addListener(SWT.MouseDown, new Listener() {
+		addressTree.addListener(SWT.MouseDoubleClick, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
 				Point point = new Point(event.x, event.y);
@@ -211,12 +212,15 @@ public class TDLSBFLView extends ViewPart{
 					IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 					try {
 						IEditorPart editor = page.openEditor(new FileEditorInput(fileToOpen), desc.getId());
-						TreeViewer tviewer = (TreeViewer)((EcoreEditor) editor).getViewer();
-						ResourceSet resSet =(ResourceSet) tviewer.getInput();
-						EObject eobjectToOpen2 = resSet.getResources().get(0).getEObject(
-								eobjectToOpen.eResource().getURIFragment(eobjectToOpen));
-						tviewer.setSelection(new StructuredSelection(eobjectToOpen2));
-						
+						if (editor instanceof EcoreEditor ecoreEditor) {
+							TreeViewer tviewer = (TreeViewer) ecoreEditor.getViewer();
+							ResourceSet resSet =(ResourceSet) tviewer.getInput();
+							EObject eobjectToOpen2 = resSet.getResources().get(0).getEObject(
+									eobjectToOpen.eResource().getURIFragment(eobjectToOpen));
+							tviewer.setSelection(new StructuredSelection(eobjectToOpen2));
+						}else if (editor instanceof XtextEditor xtextEditor) {
+							//TODO: how to reveal the object in the xtext editor
+						}
 					} catch (PartInitException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
