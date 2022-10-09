@@ -69,6 +69,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - Java 16
 - GEMOC Studio Version 3.5.0: https://gemoc.org/download.html
 - TDL: https://tdl.etsi.org/eclipse/latest/ (TDL Metamodel Version 1.4.0)
+- Epsilon: http://download.eclipse.org/epsilon/updates/2.4/
 
 After downloading GEMOC Studio, unzip the folder and run it:
 1.	Run `GemocStudio` application
