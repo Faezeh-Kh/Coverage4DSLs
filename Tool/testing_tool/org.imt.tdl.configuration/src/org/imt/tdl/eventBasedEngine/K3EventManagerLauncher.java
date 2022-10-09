@@ -325,7 +325,7 @@ public class K3EventManagerLauncher implements IEventBasedExecutionEngine{
 				result = sb.toString().endsWith(", ") ? sb.substring(0, sb.length()-2) : sb.toString();
 			}
 			executionEngineJob.cancel();
-			executionEngineJob.getThread().interrupt();
+			//executionEngineJob.getThread().interrupt();
 		}
 		catch (NullPointerException e) {
 			//e.printStackTrace();
