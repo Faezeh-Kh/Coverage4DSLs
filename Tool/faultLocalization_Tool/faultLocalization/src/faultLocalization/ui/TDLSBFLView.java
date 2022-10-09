@@ -80,36 +80,28 @@ public class TDLSBFLView extends ViewPart{
 		SuspiciousnessRanking suspComputing = new SuspiciousnessRanking();
 		suspComputing.calculateMeasures();
 		
-		Composite contents = new Group(parent, SWT.FILL);
+		Composite contents = new Group(parent, SWT.NULL);
 	    GridLayout layout = new GridLayout();
 		layout.numColumns = 2;
-		//if the graphical view does not show the filters in small windows, uncomment the following code
-//		layout.makeColumnsEqualWidth = true;
 		contents.setLayout(layout);
-	    GridData gd = new GridData(GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);
-	    gd.horizontalAlignment = SWT.FILL;
+	    GridData gd = new GridData();
 	    contents.setLayoutData(gd);
 	    
 	    Group filter = new Group(contents, SWT.NULL);
 	    layout = new GridLayout();
-	    //layout.verticalSpacing = 9;
 	    filter.setLayout(layout);
 		filter.setText("Filters");
-		gd = new GridData(GridData.FILL_HORIZONTAL);
-		gd.horizontalAlignment = SWT.FILL;
-		gd.verticalAlignment = SWT.ON_TOP;
-		gd.widthHint = 100;
+		gd = new GridData();
+		gd.verticalAlignment = SWT.FILL;
 		filter.setLayoutData(gd);
 		
         Group elementFilter = new Group(filter, SWT.NULL);
 	    layout = new GridLayout();
-//	    layout.verticalSpacing = 9;
 	    elementFilter.setLayout(layout);
 	    elementFilter.setText("Type of Model Element");
-		gd = new GridData(GridData.FILL_HORIZONTAL);
-		gd.horizontalAlignment = SWT.FILL;
+		gd = new GridData();
 		gd.verticalAlignment = SWT.ON_TOP;
-		gd.widthHint = 100;
+		gd.widthHint = 250;
 		elementFilter.setLayoutData(gd);
         final Combo elementFilterCombo = new Combo(elementFilter, SWT.NONE);
         elementFilterCombo.add("All");
@@ -136,13 +128,11 @@ public class TDLSBFLView extends ViewPart{
 		
         Group techniqueFilter = new Group(filter, SWT.NULL);
 	    layout = new GridLayout();
-	    layout.verticalSpacing = 9;
 	    techniqueFilter.setLayout(layout);
 	    techniqueFilter.setText("SBFL Technique");
-		gd = new GridData(GridData.FILL_HORIZONTAL);
-		gd.horizontalAlignment = SWT.FILL;
+		gd = new GridData();
 		gd.verticalAlignment = SWT.ON_TOP;
-		gd.widthHint = 100;
+		gd.widthHint = 250;
 		techniqueFilter.setLayoutData(gd);
         final Combo technqiueFilterCombo = new Combo(techniqueFilter, SWT.NONE);
         technqiueFilterCombo.add(SuspiciousnessRanking.ARITHMETICMEAN);
@@ -183,10 +173,10 @@ public class TDLSBFLView extends ViewPart{
 		Group sbflInfo = new Group(contents, SWT.NULL);
 		FillLayout fill = new FillLayout(SWT.VERTICAL);
 		sbflInfo.setLayout(fill);
-		layout.verticalSpacing = 9;
 		sbflInfo.setText("SBFL Information");
 		gd = new GridData(GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);
 		gd.horizontalAlignment = SWT.FILL;
+		gd.verticalAlignment = SWT.FILL;
 		sbflInfo.setLayoutData(gd);
 		
 	    final Tree addressTree = new Tree(sbflInfo, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION);
