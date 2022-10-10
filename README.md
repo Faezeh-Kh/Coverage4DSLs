@@ -64,6 +64,8 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - An Excel file containing detailed data of the paper’s evaluation.
 
 ## Setup
+To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://zenodo.org/record/7178669) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md#usage) or you can follow the setup instruction described below:
+
 **Requirements**: 
 - *Operating System*: Windows 10
 - Java 16
@@ -92,7 +94,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
     <img src="Screenshots/selectWorkspace.png"  width="60%" height="50%">
 </p>
 
-3.	You need to install TDL using the provided update site. To do this, go to the `Help` menu and select `Install new Software`. Add the TDL update site and click on `Next`. Accept the license and follow the steps. At the end, it asks to restart the workspace.
+3.	You need to install TDL using the provided update site (https://tdl.etsi.org/eclipse/latest/). To do this, go to the `Help` menu and select `Install new Software`. Add the TDL update site and click on `Next`. Accept the license and follow the steps. At the end, it asks to restart the workspace.
 
     <p align="center">
         <img src="Screenshots/installTDL.png"  width="70%" height="50%">
@@ -100,7 +102,9 @@ After downloading GEMOC Studio, unzip the folder and run it:
     
     You may receive an error as "Cannot perform the operation" for two plugins: `converters to/from TDL` and `TDL graphical editor`. In this case, Eclipse will suggest skipping their installation and installing everything else. You can continue with this option as these two plugins are not necessary for our tool.
 
-4.	An empty workspace will be shown. Import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Tool** directory) -> `Select Folder` -> `Finish`.
+4. Install Epsilon using the provided update site (http://download.eclipse.org/epsilon/updates/2.4/) in the same way described in the previous step.
+   
+5.	An empty workspace will be shown. You should first download the content of this repository as a Zip file and unzip it to get access to its content on your machine. Afterward, import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Tool** directory) -> `Select Folder` -> `Finish`.
 
 <p align="center">
     <img src="Screenshots/importProjects.png"  width="70%" height="70%">
