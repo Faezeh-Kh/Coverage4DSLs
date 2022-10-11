@@ -211,5 +211,4 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
 ## Acknowledgment
 This work has received funding from the [EU H2020 research project Lowcomote](https://www.lowcomote.eu/), under the Marie Sk\l{}odowska Curie grant agreement No 813884.
 It is also partially funded by the Austrian Science Fund (P 30525-N31) and by the Austrian Federal Ministry for Digital and Economic Affairs and the National Foundation for Research, Technology and Development (CDG).
-
-Our special gratitude to [Dr.Javier Troya](http://www.lsi.us.es/~jtroya/) for putting [his implementation of SFBL for model transformations](https://github.com/javitroya/SBFL_MT) as open source.
+Special gratitude to [Dr.Javier Troya](http://www.lsi.us.es/~jtroya/) for putting [his implementation of SFBL for model transformations](https://github.com/javitroya/SBFL_MT) as open source, and to [Dr. Pablo Gómez-Abajo](https://www.gomezabajo.es/) for his active support of [the WODEL model mutation generator](https://gomezabajo.github.io/Wodel/Wodel-Test/).
