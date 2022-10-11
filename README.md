@@ -13,10 +13,10 @@ Both of these concerns can be addressed by measuring the *coverage* of each exec
 In the realm of programming languages, both coverage metrics and coverage-based fault localization techniques, such as Spectrum-Based Fault Localization (SBFL), have existed for a long time.
 However, to our knowledge, these concerns are still understudied when it comes to xDSLs, for which coverage tools still have to be manually developed.
 
-In this paper, we propose a generic framework for coverage computation and fault localization of domain-specific models which is applicable to a wide range of xDSLs.
+In this paper, we propose a generic framework for coverage computation and fault localization of domain-specific executable models which is applicable to a wide range of xDSLs.
 Considering a test suite for an executable model, we analyze the model's execution traces to extract its covered elements which compose the coverage matrix for the test suite.
-In addition, our proposed framework allows the language engineers (who are in charge of designing xDSLs) to customize the generic coverage measurements for their xDSLs. 
-Finally, we investigate the application of the computed coverage measurements for fault localization in executable models based on SBFL techniques. In particular, we reuse an existing collection of SBFL techniques for calculating the suspiciousness-based ranking of elements of executable models.
+In addition, our proposed framework allows language engineers (who are in charge of designing xDSLs) to customize the generic coverage measurements for their xDSLs. 
+Finally, we investigate the application of the computed coverage measurements for fault localization in executable models based on SBFL techniques. In particular, we reuse an existing collection of SBFL techniques [[1]](https://doi.org/10.1145/3241744) for calculating the suspiciousness-based ranking of elements of executable models.
 
 <p align="center">
     <img src="Screenshots/Overview.jpg"  width="100%" height="80%">
@@ -24,7 +24,7 @@ Finally, we investigate the application of the computed coverage measurements fo
 
 This repository contains our provided tool built atop the Eclipse GEMOC Studio.
 We also conducted an empirical evaluation of our approach for four different xDSLs to assess its applicability. 
-In total, we wrote 294 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
+In total, we wrote 297 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
 We injected faults into these executable models using [WODEL model mutation tool](https://gomezabajo.github.io/Wodel/) and we executed our approach for 1252 mutants of the executable models.
 We observed that meaningful coverage matrices can be automatically constructed for the test suites of all examined mutants and that it allows the application of existing SBFL techniques for successfully tracking the faulty model elements, thus demonstrating the usefulness of the generically computed coverage measurements.
 
@@ -203,7 +203,7 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
         <img src="Screenshots/flView-initial.png" width="70%" height="40%">
     </p>
 
-    Once you select a technique from the list (e.g., here we selected `phi` technique), the suspiciousness score and the rank of each model element will be calculated and immediately shown in the view. Here based on `phi` technique, the score of the defected element is 1.0 and its rank is 1.
+    Once you select a technique from the list (e.g., here we selected `phi` technique), the suspiciousness score and the rank of each model element will be calculated and immediately shown in the view. Here based on `phi` technique, the score of the faulty element is 1.0 and its rank is 1.
     <p align="center">
         <img src="Screenshots/flView-final.png" width="70%" height="40%">
     </p>
@@ -211,3 +211,5 @@ Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test
 ## Acknowledgment
 This work has received funding from the [EU H2020 research project Lowcomote](https://www.lowcomote.eu/), under the Marie Sk\l{}odowska Curie grant agreement No 813884.
 It is also partially funded by the Austrian Science Fund (P 30525-N31) and by the Austrian Federal Ministry for Digital and Economic Affairs and the National Foundation for Research, Technology and Development (CDG).
+
+Our special gratitude to [Dr.Javier Troya](http://www.lsi.us.es/~jtroya/) for putting [his implementation of SFBL for model transformations](https://github.com/javitroya/SBFL_MT) as open source.
