@@ -64,7 +64,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - An Excel file containing detailed data of the paper’s evaluation.
 
 ## Setup
-To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://zenodo.org/record/7178669) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md) or you can follow the setup instruction described below:
+To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://zenodo.org/record/7250227) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md) or you can follow the setup instruction described below:
 
 **Requirements**: 
 - *Operating System*: Windows 10, Linux
