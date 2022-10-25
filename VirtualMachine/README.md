@@ -1,4 +1,4 @@
-We created a virtual machine using [Oracle VM VirtualBox](https://www.virtualbox.org/) and set it up for easy use of the tool.
+We created a virtual machine using [Oracle VM VirtualBox](https://www.virtualbox.org/) and set it up for easy use of the tool on the windows 10 OS.
 You can access the virtual machine from [this Zenodo repository](https://zenodo.org/record/7178669).
 Please note that the virtual machine has all the contents for running the tool of this repository (it is on the desktop in a folder named `Coverage4DSLs`).
 

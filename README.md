@@ -67,7 +67,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://zenodo.org/record/7178669) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md) or you can follow the setup instruction described below:
 
 **Requirements**: 
-- *Operating System*: Windows 10
+- *Operating System*: Windows 10, Linux
 - Java 16
 - GEMOC Studio Version 3.5.0: https://gemoc.org/download.html
 - TDL: https://tdl.etsi.org/eclipse/latest/ (TDL Metamodel Version 1.4.0)
@@ -178,8 +178,14 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
     Finally, press `Run` to execute the test suite.
 
-5.	When the test execution finishes, in the `Default MessagingSystem Console`, a message as *“Test suite execution has been finished successfully.”* must be shown followed by the coverage computation result. 
-Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test` project which contains the execution result (i.e., the files described above in 3.b, 3.c, and 3.d steps).
+5.	When the test execution finishes, choose the `Default MessagingSystem Console` from the list of available consoles:
+
+    <p align="center">
+        <img src="Screenshots/selectConsole.jpg">
+    </p>
+
+    A message as *“Test suite execution has been finished successfully.”* must be shown followed by the coverage computation result. 
+    Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test` project which contains the execution result (i.e., the files described above in 3.b, 3.c, and 3.d steps).
 
     <p align="center">
         <img src="Screenshots/testExecution.png">
