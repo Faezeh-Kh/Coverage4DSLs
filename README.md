@@ -54,7 +54,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 
     **NOTE**: Currently, we do not provide any graphical syntax for the xDSLs.
 
-3.	*xModels&Tests*: the executable models conforming to each xDSL, a set of mutants generated for each of them (by applying the provided mutation operators using WODEL mutant generator), and a test project containing a test suite along with its execution result and its coverage report (under `result_coverage` directory).
+3.	*xModels_Tests*: the executable models conforming to each xDSL, a set of mutants generated for each of them (by applying the provided mutation operators using WODEL mutant generator), and a test project containing a test suite along with its execution result and its coverage report (under `result_coverage` directory).
 
     **NOTE**: There are also Excel files containing data related to the evaluation of the `fault localization` component.
 
@@ -127,7 +127,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
     **Note**: The `workspace data location` defines the path to the workspace of the newly opened Eclipse instance.  
 
-3. In the new Eclipse instance, import those projects from the `xModels&Tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `xModels&Tests/XArduino-data` directory as follows:
+3. In the new Eclipse instance, import those projects from the `xModels_Tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `xModels_Tests/XArduino-data` directory as follows:
 - `Arduino.RunningExample_Model` project containing `runningExample_withDefect.model` that is an example Arduino xModel. It has a defect since the alarm is not ringing as expected when the sensor detects an obstacle (it is highlighted in red where alarm1 is mistakenly set to 1).
     
     <p align="center">
