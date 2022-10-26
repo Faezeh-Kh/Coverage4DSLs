@@ -48,7 +48,7 @@ public class TestCoveragePersistence implements IEngineAddon{
 			TDLCoverageUtil.getInstance().runCoverageComputation();
 		}
 		
-	   //create test coverage according to the TestCoverage.ecore structure
+	   //create test coverage according to the TDLTestCoverage.ecore structure
 	   org.etsi.mts.tdl.Package copiedTestSuite = (org.etsi.mts.tdl.Package) testSutieResource.getContents().get(0);
 	   TDLTestSuiteCoverage tsCoveragObject = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
 	   TestSuiteCoverage testSuiteCoverage = TestCoverageFactory.eINSTANCE.createTestSuiteCoverage();
@@ -85,9 +85,8 @@ public class TestCoveragePersistence implements IEngineAddon{
 		   tsModelObjectCoverageStatus.setCoverageStatus(getCoverageStatus(tsCoverage));
 		   testSuiteCoverage.getTsObjectCoverageStatus().add(tsModelObjectCoverageStatus);
 	   }
-	   
 	   //create a resource for the test coverage
-	   URI testCoverageURI = URI.createURI(pathToReportsFiles + "/testCoverage.xmi", false);
+	   URI testCoverageURI = URI.createURI(pathToReportsFiles + File.separator + "testCoverage.xmi", false);
 	   Resource testCoverageResource = (new ResourceSetImpl()).createResource(testCoverageURI);
 	   testCoverageResource.getContents().add(testSuiteCoverage);
 	   //saving resources
@@ -112,8 +111,8 @@ public class TestCoveragePersistence implements IEngineAddon{
 	}
 
 	private Resource getCopyOfTestSuite(IExecutionContext<?, ?, ?> _executionContext) {
-		String copiedTestSuitePath = _executionContext.getWorkspace().getExecutionPath().toString() 
-				+ "/" + _executionContext.getResourceModel().getURI().lastSegment();
+		String copiedTestSuitePath = pathToReportsFiles + File.separator 
+				+ _executionContext.getResourceModel().getURI().lastSegment();
 		URI copiedTestSuiteURI = URI.createPlatformResourceURI(copiedTestSuitePath, false);
 		return (new ResourceSetImpl()).getResource(copiedTestSuiteURI, true);
 	}
@@ -121,7 +120,16 @@ public class TestCoveragePersistence implements IEngineAddon{
 	//save the model under test if it is not saved or if it is different from the current saved file
 	private void copyMUTResource (Resource resource, String testID) {
 		URI modelURI = null;
-		modelURI = URI.createURI(pathToReportsFiles + "/modelUnderTest_" + testID + ".xmi", false);
+		if (MUTResource == null) {
+			modelURI = URI.createURI(pathToReportsFiles + File.separator + "modelUnderTest.xmi", false);
+		}
+		//the test case uses a different model under test
+		else if (!EcoreUtil.equals(MUTResource.getContents().get(0), resource.getContents().get(0))) {
+			modelURI = URI.createURI(pathToReportsFiles + File.separator + "modelUnderTest_" + testID + ".xmi", false);
+		}
+		//the model under test is already copied, so do nothing
+		else {return;}
+		
 		MUTResource = (new ResourceSetImpl()).createResource(modelURI);
 		MUTResource.getContents().addAll(EcoreUtil.copyAll(resource.getContents()));
 	    try {
