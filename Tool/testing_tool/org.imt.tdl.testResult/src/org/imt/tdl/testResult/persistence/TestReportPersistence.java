@@ -97,25 +97,10 @@ public class TestReportPersistence implements IEngineAddon{
 	   }
 		
 	private Resource getCopyOfTestSuite(IExecutionContext<?, ?, ?> _executionContext) {
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		String projectName = _executionContext.getWorkspace().getProjectPath().toString().substring(1);
-		IProject[] projects = root.getProjects();
-		IProject testSuiteProject = null;
-		for (int i=0; i<projects.length; i++) {
-			if (projects[i].getName().equals(projectName)) {
-				testSuiteProject = projects[i];
-			}
-		}
-		String testSuiteProjectAbsolutePath = testSuiteProject.getLocation().toString().replace("/" + projectName, "");
-		String copiedModelFolderPath = testSuiteProjectAbsolutePath + _executionContext.getWorkspace().getExecutionPath().toString();
-		File modelFile = new File(copiedModelFolderPath);
-		for (File file: modelFile.listFiles()) {
-			if (file.getName().endsWith(".tdlan2")) {
-				String modelPath = file.getPath().replace(testSuiteProjectAbsolutePath.replaceAll("/", "\\\\"), "").replaceAll("\\\\", "/");
-				return (new ResourceSetImpl()).getResource(URI.createURI(modelPath), true);
-			}
-		}
-		return null;
+		String copiedTestSuitePath = _executionContext.getWorkspace().getExecutionPath().toString() 
+				+ "/" + _executionContext.getResourceModel().getURI().lastSegment();
+		URI copiedTestSuiteURI = URI.createPlatformResourceURI(copiedTestSuitePath, false);
+		return (new ResourceSetImpl()).getResource(copiedTestSuiteURI, true);
 	}
 
 	private Message findEquivalentTDLMessage(TestDescription copiedTestCase, int index) {
