@@ -67,7 +67,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://zenodo.org/record/7250227) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md) or you can follow the setup instruction described below:
 
 **Requirements**: 
-- *Operating System*: Windows 10, Linux
+- *Operating System*: Windows 10
 - Java 16
 - GEMOC Studio Version 3.5.0: https://gemoc.org/download.html
 - TDL: https://tdl.etsi.org/eclipse/latest/ (TDL Metamodel Version 1.4.0)
