@@ -1,16 +1,11 @@
 package coverage.persistence;
 
 import java.io.File;
-
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IWorkspaceRoot;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -25,8 +20,8 @@ import org.etsi.mts.tdl.TestDescription;
 
 import TestCoverage.CoverageStatus;
 import TestCoverage.ModelObjectCoverageStatus;
-import TestCoverage.TestCoverageFactory;
 import TestCoverage.TestCaseCoverage;
+import TestCoverage.TestCoverageFactory;
 import TestCoverage.TestSuiteCoverage;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
