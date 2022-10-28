@@ -18,7 +18,7 @@ Require-Bundle: coverage.dsl.xtext,
  org.eclipse.compare,
  org.eclipse.xtext.builder
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-16
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: coverage.dsl.xtext.ui.quickfix,
  coverage.dsl.xtext.ui.contentassist,
  coverage.dsl.xtext.ui.internal

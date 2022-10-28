@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: arduino.behavioralinterface
 Bundle-SymbolicName: arduino.behavioralinterface;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-16
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: arduino.behavioralinterface
 Export-Package: arduino.behavioralinterface
 Require-Bundle: org.eclipse.gemoc.executionframework.event.manager;bundle-version="4.0.0",
