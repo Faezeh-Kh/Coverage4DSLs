@@ -1,5 +1,5 @@
 # From Coverage Computation to Fault Localization for Executable DSLs
-This repository contains the tool and the evaluation data of our paper titled "From Coverage Computation to Fault Localization: A Generic Framework for Domain-Specific Languages", recently accepted at SLE 2022.
+This repository contains the tool and the evaluation data of our paper titled ["From Coverage Computation to Fault Localization: A Generic Framework for Domain-Specific Languages", published by SLE 2022](https://dl.acm.org/doi/10.1145/3567512.3567532).
 
 ## Introduction
 A multitude of Domain-Specific Languages (DSLs) are available nowadays to describe the dynamic aspects of systems as *behavioral models*
