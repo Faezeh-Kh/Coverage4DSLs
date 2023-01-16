@@ -33,7 +33,7 @@ public class VertexAspect {
     	pssm.semantics.VertexAspect._privk3_enter(_self_, (statemachines.Vertex)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   protected static void exit(final Vertex _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     	// BeginInjectInto pssm.semantics.VertexAspect#void exit(Transition,EventOccurrence,Region) from pssm.semantics.PseudostateAspect
@@ -51,7 +51,7 @@ public class VertexAspect {
     	pssm.semantics.VertexAspect._privk3_exit(_self_, (statemachines.Vertex)_self,exitingTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   protected static void terminate(final Vertex _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     	// BeginInjectInto pssm.semantics.VertexAspect#void terminate() from pssm.semantics.StateAspect
@@ -64,7 +64,7 @@ public class VertexAspect {
     	pssm.semantics.VertexAspect._privk3_terminate(_self_, (statemachines.Vertex)_self);
     };
   }
-  
+
   protected static boolean isActive(final Vertex _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     Object result = null;
@@ -79,7 +79,7 @@ public class VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean isEnterable(final Vertex _self, final Transition enteringTransition) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     Object result = null;
@@ -99,7 +99,7 @@ public class VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean isExitable(final Vertex _self, final Transition exitingTransition) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     Object result = null;
@@ -119,7 +119,7 @@ public class VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean contains(final Vertex _self, final Vertex vertex) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     Object result = null;
@@ -134,7 +134,7 @@ public class VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static Region getContainingRegion(final Vertex _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     Object result = null;
@@ -149,7 +149,7 @@ public class VertexAspect {
     };
     return (statemachines.Region)result;
   }
-  
+
   protected static State getParentState(final Vertex _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     Object result = null;
@@ -164,7 +164,7 @@ public class VertexAspect {
     };
     return (statemachines.State)result;
   }
-  
+
   protected static void _privk3_enter(final VertexAspectVertexAspectProperties _self_, final Vertex _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     if ((((leastCommonAncestor != null) && (_self.getContainer() != null)) && (!Objects.equal(_self.getContainer(), leastCommonAncestor)))) {
       State containingState = _self.getContainer().getState();
@@ -176,7 +176,7 @@ public class VertexAspect {
     _containingRegion.setCurrentVertex(_self);
     StateMachineAspect.activeVertice(RegionAspect.getContainingStateMachine(VertexAspect.getContainingRegion(_self))).add(_self);
   }
-  
+
   protected static void _privk3_exit(final VertexAspectVertexAspectProperties _self_, final Vertex _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     Region _containingRegion = VertexAspect.getContainingRegion(_self);
     _containingRegion.setCurrentVertex(null);
@@ -188,31 +188,31 @@ public class VertexAspect {
       }
     }
   }
-  
+
   protected static void _privk3_terminate(final VertexAspectVertexAspectProperties _self_, final Vertex _self) {
     return;
   }
-  
+
   protected static boolean _privk3_isActive(final VertexAspectVertexAspectProperties _self_, final Vertex _self) {
     return StateMachineAspect.activeVertice(RegionAspect.getContainingStateMachine(_self.getContainer())).contains(_self);
   }
-  
+
   protected static boolean _privk3_isEnterable(final VertexAspectVertexAspectProperties _self_, final Vertex _self, final Transition enteringTransition) {
     return true;
   }
-  
+
   protected static boolean _privk3_isExitable(final VertexAspectVertexAspectProperties _self_, final Vertex _self, final Transition exitingTransition) {
     return true;
   }
-  
+
   protected static boolean _privk3_contains(final VertexAspectVertexAspectProperties _self_, final Vertex _self, final Vertex vertex) {
     return false;
   }
-  
+
   protected static Region _privk3_getContainingRegion(final VertexAspectVertexAspectProperties _self_, final Vertex _self) {
     return _self.getContainer();
   }
-  
+
   protected static State _privk3_getParentState(final VertexAspectVertexAspectProperties _self_, final Vertex _self) {
     return _self.getContainer().getState();
   }

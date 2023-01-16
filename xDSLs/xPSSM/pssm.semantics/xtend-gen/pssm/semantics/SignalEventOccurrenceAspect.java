@@ -17,7 +17,7 @@ public class SignalEventOccurrenceAspect extends EventOccurrenceAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   protected static String _privk3_getParameters(final SignalEventOccurrenceAspectSignalEventOccurrenceAspectProperties _self_, final SignalEventOccurrence _self) {
     return "";
   }

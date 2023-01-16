@@ -27,7 +27,7 @@ public class BooleanUnaryExpressionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final BooleanUnaryExpressionAspectBooleanUnaryExpressionAspectProperties _self_, final BooleanUnaryExpression _self, final EventOccurrence eventOccurrence) {
     final BooleanAttribute operand = _self.getOperand();
     if ((operand == null)) {

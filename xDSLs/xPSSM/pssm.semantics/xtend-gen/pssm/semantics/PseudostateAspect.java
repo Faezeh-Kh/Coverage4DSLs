@@ -24,7 +24,7 @@ public class PseudostateAspect extends VertexAspect {
     	pssm.semantics.PseudostateAspect._privk3_enter(_self_, (statemachines.Pseudostate)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   @OverrideAspectMethod
   protected static void exit(final Pseudostate _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.PseudostateAspectPseudostateAspectProperties _self_ = pssm.semantics.PseudostateAspectPseudostateAspectContext.getSelf(_self);
@@ -33,7 +33,7 @@ public class PseudostateAspect extends VertexAspect {
     	pssm.semantics.PseudostateAspect._privk3_exit(_self_, (statemachines.Pseudostate)_self,exitingTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   @OverrideAspectMethod
   protected static boolean isEnterable(final Pseudostate _self, final Transition enteringTransition) {
     final pssm.semantics.PseudostateAspectPseudostateAspectProperties _self_ = pssm.semantics.PseudostateAspectPseudostateAspectContext.getSelf(_self);
@@ -44,7 +44,7 @@ public class PseudostateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   @OverrideAspectMethod
   protected static boolean isExitable(final Pseudostate _self, final Transition exitingTransition) {
     final pssm.semantics.PseudostateAspectPseudostateAspectProperties _self_ = pssm.semantics.PseudostateAspectPseudostateAspectContext.getSelf(_self);
@@ -55,7 +55,7 @@ public class PseudostateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   @OverrideAspectMethod
   protected static boolean isActive(final Pseudostate _self) {
     final pssm.semantics.PseudostateAspectPseudostateAspectProperties _self_ = pssm.semantics.PseudostateAspectPseudostateAspectContext.getSelf(_self);
@@ -66,7 +66,7 @@ public class PseudostateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   @OverrideAspectMethod
   protected static Region getContainingRegion(final Pseudostate _self) {
     final pssm.semantics.PseudostateAspectPseudostateAspectProperties _self_ = pssm.semantics.PseudostateAspectPseudostateAspectContext.getSelf(_self);
@@ -77,7 +77,7 @@ public class PseudostateAspect extends VertexAspect {
     };
     return (statemachines.Region)result;
   }
-  
+
   @OverrideAspectMethod
   protected static State getParentState(final Pseudostate _self) {
     final pssm.semantics.PseudostateAspectPseudostateAspectProperties _self_ = pssm.semantics.PseudostateAspectPseudostateAspectContext.getSelf(_self);
@@ -88,12 +88,12 @@ public class PseudostateAspect extends VertexAspect {
     };
     return (statemachines.State)result;
   }
-  
+
   private static void super_enter(final Pseudostate _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
      pssm.semantics.VertexAspect._privk3_enter(_self_, _self,enteringTransition,eventOccurrence,leastCommonAncestor);
   }
-  
+
   protected static void _privk3_enter(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     PseudostateKind _kind = _self.getKind();
     if (_kind != null) {
@@ -164,12 +164,12 @@ public class PseudostateAspect extends VertexAspect {
       PseudostateAspect.super_enter(_self, enteringTransition, eventOccurrence, leastCommonAncestor);
     }
   }
-  
+
   private static void super_exit(final Pseudostate _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
      pssm.semantics.VertexAspect._privk3_exit(_self_, _self,exitingTransition,eventOccurrence,leastCommonAncestor);
   }
-  
+
   protected static void _privk3_exit(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     PseudostateKind _kind = _self.getKind();
     boolean _equals = Objects.equal(_kind, PseudostateKind.ENTRYPOINT);
@@ -179,12 +179,12 @@ public class PseudostateAspect extends VertexAspect {
       PseudostateAspect.super_exit(_self, exitingTransition, eventOccurrence, leastCommonAncestor);
     }
   }
-  
+
   private static boolean super_isEnterable(final Pseudostate _self, final Transition enteringTransition) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_isEnterable(_self_, _self,enteringTransition);
   }
-  
+
   protected static boolean _privk3_isEnterable(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self, final Transition enteringTransition) {
     PseudostateKind _kind = _self.getKind();
     if (_kind != null) {
@@ -220,12 +220,12 @@ public class PseudostateAspect extends VertexAspect {
       return PseudostateAspect.super_isEnterable(_self, enteringTransition);
     }
   }
-  
+
   private static boolean super_isExitable(final Pseudostate _self, final Transition exitingTransition) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_isExitable(_self_, _self,exitingTransition);
   }
-  
+
   protected static boolean _privk3_isExitable(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self, final Transition exitingTransition) {
     PseudostateKind _kind = _self.getKind();
     if (_kind != null) {
@@ -261,12 +261,12 @@ public class PseudostateAspect extends VertexAspect {
       return PseudostateAspect.super_isExitable(_self, exitingTransition);
     }
   }
-  
+
   private static boolean super_isActive(final Pseudostate _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_isActive(_self_, _self);
   }
-  
+
   protected static boolean _privk3_isActive(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self) {
     if ((Objects.equal(_self.getKind(), PseudostateKind.ENTRYPOINT) || Objects.equal(_self.getKind(), PseudostateKind.EXITPOINT))) {
       return StateMachineAspect.activeVertice(RegionAspect.getContainingStateMachine(_self.getState().getContainer())).contains(_self);
@@ -274,12 +274,12 @@ public class PseudostateAspect extends VertexAspect {
       return PseudostateAspect.super_isActive(_self);
     }
   }
-  
+
   private static Region super_getContainingRegion(final Pseudostate _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_getContainingRegion(_self_, _self);
   }
-  
+
   protected static Region _privk3_getContainingRegion(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self) {
     State _state = _self.getState();
     boolean _tripleNotEquals = (_state != null);
@@ -288,12 +288,12 @@ public class PseudostateAspect extends VertexAspect {
     }
     return _self.getContainer();
   }
-  
+
   private static State super_getParentState(final Pseudostate _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_getParentState(_self_, _self);
   }
-  
+
   protected static State _privk3_getParentState(final PseudostateAspectPseudostateAspectProperties _self_, final Pseudostate _self) {
     State _state = _self.getState();
     boolean _tripleNotEquals = (_state != null);

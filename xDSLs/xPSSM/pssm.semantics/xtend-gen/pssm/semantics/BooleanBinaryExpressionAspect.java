@@ -31,7 +31,7 @@ public class BooleanBinaryExpressionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final BooleanBinaryExpressionAspectBooleanBinaryExpressionAspectProperties _self_, final BooleanBinaryExpression _self) {
     final BooleanAttribute operand1 = _self.getOperand1();
     final BooleanAttribute operand2 = _self.getOperand2();

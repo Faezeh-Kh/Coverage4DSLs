@@ -30,12 +30,12 @@ public class OperationBehaviorAspect extends BehaviorAspect {
     	;
     };
   }
-  
+
   private static void super_execute(final OperationBehavior _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.BehaviorAspectBehaviorAspectProperties _self_ = pssm.semantics.BehaviorAspectBehaviorAspectContext.getSelf(_self);
      pssm.semantics.BehaviorAspect._privk3_execute(_self_, _self,eventOccurrence);
   }
-  
+
   protected static void _privk3_execute(final OperationBehaviorAspectOperationBehaviorAspectProperties _self_, final OperationBehavior _self, final EventOccurrence eventOccurrence) {
   }
 }

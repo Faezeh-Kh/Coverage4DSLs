@@ -16,7 +16,7 @@ public class StringConstraintAspect extends ConstraintAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final StringConstraintAspectStringConstraintAspectProperties _self_, final StringConstraint _self, final EventOccurrence eventOccurrence) {
     return StringComparisonExpressionAspect.evaluate(_self.getExpression());
   }

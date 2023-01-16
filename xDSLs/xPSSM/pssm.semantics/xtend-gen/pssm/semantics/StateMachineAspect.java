@@ -43,7 +43,7 @@ public class StateMachineAspect {
     	;
     };
   }
-  
+
   @Step
   public static void eventOccurrenceReceived(final StateMachine _self, final EventOccurrence event) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
@@ -64,7 +64,7 @@ public class StateMachineAspect {
     	;
     };
   }
-  
+
   private static List<Transition> selectTransitions(final StateMachine _self, final EventOccurrence event) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -74,7 +74,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.Transition>)result;
   }
-  
+
   private static List<Transition> _selectTransitions(final StateMachine _self, final List<Vertex> vertice, final EventOccurrence event) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -84,7 +84,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.Transition>)result;
   }
-  
+
   private static List<Transition> _selectTransitions(final StateMachine _self, final Vertex vertex, final EventOccurrence event) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -94,7 +94,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.Transition>)result;
   }
-  
+
   private static void dispatchEventOccurrence(final StateMachine _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void dispatchEventOccurrence(EventOccurrence)
@@ -102,7 +102,7 @@ public class StateMachineAspect {
     	pssm.semantics.StateMachineAspect._privk3_dispatchEventOccurrence(_self_, (statemachines.StateMachine)_self,eventOccurrence);
     };
   }
-  
+
   private static void dispatchCompletionEvents(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void dispatchCompletionEvents()
@@ -110,7 +110,7 @@ public class StateMachineAspect {
     	pssm.semantics.StateMachineAspect._privk3_dispatchCompletionEvents(_self_, (statemachines.StateMachine)_self);
     };
   }
-  
+
   private static void dispatchDeferredEvents(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void dispatchDeferredEvents()
@@ -118,7 +118,7 @@ public class StateMachineAspect {
     	pssm.semantics.StateMachineAspect._privk3_dispatchDeferredEvents(_self_, (statemachines.StateMachine)_self);
     };
   }
-  
+
   private static State getDeferringState(final StateMachine _self, final EventOccurrence event) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -128,7 +128,7 @@ public class StateMachineAspect {
     };
     return (statemachines.State)result;
   }
-  
+
   private static State _getDeferringState(final StateMachine _self, final EventOccurrence event, final State state) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -138,7 +138,7 @@ public class StateMachineAspect {
     };
     return (statemachines.State)result;
   }
-  
+
   @Step
   protected static void terminate(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
@@ -159,7 +159,7 @@ public class StateMachineAspect {
     	;
     };
   }
-  
+
   protected static List<CompletionEventOccurrence> completionEvents(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -169,7 +169,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.CompletionEventOccurrence>)result;
   }
-  
+
   protected static List<EventOccurrence> deferredEvents(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -179,7 +179,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.EventOccurrence>)result;
   }
-  
+
   protected static List<Vertex> activeVertice(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -189,7 +189,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.Vertex>)result;
   }
-  
+
   public static List<EventOccurrence> receivedEvents(final StateMachine _self) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     Object result = null;
@@ -199,7 +199,7 @@ public class StateMachineAspect {
     };
     return (java.util.List<statemachines.EventOccurrence>)result;
   }
-  
+
   public static void receivedEvents(final StateMachine _self, final List<EventOccurrence> receivedEvents) {
     final pssm.semantics.StateMachineAspectStateMachineAspectProperties _self_ = pssm.semantics.StateMachineAspectStateMachineAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void receivedEvents(List<EventOccurrence>)
@@ -207,7 +207,7 @@ public class StateMachineAspect {
     	pssm.semantics.StateMachineAspect._privk3_receivedEvents(_self_, (statemachines.StateMachine)_self,receivedEvents);
     };
   }
-  
+
   protected static void _privk3_run(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     final Consumer<Region> _function = new Consumer<Region>() {
       public void accept(final Region it) {
@@ -217,12 +217,12 @@ public class StateMachineAspect {
     _self.getRegions().forEach(_function);
     StateMachineAspect.dispatchCompletionEvents(_self);
   }
-  
+
   protected static void _privk3_eventOccurrenceReceived(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final EventOccurrence event) {
     StateMachineAspect.receivedEvents(_self).add(event);
     StateMachineAspect.dispatchEventOccurrence(_self, event);
   }
-  
+
   protected static List<Transition> _privk3_selectTransitions(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final EventOccurrence event) {
     final Function1<Region, List<Transition>> _function = new Function1<Region, List<Transition>>() {
       public List<Transition> apply(final Region r) {
@@ -231,7 +231,7 @@ public class StateMachineAspect {
     };
     return IterableExtensions.<Transition>toList(Iterables.<Transition>concat(ListExtensions.<Region, List<Transition>>map(_self.getRegions(), _function)));
   }
-  
+
   protected static List<Transition> _privk3__selectTransitions(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final List<Vertex> vertice, final EventOccurrence event) {
     final Function1<Vertex, Boolean> _function = new Function1<Vertex, Boolean>() {
       public Boolean apply(final Vertex v) {
@@ -245,7 +245,7 @@ public class StateMachineAspect {
     };
     return IterableExtensions.<Transition>toList(Iterables.<Transition>concat(IterableExtensions.<Vertex, List<Transition>>map(IterableExtensions.<Vertex>filter(vertice, _function), _function_1)));
   }
-  
+
   protected static List<Transition> _privk3__selectTransitions(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final Vertex vertex, final EventOccurrence event) {
     final ArrayList<Transition> transitions = new ArrayList<Transition>();
     if ((vertex instanceof State)) {
@@ -278,7 +278,7 @@ public class StateMachineAspect {
     }
     return transitions;
   }
-  
+
   protected static void _privk3_dispatchEventOccurrence(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final EventOccurrence eventOccurrence) {
     final State deferringState = StateMachineAspect.getDeferringState(_self, eventOccurrence);
     if ((deferringState == null)) {
@@ -301,7 +301,7 @@ public class StateMachineAspect {
       StateAspect.deferredEvents(deferringState).add(eventOccurrence);
     }
   }
-  
+
   protected static void _privk3_dispatchCompletionEvents(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     while ((!StateMachineAspect.completionEvents(_self).isEmpty())) {
       {
@@ -321,7 +321,7 @@ public class StateMachineAspect {
       }
     }
   }
-  
+
   protected static void _privk3_dispatchDeferredEvents(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     List<EventOccurrence> _deferredEvents = StateMachineAspect.deferredEvents(_self);
     final ArrayList<EventOccurrence> toDispatch = new ArrayList<EventOccurrence>(_deferredEvents);
@@ -333,7 +333,7 @@ public class StateMachineAspect {
     };
     toDispatch.forEach(_function);
   }
-  
+
   protected static State _privk3_getDeferringState(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final EventOccurrence event) {
     final Function1<Region, EList<Vertex>> _function = new Function1<Region, EList<Vertex>>() {
       public EList<Vertex> apply(final Region it) {
@@ -352,7 +352,7 @@ public class StateMachineAspect {
     };
     return IterableExtensions.<State>head(IterableExtensions.<State>filterNull(IterableExtensions.<State, State>map(IterableExtensions.<State>filter(Iterables.<State>filter((Iterables.<Vertex>concat(ListExtensions.<Region, EList<Vertex>>map(_self.getRegions(), _function))), State.class), _function_1), _function_2)));
   }
-  
+
   protected static State _privk3__getDeferringState(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final EventOccurrence event, final State state) {
     final Function1<Region, EList<Vertex>> _function = new Function1<Region, EList<Vertex>>() {
       public EList<Vertex> apply(final Region it) {
@@ -378,7 +378,7 @@ public class StateMachineAspect {
     }
     return deferred;
   }
-  
+
   protected static void _privk3_terminate(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     final Consumer<Region> _function = new Consumer<Region>() {
       public void accept(final Region it) {
@@ -387,7 +387,7 @@ public class StateMachineAspect {
     };
     _self.getRegions().forEach(_function);
   }
-  
+
   protected static List<CompletionEventOccurrence> _privk3_completionEvents(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -406,7 +406,7 @@ public class StateMachineAspect {
     }
     return _self_.completionEvents;
   }
-  
+
   protected static List<EventOccurrence> _privk3_deferredEvents(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -425,7 +425,7 @@ public class StateMachineAspect {
     }
     return _self_.deferredEvents;
   }
-  
+
   protected static List<Vertex> _privk3_activeVertice(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -444,7 +444,7 @@ public class StateMachineAspect {
     }
     return _self_.activeVertice;
   }
-  
+
   protected static List<EventOccurrence> _privk3_receivedEvents(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -463,7 +463,7 @@ public class StateMachineAspect {
     }
     return _self_.receivedEvents;
   }
-  
+
   protected static void _privk3_receivedEvents(final StateMachineAspectStateMachineAspectProperties _self_, final StateMachine _self, final List<EventOccurrence> receivedEvents) {
     boolean setterCalled = false;
     try {

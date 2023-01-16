@@ -31,7 +31,7 @@ public class IntegerComparisonExpressionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final IntegerComparisonExpressionAspectIntegerComparisonExpressionAspectProperties _self_, final IntegerComparisonExpression _self) {
     final IntegerAttribute operand1 = _self.getOperand1();
     final IntegerAttribute operand2 = _self.getOperand2();

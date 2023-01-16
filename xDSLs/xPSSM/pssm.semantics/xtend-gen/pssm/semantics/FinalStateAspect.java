@@ -21,12 +21,12 @@ public class FinalStateAspect extends StateAspect {
     	pssm.semantics.FinalStateAspect._privk3_enter(_self_, (statemachines.FinalState)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   private static void super_enter(final FinalState _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
      pssm.semantics.StateAspect._privk3_enter(_self_, _self,enteringTransition,eventOccurrence,leastCommonAncestor);
   }
-  
+
   protected static void _privk3_enter(final FinalStateAspectFinalStateAspectProperties _self_, final FinalState _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     Region _container = _self.getContainer();
     _container.setCurrentVertex(_self);

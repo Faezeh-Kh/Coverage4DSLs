@@ -19,7 +19,7 @@ public class BooleanConstraintAspect extends ConstraintAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final BooleanConstraintAspectBooleanConstraintAspectProperties _self_, final BooleanConstraint _self, final EventOccurrence eventOccurrence) {
     BooleanExpression _expression = _self.getExpression();
     if ((_expression instanceof BooleanUnaryExpression)) {

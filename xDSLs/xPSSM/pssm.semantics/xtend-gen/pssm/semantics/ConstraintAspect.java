@@ -31,7 +31,7 @@ public class ConstraintAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final ConstraintAspectConstraintAspectProperties _self_, final Constraint _self, final EventOccurrence eventOccurrence) {
     return false;
   }

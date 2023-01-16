@@ -16,7 +16,7 @@ public class IntegerConstraintAspect extends ConstraintAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final IntegerConstraintAspectIntegerConstraintAspectProperties _self_, final IntegerConstraint _self, final EventOccurrence eventOccurrence) {
     return IntegerComparisonExpressionAspect.evaluate(_self.getExpression());
   }

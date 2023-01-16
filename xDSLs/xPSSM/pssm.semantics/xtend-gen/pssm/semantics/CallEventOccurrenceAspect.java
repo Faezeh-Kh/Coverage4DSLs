@@ -17,7 +17,7 @@ public class CallEventOccurrenceAspect extends EventOccurrenceAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   protected static String getOutValues(final CallEventOccurrence _self) {
     final pssm.semantics.CallEventOccurrenceAspectCallEventOccurrenceAspectProperties _self_ = pssm.semantics.CallEventOccurrenceAspectCallEventOccurrenceAspectContext.getSelf(_self);
     Object result = null;
@@ -27,11 +27,11 @@ public class CallEventOccurrenceAspect extends EventOccurrenceAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   protected static String _privk3_getParameters(final CallEventOccurrenceAspectCallEventOccurrenceAspectProperties _self_, final CallEventOccurrence _self) {
     return null;
   }
-  
+
   protected static String _privk3_getOutValues(final CallEventOccurrenceAspectCallEventOccurrenceAspectProperties _self_, final CallEventOccurrence _self) {
     return null;
   }

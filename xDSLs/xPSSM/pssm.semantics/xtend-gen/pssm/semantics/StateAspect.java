@@ -46,7 +46,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_enter(_self_, (statemachines.State)_self,enteringTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   @OverrideAspectMethod
   protected static void exit(final State _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
@@ -55,7 +55,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_exit(_self_, (statemachines.State)_self,exitingTransition,eventOccurrence,leastCommonAncestor);
     };
   }
-  
+
   protected static void enterRegions(final State _self, final Transition enteringTransition, final EventOccurrence eventOccurrence) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void enterRegions(Transition,EventOccurrence)
@@ -63,7 +63,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_enterRegions(_self_, (statemachines.State)_self,enteringTransition,eventOccurrence);
     };
   }
-  
+
   private static void tryExecuteEntry(final State _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void tryExecuteEntry(EventOccurrence)
@@ -71,7 +71,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_tryExecuteEntry(_self_, (statemachines.State)_self,eventOccurrence);
     };
   }
-  
+
   private static void tryExecuteDoActivity(final State _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void tryExecuteDoActivity(EventOccurrence)
@@ -79,7 +79,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_tryExecuteDoActivity(_self_, (statemachines.State)_self,eventOccurrence);
     };
   }
-  
+
   private static void tryExecuteExit(final State _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void tryExecuteExit(EventOccurrence)
@@ -87,7 +87,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_tryExecuteExit(_self_, (statemachines.State)_self,eventOccurrence);
     };
   }
-  
+
   @OverrideAspectMethod
   protected static void terminate(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
@@ -96,7 +96,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_terminate(_self_, (statemachines.State)_self);
     };
   }
-  
+
   @OverrideAspectMethod
   protected static boolean isEnterable(final State _self, final Transition enteringTransition) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
@@ -107,7 +107,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   @OverrideAspectMethod
   protected static boolean isExitable(final State _self, final Transition exitingTransition) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
@@ -118,7 +118,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   @OverrideAspectMethod
   protected static boolean contains(final State _self, final Vertex vertex) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
@@ -129,7 +129,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean canDefer(final State _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -139,7 +139,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static List<Vertex> getActiveVertice(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -149,7 +149,7 @@ public class StateAspect extends VertexAspect {
     };
     return (java.util.List<statemachines.Vertex>)result;
   }
-  
+
   protected static boolean hasCompleted(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -159,7 +159,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static void complete(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void complete()
@@ -167,7 +167,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_complete(_self_, (statemachines.State)_self);
     };
   }
-  
+
   public static boolean isEntryCompleted(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -177,7 +177,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   public static void isEntryCompleted(final State _self, final boolean isEntryCompleted) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void isEntryCompleted(boolean)
@@ -185,7 +185,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_isEntryCompleted(_self_, (statemachines.State)_self,isEntryCompleted);
     };
   }
-  
+
   public static boolean isDoActivityCompleted(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -195,7 +195,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   public static void isDoActivityCompleted(final State _self, final boolean isDoActivityCompleted) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void isDoActivityCompleted(boolean)
@@ -203,7 +203,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_isDoActivityCompleted(_self_, (statemachines.State)_self,isDoActivityCompleted);
     };
   }
-  
+
   public static boolean isExitCompleted(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -213,7 +213,7 @@ public class StateAspect extends VertexAspect {
     };
     return (boolean)result;
   }
-  
+
   public static void isExitCompleted(final State _self, final boolean isExitCompleted) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void isExitCompleted(boolean)
@@ -221,7 +221,7 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_isExitCompleted(_self_, (statemachines.State)_self,isExitCompleted);
     };
   }
-  
+
   protected static List<EventOccurrence> deferredEvents(final State _self) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     Object result = null;
@@ -231,7 +231,7 @@ public class StateAspect extends VertexAspect {
     };
     return (java.util.List<statemachines.EventOccurrence>)result;
   }
-  
+
   protected static void deferredEvents(final State _self, final List<EventOccurrence> deferredEvents) {
     final pssm.semantics.StateAspectStateAspectProperties _self_ = pssm.semantics.StateAspectStateAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void deferredEvents(List<EventOccurrence>)
@@ -239,12 +239,12 @@ public class StateAspect extends VertexAspect {
     	pssm.semantics.StateAspect._privk3_deferredEvents(_self_, (statemachines.State)_self,deferredEvents);
     };
   }
-  
+
   private static void super_enter(final State _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
      pssm.semantics.VertexAspect._privk3_enter(_self_, _self,enteringTransition,eventOccurrence,leastCommonAncestor);
   }
-  
+
   protected static void _privk3_enter(final StateAspectStateAspectProperties _self_, final State _self, final Transition enteringTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     boolean _isActive = VertexAspect.isActive(_self);
     boolean _not = (!_isActive);
@@ -269,12 +269,12 @@ public class StateAspect extends VertexAspect {
       }
     }
   }
-  
+
   private static void super_exit(final State _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
      pssm.semantics.VertexAspect._privk3_exit(_self_, _self,exitingTransition,eventOccurrence,leastCommonAncestor);
   }
-  
+
   protected static void _privk3_exit(final StateAspectStateAspectProperties _self_, final State _self, final Transition exitingTransition, final EventOccurrence eventOccurrence, final Region leastCommonAncestor) {
     final Consumer<Region> _function = new Consumer<Region>() {
       public void accept(final Region r) {
@@ -286,7 +286,7 @@ public class StateAspect extends VertexAspect {
     StateAspect.super_exit(_self, exitingTransition, eventOccurrence, leastCommonAncestor);
     StateMachineAspect.deferredEvents(RegionAspect.getContainingStateMachine(_self.getContainer())).addAll(StateAspect.deferredEvents(_self));
   }
-  
+
   protected static void _privk3_enterRegions(final StateAspectStateAspectProperties _self_, final State _self, final Transition enteringTransition, final EventOccurrence eventOccurrence) {
     final ArrayList<Vertex> targetedVertice = new ArrayList<Vertex>();
     final Vertex source = enteringTransition.getSource();
@@ -324,7 +324,7 @@ public class StateAspect extends VertexAspect {
     };
     IterableExtensions.<Region>filter(_self.getRegions(), _function_2).forEach(_function_3);
   }
-  
+
   protected static void _privk3_tryExecuteEntry(final StateAspectStateAspectProperties _self_, final State _self, final EventOccurrence eventOccurrence) {
     boolean _isEntryCompleted = StateAspect.isEntryCompleted(_self);
     boolean _not = (!_isEntryCompleted);
@@ -337,7 +337,7 @@ public class StateAspect extends VertexAspect {
       }
     }
   }
-  
+
   protected static void _privk3_tryExecuteDoActivity(final StateAspectStateAspectProperties _self_, final State _self, final EventOccurrence eventOccurrence) {
     boolean _isDoActivityCompleted = StateAspect.isDoActivityCompleted(_self);
     boolean _not = (!_isDoActivityCompleted);
@@ -350,7 +350,7 @@ public class StateAspect extends VertexAspect {
       }
     }
   }
-  
+
   protected static void _privk3_tryExecuteExit(final StateAspectStateAspectProperties _self_, final State _self, final EventOccurrence eventOccurrence) {
     boolean _isExitCompleted = StateAspect.isExitCompleted(_self);
     boolean _not = (!_isExitCompleted);
@@ -359,12 +359,12 @@ public class StateAspect extends VertexAspect {
       StateAspect.isExitCompleted(_self, true);
     }
   }
-  
+
   private static void super_terminate(final State _self) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
      pssm.semantics.VertexAspect._privk3_terminate(_self_, _self);
   }
-  
+
   protected static void _privk3_terminate(final StateAspectStateAspectProperties _self_, final State _self) {
     final Consumer<Region> _function = new Consumer<Region>() {
       public void accept(final Region it) {
@@ -373,31 +373,31 @@ public class StateAspect extends VertexAspect {
     };
     _self.getRegions().forEach(_function);
   }
-  
+
   private static boolean super_isEnterable(final State _self, final Transition enteringTransition) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_isEnterable(_self_, _self,enteringTransition);
   }
-  
+
   protected static boolean _privk3_isEnterable(final StateAspectStateAspectProperties _self_, final State _self, final Transition enteringTransition) {
     boolean _isActive = VertexAspect.isActive(_self);
     return (!_isActive);
   }
-  
+
   private static boolean super_isExitable(final State _self, final Transition exitingTransition) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_isExitable(_self_, _self,exitingTransition);
   }
-  
+
   protected static boolean _privk3_isExitable(final StateAspectStateAspectProperties _self_, final State _self, final Transition exitingTransition) {
     return VertexAspect.isActive(_self);
   }
-  
+
   private static boolean super_contains(final State _self, final Vertex vertex) {
     final pssm.semantics.VertexAspectVertexAspectProperties _self_ = pssm.semantics.VertexAspectVertexAspectContext.getSelf(_self);
     return  pssm.semantics.VertexAspect._privk3_contains(_self_, _self,vertex);
   }
-  
+
   protected static boolean _privk3_contains(final StateAspectStateAspectProperties _self_, final State _self, final Vertex vertex) {
     if ((Objects.equal(_self, vertex) || Objects.equal(_self, vertex.eContainer()))) {
       return true;
@@ -409,7 +409,7 @@ public class StateAspect extends VertexAspect {
     };
     return IterableExtensions.<Region>exists(_self.getRegions(), _function);
   }
-  
+
   protected static boolean _privk3_canDefer(final StateAspectStateAspectProperties _self_, final State _self, final EventOccurrence eventOccurrence) {
     if ((eventOccurrence instanceof SignalEventOccurrence)) {
       final Function1<Trigger, Boolean> _function = new Function1<Trigger, Boolean>() {
@@ -442,7 +442,7 @@ public class StateAspect extends VertexAspect {
     }
     return false;
   }
-  
+
   protected static List<Vertex> _privk3_getActiveVertice(final StateAspectStateAspectProperties _self_, final State _self) {
     final Function1<Region, Iterable<Vertex>> _function = new Function1<Region, Iterable<Vertex>>() {
       public Iterable<Vertex> apply(final Region it) {
@@ -451,7 +451,7 @@ public class StateAspect extends VertexAspect {
     };
     return IterableExtensions.<Vertex>toList(Iterables.<Vertex>concat(ListExtensions.<Region, Iterable<Vertex>>map(_self.getRegions(), _function)));
   }
-  
+
   protected static boolean _privk3_hasCompleted(final StateAspectStateAspectProperties _self_, final State _self) {
     return ((StateAspect.isEntryCompleted(_self) && StateAspect.isDoActivityCompleted(_self)) && IterableExtensions.<Region>forall(_self.getRegions(), new Function1<Region, Boolean>() {
       public Boolean apply(final Region it) {
@@ -459,7 +459,7 @@ public class StateAspect extends VertexAspect {
       }
     }));
   }
-  
+
   protected static void _privk3_complete(final StateAspectStateAspectProperties _self_, final State _self) {
     CompletionEventOccurrence _createCompletionEventOccurrence = StatemachinesFactory.eINSTANCE.createCompletionEventOccurrence();
     final Procedure1<CompletionEventOccurrence> _function = new Procedure1<CompletionEventOccurrence>() {
@@ -470,7 +470,7 @@ public class StateAspect extends VertexAspect {
     final CompletionEventOccurrence event = ObjectExtensions.<CompletionEventOccurrence>operator_doubleArrow(_createCompletionEventOccurrence, _function);
     StateMachineAspect.completionEvents(RegionAspect.getContainingStateMachine(_self.getContainer())).add(event);
   }
-  
+
   protected static boolean _privk3_isEntryCompleted(final StateAspectStateAspectProperties _self_, final State _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -486,7 +486,7 @@ public class StateAspect extends VertexAspect {
     }
     return _self_.isEntryCompleted;
   }
-  
+
   protected static void _privk3_isEntryCompleted(final StateAspectStateAspectProperties _self_, final State _self, final boolean isEntryCompleted) {
     boolean setterCalled = false;
     try {
@@ -504,7 +504,7 @@ public class StateAspect extends VertexAspect {
     	_self_.isEntryCompleted = isEntryCompleted;
     }
   }
-  
+
   protected static boolean _privk3_isDoActivityCompleted(final StateAspectStateAspectProperties _self_, final State _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -520,7 +520,7 @@ public class StateAspect extends VertexAspect {
     }
     return _self_.isDoActivityCompleted;
   }
-  
+
   protected static void _privk3_isDoActivityCompleted(final StateAspectStateAspectProperties _self_, final State _self, final boolean isDoActivityCompleted) {
     boolean setterCalled = false;
     try {
@@ -538,7 +538,7 @@ public class StateAspect extends VertexAspect {
     	_self_.isDoActivityCompleted = isDoActivityCompleted;
     }
   }
-  
+
   protected static boolean _privk3_isExitCompleted(final StateAspectStateAspectProperties _self_, final State _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -554,7 +554,7 @@ public class StateAspect extends VertexAspect {
     }
     return _self_.isExitCompleted;
   }
-  
+
   protected static void _privk3_isExitCompleted(final StateAspectStateAspectProperties _self_, final State _self, final boolean isExitCompleted) {
     boolean setterCalled = false;
     try {
@@ -572,7 +572,7 @@ public class StateAspect extends VertexAspect {
     	_self_.isExitCompleted = isExitCompleted;
     }
   }
-  
+
   protected static List<EventOccurrence> _privk3_deferredEvents(final StateAspectStateAspectProperties _self_, final State _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -591,7 +591,7 @@ public class StateAspect extends VertexAspect {
     }
     return _self_.deferredEvents;
   }
-  
+
   protected static void _privk3_deferredEvents(final StateAspectStateAspectProperties _self_, final State _self, final List<EventOccurrence> deferredEvents) {
     boolean setterCalled = false;
     try {

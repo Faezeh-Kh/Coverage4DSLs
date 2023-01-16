@@ -18,7 +18,7 @@ public class StringAttributeValueAspect extends AttributeValueAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   @OverrideAspectMethod
   protected static void set_value(final StringAttributeValue _self, final String value) {
     final pssm.semantics.StringAttributeValueAspectStringAttributeValueAspectProperties _self_ = pssm.semantics.StringAttributeValueAspectStringAttributeValueAspectContext.getSelf(_self);
@@ -27,7 +27,7 @@ public class StringAttributeValueAspect extends AttributeValueAspect {
     	pssm.semantics.StringAttributeValueAspect._privk3_set_value(_self_, (statemachines.StringAttributeValue)_self,value);
     };
   }
-  
+
   @OverrideAspectMethod
   protected static Attribute get_attribute(final StringAttributeValue _self) {
     final pssm.semantics.StringAttributeValueAspectStringAttributeValueAspectProperties _self_ = pssm.semantics.StringAttributeValueAspectStringAttributeValueAspectContext.getSelf(_self);
@@ -38,7 +38,7 @@ public class StringAttributeValueAspect extends AttributeValueAspect {
     };
     return (statemachines.Attribute)result;
   }
-  
+
   @OverrideAspectMethod
   protected static String getString(final StringAttributeValue _self) {
     final pssm.semantics.StringAttributeValueAspectStringAttributeValueAspectProperties _self_ = pssm.semantics.StringAttributeValueAspectStringAttributeValueAspectContext.getSelf(_self);
@@ -49,19 +49,19 @@ public class StringAttributeValueAspect extends AttributeValueAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   protected static String _privk3_get_value(final StringAttributeValueAspectStringAttributeValueAspectProperties _self_, final StringAttributeValue _self) {
     return _self.getValue();
   }
-  
+
   protected static void _privk3_set_value(final StringAttributeValueAspectStringAttributeValueAspectProperties _self_, final StringAttributeValue _self, final String value) {
     _self.setValue(value);
   }
-  
+
   protected static Attribute _privk3_get_attribute(final StringAttributeValueAspectStringAttributeValueAspectProperties _self_, final StringAttributeValue _self) {
     return _self.getAttribute();
   }
-  
+
   protected static String _privk3_getString(final StringAttributeValueAspectStringAttributeValueAspectProperties _self_, final StringAttributeValue _self) {
     return _self.getValue();
   }

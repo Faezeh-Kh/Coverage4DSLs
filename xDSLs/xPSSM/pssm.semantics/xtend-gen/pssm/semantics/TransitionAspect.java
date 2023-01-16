@@ -48,7 +48,7 @@ public class TransitionAspect {
     	;
     };
   }
-  
+
   protected static boolean canFireOn(final Transition _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -58,7 +58,7 @@ public class TransitionAspect {
     };
     return (boolean)result;
   }
-  
+
   private static void exitSource(final Transition _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void exitSource(EventOccurrence)
@@ -66,7 +66,7 @@ public class TransitionAspect {
     	pssm.semantics.TransitionAspect._privk3_exitSource(_self_, (statemachines.Transition)_self,eventOccurrence);
     };
   }
-  
+
   private static void enterTarget(final Transition _self, final EventOccurrence eventOccurrence) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void enterTarget(EventOccurrence)
@@ -74,7 +74,7 @@ public class TransitionAspect {
     	pssm.semantics.TransitionAspect._privk3_enterTarget(_self_, (statemachines.Transition)_self,eventOccurrence);
     };
   }
-  
+
   private static State getContainingState(final Transition _self) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -84,7 +84,7 @@ public class TransitionAspect {
     };
     return (statemachines.State)result;
   }
-  
+
   private static Region getRegion(final Transition _self, final EObject object) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -94,7 +94,7 @@ public class TransitionAspect {
     };
     return (statemachines.Region)result;
   }
-  
+
   private static Region getLeastCommonAncestor(final Transition _self) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -104,7 +104,7 @@ public class TransitionAspect {
     };
     return (statemachines.Region)result;
   }
-  
+
   public static StateMachine getRootStateMachine(final Transition _self) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -114,7 +114,7 @@ public class TransitionAspect {
     };
     return (statemachines.StateMachine)result;
   }
-  
+
   protected static boolean traversed(final Transition _self) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -124,7 +124,7 @@ public class TransitionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static void traversed(final Transition _self, final boolean traversed) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void traversed(boolean)
@@ -132,7 +132,7 @@ public class TransitionAspect {
     	pssm.semantics.TransitionAspect._privk3_traversed(_self_, (statemachines.Transition)_self,traversed);
     };
   }
-  
+
   private static Region _leastCommonAncestor(final Transition _self) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     Object result = null;
@@ -142,7 +142,7 @@ public class TransitionAspect {
     };
     return (statemachines.Region)result;
   }
-  
+
   private static void _leastCommonAncestor(final Transition _self, final Region _leastCommonAncestor) {
     final pssm.semantics.TransitionAspectTransitionAspectProperties _self_ = pssm.semantics.TransitionAspectTransitionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void _leastCommonAncestor(Region)
@@ -150,7 +150,7 @@ public class TransitionAspect {
     	pssm.semantics.TransitionAspect._privk3__leastCommonAncestor(_self_, (statemachines.Transition)_self,_leastCommonAncestor);
     };
   }
-  
+
   protected static void _privk3_fire(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final EventOccurrence eventOccurrence) {
     TransitionAspect.exitSource(_self, eventOccurrence);
     Behavior _effect = _self.getEffect();
@@ -161,7 +161,7 @@ public class TransitionAspect {
     TransitionAspect.traversed(_self, true);
     TransitionAspect.enterTarget(_self, eventOccurrence);
   }
-  
+
   protected static boolean _privk3_canFireOn(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final EventOccurrence eventOccurrence) {
     boolean canFire = false;
     if ((eventOccurrence == null)) {
@@ -205,7 +205,7 @@ public class TransitionAspect {
     }
     return canFire;
   }
-  
+
   protected static void _privk3_exitSource(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final EventOccurrence eventOccurrence) {
     TransitionKind _kind = _self.getKind();
     if (_kind != null) {
@@ -257,7 +257,7 @@ public class TransitionAspect {
       }
     }
   }
-  
+
   protected static void _privk3_enterTarget(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final EventOccurrence eventOccurrence) {
     TransitionKind _kind = _self.getKind();
     if (_kind != null) {
@@ -298,7 +298,7 @@ public class TransitionAspect {
       }
     }
   }
-  
+
   protected static State _privk3_getContainingState(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
     if (((_self.getSource() instanceof Pseudostate) && Objects.equal(((Pseudostate) _self.getSource()).getKind(), PseudostateKind.ENTRYPOINT))) {
       Vertex _source = _self.getSource();
@@ -312,7 +312,7 @@ public class TransitionAspect {
     Vertex _target = _self.getTarget();
     return ((State) _target);
   }
-  
+
   protected static Region _privk3_getRegion(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final EObject object) {
     if ((object instanceof Region)) {
       return ((Region) object);
@@ -323,7 +323,7 @@ public class TransitionAspect {
     }
     return null;
   }
-  
+
   protected static Region _privk3_getLeastCommonAncestor(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
     State _parentState = VertexAspect.getParentState(_self.getSource());
     State _parentState_1 = VertexAspect.getParentState(_self.getTarget());
@@ -390,7 +390,7 @@ public class TransitionAspect {
     }
     return TransitionAspect._leastCommonAncestor(_self);
   }
-  
+
   protected static StateMachine _privk3_getRootStateMachine(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
     Region region = _self.getContainer();
     StateMachine _stateMachine = region.getStateMachine();
@@ -410,7 +410,7 @@ public class TransitionAspect {
     }
     return null;
   }
-  
+
   protected static boolean _privk3_traversed(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -426,7 +426,7 @@ public class TransitionAspect {
     }
     return _self_.traversed;
   }
-  
+
   protected static void _privk3_traversed(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final boolean traversed) {
     boolean setterCalled = false;
     try {
@@ -444,7 +444,7 @@ public class TransitionAspect {
     	_self_.traversed = traversed;
     }
   }
-  
+
   protected static Region _privk3__leastCommonAncestor(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -463,7 +463,7 @@ public class TransitionAspect {
     }
     return _self_._leastCommonAncestor;
   }
-  
+
   protected static void _privk3__leastCommonAncestor(final TransitionAspectTransitionAspectProperties _self_, final Transition _self, final Region _leastCommonAncestor) {
     boolean setterCalled = false;
     try {

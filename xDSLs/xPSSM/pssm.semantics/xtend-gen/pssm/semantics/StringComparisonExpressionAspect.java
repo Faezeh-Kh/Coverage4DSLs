@@ -31,7 +31,7 @@ public class StringComparisonExpressionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean _privk3_evaluate(final StringComparisonExpressionAspectStringComparisonExpressionAspectProperties _self_, final StringComparisonExpression _self) {
     final StringAttribute operand1 = _self.getOperand1();
     final StringAttribute operand2 = _self.getOperand2();

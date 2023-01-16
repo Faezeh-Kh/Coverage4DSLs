@@ -27,7 +27,7 @@ public class RegionAspect {
     	pssm.semantics.RegionAspect._privk3_enter(_self_, (statemachines.Region)_self,enteringTransition,eventOccurrence);
     };
   }
-  
+
   protected static void exit(final Region _self, final Transition exitingTransition, final EventOccurrence eventOccurrence) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void exit(Transition,EventOccurrence)
@@ -35,7 +35,7 @@ public class RegionAspect {
     	pssm.semantics.RegionAspect._privk3_exit(_self_, (statemachines.Region)_self,exitingTransition,eventOccurrence);
     };
   }
-  
+
   protected static void terminate(final Region _self) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void terminate()
@@ -43,7 +43,7 @@ public class RegionAspect {
     	pssm.semantics.RegionAspect._privk3_terminate(_self_, (statemachines.Region)_self);
     };
   }
-  
+
   protected static StateMachine getContainingStateMachine(final Region _self) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     Object result = null;
@@ -53,7 +53,7 @@ public class RegionAspect {
     };
     return (statemachines.StateMachine)result;
   }
-  
+
   protected static Iterable<Vertex> getActiveVertice(final Region _self) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     Object result = null;
@@ -63,7 +63,7 @@ public class RegionAspect {
     };
     return (java.lang.Iterable<statemachines.Vertex>)result;
   }
-  
+
   protected static boolean contains(final Region _self, final Vertex vertex) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     Object result = null;
@@ -73,7 +73,7 @@ public class RegionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static boolean completed(final Region _self) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     Object result = null;
@@ -83,7 +83,7 @@ public class RegionAspect {
     };
     return (boolean)result;
   }
-  
+
   protected static void completed(final Region _self, final boolean completed) {
     final pssm.semantics.RegionAspectRegionAspectProperties _self_ = pssm.semantics.RegionAspectRegionAspectContext.getSelf(_self);
     // #DispatchPointCut_before# void completed(boolean)
@@ -91,7 +91,7 @@ public class RegionAspect {
     	pssm.semantics.RegionAspect._privk3_completed(_self_, (statemachines.Region)_self,completed);
     };
   }
-  
+
   protected static void _privk3_enter(final RegionAspectRegionAspectProperties _self_, final Region _self, final Transition enteringTransition, final EventOccurrence eventOccurrence) {
     if (((enteringTransition == null) || (!RegionAspect.contains(_self, enteringTransition.getTarget())))) {
       final Function1<Pseudostate, Boolean> _function = new Function1<Pseudostate, Boolean>() {
@@ -111,7 +111,7 @@ public class RegionAspect {
       }
     }
   }
-  
+
   protected static void _privk3_exit(final RegionAspectRegionAspectProperties _self_, final Region _self, final Transition exitingTransition, final EventOccurrence eventOccurrence) {
     final Function1<Vertex, Boolean> _function = new Function1<Vertex, Boolean>() {
       public Boolean apply(final Vertex v) {
@@ -125,7 +125,7 @@ public class RegionAspect {
     };
     IterableExtensions.<Vertex>filter(_self.getVertice(), _function).forEach(_function_1);
   }
-  
+
   protected static void _privk3_terminate(final RegionAspectRegionAspectProperties _self_, final Region _self) {
     final Consumer<Vertex> _function = new Consumer<Vertex>() {
       public void accept(final Vertex it) {
@@ -134,7 +134,7 @@ public class RegionAspect {
     };
     _self.getVertice().forEach(_function);
   }
-  
+
   protected static StateMachine _privk3_getContainingStateMachine(final RegionAspectRegionAspectProperties _self_, final Region _self) {
     State _state = _self.getState();
     boolean _tripleNotEquals = (_state != null);
@@ -143,7 +143,7 @@ public class RegionAspect {
     }
     return _self.getStateMachine();
   }
-  
+
   protected static Iterable<Vertex> _privk3_getActiveVertice(final RegionAspectRegionAspectProperties _self_, final Region _self) {
     List<Vertex> _activeVertice = StateMachineAspect.activeVertice(RegionAspect.getContainingStateMachine(_self));
     final ArrayList<Vertex> result = new ArrayList<Vertex>(_activeVertice);
@@ -156,7 +156,7 @@ public class RegionAspect {
     Iterables.<Vertex>addAll(result, Iterables.<Vertex>concat(IterableExtensions.<State, List<Vertex>>map(Iterables.<State>filter(_self.getVertice(), State.class), _function)));
     return result;
   }
-  
+
   protected static boolean _privk3_contains(final RegionAspectRegionAspectProperties _self_, final Region _self, final Vertex vertex) {
     final Function1<Vertex, Boolean> _function = new Function1<Vertex, Boolean>() {
       public Boolean apply(final Vertex it) {
@@ -165,7 +165,7 @@ public class RegionAspect {
     };
     return IterableExtensions.<Vertex>exists(_self.getVertice(), _function);
   }
-  
+
   protected static boolean _privk3_completed(final RegionAspectRegionAspectProperties _self_, final Region _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -181,7 +181,7 @@ public class RegionAspect {
     }
     return _self_.completed;
   }
-  
+
   protected static void _privk3_completed(final RegionAspectRegionAspectProperties _self_, final Region _self, final boolean completed) {
     boolean setterCalled = false;
     try {

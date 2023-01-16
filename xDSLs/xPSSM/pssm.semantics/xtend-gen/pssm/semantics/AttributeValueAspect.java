@@ -28,7 +28,7 @@ public abstract class AttributeValueAspect {
     };
     return (int)result;
   }
-  
+
   @Abstract
   protected static void set_value(final AttributeValue _self, final int value) {
     final pssm.semantics.AttributeValueAspectAttributeValueAspectProperties _self_ = pssm.semantics.AttributeValueAspectAttributeValueAspectContext.getSelf(_self);
@@ -47,7 +47,7 @@ public abstract class AttributeValueAspect {
     	pssm.semantics.AttributeValueAspect._privk3_set_value(_self_, (statemachines.AttributeValue)_self,value);
     };
   }
-  
+
   @Abstract
   protected static Attribute get_attribute(final AttributeValue _self) {
     final pssm.semantics.AttributeValueAspectAttributeValueAspectProperties _self_ = pssm.semantics.AttributeValueAspectAttributeValueAspectContext.getSelf(_self);
@@ -73,7 +73,7 @@ public abstract class AttributeValueAspect {
     };
     return (statemachines.Attribute)result;
   }
-  
+
   @Abstract
   protected static String getString(final AttributeValue _self) {
     final pssm.semantics.AttributeValueAspectAttributeValueAspectProperties _self_ = pssm.semantics.AttributeValueAspectAttributeValueAspectContext.getSelf(_self);
@@ -99,19 +99,19 @@ public abstract class AttributeValueAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   protected static int _privk3_get_value(final AttributeValueAspectAttributeValueAspectProperties _self_, final AttributeValue _self) {
     throw new java.lang.RuntimeException("Not implemented");
   }
-  
+
   protected static void _privk3_set_value(final AttributeValueAspectAttributeValueAspectProperties _self_, final AttributeValue _self, final int value) {
     throw new java.lang.RuntimeException("Not implemented");
   }
-  
+
   protected static Attribute _privk3_get_attribute(final AttributeValueAspectAttributeValueAspectProperties _self_, final AttributeValue _self) {
     throw new java.lang.RuntimeException("Not implemented");
   }
-  
+
   protected static String _privk3_getString(final AttributeValueAspectAttributeValueAspectProperties _self_, final AttributeValue _self) {
     throw new java.lang.RuntimeException("Not implemented");
   }

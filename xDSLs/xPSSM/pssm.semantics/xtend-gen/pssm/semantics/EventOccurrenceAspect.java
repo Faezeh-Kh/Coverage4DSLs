@@ -27,7 +27,7 @@ public abstract class EventOccurrenceAspect {
     };
     return (java.lang.String)result;
   }
-  
+
   protected static String _privk3_getParameters(final EventOccurrenceAspectEventOccurrenceAspectProperties _self_, final EventOccurrence _self) {
     throw new java.lang.RuntimeException("Not implemented");
   }

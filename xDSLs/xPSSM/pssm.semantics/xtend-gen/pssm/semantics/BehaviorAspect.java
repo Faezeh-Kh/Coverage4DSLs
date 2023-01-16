@@ -39,7 +39,7 @@ public class BehaviorAspect {
     	;
     };
   }
-  
+
   protected static void _privk3_execute(final BehaviorAspectBehaviorAspectProperties _self_, final Behavior _self, final EventOccurrence eventOccurrence) {
     InputOutput.<String>println(_self.getName());
     StateMachine containerSM = null;
