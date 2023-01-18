@@ -1,75 +1,43 @@
-DomainSpecificCoverage PSSMCoverage{
-	Import metamodel statemachines
-	Context CustomSystem{
+ruleset PSSMCoverage{
+	import metamodel statemachines
+	context CustomSystem{
 		//a customSystem is covered when its inner stateMachine is covered
-		CoverageByContent{
-			containmentReference statemachine
-			multiplicity ONE
-		}
+		covered when ONE statemachine iscovered
 	},
-	Context StateMachine{
+	context StateMachine{
 		//a stateMachine is covered when one of its inner regions are covered
-		CoverageByContent{
-			containmentReference regions
-			multiplicity ONE
-		}
+		covered when ONE regions iscovered
 	},
-	Context Region{
+	context Region{
 		//a region is covered if at least one of its transitions is covered
-		CoverageByContent{
-			containmentReference transitions
-			multiplicity ONE
-		}
+		covered when ONE transitions iscovered
 	},
-	Context Transition{
+	context Transition{
 		//if a transition is covered, its source state, target state, constraint, and triggers are also covered
-		CoverageOfReferenced{
-			reference source
-		},
-		CoverageOfReferenced{
-			reference target
-		},
-		CoverageOfReferenced{
-			reference constraint
-		},
-		CoverageOfReferenced{
-			reference triggers
-		}
+		covers source, target, constraint, triggers
 	},
-	Context BooleanConstraint{
+	context BooleanConstraint{
 		//if a constraint is covered, its expression is also covered
-		CoverageOfReferenced {
-			reference expression
-		}
+		covers expression
 	},
-	Context IntegerConstraint{
+	context IntegerConstraint{
 		//if a constraint is covered, its expression is also covered
-		CoverageOfReferenced {
-			reference expression
-		}
+		covers expression
 	},
-	Context StringConstraint{
+	context StringConstraint{
 		//if a constraint is covered, its expression is also covered
-		CoverageOfReferenced {
-			reference expression
-		}
+		covers expression
 	},
-	Context Trigger{
+	context Trigger{
 		//if a trigger is covered, its EventType is also covered
-		CoverageOfReferenced {
-			reference eventType
-		}
+		covers eventType
 	},
-	Context SignalEventType{
+	context SignalEventType{
 		//if a SignalEventType is covered, its Signal is also covered
-		CoverageOfReferenced {
-			reference signal
-		}
+		covers signal
 	},
-	Context CallEventType{
+	context CallEventType{
 		//if a CallEventType is covered, its Operation is also covered
-		CoverageOfReferenced {
-			reference operation
-		}
+		covers operation
 	}
 }
