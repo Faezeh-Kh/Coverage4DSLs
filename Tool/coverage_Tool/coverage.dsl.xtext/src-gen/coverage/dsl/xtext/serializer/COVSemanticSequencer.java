@@ -3,6 +3,8 @@
  */
 package coverage.dsl.xtext.serializer;
 
+import DSLSpecificCoverage.Branch;
+import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.ConditionalIgnore;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
@@ -37,6 +39,12 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == DSLSpecificCoveragePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case DSLSpecificCoveragePackage.BRANCH:
+				sequence_Branch(context, (Branch) semanticObject); 
+				return; 
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION:
+				sequence_BranchSpecification(context, (BranchSpecification) semanticObject); 
+				return; 
 			case DSLSpecificCoveragePackage.CONDITIONAL_IGNORE:
 				sequence_ConditionalIgnore(context, (ConditionalIgnore) semanticObject); 
 				return; 
@@ -59,6 +67,41 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Rule returns BranchSpecification
+	 *     BranchSpecification returns BranchSpecification
+	 *
+	 * Constraint:
+	 *     (branches+=Branch branches+=Branch*)
+	 * </pre>
+	 */
+	protected void sequence_BranchSpecification(ISerializationContext context, BranchSpecification semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Branch returns Branch
+	 *
+	 * Constraint:
+	 *     query=EString
+	 * </pre>
+	 */
+	protected void sequence_Branch(ISerializationContext context, Branch semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.BRANCH__QUERY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.BRANCH__QUERY));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBranchAccess().getQueryEStringParserRuleCall_1_0(), semanticObject.getQuery());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * <pre>
@@ -96,19 +139,19 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CoverageByContent returns CoverageByContent
 	 *
 	 * Constraint:
-	 *     (containmentReference=[EReference|EString] multiplicity=CoveredContents)
+	 *     (multiplicity=CoveredContents containmentReference=[EReference|EString])
 	 * </pre>
 	 */
 	protected void sequence_CoverageByContent(ISerializationContext context, CoverageByContent semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE));
 			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__MULTIPLICITY) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__MULTIPLICITY));
+			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCoverageByContentAccess().getMultiplicityCoveredContentsEnumRuleCall_2_0(), semanticObject.getMultiplicity());
 		feeder.accept(grammarAccess.getCoverageByContentAccess().getContainmentReferenceEReferenceEStringParserRuleCall_3_0_1(), semanticObject.eGet(DSLSpecificCoveragePackage.Literals.COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE, false));
-		feeder.accept(grammarAccess.getCoverageByContentAccess().getMultiplicityCoveredContentsEnumRuleCall_5_0(), semanticObject.getMultiplicity());
 		feeder.finish();
 	}
 	
@@ -120,17 +163,11 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CoverageOfReferenced returns CoverageOfReferenced
 	 *
 	 * Constraint:
-	 *     reference=[EReference|EString]
+	 *     (reference+=[EReference|EString] reference+=[EReference|EString]*)
 	 * </pre>
 	 */
 	protected void sequence_CoverageOfReferenced(ISerializationContext context, CoverageOfReferenced semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_OF_REFERENCED__REFERENCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.COVERAGE_OF_REFERENCED__REFERENCE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCoverageOfReferencedAccess().getReferenceEReferenceEStringParserRuleCall_3_0_1(), semanticObject.eGet(DSLSpecificCoveragePackage.Literals.COVERAGE_OF_REFERENCED__REFERENCE, false));
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

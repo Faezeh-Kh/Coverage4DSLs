@@ -2,6 +2,7 @@
  */
 package DSLSpecificCoverage;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EReference;
 
 /**
@@ -20,27 +21,17 @@ import org.eclipse.emf.ecore.EReference;
  * @model
  * @generated
  */
-public interface CoverageOfReferenced extends Rule {
+public interface CoverageOfReferenced extends InclusionRule {
 	/**
-	 * Returns the value of the '<em><b>Reference</b></em>' reference.
+	 * Returns the value of the '<em><b>Reference</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference</em>' reference.
-	 * @see #setReference(EReference)
+	 * @return the value of the '<em>Reference</em>' reference list.
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getCoverageOfReferenced_Reference()
 	 * @model required="true"
 	 * @generated
 	 */
-	EReference getReference();
-
-	/**
-	 * Sets the value of the '{@link DSLSpecificCoverage.CoverageOfReferenced#getReference <em>Reference</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reference</em>' reference.
-	 * @see #getReference()
-	 * @generated
-	 */
-	void setReference(EReference value);
+	EList<EReference> getReference();
 
 } // CoverageOfReferenced

@@ -16,32 +16,43 @@
         eType="#//Rule" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rule" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Ignore" eSuperTypes="#//Rule">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ignoreSubtypes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CoverageOfReferenced" eSuperTypes="#//Rule">
+  <eClassifiers xsi:type="ecore:EClass" name="InclusionRule" abstract="true" eSuperTypes="#//Rule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExclusionRule" abstract="true" eSuperTypes="#//Rule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecializationRule" abstract="true"
+      eSuperTypes="#//Rule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CoverageOfReferenced" eSuperTypes="#//InclusionRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
-        eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+        upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CoverageByContent" eSuperTypes="#//Rule">
+  <eClassifiers xsi:type="ecore:EClass" name="CoverageByContent" eSuperTypes="#//InclusionRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containmentReference" lowerBound="1"
         eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" lowerBound="1"
         eType="#//CoveredContents"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConditionalIgnore" eSuperTypes="#//Rule">
+  <eClassifiers xsi:type="ecore:EClass" name="Ignore" eSuperTypes="#//ExclusionRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ignoreSubtypes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionalIgnore" eSuperTypes="#//ExclusionRule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" lowerBound="1"
         eType="#//ConditionType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerType" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BranchSpecification" eSuperTypes="#//SpecializationRule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branches" upperBound="-1"
+        eType="#//Branch" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Branch">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CoveredContents">
     <eLiterals name="ALL"/>
     <eLiterals name="ONE" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ConditionType">
-    <eLiterals name="INCLUSION"/>
-    <eLiterals name="EXCLUSION" value="1"/>
+    <eLiterals name="ContainedBy" literal="ContainedBy"/>
+    <eLiterals name="NotContainedBy" value="1" literal="NotContainedBy"/>
   </eClassifiers>
 </ecore:EPackage>

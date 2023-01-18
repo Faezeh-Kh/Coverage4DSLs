@@ -29,7 +29,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	public class DomainSpecificCoverageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.DomainSpecificCoverage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDomainSpecificCoverageKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cRulesetKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -47,24 +47,24 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//DomainSpecificCoverage returns DomainSpecificCoverage:
-		//    'DomainSpecificCoverage'
+		//    'ruleset'
 		//    name=EString
 		//    '{'
-		//        'Import' 'metamodel' metamodel=[ecore::EPackage|EString]
+		//        'import' 'metamodel' metamodel=[ecore::EPackage|EString]
 		//        contexts+=Context ( "," contexts+=Context)*
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'DomainSpecificCoverage'
+		//'ruleset'
 		//name=EString
 		//'{'
-		//    'Import' 'metamodel' metamodel=[ecore::EPackage|EString]
+		//    'import' 'metamodel' metamodel=[ecore::EPackage|EString]
 		//    contexts+=Context ( "," contexts+=Context)*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
-		//'DomainSpecificCoverage'
-		public Keyword getDomainSpecificCoverageKeyword_0() { return cDomainSpecificCoverageKeyword_0; }
+		//'ruleset'
+		public Keyword getRulesetKeyword_0() { return cRulesetKeyword_0; }
 		
 		//name=EString
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -75,7 +75,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//'Import'
+		//'import'
 		public Keyword getImportKeyword_3() { return cImportKeyword_3; }
 		
 		//'metamodel'
@@ -148,19 +148,19 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Context returns Context:
-		//    'Context' metaclass=[ecore::EClass|EString]
+		//    'context' metaclass=[ecore::EClass|EString]
 		//    '{'
 		//        (rules+=Rule ( "," rules+=Rule)*)?
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Context' metaclass=[ecore::EClass|EString]
+		//'context' metaclass=[ecore::EClass|EString]
 		//'{'
 		//    (rules+=Rule ( "," rules+=Rule)*)?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
-		//'Context'
+		//'context'
 		public Keyword getContextKeyword_0() { return cContextKeyword_0; }
 		
 		//metaclass=[ecore::EClass|EString]
@@ -206,12 +206,13 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cCoverageOfReferencedParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cCoverageByContentParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cConditionalIgnoreParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cBranchSpecificationParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//Rule returns Rule:
-		//    Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore;
+		//    Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore | BranchSpecification ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore
+		//Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore | BranchSpecification
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Ignore
@@ -225,6 +226,9 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		
 		//ConditionalIgnore
 		public RuleCall getConditionalIgnoreParserRuleCall_3() { return cConditionalIgnoreParserRuleCall_3; }
+		
+		//BranchSpecification
+		public RuleCall getBranchSpecificationParserRuleCall_4() { return cBranchSpecificationParserRuleCall_4; }
 	}
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.EBoolean");
@@ -250,42 +254,34 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cIgnoreAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cIgnoreKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cIgnoreSubtypesKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cSubtypesKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cIgnoreSubtypesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cIgnoreSubtypesEBooleanParserRuleCall_3_1_0 = (RuleCall)cIgnoreSubtypesAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Ignore returns Ignore:
-		//    {Ignore}
-		//    'Ignore'
-		//    '{'
-		//        ('ignoreSubtypes' ignoreSubtypes=EBoolean)?
-		//    '}';
+		//    {Ignore} 'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Ignore}
-		//'Ignore'
-		//'{'
-		//    ('ignoreSubtypes' ignoreSubtypes=EBoolean)?
-		//'}'
+		//{Ignore} 'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')'
 		public Group getGroup() { return cGroup; }
 		
 		//{Ignore}
 		public Action getIgnoreAction_0() { return cIgnoreAction_0; }
 		
-		//'Ignore'
+		//'ignore'
 		public Keyword getIgnoreKeyword_1() { return cIgnoreKeyword_1; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 		
-		//('ignoreSubtypes' ignoreSubtypes=EBoolean)?
+		//('subtypes' ignoreSubtypes=EBoolean)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'ignoreSubtypes'
-		public Keyword getIgnoreSubtypesKeyword_3_0() { return cIgnoreSubtypesKeyword_3_0; }
+		//'subtypes'
+		public Keyword getSubtypesKeyword_3_0() { return cSubtypesKeyword_3_0; }
 		
 		//ignoreSubtypes=EBoolean
 		public Assignment getIgnoreSubtypesAssignment_3_1() { return cIgnoreSubtypesAssignment_3_1; }
@@ -293,91 +289,146 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//EBoolean
 		public RuleCall getIgnoreSubtypesEBooleanParserRuleCall_3_1_0() { return cIgnoreSubtypesEBooleanParserRuleCall_3_1_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
+	public class ConditionalIgnoreElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.ConditionalIgnore");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIgnoreifKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cConditionConditionTypeEnumRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
+		private final Assignment cContainerTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cContainerTypeEClassCrossReference_2_0 = (CrossReference)cContainerTypeAssignment_2.eContents().get(0);
+		private final RuleCall cContainerTypeEClassEStringParserRuleCall_2_0_1 = (RuleCall)cContainerTypeEClassCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cContainerTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cContainerTypeEClassCrossReference_3_1_0 = (CrossReference)cContainerTypeAssignment_3_1.eContents().get(0);
+		private final RuleCall cContainerTypeEClassEStringParserRuleCall_3_1_0_1 = (RuleCall)cContainerTypeEClassCrossReference_3_1_0.eContents().get(1);
+		
+		//ConditionalIgnore returns ConditionalIgnore:
+		//    'ignoreif' condition=ConditionType
+		//        containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])*
+		//    ;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ignoreif' condition=ConditionType
+		//    containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])*
+		public Group getGroup() { return cGroup; }
+		
+		//'ignoreif'
+		public Keyword getIgnoreifKeyword_0() { return cIgnoreifKeyword_0; }
+		
+		//condition=ConditionType
+		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
+		
+		//ConditionType
+		public RuleCall getConditionConditionTypeEnumRuleCall_1_0() { return cConditionConditionTypeEnumRuleCall_1_0; }
+		
+		//containerType+=[ecore::EClass|EString]
+		public Assignment getContainerTypeAssignment_2() { return cContainerTypeAssignment_2; }
+		
+		//[ecore::EClass|EString]
+		public CrossReference getContainerTypeEClassCrossReference_2_0() { return cContainerTypeEClassCrossReference_2_0; }
+		
+		//EString
+		public RuleCall getContainerTypeEClassEStringParserRuleCall_2_0_1() { return cContainerTypeEClassEStringParserRuleCall_2_0_1; }
+		
+		//( "," containerType+=[ecore::EClass|EString])*
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		
+		//containerType+=[ecore::EClass|EString]
+		public Assignment getContainerTypeAssignment_3_1() { return cContainerTypeAssignment_3_1; }
+		
+		//[ecore::EClass|EString]
+		public CrossReference getContainerTypeEClassCrossReference_3_1_0() { return cContainerTypeEClassCrossReference_3_1_0; }
+		
+		//EString
+		public RuleCall getContainerTypeEClassEStringParserRuleCall_3_1_0_1() { return cContainerTypeEClassEStringParserRuleCall_3_1_0_1; }
 	}
 	public class CoverageOfReferencedElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.CoverageOfReferenced");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCoverageOfReferencedKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cReferenceKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cReferenceAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cReferenceEReferenceCrossReference_3_0 = (CrossReference)cReferenceAssignment_3.eContents().get(0);
-		private final RuleCall cReferenceEReferenceEStringParserRuleCall_3_0_1 = (RuleCall)cReferenceEReferenceCrossReference_3_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cCoversKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cReferenceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cReferenceEReferenceCrossReference_1_0 = (CrossReference)cReferenceAssignment_1.eContents().get(0);
+		private final RuleCall cReferenceEReferenceEStringParserRuleCall_1_0_1 = (RuleCall)cReferenceEReferenceCrossReference_1_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cReferenceAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cReferenceEReferenceCrossReference_2_1_0 = (CrossReference)cReferenceAssignment_2_1.eContents().get(0);
+		private final RuleCall cReferenceEReferenceEStringParserRuleCall_2_1_0_1 = (RuleCall)cReferenceEReferenceCrossReference_2_1_0.eContents().get(1);
 		
 		//CoverageOfReferenced returns CoverageOfReferenced:
-		//    'CoverageOfReferenced'
-		//    '{'
-		//        'reference' reference=[ecore::EReference|EString]
-		//    '}';
+		//    'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'CoverageOfReferenced'
-		//'{'
-		//    'reference' reference=[ecore::EReference|EString]
-		//'}'
+		//'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*
 		public Group getGroup() { return cGroup; }
 		
-		//'CoverageOfReferenced'
-		public Keyword getCoverageOfReferencedKeyword_0() { return cCoverageOfReferencedKeyword_0; }
+		//'covers'
+		public Keyword getCoversKeyword_0() { return cCoversKeyword_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//'reference'
-		public Keyword getReferenceKeyword_2() { return cReferenceKeyword_2; }
-		
-		//reference=[ecore::EReference|EString]
-		public Assignment getReferenceAssignment_3() { return cReferenceAssignment_3; }
+		//reference+=[ecore::EReference|EString]
+		public Assignment getReferenceAssignment_1() { return cReferenceAssignment_1; }
 		
 		//[ecore::EReference|EString]
-		public CrossReference getReferenceEReferenceCrossReference_3_0() { return cReferenceEReferenceCrossReference_3_0; }
+		public CrossReference getReferenceEReferenceCrossReference_1_0() { return cReferenceEReferenceCrossReference_1_0; }
 		
 		//EString
-		public RuleCall getReferenceEReferenceEStringParserRuleCall_3_0_1() { return cReferenceEReferenceEStringParserRuleCall_3_0_1; }
+		public RuleCall getReferenceEReferenceEStringParserRuleCall_1_0_1() { return cReferenceEReferenceEStringParserRuleCall_1_0_1; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//("," reference+=[ecore::EReference|EString])*
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//","
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		
+		//reference+=[ecore::EReference|EString]
+		public Assignment getReferenceAssignment_2_1() { return cReferenceAssignment_2_1; }
+		
+		//[ecore::EReference|EString]
+		public CrossReference getReferenceEReferenceCrossReference_2_1_0() { return cReferenceEReferenceCrossReference_2_1_0; }
+		
+		//EString
+		public RuleCall getReferenceEReferenceEStringParserRuleCall_2_1_0_1() { return cReferenceEReferenceEStringParserRuleCall_2_1_0_1; }
 	}
 	public class CoverageByContentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.CoverageByContent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCoverageByContentKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cContainmentReferenceKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cCoveredKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cWhenKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cMultiplicityAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cMultiplicityCoveredContentsEnumRuleCall_2_0 = (RuleCall)cMultiplicityAssignment_2.eContents().get(0);
 		private final Assignment cContainmentReferenceAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cContainmentReferenceEReferenceCrossReference_3_0 = (CrossReference)cContainmentReferenceAssignment_3.eContents().get(0);
 		private final RuleCall cContainmentReferenceEReferenceEStringParserRuleCall_3_0_1 = (RuleCall)cContainmentReferenceEReferenceCrossReference_3_0.eContents().get(1);
-		private final Keyword cMultiplicityKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cMultiplicityAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cMultiplicityCoveredContentsEnumRuleCall_5_0 = (RuleCall)cMultiplicityAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cIscoveredKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//CoverageByContent returns CoverageByContent:
-		//    'CoverageByContent'
-		//    '{'
-		//        'containmentReference' containmentReference=[ecore::EReference|EString]
-		//        'multiplicity' multiplicity=CoveredContents
-		//    '}';
+		//    'covered' 'when' multiplicity=CoveredContents
+		//        containmentReference=[ecore::EReference|EString] 'iscovered';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'CoverageByContent'
-		//'{'
-		//    'containmentReference' containmentReference=[ecore::EReference|EString]
-		//    'multiplicity' multiplicity=CoveredContents
-		//'}'
+		//'covered' 'when' multiplicity=CoveredContents
+		//    containmentReference=[ecore::EReference|EString] 'iscovered'
 		public Group getGroup() { return cGroup; }
 		
-		//'CoverageByContent'
-		public Keyword getCoverageByContentKeyword_0() { return cCoverageByContentKeyword_0; }
+		//'covered'
+		public Keyword getCoveredKeyword_0() { return cCoveredKeyword_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		//'when'
+		public Keyword getWhenKeyword_1() { return cWhenKeyword_1; }
 		
-		//'containmentReference'
-		public Keyword getContainmentReferenceKeyword_2() { return cContainmentReferenceKeyword_2; }
+		//multiplicity=CoveredContents
+		public Assignment getMultiplicityAssignment_2() { return cMultiplicityAssignment_2; }
+		
+		//CoveredContents
+		public RuleCall getMultiplicityCoveredContentsEnumRuleCall_2_0() { return cMultiplicityCoveredContentsEnumRuleCall_2_0; }
 		
 		//containmentReference=[ecore::EReference|EString]
 		public Assignment getContainmentReferenceAssignment_3() { return cContainmentReferenceAssignment_3; }
@@ -388,104 +439,83 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//EString
 		public RuleCall getContainmentReferenceEReferenceEStringParserRuleCall_3_0_1() { return cContainmentReferenceEReferenceEStringParserRuleCall_3_0_1; }
 		
-		//'multiplicity'
-		public Keyword getMultiplicityKeyword_4() { return cMultiplicityKeyword_4; }
-		
-		//multiplicity=CoveredContents
-		public Assignment getMultiplicityAssignment_5() { return cMultiplicityAssignment_5; }
-		
-		//CoveredContents
-		public RuleCall getMultiplicityCoveredContentsEnumRuleCall_5_0() { return cMultiplicityCoveredContentsEnumRuleCall_5_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		//'iscovered'
+		public Keyword getIscoveredKeyword_4() { return cIscoveredKeyword_4; }
 	}
-	public class ConditionalIgnoreElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.ConditionalIgnore");
+	public class BranchSpecificationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.BranchSpecification");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cConditionalIgnoreKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cConditionKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cConditionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cConditionConditionTypeEnumRuleCall_3_0 = (RuleCall)cConditionAssignment_3.eContents().get(0);
-		private final Keyword cContainerTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cLeftParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cContainerTypeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final CrossReference cContainerTypeEClassCrossReference_6_0 = (CrossReference)cContainerTypeAssignment_6.eContents().get(0);
-		private final RuleCall cContainerTypeEClassEStringParserRuleCall_6_0_1 = (RuleCall)cContainerTypeEClassCrossReference_6_0.eContents().get(1);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cContainerTypeAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final CrossReference cContainerTypeEClassCrossReference_7_1_0 = (CrossReference)cContainerTypeAssignment_7_1.eContents().get(0);
-		private final RuleCall cContainerTypeEClassEStringParserRuleCall_7_1_0_1 = (RuleCall)cContainerTypeEClassCrossReference_7_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cHasKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cBranchesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cBranchesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cBranchesBranchParserRuleCall_3_0 = (RuleCall)cBranchesAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cBranchesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cBranchesBranchParserRuleCall_4_1_0 = (RuleCall)cBranchesAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//ConditionalIgnore returns ConditionalIgnore:
-		//    'ConditionalIgnore'
-		//    '{'
-		//        'condition' condition=ConditionType
-		//        'containerType' '(' containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])* ')'
-		//    '}';
+		//BranchSpecification returns BranchSpecification:
+		//    'has' 'branches' '{' branches += Branch (',' branches += Branch)* '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'ConditionalIgnore'
-		//'{'
-		//    'condition' condition=ConditionType
-		//    'containerType' '(' containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])* ')'
-		//'}'
+		//'has' 'branches' '{' branches += Branch (',' branches += Branch)* '}'
 		public Group getGroup() { return cGroup; }
 		
-		//'ConditionalIgnore'
-		public Keyword getConditionalIgnoreKeyword_0() { return cConditionalIgnoreKeyword_0; }
+		//'has'
+		public Keyword getHasKeyword_0() { return cHasKeyword_0; }
+		
+		//'branches'
+		public Keyword getBranchesKeyword_1() { return cBranchesKeyword_1; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//'condition'
-		public Keyword getConditionKeyword_2() { return cConditionKeyword_2; }
+		//branches += Branch
+		public Assignment getBranchesAssignment_3() { return cBranchesAssignment_3; }
 		
-		//condition=ConditionType
-		public Assignment getConditionAssignment_3() { return cConditionAssignment_3; }
+		//Branch
+		public RuleCall getBranchesBranchParserRuleCall_3_0() { return cBranchesBranchParserRuleCall_3_0; }
 		
-		//ConditionType
-		public RuleCall getConditionConditionTypeEnumRuleCall_3_0() { return cConditionConditionTypeEnumRuleCall_3_0; }
+		//(',' branches += Branch)*
+		public Group getGroup_4() { return cGroup_4; }
 		
-		//'containerType'
-		public Keyword getContainerTypeKeyword_4() { return cContainerTypeKeyword_4; }
+		//','
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
 		
-		//'('
-		public Keyword getLeftParenthesisKeyword_5() { return cLeftParenthesisKeyword_5; }
+		//branches += Branch
+		public Assignment getBranchesAssignment_4_1() { return cBranchesAssignment_4_1; }
 		
-		//containerType+=[ecore::EClass|EString]
-		public Assignment getContainerTypeAssignment_6() { return cContainerTypeAssignment_6; }
-		
-		//[ecore::EClass|EString]
-		public CrossReference getContainerTypeEClassCrossReference_6_0() { return cContainerTypeEClassCrossReference_6_0; }
-		
-		//EString
-		public RuleCall getContainerTypeEClassEStringParserRuleCall_6_0_1() { return cContainerTypeEClassEStringParserRuleCall_6_0_1; }
-		
-		//( "," containerType+=[ecore::EClass|EString])*
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//","
-		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
-		
-		//containerType+=[ecore::EClass|EString]
-		public Assignment getContainerTypeAssignment_7_1() { return cContainerTypeAssignment_7_1; }
-		
-		//[ecore::EClass|EString]
-		public CrossReference getContainerTypeEClassCrossReference_7_1_0() { return cContainerTypeEClassCrossReference_7_1_0; }
-		
-		//EString
-		public RuleCall getContainerTypeEClassEStringParserRuleCall_7_1_0_1() { return cContainerTypeEClassEStringParserRuleCall_7_1_0_1; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_8() { return cRightParenthesisKeyword_8; }
+		//Branch
+		public RuleCall getBranchesBranchParserRuleCall_4_1_0() { return cBranchesBranchParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+	public class BranchElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.Branch");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cQueryBranchKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cQueryAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cQueryEStringParserRuleCall_1_0 = (RuleCall)cQueryAssignment_1.eContents().get(0);
+		
+		//Branch returns Branch:
+		//    'queryBranch' query=EString
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'queryBranch' query=EString
+		public Group getGroup() { return cGroup; }
+		
+		//'queryBranch'
+		public Keyword getQueryBranchKeyword_0() { return cQueryBranchKeyword_0; }
+		
+		//query=EString
+		public Assignment getQueryAssignment_1() { return cQueryAssignment_1; }
+		
+		//EString
+		public RuleCall getQueryEStringParserRuleCall_1_0() { return cQueryEStringParserRuleCall_1_0; }
 	}
 	
 	public class CoveredContentsElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
@@ -497,7 +527,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cONEONEKeyword_1_0 = (Keyword)cONEEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum CoveredContents returns CoveredContents:
-		//                ALL = 'ALL' | ONE = 'ONE';
+		//    ALL = 'ALL' | ONE = 'ONE';
 		public EnumRule getRule() { return rule; }
 		
 		//ALL = 'ALL' | ONE = 'ONE'
@@ -518,29 +548,29 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	public class ConditionTypeElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.ConditionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cINCLUSIONEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cINCLUSIONINCLUSIONKeyword_0_0 = (Keyword)cINCLUSIONEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cEXCLUSIONEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cEXCLUSIONEXCLUSIONKeyword_1_0 = (Keyword)cEXCLUSIONEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cContainedByEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cContainedByContainedByKeyword_0_0 = (Keyword)cContainedByEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cNotContainedByEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cNotContainedByNotContainedByKeyword_1_0 = (Keyword)cNotContainedByEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum ConditionType returns ConditionType:
-		//                INCLUSION = 'INCLUSION' | EXCLUSION = 'EXCLUSION';
+		//    ContainedBy = 'containedBy' | NotContainedBy = 'notContainedBy';
 		public EnumRule getRule() { return rule; }
 		
-		//INCLUSION = 'INCLUSION' | EXCLUSION = 'EXCLUSION'
+		//ContainedBy = 'containedBy' | NotContainedBy = 'notContainedBy'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//INCLUSION = 'INCLUSION'
-		public EnumLiteralDeclaration getINCLUSIONEnumLiteralDeclaration_0() { return cINCLUSIONEnumLiteralDeclaration_0; }
+		//ContainedBy = 'containedBy'
+		public EnumLiteralDeclaration getContainedByEnumLiteralDeclaration_0() { return cContainedByEnumLiteralDeclaration_0; }
 		
-		//'INCLUSION'
-		public Keyword getINCLUSIONINCLUSIONKeyword_0_0() { return cINCLUSIONINCLUSIONKeyword_0_0; }
+		//'containedBy'
+		public Keyword getContainedByContainedByKeyword_0_0() { return cContainedByContainedByKeyword_0_0; }
 		
-		//EXCLUSION = 'EXCLUSION'
-		public EnumLiteralDeclaration getEXCLUSIONEnumLiteralDeclaration_1() { return cEXCLUSIONEnumLiteralDeclaration_1; }
+		//NotContainedBy = 'notContainedBy'
+		public EnumLiteralDeclaration getNotContainedByEnumLiteralDeclaration_1() { return cNotContainedByEnumLiteralDeclaration_1; }
 		
-		//'EXCLUSION'
-		public Keyword getEXCLUSIONEXCLUSIONKeyword_1_0() { return cEXCLUSIONEXCLUSIONKeyword_1_0; }
+		//'notContainedBy'
+		public Keyword getNotContainedByNotContainedByKeyword_1_0() { return cNotContainedByNotContainedByKeyword_1_0; }
 	}
 	
 	private final DomainSpecificCoverageElements pDomainSpecificCoverage;
@@ -549,9 +579,11 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	private final RuleElements pRule;
 	private final EBooleanElements pEBoolean;
 	private final IgnoreElements pIgnore;
+	private final ConditionalIgnoreElements pConditionalIgnore;
 	private final CoverageOfReferencedElements pCoverageOfReferenced;
 	private final CoverageByContentElements pCoverageByContent;
-	private final ConditionalIgnoreElements pConditionalIgnore;
+	private final BranchSpecificationElements pBranchSpecification;
+	private final BranchElements pBranch;
 	private final CoveredContentsElements eCoveredContents;
 	private final ConditionTypeElements eConditionType;
 	
@@ -570,9 +602,11 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.pRule = new RuleElements();
 		this.pEBoolean = new EBooleanElements();
 		this.pIgnore = new IgnoreElements();
+		this.pConditionalIgnore = new ConditionalIgnoreElements();
 		this.pCoverageOfReferenced = new CoverageOfReferencedElements();
 		this.pCoverageByContent = new CoverageByContentElements();
-		this.pConditionalIgnore = new ConditionalIgnoreElements();
+		this.pBranchSpecification = new BranchSpecificationElements();
+		this.pBranch = new BranchElements();
 		this.eCoveredContents = new CoveredContentsElements();
 		this.eConditionType = new ConditionTypeElements();
 	}
@@ -605,10 +639,10 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 
 	
 	//DomainSpecificCoverage returns DomainSpecificCoverage:
-	//    'DomainSpecificCoverage'
+	//    'ruleset'
 	//    name=EString
 	//    '{'
-	//        'Import' 'metamodel' metamodel=[ecore::EPackage|EString]
+	//        'import' 'metamodel' metamodel=[ecore::EPackage|EString]
 	//        contexts+=Context ( "," contexts+=Context)*
 	//    '}';
 	public DomainSpecificCoverageElements getDomainSpecificCoverageAccess() {
@@ -630,7 +664,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Context returns Context:
-	//    'Context' metaclass=[ecore::EClass|EString]
+	//    'context' metaclass=[ecore::EClass|EString]
 	//    '{'
 	//        (rules+=Rule ( "," rules+=Rule)*)?
 	//    '}';
@@ -643,7 +677,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Rule returns Rule:
-	//    Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore;
+	//    Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore | BranchSpecification ;
 	public RuleElements getRuleAccess() {
 		return pRule;
 	}
@@ -663,11 +697,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Ignore returns Ignore:
-	//    {Ignore}
-	//    'Ignore'
-	//    '{'
-	//        ('ignoreSubtypes' ignoreSubtypes=EBoolean)?
-	//    '}';
+	//    {Ignore} 'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')';
 	public IgnoreElements getIgnoreAccess() {
 		return pIgnore;
 	}
@@ -676,11 +706,20 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getIgnoreAccess().getRule();
 	}
 	
+	//ConditionalIgnore returns ConditionalIgnore:
+	//    'ignoreif' condition=ConditionType
+	//        containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])*
+	//    ;
+	public ConditionalIgnoreElements getConditionalIgnoreAccess() {
+		return pConditionalIgnore;
+	}
+	
+	public ParserRule getConditionalIgnoreRule() {
+		return getConditionalIgnoreAccess().getRule();
+	}
+	
 	//CoverageOfReferenced returns CoverageOfReferenced:
-	//    'CoverageOfReferenced'
-	//    '{'
-	//        'reference' reference=[ecore::EReference|EString]
-	//    '}';
+	//    'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*;
 	public CoverageOfReferencedElements getCoverageOfReferencedAccess() {
 		return pCoverageOfReferenced;
 	}
@@ -690,11 +729,8 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//CoverageByContent returns CoverageByContent:
-	//    'CoverageByContent'
-	//    '{'
-	//        'containmentReference' containmentReference=[ecore::EReference|EString]
-	//        'multiplicity' multiplicity=CoveredContents
-	//    '}';
+	//    'covered' 'when' multiplicity=CoveredContents
+	//        containmentReference=[ecore::EReference|EString] 'iscovered';
 	public CoverageByContentElements getCoverageByContentAccess() {
 		return pCoverageByContent;
 	}
@@ -703,22 +739,29 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getCoverageByContentAccess().getRule();
 	}
 	
-	//ConditionalIgnore returns ConditionalIgnore:
-	//    'ConditionalIgnore'
-	//    '{'
-	//        'condition' condition=ConditionType
-	//        'containerType' '(' containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])* ')'
-	//    '}';
-	public ConditionalIgnoreElements getConditionalIgnoreAccess() {
-		return pConditionalIgnore;
+	//BranchSpecification returns BranchSpecification:
+	//    'has' 'branches' '{' branches += Branch (',' branches += Branch)* '}';
+	public BranchSpecificationElements getBranchSpecificationAccess() {
+		return pBranchSpecification;
 	}
 	
-	public ParserRule getConditionalIgnoreRule() {
-		return getConditionalIgnoreAccess().getRule();
+	public ParserRule getBranchSpecificationRule() {
+		return getBranchSpecificationAccess().getRule();
+	}
+	
+	//Branch returns Branch:
+	//    'queryBranch' query=EString
+	//;
+	public BranchElements getBranchAccess() {
+		return pBranch;
+	}
+	
+	public ParserRule getBranchRule() {
+		return getBranchAccess().getRule();
 	}
 	
 	//enum CoveredContents returns CoveredContents:
-	//                ALL = 'ALL' | ONE = 'ONE';
+	//    ALL = 'ALL' | ONE = 'ONE';
 	public CoveredContentsElements getCoveredContentsAccess() {
 		return eCoveredContents;
 	}
@@ -728,7 +771,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//enum ConditionType returns ConditionType:
-	//                INCLUSION = 'INCLUSION' | EXCLUSION = 'EXCLUSION';
+	//    ContainedBy = 'containedBy' | NotContainedBy = 'notContainedBy';
 	public ConditionTypeElements getConditionTypeAccess() {
 		return eConditionType;
 	}

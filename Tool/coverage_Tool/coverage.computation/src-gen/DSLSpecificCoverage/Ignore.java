@@ -19,7 +19,7 @@ package DSLSpecificCoverage;
  * @model
  * @generated
  */
-public interface Ignore extends Rule {
+public interface Ignore extends ExclusionRule {
 	/**
 	 * Returns the value of the '<em><b>Ignore Subtypes</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

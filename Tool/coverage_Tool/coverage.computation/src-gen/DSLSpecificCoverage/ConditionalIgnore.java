@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EClass;
  * @model
  * @generated
  */
-public interface ConditionalIgnore extends Rule {
+public interface ConditionalIgnore extends ExclusionRule {
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' attribute.
 	 * The literals are from the enumeration {@link DSLSpecificCoverage.ConditionType}.

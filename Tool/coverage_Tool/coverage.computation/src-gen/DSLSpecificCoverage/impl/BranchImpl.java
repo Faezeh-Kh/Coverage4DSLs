@@ -2,55 +2,56 @@
  */
 package DSLSpecificCoverage.impl;
 
+import DSLSpecificCoverage.Branch;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
-import DSLSpecificCoverage.Ignore;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ignore</b></em>'.
+ * An implementation of the model object '<em><b>Branch</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link DSLSpecificCoverage.impl.IgnoreImpl#isIgnoreSubtypes <em>Ignore Subtypes</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.BranchImpl#getQuery <em>Query</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
+public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	/**
-	 * The default value of the '{@link #isIgnoreSubtypes() <em>Ignore Subtypes</em>}' attribute.
+	 * The default value of the '{@link #getQuery() <em>Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIgnoreSubtypes()
+	 * @see #getQuery()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IGNORE_SUBTYPES_EDEFAULT = true;
+	protected static final String QUERY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isIgnoreSubtypes() <em>Ignore Subtypes</em>}' attribute.
+	 * The cached value of the '{@link #getQuery() <em>Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIgnoreSubtypes()
+	 * @see #getQuery()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean ignoreSubtypes = IGNORE_SUBTYPES_EDEFAULT;
+	protected String query = QUERY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IgnoreImpl() {
+	protected BranchImpl() {
 		super();
 	}
 
@@ -61,7 +62,7 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DSLSpecificCoveragePackage.Literals.IGNORE;
+		return DSLSpecificCoveragePackage.Literals.BRANCH;
 	}
 
 	/**
@@ -69,8 +70,8 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIgnoreSubtypes() {
-		return ignoreSubtypes;
+	public String getQuery() {
+		return query;
 	}
 
 	/**
@@ -78,11 +79,11 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIgnoreSubtypes(boolean newIgnoreSubtypes) {
-		boolean oldIgnoreSubtypes = ignoreSubtypes;
-		ignoreSubtypes = newIgnoreSubtypes;
+	public void setQuery(String newQuery) {
+		String oldQuery = query;
+		query = newQuery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.IGNORE__IGNORE_SUBTYPES, oldIgnoreSubtypes, ignoreSubtypes));
+			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.BRANCH__QUERY, oldQuery, query));
 	}
 
 	/**
@@ -93,8 +94,8 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.IGNORE__IGNORE_SUBTYPES:
-				return isIgnoreSubtypes();
+			case DSLSpecificCoveragePackage.BRANCH__QUERY:
+				return getQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +108,8 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.IGNORE__IGNORE_SUBTYPES:
-				setIgnoreSubtypes((Boolean)newValue);
+			case DSLSpecificCoveragePackage.BRANCH__QUERY:
+				setQuery((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +123,8 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.IGNORE__IGNORE_SUBTYPES:
-				setIgnoreSubtypes(IGNORE_SUBTYPES_EDEFAULT);
+			case DSLSpecificCoveragePackage.BRANCH__QUERY:
+				setQuery(QUERY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +138,8 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.IGNORE__IGNORE_SUBTYPES:
-				return ignoreSubtypes != IGNORE_SUBTYPES_EDEFAULT;
+			case DSLSpecificCoveragePackage.BRANCH__QUERY:
+				return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,10 +154,10 @@ public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (ignoreSubtypes: ");
-		result.append(ignoreSubtypes);
+		result.append(" (query: ");
+		result.append(query);
 		result.append(')');
 		return result.toString();
 	}
 
-} //IgnoreImpl
+} //BranchImpl

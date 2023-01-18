@@ -187,6 +187,90 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int RULE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.InclusionRuleImpl <em>Inclusion Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.InclusionRuleImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getInclusionRule()
+	 * @generated
+	 */
+	int INCLUSION_RULE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Inclusion Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUSION_RULE_FEATURE_COUNT = RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Inclusion Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUSION_RULE_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ExclusionRuleImpl <em>Exclusion Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.ExclusionRuleImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getExclusionRule()
+	 * @generated
+	 */
+	int EXCLUSION_RULE = 4;
+
+	/**
+	 * The number of structural features of the '<em>Exclusion Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCLUSION_RULE_FEATURE_COUNT = RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Exclusion Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCLUSION_RULE_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.SpecializationRuleImpl <em>Specialization Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.SpecializationRuleImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getSpecializationRule()
+	 * @generated
+	 */
+	int SPECIALIZATION_RULE = 5;
+
+	/**
+	 * The number of structural features of the '<em>Specialization Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALIZATION_RULE_FEATURE_COUNT = RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Specialization Rule</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALIZATION_RULE_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.impl.IgnoreImpl <em>Ignore</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -194,34 +278,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getIgnore()
 	 * @generated
 	 */
-	int IGNORE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Ignore Subtypes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE__IGNORE_SUBTYPES = RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Ignore</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_FEATURE_COUNT = RULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Ignore</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+	int IGNORE = 8;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.impl.CoverageOfReferencedImpl <em>Coverage Of Referenced</em>}' class.
@@ -231,16 +288,16 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoverageOfReferenced()
 	 * @generated
 	 */
-	int COVERAGE_OF_REFERENCED = 4;
+	int COVERAGE_OF_REFERENCED = 6;
 
 	/**
-	 * The feature id for the '<em><b>Reference</b></em>' reference.
+	 * The feature id for the '<em><b>Reference</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_OF_REFERENCED__REFERENCE = RULE_FEATURE_COUNT + 0;
+	int COVERAGE_OF_REFERENCED__REFERENCE = INCLUSION_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Coverage Of Referenced</em>' class.
@@ -249,7 +306,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_OF_REFERENCED_FEATURE_COUNT = RULE_FEATURE_COUNT + 1;
+	int COVERAGE_OF_REFERENCED_FEATURE_COUNT = INCLUSION_RULE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Coverage Of Referenced</em>' class.
@@ -258,7 +315,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_OF_REFERENCED_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+	int COVERAGE_OF_REFERENCED_OPERATION_COUNT = INCLUSION_RULE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.impl.CoverageByContentImpl <em>Coverage By Content</em>}' class.
@@ -268,7 +325,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoverageByContent()
 	 * @generated
 	 */
-	int COVERAGE_BY_CONTENT = 5;
+	int COVERAGE_BY_CONTENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Containment Reference</b></em>' reference.
@@ -277,7 +334,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE = RULE_FEATURE_COUNT + 0;
+	int COVERAGE_BY_CONTENT__CONTAINMENT_REFERENCE = INCLUSION_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicity</b></em>' attribute.
@@ -286,7 +343,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_BY_CONTENT__MULTIPLICITY = RULE_FEATURE_COUNT + 1;
+	int COVERAGE_BY_CONTENT__MULTIPLICITY = INCLUSION_RULE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Coverage By Content</em>' class.
@@ -295,7 +352,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_BY_CONTENT_FEATURE_COUNT = RULE_FEATURE_COUNT + 2;
+	int COVERAGE_BY_CONTENT_FEATURE_COUNT = INCLUSION_RULE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Coverage By Content</em>' class.
@@ -304,7 +361,34 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_BY_CONTENT_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+	int COVERAGE_BY_CONTENT_OPERATION_COUNT = INCLUSION_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Ignore Subtypes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE__IGNORE_SUBTYPES = EXCLUSION_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Ignore</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_FEATURE_COUNT = EXCLUSION_RULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Ignore</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPERATION_COUNT = EXCLUSION_RULE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ConditionalIgnoreImpl <em>Conditional Ignore</em>}' class.
@@ -314,7 +398,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getConditionalIgnore()
 	 * @generated
 	 */
-	int CONDITIONAL_IGNORE = 6;
+	int CONDITIONAL_IGNORE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' attribute.
@@ -323,7 +407,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_IGNORE__CONDITION = RULE_FEATURE_COUNT + 0;
+	int CONDITIONAL_IGNORE__CONDITION = EXCLUSION_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Container Type</b></em>' reference list.
@@ -332,7 +416,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_IGNORE__CONTAINER_TYPE = RULE_FEATURE_COUNT + 1;
+	int CONDITIONAL_IGNORE__CONTAINER_TYPE = EXCLUSION_RULE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Conditional Ignore</em>' class.
@@ -341,7 +425,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_IGNORE_FEATURE_COUNT = RULE_FEATURE_COUNT + 2;
+	int CONDITIONAL_IGNORE_FEATURE_COUNT = EXCLUSION_RULE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Conditional Ignore</em>' class.
@@ -350,7 +434,81 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_IGNORE_OPERATION_COUNT = RULE_OPERATION_COUNT + 0;
+	int CONDITIONAL_IGNORE_OPERATION_COUNT = EXCLUSION_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.BranchSpecificationImpl <em>Branch Specification</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.BranchSpecificationImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranchSpecification()
+	 * @generated
+	 */
+	int BRANCH_SPECIFICATION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Branches</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_SPECIFICATION__BRANCHES = SPECIALIZATION_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Branch Specification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_SPECIFICATION_FEATURE_COUNT = SPECIALIZATION_RULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Branch Specification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_SPECIFICATION_OPERATION_COUNT = SPECIALIZATION_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.BranchImpl <em>Branch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.BranchImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranch()
+	 * @generated
+	 */
+	int BRANCH = 11;
+
+	/**
+	 * The feature id for the '<em><b>Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH__QUERY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Branch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Branch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.CoveredContents <em>Covered Contents</em>}' enum.
@@ -360,7 +518,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoveredContents()
 	 * @generated
 	 */
-	int COVERED_CONTENTS = 7;
+	int COVERED_CONTENTS = 12;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.ConditionType <em>Condition Type</em>}' enum.
@@ -370,7 +528,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getConditionType()
 	 * @generated
 	 */
-	int CONDITION_TYPE = 8;
+	int CONDITION_TYPE = 13;
 
 
 	/**
@@ -459,6 +617,36 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EClass getRule();
 
 	/**
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.InclusionRule <em>Inclusion Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Inclusion Rule</em>'.
+	 * @see DSLSpecificCoverage.InclusionRule
+	 * @generated
+	 */
+	EClass getInclusionRule();
+
+	/**
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.ExclusionRule <em>Exclusion Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exclusion Rule</em>'.
+	 * @see DSLSpecificCoverage.ExclusionRule
+	 * @generated
+	 */
+	EClass getExclusionRule();
+
+	/**
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.SpecializationRule <em>Specialization Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Specialization Rule</em>'.
+	 * @see DSLSpecificCoverage.SpecializationRule
+	 * @generated
+	 */
+	EClass getSpecializationRule();
+
+	/**
 	 * Returns the meta object for class '{@link DSLSpecificCoverage.Ignore <em>Ignore</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -490,10 +678,10 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EClass getCoverageOfReferenced();
 
 	/**
-	 * Returns the meta object for the reference '{@link DSLSpecificCoverage.CoverageOfReferenced#getReference <em>Reference</em>}'.
+	 * Returns the meta object for the reference list '{@link DSLSpecificCoverage.CoverageOfReferenced#getReference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Reference</em>'.
+	 * @return the meta object for the reference list '<em>Reference</em>'.
 	 * @see DSLSpecificCoverage.CoverageOfReferenced#getReference()
 	 * @see #getCoverageOfReferenced()
 	 * @generated
@@ -563,6 +751,48 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConditionalIgnore_ContainerType();
+
+	/**
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.BranchSpecification <em>Branch Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Branch Specification</em>'.
+	 * @see DSLSpecificCoverage.BranchSpecification
+	 * @generated
+	 */
+	EClass getBranchSpecification();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link DSLSpecificCoverage.BranchSpecification#getBranches <em>Branches</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Branches</em>'.
+	 * @see DSLSpecificCoverage.BranchSpecification#getBranches()
+	 * @see #getBranchSpecification()
+	 * @generated
+	 */
+	EReference getBranchSpecification_Branches();
+
+	/**
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.Branch <em>Branch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Branch</em>'.
+	 * @see DSLSpecificCoverage.Branch
+	 * @generated
+	 */
+	EClass getBranch();
+
+	/**
+	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.Branch#getQuery <em>Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Query</em>'.
+	 * @see DSLSpecificCoverage.Branch#getQuery()
+	 * @see #getBranch()
+	 * @generated
+	 */
+	EAttribute getBranch_Query();
 
 	/**
 	 * Returns the meta object for enum '{@link DSLSpecificCoverage.CoveredContents <em>Covered Contents</em>}'.
@@ -678,6 +908,36 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		EClass RULE = eINSTANCE.getRule();
 
 		/**
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.InclusionRuleImpl <em>Inclusion Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.InclusionRuleImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getInclusionRule()
+		 * @generated
+		 */
+		EClass INCLUSION_RULE = eINSTANCE.getInclusionRule();
+
+		/**
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ExclusionRuleImpl <em>Exclusion Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.ExclusionRuleImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getExclusionRule()
+		 * @generated
+		 */
+		EClass EXCLUSION_RULE = eINSTANCE.getExclusionRule();
+
+		/**
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.SpecializationRuleImpl <em>Specialization Rule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.SpecializationRuleImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getSpecializationRule()
+		 * @generated
+		 */
+		EClass SPECIALIZATION_RULE = eINSTANCE.getSpecializationRule();
+
+		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.IgnoreImpl <em>Ignore</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -706,7 +966,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		EClass COVERAGE_OF_REFERENCED = eINSTANCE.getCoverageOfReferenced();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Reference</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -764,6 +1024,42 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONDITIONAL_IGNORE__CONTAINER_TYPE = eINSTANCE.getConditionalIgnore_ContainerType();
+
+		/**
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.BranchSpecificationImpl <em>Branch Specification</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.BranchSpecificationImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranchSpecification()
+		 * @generated
+		 */
+		EClass BRANCH_SPECIFICATION = eINSTANCE.getBranchSpecification();
+
+		/**
+		 * The meta object literal for the '<em><b>Branches</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BRANCH_SPECIFICATION__BRANCHES = eINSTANCE.getBranchSpecification_Branches();
+
+		/**
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.BranchImpl <em>Branch</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.BranchImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranch()
+		 * @generated
+		 */
+		EClass BRANCH = eINSTANCE.getBranch();
+
+		/**
+		 * The meta object literal for the '<em><b>Query</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BRANCH__QUERY = eINSTANCE.getBranch_Query();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.CoveredContents <em>Covered Contents</em>}' enum.

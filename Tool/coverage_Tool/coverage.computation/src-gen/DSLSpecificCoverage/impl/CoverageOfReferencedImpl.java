@@ -5,13 +5,11 @@ package DSLSpecificCoverage.impl;
 import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 
-import org.eclipse.emf.common.notify.Notification;
-
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,16 +24,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CoverageOfReferencedImpl extends RuleImpl implements CoverageOfReferenced {
+public class CoverageOfReferencedImpl extends InclusionRuleImpl implements CoverageOfReferenced {
 	/**
-	 * The cached value of the '{@link #getReference() <em>Reference</em>}' reference.
+	 * The cached value of the '{@link #getReference() <em>Reference</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected EReference reference;
+	protected EList<EReference> reference;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,37 +59,11 @@ public class CoverageOfReferencedImpl extends RuleImpl implements CoverageOfRefe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getReference() {
-		if (reference != null && reference.eIsProxy()) {
-			InternalEObject oldReference = (InternalEObject)reference;
-			reference = (EReference)eResolveProxy(oldReference);
-			if (reference != oldReference) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE, oldReference, reference));
-			}
+	public EList<EReference> getReference() {
+		if (reference == null) {
+			reference = new EObjectResolvingEList<EReference>(EReference.class, this, DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE);
 		}
 		return reference;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference basicGetReference() {
-		return reference;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReference(EReference newReference) {
-		EReference oldReference = reference;
-		reference = newReference;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE, oldReference, reference));
 	}
 
 	/**
@@ -103,8 +75,7 @@ public class CoverageOfReferencedImpl extends RuleImpl implements CoverageOfRefe
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE:
-				if (resolve) return getReference();
-				return basicGetReference();
+				return getReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,11 +85,13 @@ public class CoverageOfReferencedImpl extends RuleImpl implements CoverageOfRefe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE:
-				setReference((EReference)newValue);
+				getReference().clear();
+				getReference().addAll((Collection<? extends EReference>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +106,7 @@ public class CoverageOfReferencedImpl extends RuleImpl implements CoverageOfRefe
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE:
-				setReference((EReference)null);
+				getReference().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,7 +121,7 @@ public class CoverageOfReferencedImpl extends RuleImpl implements CoverageOfRefe
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED__REFERENCE:
-				return reference != null;
+				return reference != null && !reference.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

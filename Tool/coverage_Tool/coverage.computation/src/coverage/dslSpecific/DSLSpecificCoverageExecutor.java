@@ -57,8 +57,10 @@ public class DSLSpecificCoverageExecutor {
 	}
 
 	private void updateCoverableClasses(CoverageOfReferenced rule) {
-		TDLCoverageUtil.getInstance().addCoverableClass(
-				(EClass) rule.getReference().getEType());
+		rule.getReference().stream().forEach(r -> 
+			TDLCoverageUtil.getInstance().addCoverableClass(
+				(EClass) r.getEType()));
+		
 	}
 	
 	private void updateCoverableClasses(Ignore rule) {
@@ -77,20 +79,22 @@ public class DSLSpecificCoverageExecutor {
 	}
 
 	private void inferReferenceCoverage(CoverageOfReferenced r, EObject object) {
-		EReference ref = (EReference) getMatchedFeature(object, r.getReference().getName());
-		if (ref == null) {return; }
-		
-		Object referencedObject = object.eGet(ref);
-		if (referencedObject == null) { return; }
-		
-		if (referencedObject instanceof EObject) {
-			testCaseCoverage.setObjectCoverage(
-					(EObject) referencedObject, testCaseCoverage.getObjectCoverage(object));
-		}
-		else if (referencedObject instanceof EObjectContainmentEList<?>) {
-			((EObjectContainmentEList<?>) referencedObject).
-				forEach(o -> testCaseCoverage.setObjectCoverage(
-						(EObject) o, testCaseCoverage.getObjectCoverage(object)));
+		for (EReference reference:r.getReference()) {
+			EReference ref = (EReference) getMatchedFeature(object, reference.getName());
+			if (ref != null) {
+				Object referencedObject = object.eGet(ref);
+				if (referencedObject != null) { 
+					if (referencedObject instanceof EObject) {
+						testCaseCoverage.setObjectCoverage(
+								(EObject) referencedObject, testCaseCoverage.getObjectCoverage(object));
+					}
+					else if (referencedObject instanceof EObjectContainmentEList<?>) {
+						((EObjectContainmentEList<?>) referencedObject).
+							forEach(o -> testCaseCoverage.setObjectCoverage(
+									(EObject) o, testCaseCoverage.getObjectCoverage(object)));
+					}
+				}
+			}
 		}
 	}
 
@@ -143,14 +147,14 @@ public class DSLSpecificCoverageExecutor {
 	}
 	
 	private void runConditionalIgnoreRule(ConditionalIgnore rule, EObject object) {
-		if (rule.getCondition() == ConditionType.INCLUSION) {
+		if (rule.getCondition() == ConditionType.CONTAINED_BY) {
 			//ignore EObjects contained by one of the ContainerType classes
 			if (rule.getContainerType().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
 				testCaseCoverage.setObjectNotCoverable(object);
 			}
 		}
-		else if (rule.getCondition() == ConditionType.EXCLUSION) {
+		else if (rule.getCondition() == ConditionType.NOT_CONTAINED_BY) {
 			//ignore EObjects that are not contained by any of the ContainerType classes
 			if (!rule.getContainerType().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {

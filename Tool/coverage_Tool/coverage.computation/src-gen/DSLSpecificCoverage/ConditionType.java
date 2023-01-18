@@ -19,46 +19,44 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ConditionType implements Enumerator {
 	/**
-	 * The '<em><b>INCLUSION</b></em>' literal object.
+	 * The '<em><b>Contained By</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INCLUSION_VALUE
+	 * @see #CONTAINED_BY_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	INCLUSION(0, "INCLUSION", "INCLUSION"),
+	CONTAINED_BY(0, "ContainedBy", "ContainedBy"), /**
+	 * The '<em><b>Not Contained By</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NOT_CONTAINED_BY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NOT_CONTAINED_BY(1, "NotContainedBy", "NotContainedBy");
 
 	/**
-	 * The '<em><b>EXCLUSION</b></em>' literal object.
+	 * The '<em><b>Contained By</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #EXCLUSION_VALUE
+	 * @see #CONTAINED_BY
+	 * @model name="ContainedBy"
 	 * @generated
 	 * @ordered
 	 */
-	EXCLUSION(1, "EXCLUSION", "EXCLUSION");
+	public static final int CONTAINED_BY_VALUE = 0;
 
 	/**
-	 * The '<em><b>INCLUSION</b></em>' literal value.
+	 * The '<em><b>Not Contained By</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INCLUSION
-	 * @model
+	 * @see #NOT_CONTAINED_BY
+	 * @model name="NotContainedBy"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INCLUSION_VALUE = 0;
-
-	/**
-	 * The '<em><b>EXCLUSION</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EXCLUSION
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int EXCLUSION_VALUE = 1;
+	public static final int NOT_CONTAINED_BY_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Condition Type</b></em>' enumerators.
@@ -68,8 +66,8 @@ public enum ConditionType implements Enumerator {
 	 */
 	private static final ConditionType[] VALUES_ARRAY =
 		new ConditionType[] {
-			INCLUSION,
-			EXCLUSION,
+			CONTAINED_BY,
+			NOT_CONTAINED_BY,
 		};
 
 	/**
@@ -126,8 +124,8 @@ public enum ConditionType implements Enumerator {
 	 */
 	public static ConditionType get(int value) {
 		switch (value) {
-			case INCLUSION_VALUE: return INCLUSION;
-			case EXCLUSION_VALUE: return EXCLUSION;
+			case CONTAINED_BY_VALUE: return CONTAINED_BY;
+			case NOT_CONTAINED_BY_VALUE: return NOT_CONTAINED_BY;
 		}
 		return null;
 	}

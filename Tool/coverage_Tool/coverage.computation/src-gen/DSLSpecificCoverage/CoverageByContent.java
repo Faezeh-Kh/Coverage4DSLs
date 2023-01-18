@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * @model
  * @generated
  */
-public interface CoverageByContent extends Rule {
+public interface CoverageByContent extends InclusionRule {
 	/**
 	 * Returns the value of the '<em><b>Containment Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->

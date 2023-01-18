@@ -84,16 +84,31 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DSLSpecificCoveragePackage.IGNORE: {
-				Ignore ignore = (Ignore)theEObject;
-				T result = caseIgnore(ignore);
-				if (result == null) result = caseRule(ignore);
+			case DSLSpecificCoveragePackage.INCLUSION_RULE: {
+				InclusionRule inclusionRule = (InclusionRule)theEObject;
+				T result = caseInclusionRule(inclusionRule);
+				if (result == null) result = caseRule(inclusionRule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.EXCLUSION_RULE: {
+				ExclusionRule exclusionRule = (ExclusionRule)theEObject;
+				T result = caseExclusionRule(exclusionRule);
+				if (result == null) result = caseRule(exclusionRule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.SPECIALIZATION_RULE: {
+				SpecializationRule specializationRule = (SpecializationRule)theEObject;
+				T result = caseSpecializationRule(specializationRule);
+				if (result == null) result = caseRule(specializationRule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED: {
 				CoverageOfReferenced coverageOfReferenced = (CoverageOfReferenced)theEObject;
 				T result = caseCoverageOfReferenced(coverageOfReferenced);
+				if (result == null) result = caseInclusionRule(coverageOfReferenced);
 				if (result == null) result = caseRule(coverageOfReferenced);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -101,14 +116,38 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 			case DSLSpecificCoveragePackage.COVERAGE_BY_CONTENT: {
 				CoverageByContent coverageByContent = (CoverageByContent)theEObject;
 				T result = caseCoverageByContent(coverageByContent);
+				if (result == null) result = caseInclusionRule(coverageByContent);
 				if (result == null) result = caseRule(coverageByContent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.IGNORE: {
+				Ignore ignore = (Ignore)theEObject;
+				T result = caseIgnore(ignore);
+				if (result == null) result = caseExclusionRule(ignore);
+				if (result == null) result = caseRule(ignore);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case DSLSpecificCoveragePackage.CONDITIONAL_IGNORE: {
 				ConditionalIgnore conditionalIgnore = (ConditionalIgnore)theEObject;
 				T result = caseConditionalIgnore(conditionalIgnore);
+				if (result == null) result = caseExclusionRule(conditionalIgnore);
 				if (result == null) result = caseRule(conditionalIgnore);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: {
+				BranchSpecification branchSpecification = (BranchSpecification)theEObject;
+				T result = caseBranchSpecification(branchSpecification);
+				if (result == null) result = caseSpecializationRule(branchSpecification);
+				if (result == null) result = caseRule(branchSpecification);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.BRANCH: {
+				Branch branch = (Branch)theEObject;
+				T result = caseBranch(branch);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,6 +197,51 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRule(Rule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Inclusion Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Inclusion Rule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInclusionRule(InclusionRule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Exclusion Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Exclusion Rule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExclusionRule(ExclusionRule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Specialization Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Specialization Rule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpecializationRule(SpecializationRule object) {
 		return null;
 	}
 
@@ -218,6 +302,36 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConditionalIgnore(ConditionalIgnore object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Branch Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Branch Specification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBranchSpecification(BranchSpecification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Branch</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Branch</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBranch(Branch object) {
 		return null;
 	}
 

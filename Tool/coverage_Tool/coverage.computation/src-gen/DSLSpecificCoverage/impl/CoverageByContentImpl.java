@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class CoverageByContentImpl extends RuleImpl implements CoverageByContent {
+public class CoverageByContentImpl extends InclusionRuleImpl implements CoverageByContent {
 	/**
 	 * The cached value of the '{@link #getContainmentReference() <em>Containment Reference</em>}' reference.
 	 * <!-- begin-user-doc -->

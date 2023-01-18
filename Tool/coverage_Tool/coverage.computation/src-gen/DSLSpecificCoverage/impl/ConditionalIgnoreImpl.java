@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ConditionalIgnoreImpl extends RuleImpl implements ConditionalIgnore {
+public class ConditionalIgnoreImpl extends ExclusionRuleImpl implements ConditionalIgnore {
 	/**
 	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public class ConditionalIgnoreImpl extends RuleImpl implements ConditionalIgnore
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ConditionType CONDITION_EDEFAULT = ConditionType.INCLUSION;
+	protected static final ConditionType CONDITION_EDEFAULT = ConditionType.CONTAINED_BY;
 
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.

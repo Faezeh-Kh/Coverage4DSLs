@@ -59,10 +59,12 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 		switch (eClass.getClassifierID()) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE: return createDomainSpecificCoverage();
 			case DSLSpecificCoveragePackage.CONTEXT: return createContext();
-			case DSLSpecificCoveragePackage.IGNORE: return createIgnore();
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED: return createCoverageOfReferenced();
 			case DSLSpecificCoveragePackage.COVERAGE_BY_CONTENT: return createCoverageByContent();
+			case DSLSpecificCoveragePackage.IGNORE: return createIgnore();
 			case DSLSpecificCoveragePackage.CONDITIONAL_IGNORE: return createConditionalIgnore();
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: return createBranchSpecification();
+			case DSLSpecificCoveragePackage.BRANCH: return createBranch();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -160,6 +162,26 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public ConditionalIgnore createConditionalIgnore() {
 		ConditionalIgnoreImpl conditionalIgnore = new ConditionalIgnoreImpl();
 		return conditionalIgnore;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BranchSpecification createBranchSpecification() {
+		BranchSpecificationImpl branchSpecification = new BranchSpecificationImpl();
+		return branchSpecification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Branch createBranch() {
+		BranchImpl branch = new BranchImpl();
+		return branch;
 	}
 
 	/**
