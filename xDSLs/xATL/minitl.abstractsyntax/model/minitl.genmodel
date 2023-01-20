@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/minitl.abstractsyntax/src-gen" creationIcons="false" editDirectory="/minitl.abstractsyntax.edit/src-gen" editorDirectory="/minitl.abstractsyntax.editor/src-gen" modelPluginID="minitl.abstractsyntax" modelName="minitl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>minitl.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="minitl" disposableProviderFactory="true">
+    <ecorePackage href="minitl.ecore#/"/>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="minitl.ecore#//Operator"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="minitl.ecore#//Operator/ADD"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="minitl.ecore#//Operator/SUB"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genDataTypes>
+      <ecoreDataType href="minitl.ecore#//Object"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="minitl.ecore#//EObject"/>
+    </genDataTypes>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//Transformation"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Transformation/inputMetamodel"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Transformation/rules"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Transformation/outputMetamodel"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//Transformation/inputModel"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//Transformation/outputModel"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//Transformation/inputModelURI"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//Transformation/outputFilePath"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//Rule"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Rule/objectTemplates"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Rule/transformation"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//Binding"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Binding/feature"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Binding/value"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Binding/objectTemplate"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="minitl.ecore#//Value"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//BinaryExpression"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//BinaryExpression/expressions"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//BinaryExpression/operator"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//FieldAccessValue"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//FieldAccessValue/object"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//FieldAccessValue/feature"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//ObjectTemplate"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//ObjectTemplate/bindings"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//ObjectTemplate/type"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//ObjectTemplate/rule"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//ObjectTemplate/currentObject"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="minitl.ecore#//NamedElement"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//NamedElement/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//StringValue"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minitl.ecore#//StringValue/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//ObjectTemplateValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//ObjectTemplateValue/objecttemplate"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minitl.ecore#//Metamodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minitl.ecore#//Metamodel/packages"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

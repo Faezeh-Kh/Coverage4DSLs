@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/shipyardV4/src" modelPluginID="shipyardV4" modelName="ShipyardV4Opt"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>shipyardV4Opt.ecore</foreignModel>
+  <genPackages prefix="ShipyardV4" disposableProviderFactory="true" ecorePackage="shipyardV4Opt.ecore#/">
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardV4Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardV4Root/shipyardV4Root"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardV4Root/initialSequence"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Metadata">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Metadata/Metadata"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Selector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Selector/Selector"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Sequence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Sequence/Sequence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//Sequence/simulatedResult"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Shipyard">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Shipyard/Shipyard"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardSpec">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardSpec/ShipyardSpec"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Stage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Stage/Stage"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Task">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Task/Task"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//Task/simulatedResult"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//Trigger">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//Trigger/Trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//MetadataName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//MetadataName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SelectorMatch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//SelectorMatch/match"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SequenceName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//SequenceName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SequenceTriggeredOn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//SequenceTriggeredOn/triggeredOn"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SequenceTasks">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//SequenceTasks/tasks"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardApiVersion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//ShipyardApiVersion/apiVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardKind">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//ShipyardKind/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardMetadata">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardMetadata/metadata"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardSpec1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardSpec1/spec"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardSpecStages">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardSpecStages/stages"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//StageName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//StageName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//StageSequences">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//StageSequences/sequences"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//TaskName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//TaskName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//TaskProperties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//TaskProperties/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//TriggerEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//TriggerEvent/event"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//TriggerSelector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//TriggerSelector/selector"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SelectorMatchPatternProperties0">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//SelectorMatchPatternProperties0/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//SelectorMatchPatternProperties0/patternProperties0"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//TaskPropertiesAdditionalProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shipyardV4Opt.ecore#//TaskPropertiesAdditionalProperties/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//TaskPropertiesAdditionalProperties/additionalProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SequenceTriggeredOnItems">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//SequenceTriggeredOnItems/items"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//SequenceTasksItems">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//SequenceTasksItems/items"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//ShipyardSpecStagesItems">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//ShipyardSpecStagesItems/items"/>
+    </genClasses>
+    <genClasses ecoreClass="shipyardV4Opt.ecore#//StageSequencesItems">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shipyardV4Opt.ecore#//StageSequencesItems/items"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//MetadataPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//SelectorPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//SequencePropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//ShipyardPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//ShipyardSpecPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//StagePropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//TaskPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//TriggerPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//SelectorMatchPropertiesAbstract"/>
+    <genClasses image="false" ecoreClass="shipyardV4Opt.ecore#//TaskPropertiesPropertiesAbstract"/>
+  </genPackages>
+  <genPackages prefix="JsonMetaschemaMM" ecorePackage="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes">
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/array"/>
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/null"/>
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/number"/>
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/object"/>
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SimpleTypes/string"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NullEnum">
+      <genEnumLiterals ecoreEnumLiteral="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NullEnum/null"/>
+    </genEnums>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ObjectSchema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ObjectSchema/keywordDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaximumSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaximumSchemaDefinition/maximum"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//IntegerValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//IntegerValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//WriteOnlySchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//WriteOnlySchemaDefinition/writeOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//CommentSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//CommentSchemaDefinition/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//EnumSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//EnumSchemaDefinition/items"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//UniqueItemsSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//UniqueItemsSchemaDefinition/uniqueItems"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AnyOfSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AnyOfSchemaDefinition/anyOf"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//StringArray">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//StringArray/values"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TitleSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TitleSchemaDefinition/title"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ItemsSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ItemsSchemaDefinition/itemsAnyOf1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ItemsSchemaDefinition/itemsAnyOf2"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DefaultSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DefaultSchemaDefinition/default"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ThenSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ThenSchemaDefinition/then"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinLengthSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinLengthSchemaDefinition/minLength"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DefinitionsSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DefinitionsSchemaDefinition/keySchemaPairs"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//BooleanValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//BooleanValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinItemsSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinItemsSchemaDefinition/minItems"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//OneOfSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//OneOfSchemaDefinition/oneOf"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaArray">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaArray/items"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaxPropertiesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaxPropertiesSchemaDefinition/maxProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NullValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NullValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinimumSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinimumSchemaDefinition/minimum"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//StringValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//StringValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//JsonDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//JsonDocument/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaxItemsSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaxItemsSchemaDefinition/maxItems"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//FormatSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//FormatSchemaDefinition/format"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ReadOnlySchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ReadOnlySchemaDefinition/readOnly"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//Schema"/>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ObjectValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ObjectValue/keyvaluepair"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TypeSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TypeSchemaDefinition/typeAnyOf1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TypeSchemaDefinition/typesAnyOf2"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AdditionalPropertiesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AdditionalPropertiesSchemaDefinition/additionalProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ElseSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ElseSchemaDefinition/else"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//IdSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//IdSchemaDefinition/id"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ConstSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ConstSchemaDefinition/const"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DependenciesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DependenciesSchemaDefinition/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NumberValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NumberValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//RequiredSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//RequiredSchemaDefinition/required"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DescriptionSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//DescriptionSchemaDefinition/description"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinPropertiesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MinPropertiesSchemaDefinition/minProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PatternPropertiesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PatternPropertiesSchemaDefinition/keySchemaPairs"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AdditionalItemsSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AdditionalItemsSchemaDefinition/additionalItems"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeyValuePair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeyValuePair/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeyValuePair/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ExamplesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ExamplesSchemaDefinition/examples"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//IfSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//IfSchemaDefinition/if"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AllOfSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//AllOfSchemaDefinition/allOf"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ContentEncodingSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ContentEncodingSchemaDefinition/contentEncoding"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MultipleOfSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MultipleOfSchemaDefinition/multipleOf"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PatternSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PatternSchemaDefinition/pattern"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeywordDefinition"/>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ContainsSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ContainsSchemaDefinition/contains"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NotSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NotSchemaDefinition/not"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ExclusiveMaximumSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ExclusiveMaximumSchemaDefinition/exclusiveMaximum"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaxLengthSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//MaxLengthSchemaDefinition/maxLength"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//RefSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//RefSchemaDefinition/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//JsonSchema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//JsonSchema/schema"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeySchemaPair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeySchemaPair/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//KeySchemaPair/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ContentMediaTypeSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ContentMediaTypeSchemaDefinition/contentMediaType"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ExclusiveMinimumSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ExclusiveMinimumSchemaDefinition/exclusiveMinimum"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaSchemaDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaSchemaDefinition/schema"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PropertiesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PropertiesSchemaDefinition/keySchemaPairs"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PropertyNamesSchemaDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//PropertyNamesSchemaDefinition/propertyNames"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ArrayValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//ArrayValue/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//Value"/>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TypesAnyOf2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//TypesAnyOf2/items"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//BooleanSchema">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//BooleanSchema/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NonNegativeInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NonNegativeInteger/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NonNegativeIntegerDefault0">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//NonNegativeIntegerDefault0/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectAdditionalProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectAdditionalProperties/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectAdditionalProperties/additionalProperties"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesProperties"/>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalProperties/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalProperties/additionalProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalPropertiesAnyOf1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalPropertiesAnyOf1/anyOf1"/>
+    </genClasses>
+    <genClasses ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalPropertiesAnyOf2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalPropertiesAnyOf2/anyOf2"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../jsonmetaschemaMM/model/jsonMetaschemaMM.ecore#//SchemaObjectDependenciesAdditionalPropertiesAnyOf"/>
+  </genPackages>
+</genmodel:GenModel>

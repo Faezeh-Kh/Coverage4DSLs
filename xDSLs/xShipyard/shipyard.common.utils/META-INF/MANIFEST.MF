@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Utils
+Bundle-SymbolicName: shipyard.common.utils
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: shipyard.common.utils.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ shipyardV4;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: shipyard.common.utils
+Bundle-ActivationPolicy: lazy
+Export-Package: shipyard.common.utils
