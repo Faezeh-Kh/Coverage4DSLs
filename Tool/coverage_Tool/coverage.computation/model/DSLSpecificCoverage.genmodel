@@ -45,6 +45,7 @@
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//BranchSpecification">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchSpecification/branches"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//BranchSpecification/condition"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Branch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Branch/query"/>
