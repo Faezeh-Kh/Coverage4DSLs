@@ -18,14 +18,14 @@ import org.imt.tdl.testResult.TDLTestResultUtil;
 @SuppressWarnings("all")
 public class StructuredDataInstanceAspect extends DataInstanceAspect {
   @OverrideAspectMethod
-  public static EObject getMatchedMUTElement(final StructuredDataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
+  public static ArrayList<EObject> getMatchedMUTElement(final StructuredDataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
     final org.imt.k3tdl.k3dsa.StructuredDataInstanceAspectStructuredDataInstanceAspectProperties _self_ = org.imt.k3tdl.k3dsa.StructuredDataInstanceAspectStructuredDataInstanceAspectContext.getSelf(_self);
     Object result = null;
-    // #DispatchPointCut_before# EObject getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String)
+    // #DispatchPointCut_before# ArrayList<EObject> getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String)
     if (_self instanceof org.etsi.mts.tdl.StructuredDataInstance){
     	result = org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect._privk3_getMatchedMUTElement(_self_, (org.etsi.mts.tdl.StructuredDataInstance)_self,rootElement,MUTResource,isAssertion,DSLPath);
     };
-    return (org.eclipse.emf.ecore.EObject)result;
+    return (java.util.ArrayList<org.eclipse.emf.ecore.EObject>)result;
   }
 
   public static String setMatchedMUTElement(final StructuredDataInstance _self, final EObject matchedObject, final Resource MUTResource, final String DSLPath) {
@@ -56,12 +56,12 @@ public class StructuredDataInstanceAspect extends DataInstanceAspect {
     };
   }
 
-  private static EObject super_getMatchedMUTElement(final StructuredDataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
+  private static ArrayList<EObject> super_getMatchedMUTElement(final StructuredDataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
     final org.imt.k3tdl.k3dsa.DataInstanceAspectDataInstanceAspectProperties _self_ = org.imt.k3tdl.k3dsa.DataInstanceAspectDataInstanceAspectContext.getSelf(_self);
     return  org.imt.k3tdl.k3dsa.DataInstanceAspect._privk3_getMatchedMUTElement(_self_, _self,rootElement,MUTResource,isAssertion,DSLPath);
   }
 
-  protected static EObject _privk3_getMatchedMUTElement(final StructuredDataInstanceAspectStructuredDataInstanceAspectProperties _self_, final StructuredDataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
+  protected static ArrayList<EObject> _privk3_getMatchedMUTElement(final StructuredDataInstanceAspectStructuredDataInstanceAspectProperties _self_, final StructuredDataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
     StructuredDataInstanceAspect.matchedElements(_self).clear();
     int _size = rootElement.size();
     ExclusiveRange _doubleDotLessThan = new ExclusiveRange(0, _size, true);
@@ -95,11 +95,7 @@ public class StructuredDataInstanceAspect extends DataInstanceAspect {
         }
       }
     }
-    boolean _isEmpty = StructuredDataInstanceAspect.matchedElements(_self).isEmpty();
-    if (_isEmpty) {
-      return null;
-    }
-    return StructuredDataInstanceAspect.matchedElements(_self).get(0);
+    return StructuredDataInstanceAspect.matchedElements(_self);
   }
 
   protected static String _privk3_setMatchedMUTElement(final StructuredDataInstanceAspectStructuredDataInstanceAspectProperties _self_, final StructuredDataInstance _self, final EObject matchedObject, final Resource MUTResource, final String DSLPath) {

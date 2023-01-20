@@ -1,9 +1,11 @@
 package org.imt.k3tdl.k3dsa;
 
+import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -16,12 +18,15 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.ExclusiveRange;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.InputOutput;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.etsi.mts.tdl.DataInstance;
 import org.etsi.mts.tdl.DataInstanceUse;
 import org.etsi.mts.tdl.DataUse;
 import org.etsi.mts.tdl.Member;
+import org.etsi.mts.tdl.MemberAssignment;
+import org.etsi.mts.tdl.PackageableElement;
 import org.etsi.mts.tdl.ParameterBinding;
 import org.etsi.mts.tdl.StructuredDataInstance;
 import org.imt.tdl.testResult.TDLTestResultUtil;
@@ -57,6 +62,16 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
     	result = org.imt.k3tdl.k3dsa.DataInstanceUseAspect._privk3_isMatchedParametrizedElement(_self_, (org.etsi.mts.tdl.DataInstanceUse)_self,rootElement,MUTResource,isAssertion,DSLPath);
     };
     return (java.lang.String)result;
+  }
+
+  public static List<StructuredDataInstance> findPossibleContainers(final DataInstanceUse _self) {
+    final org.imt.k3tdl.k3dsa.DataInstanceUseAspectDataInstanceUseAspectProperties _self_ = org.imt.k3tdl.k3dsa.DataInstanceUseAspectDataInstanceUseAspectContext.getSelf(_self);
+    Object result = null;
+    // #DispatchPointCut_before# List<StructuredDataInstance> findPossibleContainers()
+    if (_self instanceof org.etsi.mts.tdl.DataInstanceUse){
+    	result = org.imt.k3tdl.k3dsa.DataInstanceUseAspect._privk3_findPossibleContainers(_self_, (org.etsi.mts.tdl.DataInstanceUse)_self);
+    };
+    return (java.util.List<org.etsi.mts.tdl.StructuredDataInstance>)result;
   }
 
   public static String setMatchedMUTElement(final DataInstanceUse _self, final Resource MUTResource, final String DSLPath) {
@@ -146,7 +161,7 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
 
   protected static EObject _privk3_getMatchedMUTElement(final DataInstanceUseAspectDataInstanceUseAspectProperties _self_, final DataInstanceUse _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
     ArrayList<EObject> containers = new ArrayList<EObject>();
-    EObject matchedElement = null;
+    ArrayList<EObject> matchedElement = null;
     DataInstance _dataInstance = _self.getDataInstance();
     if ((_dataInstance instanceof StructuredDataInstance)) {
       DataInstance _dataInstance_1 = _self.getDataInstance();
@@ -171,10 +186,28 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
       {
         DataInstance _dataInstance_3 = _self.getDataInstance();
         DataInstanceAspect.info(_dataInstance_3, DataInstanceUseAspect.isMatchedParametrizedElement(_self, containers.get((i).intValue()), MUTResource, isAssertion, DSLPath));
-        boolean _contains = DataInstanceAspect.info(_self.getDataInstance()).contains(TDLTestResultUtil.PASS);
+        boolean _contains = DataInstanceAspect.info(_self.getDataInstance()).contains(TDLTestResultUtil.FAIL);
         if (_contains) {
-          return containers.get((i).intValue());
+          containers.remove(i);
         }
+      }
+    }
+    int _size_2 = containers.size();
+    boolean _greaterThan_1 = (_size_2 > 1);
+    if (_greaterThan_1) {
+      int _size_3 = containers.size();
+      ExclusiveRange _doubleDotLessThan_1 = new ExclusiveRange(0, _size_3, true);
+      for (final Integer i_1 : _doubleDotLessThan_1) {
+        {
+          final EObject eobjectContainer = containers.get((i_1).intValue()).eContainer();
+          final List<StructuredDataInstance> tdlElementContainers = DataInstanceUseAspect.findPossibleContainers(_self);
+        }
+      }
+    } else {
+      int _size_4 = containers.size();
+      boolean _equals = (_size_4 == 1);
+      if (_equals) {
+        return containers.get(0);
       }
     }
     return null;
@@ -194,6 +227,28 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
       }
     }
     return TDLTestResultUtil.PASS;
+  }
+
+  protected static List<StructuredDataInstance> _privk3_findPossibleContainers(final DataInstanceUseAspectDataInstanceUseAspectProperties _self_, final DataInstanceUse _self) {
+    EObject _eContainer = _self.getDataInstance().eContainer();
+    final org.etsi.mts.tdl.Package tdlPackage = ((org.etsi.mts.tdl.Package) _eContainer);
+    final Function1<PackageableElement, Boolean> _function = new Function1<PackageableElement, Boolean>() {
+      public Boolean apply(final PackageableElement p) {
+        return Boolean.valueOf(((p instanceof StructuredDataInstance) && IterableExtensions.<MemberAssignment>exists(((StructuredDataInstance) p).getMemberAssignment(), new Function1<MemberAssignment, Boolean>() {
+          public Boolean apply(final MemberAssignment ma) {
+            return Boolean.valueOf(((ma.getMemberSpec() instanceof DataInstanceUse) && 
+              (Objects.equal(((DataInstanceUse) ma.getMemberSpec()).getDataInstance(), _self.getDataInstance()) || ((DataInstanceUse) ma.getMemberSpec()).getItem().contains(_self.getDataInstance()))));
+          }
+        })));
+      }
+    };
+    final Function1<PackageableElement, StructuredDataInstance> _function_1 = new Function1<PackageableElement, StructuredDataInstance>() {
+      public StructuredDataInstance apply(final PackageableElement p) {
+        return ((StructuredDataInstance) p);
+      }
+    };
+    final List<StructuredDataInstance> dataInstances = IterableExtensions.<StructuredDataInstance>toList(IterableExtensions.<PackageableElement, StructuredDataInstance>map(IterableExtensions.<PackageableElement>filter(tdlPackage.getPackagedElement(), _function), _function_1));
+    return dataInstances;
   }
 
   protected static String _privk3_setMatchedMUTElement(final DataInstanceUseAspectDataInstanceUseAspectProperties _self_, final DataInstanceUse _self, final Resource MUTResource, final String DSLPath) {
@@ -449,11 +504,7 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
       final EObject matchedObject = DataInstanceUseAspect.getMatchedMUTElement(_self, MUTResource, false, DSLPath);
       if ((matchedObject == null)) {
         String _name = _self.getDataInstance().getName();
-        String _plus = ("There is no " + _name);
-        String _plus_1 = (_plus + " property in the MUT");
-        InputOutput.<String>println(_plus_1);
-        String _name_1 = _self.getDataInstance().getName();
-        return ((TDLTestResultUtil.FAIL + ": There is no MUT element matched with ") + _name_1);
+        return ((TDLTestResultUtil.FAIL + ": There is no MUT element matched with ") + _name);
       }
       try {
         final TransactionalEditingDomain domain_1 = TransactionUtil.getEditingDomain(object);
@@ -476,13 +527,13 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
         });
       } catch (final Throwable _t) {
         if (_t instanceof IllegalArgumentException) {
+          String _name_1 = matchedFeature.getName();
+          String _plus = ("New value cannot be set for the " + _name_1);
+          String _plus_1 = (_plus + " property of the MUT");
+          InputOutput.<String>println(_plus_1);
           String _name_2 = matchedFeature.getName();
-          String _plus_2 = ("New value cannot be set for the " + _name_2);
-          String _plus_3 = (_plus_2 + " property of the MUT");
-          InputOutput.<String>println(_plus_3);
-          String _name_3 = matchedFeature.getName();
-          String _plus_4 = ((TDLTestResultUtil.FAIL + ": New value cannot be set for the ") + _name_3);
-          return (_plus_4 + " property of the MUT");
+          String _plus_2 = ((TDLTestResultUtil.FAIL + ": New value cannot be set for the ") + _name_2);
+          return (_plus_2 + " property of the MUT");
         } else if (_t instanceof NullPointerException) {
           ArrayList<EObject> rootElements = new ArrayList<EObject>();
           rootElements.add(object);
@@ -500,8 +551,8 @@ public class DataInstanceUseAspect extends StaticDataUseAspect {
         }
       }
     }
-    String _name_2 = matchedFeature.getName();
-    String _plus_2 = ((TDLTestResultUtil.PASS + ": New value is set for the ") + _name_2);
-    return (_plus_2 + " property of the MUT");
+    String _name_1 = matchedFeature.getName();
+    String _plus = ((TDLTestResultUtil.PASS + ": New value is set for the ") + _name_1);
+    return (_plus + " property of the MUT");
   }
 }

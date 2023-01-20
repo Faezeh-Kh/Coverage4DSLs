@@ -15,24 +15,24 @@ import org.etsi.mts.tdl.StructuredDataInstance;
 @Aspect(className = DataInstance.class)
 @SuppressWarnings("all")
 public class DataInstanceAspect {
-  public static EObject getMatchedMUTElement(final DataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
+  public static ArrayList<EObject> getMatchedMUTElement(final DataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
     final org.imt.k3tdl.k3dsa.DataInstanceAspectDataInstanceAspectProperties _self_ = org.imt.k3tdl.k3dsa.DataInstanceAspectDataInstanceAspectContext.getSelf(_self);
     Object result = null;
-    	// BeginInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#EObject getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect
-    		if (_self instanceof org.etsi.mts.tdl.StructuredDataInstance){
-    			result = org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect.getMatchedMUTElement((org.etsi.mts.tdl.StructuredDataInstance)_self,rootElement,MUTResource,isAssertion,DSLPath);
-    		} else
-    		// EndInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#EObject getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect
-    	// BeginInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#EObject getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.SimpleDataInstanceAspect
+    	// BeginInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#ArrayList<EObject> getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.SimpleDataInstanceAspect
     		if (_self instanceof org.etsi.mts.tdl.SimpleDataInstance){
     			result = org.imt.k3tdl.k3dsa.SimpleDataInstanceAspect.getMatchedMUTElement((org.etsi.mts.tdl.SimpleDataInstance)_self,rootElement,MUTResource,isAssertion,DSLPath);
     		} else
-    		// EndInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#EObject getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.SimpleDataInstanceAspect
-    // #DispatchPointCut_before# EObject getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String)
+    		// EndInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#ArrayList<EObject> getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.SimpleDataInstanceAspect
+    	// BeginInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#ArrayList<EObject> getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect
+    		if (_self instanceof org.etsi.mts.tdl.StructuredDataInstance){
+    			result = org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect.getMatchedMUTElement((org.etsi.mts.tdl.StructuredDataInstance)_self,rootElement,MUTResource,isAssertion,DSLPath);
+    		} else
+    		// EndInjectInto org.imt.k3tdl.k3dsa.DataInstanceAspect#ArrayList<EObject> getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String) from org.imt.k3tdl.k3dsa.StructuredDataInstanceAspect
+    // #DispatchPointCut_before# ArrayList<EObject> getMatchedMUTElement(ArrayList<EObject>,Resource,boolean,String)
     if (_self instanceof org.etsi.mts.tdl.DataInstance){
     	result = org.imt.k3tdl.k3dsa.DataInstanceAspect._privk3_getMatchedMUTElement(_self_, (org.etsi.mts.tdl.DataInstance)_self,rootElement,MUTResource,isAssertion,DSLPath);
     };
-    return (org.eclipse.emf.ecore.EObject)result;
+    return (java.util.ArrayList<org.eclipse.emf.ecore.EObject>)result;
   }
 
   public static String getValidName(final DataInstance _self) {
@@ -63,7 +63,7 @@ public class DataInstanceAspect {
     };
   }
 
-  protected static EObject _privk3_getMatchedMUTElement(final DataInstanceAspectDataInstanceAspectProperties _self_, final DataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
+  protected static ArrayList<EObject> _privk3_getMatchedMUTElement(final DataInstanceAspectDataInstanceAspectProperties _self_, final DataInstance _self, final ArrayList<EObject> rootElement, final Resource MUTResource, final boolean isAssertion, final String DSLPath) {
     return null;
   }
 

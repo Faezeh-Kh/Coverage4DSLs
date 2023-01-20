@@ -4,7 +4,6 @@ import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.etsi.mts.tdl.DataInstanceUse;
 import org.etsi.mts.tdl.DataUse;
 import org.etsi.mts.tdl.Member;
@@ -50,11 +49,7 @@ public class ParameterBindingAspect {
     final EStructuralFeature matchedFeature = MemberAspect.getMatchedFeature(((Member) _parameter), rootElement);
     if ((matchedFeature == null)) {
       String _name = _self.getParameter().getName();
-      String _plus = ("There is no " + _name);
-      String _plus_1 = (_plus + " property in the MUT");
-      InputOutput.<String>println(_plus_1);
-      String _name_1 = _self.getParameter().getName();
-      return ((TDLTestResultUtil.FAIL + ": There is no MUT element matched with ") + _name_1);
+      return ((TDLTestResultUtil.FAIL + ": There is no MUT element matched with ") + _name);
     }
     final Object featureValue = rootElement.eGet(matchedFeature);
     if (((!(isAssertion).booleanValue()) && MemberAspect.isDynamicMember(((Member) _self.getParameter())))) {

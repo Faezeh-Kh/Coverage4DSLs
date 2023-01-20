@@ -85,6 +85,7 @@ public class JavaEngineLauncher extends AbstractEngine{
 	public String executeModelSynchronous(){
 		try{
 			javaEngine = createExecutionEngine();
+			System.out.println();
 		}catch (EngineContextException e) {
 			e.printStackTrace();
 			return "FAIL: Cannot execute the model under test";
