@@ -169,13 +169,22 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int RULE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RULE__DESCRIPTION = 0;
+
+	/**
 	 * The number of structural features of the '<em>Rule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RULE_FEATURE_COUNT = 0;
+	int RULE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Rule</em>' class.
@@ -195,6 +204,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 */
 	int INCLUSION_RULE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INCLUSION_RULE__DESCRIPTION = RULE__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>Inclusion Rule</em>' class.
@@ -225,6 +243,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int EXCLUSION_RULE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCLUSION_RULE__DESCRIPTION = RULE__DESCRIPTION;
+
+	/**
 	 * The number of structural features of the '<em>Exclusion Rule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -251,6 +278,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 */
 	int SPECIALIZATION_RULE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALIZATION_RULE__DESCRIPTION = RULE__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>Specialization Rule</em>' class.
@@ -291,6 +327,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int COVERAGE_OF_REFERENCED = 6;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COVERAGE_OF_REFERENCED__DESCRIPTION = INCLUSION_RULE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Reference</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -326,6 +371,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 */
 	int COVERAGE_BY_CONTENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COVERAGE_BY_CONTENT__DESCRIPTION = INCLUSION_RULE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Containment Reference</b></em>' reference.
@@ -364,6 +418,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int COVERAGE_BY_CONTENT_OPERATION_COUNT = INCLUSION_RULE_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE__DESCRIPTION = EXCLUSION_RULE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Ignore Subtypes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -399,6 +462,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 */
 	int CONDITIONAL_IGNORE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_IGNORE__DESCRIPTION = EXCLUSION_RULE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' attribute.
@@ -447,6 +519,15 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int BRANCH_SPECIFICATION = 10;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_SPECIFICATION__DESCRIPTION = SPECIALIZATION_RULE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Branches</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -456,13 +537,22 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int BRANCH_SPECIFICATION__BRANCHES = SPECIALIZATION_RULE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH_SPECIFICATION__CONDITION = SPECIALIZATION_RULE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Branch Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_SPECIFICATION_FEATURE_COUNT = SPECIALIZATION_RULE_FEATURE_COUNT + 1;
+	int BRANCH_SPECIFICATION_FEATURE_COUNT = SPECIALIZATION_RULE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Branch Specification</em>' class.
@@ -615,6 +705,17 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.Rule#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see DSLSpecificCoverage.Rule#getDescription()
+	 * @see #getRule()
+	 * @generated
+	 */
+	EAttribute getRule_Description();
 
 	/**
 	 * Returns the meta object for class '{@link DSLSpecificCoverage.InclusionRule <em>Inclusion Rule</em>}'.
@@ -774,6 +875,17 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EReference getBranchSpecification_Branches();
 
 	/**
+	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.BranchSpecification#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see DSLSpecificCoverage.BranchSpecification#getCondition()
+	 * @see #getBranchSpecification()
+	 * @generated
+	 */
+	EAttribute getBranchSpecification_Condition();
+
+	/**
 	 * Returns the meta object for class '{@link DSLSpecificCoverage.Branch <em>Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -906,6 +1018,14 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		 * @generated
 		 */
 		EClass RULE = eINSTANCE.getRule();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RULE__DESCRIPTION = eINSTANCE.getRule_Description();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.InclusionRuleImpl <em>Inclusion Rule</em>}' class.
@@ -1042,6 +1162,14 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		 * @generated
 		 */
 		EReference BRANCH_SPECIFICATION__BRANCHES = eINSTANCE.getBranchSpecification_Branches();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BRANCH_SPECIFICATION__CONDITION = eINSTANCE.getBranchSpecification_Condition();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.BranchImpl <em>Branch</em>}' class.

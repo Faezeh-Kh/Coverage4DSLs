@@ -7,11 +7,13 @@ import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -24,6 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link DSLSpecificCoverage.impl.BranchSpecificationImpl#getBranches <em>Branches</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.BranchSpecificationImpl#getCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +41,25 @@ public class BranchSpecificationImpl extends SpecializationRuleImpl implements B
 	 * @ordered
 	 */
 	protected EList<Branch> branches;
+
+	/**
+	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONDITION_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected String condition = CONDITION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,6 +97,27 @@ public class BranchSpecificationImpl extends SpecializationRuleImpl implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCondition() {
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(String newCondition) {
+		String oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__CONDITION, oldCondition, condition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -94,6 +137,8 @@ public class BranchSpecificationImpl extends SpecializationRuleImpl implements B
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__BRANCHES:
 				return getBranches();
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__CONDITION:
+				return getCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,6 +156,9 @@ public class BranchSpecificationImpl extends SpecializationRuleImpl implements B
 				getBranches().clear();
 				getBranches().addAll((Collection<? extends Branch>)newValue);
 				return;
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__CONDITION:
+				setCondition((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -126,6 +174,9 @@ public class BranchSpecificationImpl extends SpecializationRuleImpl implements B
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__BRANCHES:
 				getBranches().clear();
 				return;
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__CONDITION:
+				setCondition(CONDITION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,8 +191,26 @@ public class BranchSpecificationImpl extends SpecializationRuleImpl implements B
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__BRANCHES:
 				return branches != null && !branches.isEmpty();
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__CONDITION:
+				return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (condition: ");
+		result.append(condition);
+		result.append(')');
+		return result.toString();
 	}
 
 } //BranchSpecificationImpl
