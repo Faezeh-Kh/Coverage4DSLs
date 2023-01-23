@@ -28,26 +28,34 @@ EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
 Ignore returns Ignore:
-	{Ignore} 'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')';
+	{Ignore} 
+	'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')'
+		('{' 'description' description=EString '}')?;
 	
 ConditionalIgnore returns ConditionalIgnore:
 	'ignoreif' condition=ConditionType
 		containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])* 
-	;
+		('{' 'description' description=EString '}')?;
 	
 CoverageOfReferenced returns CoverageOfReferenced:
-	'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*;
-
+	'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*
+		('{' 'description' description=EString '}')?;
+	
 CoverageByContent returns CoverageByContent:
 	'covered' 'when' multiplicity=CoveredContents 
-		containmentReference=[ecore::EReference|EString] 'iscovered';
+		containmentReference=[ecore::EReference|EString] 'iscovered'
+		('{' 'description' description=EString '}')?;
+		
 
 BranchSpecification returns BranchSpecification:
-	'has' 'branches' '{' branches += Branch (',' branches += Branch)* '}';
+	'has' 'branches' '{' 
+		'description' description=EString
+		'condition' condition=EString
+		branches += Branch (',' branches += Branch)* 
+	'}';
 
 Branch returns Branch:
-	'queryBranch' query=EString
-;
+	'queryBranch' query=EString;
 	
 enum CoveredContents returns CoveredContents:
 	ALL = 'ALL' | ONE = 'ONE';
