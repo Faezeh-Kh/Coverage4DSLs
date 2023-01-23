@@ -1,5 +1,6 @@
 package coverage.dslSpecific;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -9,13 +10,14 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
+import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.ConditionType;
-import DSLSpecificCoverage.CoverageByContent;
+import DSLSpecificCoverage.ConditionalIgnore;
 import DSLSpecificCoverage.Context;
+import DSLSpecificCoverage.CoverageByContent;
+import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.CoveredContents;
 import DSLSpecificCoverage.Ignore;
-import DSLSpecificCoverage.ConditionalIgnore;
-import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.Rule;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
@@ -23,6 +25,7 @@ import coverage.computation.TDLTestCaseCoverage;
 public class DSLSpecificCoverageExecutor {
 
 	private TDLTestCaseCoverage testCaseCoverage;
+	private HashMap<BranchSpecification, List<EObject>> branchingRule_contextObjects = new HashMap<>();
 	
 	public DSLSpecificCoverageExecutor (TDLTestCaseCoverage testCaseCoverage) {
 		this.testCaseCoverage = testCaseCoverage;
@@ -48,6 +51,9 @@ public class DSLSpecificCoverageExecutor {
 				updateCoverableClasses((Ignore) rule);
 				eObjects.forEach(object -> 
 					runIgnoreRule((Ignore) rule, object));
+			}
+			else if (rule instanceof BranchSpecification) {
+				branchingRule_contextObjects.put((BranchSpecification) rule, eObjects);
 			}
 		}
 	}
@@ -175,5 +181,14 @@ public class DSLSpecificCoverageExecutor {
 		EStructuralFeature matchedFeature = rootElement.eClass().getEAllStructuralFeatures().stream().
 				filter(f -> f.getName().equals(featureName)).findFirst().get();
 		return matchedFeature;
+	}
+	
+	public boolean hasBranchSpecificationRule() {
+		return branchingRule_contextObjects.size() == 0 ? false : true;
+	}
+	
+	public void runBranchCoverageRules() {
+		DSLSpecificBranchCoverage branchCoverageExecutor = new DSLSpecificBranchCoverage(branchingRule_contextObjects);
+		branchCoverageExecutor.runBranchCoverageComputation(testCaseCoverage);
 	}
 }

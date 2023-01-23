@@ -34,16 +34,15 @@ public class TDLTestCaseCoverage {
 	private List<String> tcObjectCoverageStatus;
 	private List<String> tcObjectCoverageStatus_pv;
 	
-	double tcCoveragePercentage;
-	int numOfCoveredObjs;
-	int numOfNotCoverableElements;
+	double tcObjectCoveragePercentage;
+	
+	private HashMap<EObject, String> branch_tcCoverageStatus;
+	double tcBranchCoveragePercentage;
 	
 	public TDLTestCaseCoverage() {
 		modelObjects = new ArrayList<>();
 		tcObjectCoverageStatus = new ArrayList<>();
 		tcObjectCoverageStatus_pv = new ArrayList<>();
-		numOfCoveredObjs= 0 ;
-		numOfNotCoverableElements = 0;
 	}
 	
 	//calculating the coverage of the test case based on the model execution trace and dsl-specific coverage rules
@@ -61,8 +60,10 @@ public class TDLTestCaseCoverage {
 		}
 		
 		findNotCoverableObjects();
-		countNumOfElements();
-		calculateCoveragePercentage();
+		calculateObjectCoveragePercentage();
+		if (hasBranchCoverageInformation()) {
+			calculateBranchCoveragePercentage();
+		}
 	}
 
 	private void listEObjects() {
@@ -114,6 +115,12 @@ public class TDLTestCaseCoverage {
 				forEach(entry -> executor.applyCoverageRules(entry.getKey().getRules(), entry.getValue()));
 			isCoverageMatrixChanged = !Objects.equals(tcObjectCoverageStatus_pv, tcObjectCoverageStatus);
 		}
+		//if there are branchSpecificationRules, compute the branch coverage
+		if (executor.hasBranchSpecificationRule()) {
+			branch_tcCoverageStatus = new HashMap<>();
+			executor.runBranchCoverageRules();
+			
+		}
 	}
 	
 	public String getObjectCoverage(EObject object) {
@@ -149,9 +156,9 @@ public class TDLTestCaseCoverage {
 		}
 	}
 	
-	public void countNumOfElements() {
-		numOfCoveredObjs = 0;
-		numOfNotCoverableElements = 0;
+	public void calculateObjectCoveragePercentage() {
+		int numOfCoveredObjs = 0;
+		int numOfNotCoverableElements = 0;
 		for (String coverage:tcObjectCoverageStatus) {
 			if (coverage == TDLCoverageUtil.NOT_TRACED) {
 				numOfNotCoverableElements++;
@@ -160,19 +167,31 @@ public class TDLTestCaseCoverage {
 				numOfCoveredObjs++;
 			}
 		}
-	}
-	
-	public void calculateCoveragePercentage() {
 		int numOfCoverableElements = tcObjectCoverageStatus.size() - numOfNotCoverableElements;
-		tcCoveragePercentage = (double)(numOfCoveredObjs*100)/numOfCoverableElements;
+		tcObjectCoveragePercentage = (double)(numOfCoveredObjs*100)/numOfCoverableElements;
 		try {
-		BigDecimal bd = new BigDecimal(tcCoveragePercentage).setScale(2, RoundingMode.HALF_UP);
-		tcCoveragePercentage = bd.doubleValue();
+		BigDecimal bd = new BigDecimal(tcObjectCoveragePercentage).setScale(2, RoundingMode.HALF_UP);
+		tcObjectCoveragePercentage = bd.doubleValue();
 		}catch (NumberFormatException e) {
-			System.out.println("NumberFormatException:" + tcCoveragePercentage);
+			System.out.println("NumberFormatException:" + tcObjectCoveragePercentage);
 		}
 		System.out.println(this.testCase.getName() + " coverage: " + 
-				numOfCoveredObjs + "/" + numOfCoverableElements + " = " + tcCoveragePercentage +"%");
+				numOfCoveredObjs + "/" + numOfCoverableElements + " = " + tcObjectCoveragePercentage +"%");
+	}
+	
+	public void calculateBranchCoveragePercentage() {
+		int numOfBranches = branch_tcCoverageStatus.size();
+		int numOfCoveredBranches = (int) branch_tcCoverageStatus.values().stream()
+				.filter(coverage -> coverage == TDLCoverageUtil.COVERED).count();
+		tcBranchCoveragePercentage = (double)(numOfCoveredBranches*100)/numOfBranches;
+		try {
+		BigDecimal bd = new BigDecimal(tcBranchCoveragePercentage).setScale(2, RoundingMode.HALF_UP);
+		tcBranchCoveragePercentage = bd.doubleValue();
+		}catch (NumberFormatException e) {
+			System.out.println("NumberFormatException:" + tcBranchCoveragePercentage);
+		}
+		System.out.println(testCase.getName() + "Branch coverage: " + 
+				numOfCoveredBranches + "/" + numOfBranches + " = " + tcBranchCoveragePercentage +"%");
 	}
 	
 	public Trace<?, ?, ?> getTrace() {
@@ -206,8 +225,21 @@ public class TDLTestCaseCoverage {
 	public List<String> getTcObjectCoverageStatus() {
 		return tcObjectCoverageStatus;
 	}
-	public double getTcCoveragePercentage() {
-		return tcCoveragePercentage;
+	
+	public HashMap<EObject, String> getTcBranchCoverageStatus() {
+		return branch_tcCoverageStatus;
+	}
+
+	public double getTcObjectCoveragePercentage() {
+		return tcObjectCoveragePercentage;
+	}
+
+	public double getTcBranchCoveragePercentage() {
+		return tcBranchCoveragePercentage;
+	}
+	
+	public boolean hasBranchCoverageInformation() {
+		return branch_tcCoverageStatus == null ? false : true;
 	}
 	
 }
