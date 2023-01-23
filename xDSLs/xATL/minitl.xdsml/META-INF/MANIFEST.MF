@@ -17,5 +17,5 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.21.0";visibility:="priva
  org.eclipse.gemoc.executionframework.engine;bundle-version="4.0.0";visibility:="reexport",
  minitl.semantics;bundle-version="0.0.0";visibility:="private",
  minitl.abstractsyntax;bundle-version="0.0.0";visibility:="private",
- org.eclipse.gemoc.executionframework.extensions.sirius;bundle-version=0.0.0;visibility:=reexport
+ org.eclipse.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

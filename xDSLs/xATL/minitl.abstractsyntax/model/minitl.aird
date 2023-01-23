@@ -3,6 +3,8 @@
   <viewpoint:DAnalysis uid="_e_z_IJg1Ee2TUo4hFIiRGQ" selectedViews="_f4U7gJg1Ee2TUo4hFIiRGQ" version="15.0.0.202201261500">
     <semanticResources>minitl.ecore</semanticResources>
     <semanticResources>minitl.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_f4U7gJg1Ee2TUo4hFIiRGQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_f9l2AJg1Ee2TUo4hFIiRGQ" name="abstractsyntax" repPath="#_f8JEgJg1Ee2TUo4hFIiRGQ" changeId="31896bd3-ffad-4416-b591-629856b9b235">
