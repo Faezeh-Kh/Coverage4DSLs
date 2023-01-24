@@ -1,43 +1,49 @@
 ruleset PSSMCoverage{
 	import metamodel statemachines
 	context CustomSystem{
-		//a customSystem is covered when its inner stateMachine is covered
 		covered when ONE statemachine iscovered
+			description "a customSystem is covered when its inner stateMachine is covered"
 	},
 	context StateMachine{
-		//a stateMachine is covered when one of its inner regions are covered
 		covered when ONE regions iscovered
+			description "a stateMachine is covered when one of its inner regions are covered"
 	},
 	context Region{
-		//a region is covered if at least one of its transitions is covered
 		covered when ONE transitions iscovered
+			description "a region is covered if at least one of its transitions is covered"
 	},
 	context Transition{
-		//if a transition is covered, its source state, target state, constraint, and triggers are also covered
 		covers source, target, constraint, triggers
+			description "if a transition is covered, its source state, target state, constraint, and triggers are also covered"
 	},
+	//if a constraint is covered, its expression is also covered
 	context BooleanConstraint{
-		//if a constraint is covered, its expression is also covered
 		covers expression
 	},
 	context IntegerConstraint{
-		//if a constraint is covered, its expression is also covered
 		covers expression
 	},
 	context StringConstraint{
-		//if a constraint is covered, its expression is also covered
 		covers expression
 	},
 	context Trigger{
-		//if a trigger is covered, its EventType is also covered
 		covers eventType
+			description "if a trigger is covered, its EventType is also covered"
 	},
 	context SignalEventType{
-		//if a SignalEventType is covered, its Signal is also covered
 		covers signal
+			description "if a SignalEventType is covered, its Signal is also covered"
 	},
 	context CallEventType{
-		//if a CallEventType is covered, its Operation is also covered
 		covers operation
+			description "if a CallEventType is covered, its Operation is also covered"
+	},
+	context State{
+		has branches{
+			description "if a State has more than one outgoing transition, each transition defines a branch"
+			condition "self.outgoingTransitions.size()>1" 
+				AND "outgoingTransitions -> forall(x1, x2| x1<>x2 implies x1.trigger <> x2.trigger or x1.constraint <> x2.constraint)"
+			queryBranch "self.outgoingTransitions"
+		}
 	}
 }
