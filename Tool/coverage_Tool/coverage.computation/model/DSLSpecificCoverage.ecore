@@ -43,8 +43,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerMetaclass" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BranchSpecification" abstract="true"
-      eSuperTypes="#//SpecializationRule">
+  <eClassifiers xsi:type="ecore:EClass" name="BranchSpecification" eSuperTypes="#//SpecializationRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="branches" upperBound="-1"
         eType="#//Branch" containment="true"/>
   </eClassifiers>

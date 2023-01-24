@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class BranchSpecificationImpl extends SpecializationRuleImpl implements BranchSpecification {
+public class BranchSpecificationImpl extends SpecializationRuleImpl implements BranchSpecification {
 	/**
 	 * The cached value of the '{@link #getBranches() <em>Branches</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -63,6 +63,7 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 			case DSLSpecificCoveragePackage.COVERAGE_BY_CONTENT: return createCoverageByContent();
 			case DSLSpecificCoveragePackage.IGNORE: return createIgnore();
 			case DSLSpecificCoveragePackage.LIMITED_IGNORE: return createLimitedIgnore();
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: return createBranchSpecification();
 			case DSLSpecificCoveragePackage.BRANCH: return createBranch();
 			case DSLSpecificCoveragePackage.UNARY_CONDITION: return createUnaryCondition();
 			case DSLSpecificCoveragePackage.BINARY_CONDITION: return createBinaryCondition();
@@ -171,6 +172,16 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public LimitedIgnore createLimitedIgnore() {
 		LimitedIgnoreImpl limitedIgnore = new LimitedIgnoreImpl();
 		return limitedIgnore;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BranchSpecification createBranchSpecification() {
+		BranchSpecificationImpl branchSpecification = new BranchSpecificationImpl();
+		return branchSpecification;
 	}
 
 	/**

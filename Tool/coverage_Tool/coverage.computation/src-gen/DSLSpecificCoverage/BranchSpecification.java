@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getBranchSpecification()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface BranchSpecification extends SpecializationRule {
