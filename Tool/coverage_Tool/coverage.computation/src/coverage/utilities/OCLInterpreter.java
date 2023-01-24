@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.ocl.OCL;
 import org.eclipse.ocl.ParserException;
 import org.eclipse.ocl.Query;
+import org.eclipse.ocl.ecore.Constraint;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
 import org.eclipse.ocl.expressions.OCLExpression;
 import org.eclipse.ocl.helper.ConstraintKind;
@@ -74,15 +75,16 @@ public class OCLInterpreter {
 
 	public boolean isConstraintSatisfied(EObject context, String constraint) {
 		oclHelper.setContext(context.eClass());
-		Object oclConstraint;
+		Constraint invariant = null;
 		try {
-			oclConstraint = oclHelper.createConstraint(ConstraintKind.INVARIANT, constraint);
+			invariant = (Constraint) oclHelper.createInvariant(constraint);
 		} catch (ParserException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
-		
-		return false;
+		Query<EClassifier, EClass, EObject> queryEval = ocl.createQuery(invariant);
+		// the ocl query will be evaluated on the context element
+		return queryEval.check(context);
 	}
 }
