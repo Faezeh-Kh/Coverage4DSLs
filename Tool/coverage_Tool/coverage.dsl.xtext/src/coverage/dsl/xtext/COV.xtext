@@ -22,7 +22,7 @@ Context returns Context:
 	'}';
 
 Rule returns Rule:
-	Ignore | CoverageOfReferenced | CoverageByContent | ConditionalIgnore | BranchSpecification ;
+	Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore | BranchSpecification ;
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
@@ -30,35 +30,54 @@ EBoolean returns ecore::EBoolean:
 Ignore returns Ignore:
 	{Ignore} 
 	'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')'
-		('{' 'description' description=EString '}')?;
+		('description' description=EString)?
+		('condition' condition+=Condition (condition+=Condition)*)?;
 	
-ConditionalIgnore returns ConditionalIgnore:
-	'ignoreif' condition=ConditionType
-		containerType+=[ecore::EClass|EString] ( "," containerType+=[ecore::EClass|EString])* 
-		('{' 'description' description=EString '}')?;
+LimitedIgnore returns LimitedIgnore:
+	'ignoreif' type=LimitationType
+		containerMetaclass+=[ecore::EClass|EString] ( "," containerMetaclass+=[ecore::EClass|EString])* 
+		('description' description=EString)?
+		('condition' condition+=Condition (condition+=Condition)*)?;
 	
 CoverageOfReferenced returns CoverageOfReferenced:
 	'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*
-		('{' 'description' description=EString '}')?;
+		('description' description=EString)?
+		('condition' condition+=Condition (condition+=Condition)*)?;
 	
 CoverageByContent returns CoverageByContent:
 	'covered' 'when' multiplicity=CoveredContents 
 		containmentReference=[ecore::EReference|EString] 'iscovered'
-		('{' 'description' description=EString '}')?;
+		('description' description=EString)?
+		('condition' condition+=Condition (condition+=Condition)*)?;
 		
 
 BranchSpecification returns BranchSpecification:
 	'has' 'branches' '{' 
-		'description' description=EString
-		'condition' condition=EString
+		('description' description=EString)?
+		('condition' condition+=Condition (condition+=Condition)*)?
 		branches += Branch (',' branches += Branch)* 
 	'}';
 
 Branch returns Branch:
 	'queryBranch' query=EString;
 	
+Condition returns Condition:
+	UnaryCondition | BinaryCondition;
+	
+UnaryCondition returns UnaryCondition:
+	(operator=UnaryOperator)? constraint=EString;
+
+BinaryCondition returns BinaryCondition:	
+	constraint=EString operator=BinaryOperator;
+
+enum BinaryOperator returns BinaryOperator:
+	AND = 'AND' | OR = 'OR';
+	
+enum UnaryOperator returns UnaryOperator:
+	NOT = 'NOT';
+	
 enum CoveredContents returns CoveredContents:
 	ALL = 'ALL' | ONE = 'ONE';
 
-enum ConditionType returns ConditionType:
-	ContainedBy = 'containedBy' | NotContainedBy = 'notContainedBy';
+enum LimitationType returns LimitationType:
+	containedBy = 'containedBy' | notContainedBy = 'notContainedBy';

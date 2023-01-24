@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
 import DSLSpecificCoverage.BranchSpecification;
-import DSLSpecificCoverage.ConditionType;
-import DSLSpecificCoverage.ConditionalIgnore;
+import DSLSpecificCoverage.LimitationType;
+import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
 import DSLSpecificCoverage.CoverageOfReferenced;
@@ -43,9 +43,9 @@ public class DSLSpecificCoverageExecutor {
 				eObjects.forEach(object -> 
 					inferContainerCoverage((CoverageByContent) rule, object));
 			}
-			else if (rule instanceof ConditionalIgnore) {
+			else if (rule instanceof LimitedIgnore) {
 				eObjects.forEach(object -> 
-					runConditionalIgnoreRule((ConditionalIgnore) rule, object));
+					runLimitedIgnoreRule((LimitedIgnore) rule, object));
 			}
 			else if (rule instanceof Ignore) {
 				updateCoverableClasses((Ignore) rule);
@@ -152,17 +152,17 @@ public class DSLSpecificCoverageExecutor {
 		}
 	}
 	
-	private void runConditionalIgnoreRule(ConditionalIgnore rule, EObject object) {
-		if (rule.getCondition() == ConditionType.CONTAINED_BY) {
+	private void runLimitedIgnoreRule(LimitedIgnore rule, EObject object) {
+		if (rule.getType() == LimitationType.CONTAINED_BY) {
 			//ignore EObjects contained by one of the ContainerType classes
-			if (rule.getContainerType().stream().
+			if (rule.getContainerMetaclass().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
 				testCaseCoverage.setObjectNotCoverable(object);
 			}
 		}
-		else if (rule.getCondition() == ConditionType.NOT_CONTAINED_BY) {
+		else if (rule.getType() == LimitationType.NOT_CONTAINED_BY) {
 			//ignore EObjects that are not contained by any of the ContainerType classes
-			if (!rule.getContainerType().stream().
+			if (!rule.getContainerMetaclass().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
 				testCaseCoverage.setObjectNotCoverable(object);
 			}

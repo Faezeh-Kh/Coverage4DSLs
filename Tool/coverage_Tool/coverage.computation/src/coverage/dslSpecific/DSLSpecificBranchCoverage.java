@@ -1,10 +1,10 @@
 package coverage.dslSpecific;
 
 import java.util.ArrayList;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
+
 import org.eclipse.emf.ecore.EObject;
 
 import DSLSpecificCoverage.Branch;
@@ -33,12 +33,14 @@ public class DSLSpecificBranchCoverage {
 				}
 				BranchSpecification branchingRule = rule_contextObjects.getKey();
 				for (Branch branchSpecification:branchingRule.getBranches()) {
-					String query2getBranch = branchSpecification.getQuery();
-					ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch.substring(1, query2getBranch.length()-1));
-					if (queryResult != null && !queryResult.isEmpty()) {
-						branchingRoot_branches.get(branchingRoot).addAll(queryResult);
-						allBranches.addAll(queryResult);
-					}					
+					if (conditionIsSatisfied(branchSpecification, branchingRoot)) {
+						String query2getBranch = branchSpecification.getQuery();
+						ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch.substring(1, query2getBranch.length()-1));
+						if (queryResult != null && !queryResult.isEmpty()) {
+							branchingRoot_branches.get(branchingRoot).addAll(queryResult);
+							allBranches.addAll(queryResult);
+						}
+					}						
 				}
 			}			
 		}
@@ -47,6 +49,12 @@ public class DSLSpecificBranchCoverage {
 				testCaseCoverage.getTcBranchCoverageStatus().put(object, testCaseCoverage.getObjectCoverage(object));
 			}
 		}
+	}
+
+	private boolean conditionIsSatisfied(Branch branchSpecification, EObject branchingRoot) {
+		OCLInterpreter oclLauncher = new OCLInterpreter();
+		//TODO
+		return false;
 	}
 
 	public HashMap<BranchSpecification, List<EObject>> getBranchingRule_contextObjects() {

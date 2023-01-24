@@ -6,9 +6,12 @@ import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**

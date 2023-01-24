@@ -40,15 +40,6 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	Context createContext();
 
 	/**
-	 * Returns a new object of class '<em>Ignore</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ignore</em>'.
-	 * @generated
-	 */
-	Ignore createIgnore();
-
-	/**
 	 * Returns a new object of class '<em>Coverage Of Referenced</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,22 +58,22 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	CoverageByContent createCoverageByContent();
 
 	/**
-	 * Returns a new object of class '<em>Conditional Ignore</em>'.
+	 * Returns a new object of class '<em>Ignore</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conditional Ignore</em>'.
+	 * @return a new object of class '<em>Ignore</em>'.
 	 * @generated
 	 */
-	ConditionalIgnore createConditionalIgnore();
+	Ignore createIgnore();
 
 	/**
-	 * Returns a new object of class '<em>Branch Specification</em>'.
+	 * Returns a new object of class '<em>Limited Ignore</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Branch Specification</em>'.
+	 * @return a new object of class '<em>Limited Ignore</em>'.
 	 * @generated
 	 */
-	BranchSpecification createBranchSpecification();
+	LimitedIgnore createLimitedIgnore();
 
 	/**
 	 * Returns a new object of class '<em>Branch</em>'.
@@ -92,6 +83,24 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	 * @generated
 	 */
 	Branch createBranch();
+
+	/**
+	 * Returns a new object of class '<em>Unary Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unary Condition</em>'.
+	 * @generated
+	 */
+	UnaryCondition createUnaryCondition();
+
+	/**
+	 * Returns a new object of class '<em>Binary Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Binary Condition</em>'.
+	 * @generated
+	 */
+	BinaryCondition createBinaryCondition();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -8,13 +8,20 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>DSLSpecificCoverage.ecore</foreignModel>
   <genPackages prefix="DSLSpecificCoverage" disposableProviderFactory="true" ecorePackage="DSLSpecificCoverage.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//UnaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//UnaryOperator/NOT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//BinaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//BinaryOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//BinaryOperator/OR"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//CoveredContents">
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ALL"/>
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ONE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//ConditionType">
-      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//ConditionType/ContainedBy"/>
-      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//ConditionType/NotContainedBy"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//LimitationType">
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//LimitationType/containedBy"/>
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//LimitationType/notContainedBy"/>
     </genEnums>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//DomainSpecificCoverage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//DomainSpecificCoverage/name"/>
@@ -27,6 +34,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="DSLSpecificCoverage.ecore#//Rule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Rule/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//Rule/condition"/>
     </genClasses>
     <genClasses image="false" ecoreClass="DSLSpecificCoverage.ecore#//InclusionRule"/>
     <genClasses image="false" ecoreClass="DSLSpecificCoverage.ecore#//ExclusionRule"/>
@@ -41,16 +49,24 @@
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Ignore">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Ignore/ignoreSubtypes"/>
     </genClasses>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//ConditionalIgnore">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//ConditionalIgnore/condition"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//ConditionalIgnore/containerType"/>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//LimitedIgnore">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//LimitedIgnore/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//LimitedIgnore/containerMetaclass"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//BranchSpecification">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchSpecification/branches"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//BranchSpecification/condition"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Branch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Branch/query"/>
+    </genClasses>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Condition/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//UnaryCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//UnaryCondition/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//BinaryCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//BinaryCondition/operator"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

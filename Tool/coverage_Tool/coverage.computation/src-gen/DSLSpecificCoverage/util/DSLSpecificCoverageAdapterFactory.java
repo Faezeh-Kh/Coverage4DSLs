@@ -104,8 +104,8 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 				return createIgnoreAdapter();
 			}
 			@Override
-			public Adapter caseConditionalIgnore(ConditionalIgnore object) {
-				return createConditionalIgnoreAdapter();
+			public Adapter caseLimitedIgnore(LimitedIgnore object) {
+				return createLimitedIgnoreAdapter();
 			}
 			@Override
 			public Adapter caseBranchSpecification(BranchSpecification object) {
@@ -114,6 +114,18 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBranch(Branch object) {
 				return createBranchAdapter();
+			}
+			@Override
+			public Adapter caseCondition(Condition object) {
+				return createConditionAdapter();
+			}
+			@Override
+			public Adapter caseUnaryCondition(UnaryCondition object) {
+				return createUnaryConditionAdapter();
+			}
+			@Override
+			public Adapter caseBinaryCondition(BinaryCondition object) {
+				return createBinaryConditionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -220,20 +232,6 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Ignore <em>Ignore</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.Ignore
-	 * @generated
-	 */
-	public Adapter createIgnoreAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.CoverageOfReferenced <em>Coverage Of Referenced</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -262,16 +260,30 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.ConditionalIgnore <em>Conditional Ignore</em>}'.
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Ignore <em>Ignore</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.ConditionalIgnore
+	 * @see DSLSpecificCoverage.Ignore
 	 * @generated
 	 */
-	public Adapter createConditionalIgnoreAdapter() {
+	public Adapter createIgnoreAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.LimitedIgnore <em>Limited Ignore</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see DSLSpecificCoverage.LimitedIgnore
+	 * @generated
+	 */
+	public Adapter createLimitedIgnoreAdapter() {
 		return null;
 	}
 
@@ -300,6 +312,48 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBranchAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see DSLSpecificCoverage.Condition
+	 * @generated
+	 */
+	public Adapter createConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.UnaryCondition <em>Unary Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see DSLSpecificCoverage.UnaryCondition
+	 * @generated
+	 */
+	public Adapter createUnaryConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.BinaryCondition <em>Binary Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see DSLSpecificCoverage.BinaryCondition
+	 * @generated
+	 */
+	public Adapter createBinaryConditionAdapter() {
 		return null;
 	}
 

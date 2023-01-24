@@ -2,10 +2,11 @@
  */
 package DSLSpecificCoverage.impl;
 
+import DSLSpecificCoverage.BinaryCondition;
+import DSLSpecificCoverage.BinaryOperator;
 import DSLSpecificCoverage.Branch;
 import DSLSpecificCoverage.BranchSpecification;
-import DSLSpecificCoverage.ConditionType;
-import DSLSpecificCoverage.ConditionalIgnore;
+import DSLSpecificCoverage.Condition;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
 import DSLSpecificCoverage.CoverageOfReferenced;
@@ -16,9 +17,13 @@ import DSLSpecificCoverage.DomainSpecificCoverage;
 import DSLSpecificCoverage.ExclusionRule;
 import DSLSpecificCoverage.Ignore;
 import DSLSpecificCoverage.InclusionRule;
+import DSLSpecificCoverage.LimitationType;
+import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Rule;
-
 import DSLSpecificCoverage.SpecializationRule;
+import DSLSpecificCoverage.UnaryCondition;
+import DSLSpecificCoverage.UnaryOperator;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -82,13 +87,6 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass ignoreEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass coverageOfReferencedEClass = null;
 
 	/**
@@ -103,7 +101,14 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass conditionalIgnoreEClass = null;
+	private EClass ignoreEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass limitedIgnoreEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +129,41 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass conditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unaryConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass binaryConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum unaryOperatorEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum binaryOperatorEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum coveredContentsEEnum = null;
 
 	/**
@@ -131,7 +171,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum conditionTypeEEnum = null;
+	private EEnum limitationTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -283,6 +323,15 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRule_Condition() {
+		return (EReference)ruleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInclusionRule() {
 		return inclusionRuleEClass;
 	}
@@ -303,24 +352,6 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 */
 	public EClass getSpecializationRule() {
 		return specializationRuleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIgnore() {
-		return ignoreEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIgnore_IgnoreSubtypes() {
-		return (EAttribute)ignoreEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -373,8 +404,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConditionalIgnore() {
-		return conditionalIgnoreEClass;
+	public EClass getIgnore() {
+		return ignoreEClass;
 	}
 
 	/**
@@ -382,8 +413,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConditionalIgnore_Condition() {
-		return (EAttribute)conditionalIgnoreEClass.getEStructuralFeatures().get(0);
+	public EAttribute getIgnore_IgnoreSubtypes() {
+		return (EAttribute)ignoreEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -391,8 +422,26 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConditionalIgnore_ContainerType() {
-		return (EReference)conditionalIgnoreEClass.getEStructuralFeatures().get(1);
+	public EClass getLimitedIgnore() {
+		return limitedIgnoreEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLimitedIgnore_Type() {
+		return (EAttribute)limitedIgnoreEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLimitedIgnore_ContainerMetaclass() {
+		return (EReference)limitedIgnoreEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -418,15 +467,6 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBranchSpecification_Condition() {
-		return (EAttribute)branchSpecificationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBranch() {
 		return branchEClass;
 	}
@@ -445,6 +485,78 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCondition() {
+		return conditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCondition_Constraint() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnaryCondition() {
+		return unaryConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnaryCondition_Operator() {
+		return (EAttribute)unaryConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBinaryCondition() {
+		return binaryConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBinaryCondition_Operator() {
+		return (EAttribute)binaryConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getUnaryOperator() {
+		return unaryOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getBinaryOperator() {
+		return binaryOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCoveredContents() {
 		return coveredContentsEEnum;
 	}
@@ -454,8 +566,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getConditionType() {
-		return conditionTypeEEnum;
+	public EEnum getLimitationType() {
+		return limitationTypeEEnum;
 	}
 
 	/**
@@ -497,6 +609,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 
 		ruleEClass = createEClass(RULE);
 		createEAttribute(ruleEClass, RULE__DESCRIPTION);
+		createEReference(ruleEClass, RULE__CONDITION);
 
 		inclusionRuleEClass = createEClass(INCLUSION_RULE);
 
@@ -514,20 +627,30 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		ignoreEClass = createEClass(IGNORE);
 		createEAttribute(ignoreEClass, IGNORE__IGNORE_SUBTYPES);
 
-		conditionalIgnoreEClass = createEClass(CONDITIONAL_IGNORE);
-		createEAttribute(conditionalIgnoreEClass, CONDITIONAL_IGNORE__CONDITION);
-		createEReference(conditionalIgnoreEClass, CONDITIONAL_IGNORE__CONTAINER_TYPE);
+		limitedIgnoreEClass = createEClass(LIMITED_IGNORE);
+		createEAttribute(limitedIgnoreEClass, LIMITED_IGNORE__TYPE);
+		createEReference(limitedIgnoreEClass, LIMITED_IGNORE__CONTAINER_METACLASS);
 
 		branchSpecificationEClass = createEClass(BRANCH_SPECIFICATION);
 		createEReference(branchSpecificationEClass, BRANCH_SPECIFICATION__BRANCHES);
-		createEAttribute(branchSpecificationEClass, BRANCH_SPECIFICATION__CONDITION);
 
 		branchEClass = createEClass(BRANCH);
 		createEAttribute(branchEClass, BRANCH__QUERY);
 
+		conditionEClass = createEClass(CONDITION);
+		createEAttribute(conditionEClass, CONDITION__CONSTRAINT);
+
+		unaryConditionEClass = createEClass(UNARY_CONDITION);
+		createEAttribute(unaryConditionEClass, UNARY_CONDITION__OPERATOR);
+
+		binaryConditionEClass = createEClass(BINARY_CONDITION);
+		createEAttribute(binaryConditionEClass, BINARY_CONDITION__OPERATOR);
+
 		// Create enums
+		unaryOperatorEEnum = createEEnum(UNARY_OPERATOR);
+		binaryOperatorEEnum = createEEnum(BINARY_OPERATOR);
 		coveredContentsEEnum = createEEnum(COVERED_CONTENTS);
-		conditionTypeEEnum = createEEnum(CONDITION_TYPE);
+		limitationTypeEEnum = createEEnum(LIMITATION_TYPE);
 	}
 
 	/**
@@ -567,8 +690,10 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		coverageOfReferencedEClass.getESuperTypes().add(this.getInclusionRule());
 		coverageByContentEClass.getESuperTypes().add(this.getInclusionRule());
 		ignoreEClass.getESuperTypes().add(this.getExclusionRule());
-		conditionalIgnoreEClass.getESuperTypes().add(this.getExclusionRule());
+		limitedIgnoreEClass.getESuperTypes().add(this.getExclusionRule());
 		branchSpecificationEClass.getESuperTypes().add(this.getSpecializationRule());
+		unaryConditionEClass.getESuperTypes().add(this.getCondition());
+		binaryConditionEClass.getESuperTypes().add(this.getCondition());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainSpecificCoverageEClass, DomainSpecificCoverage.class, "DomainSpecificCoverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -581,7 +706,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEReference(getContext_Rules(), this.getRule(), null, "rules", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ruleEClass, Rule.class, "Rule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRule_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRule_Description(), ecorePackage.getEString(), "description", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRule_Condition(), this.getCondition(), null, "condition", null, 0, -1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inclusionRuleEClass, InclusionRule.class, "InclusionRule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -599,25 +725,40 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEClass(ignoreEClass, Ignore.class, "Ignore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIgnore_IgnoreSubtypes(), ecorePackage.getEBoolean(), "ignoreSubtypes", "true", 0, 1, Ignore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(conditionalIgnoreEClass, ConditionalIgnore.class, "ConditionalIgnore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConditionalIgnore_Condition(), this.getConditionType(), "condition", null, 1, 1, ConditionalIgnore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConditionalIgnore_ContainerType(), theEcorePackage.getEClass(), null, "containerType", null, 1, -1, ConditionalIgnore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(limitedIgnoreEClass, LimitedIgnore.class, "LimitedIgnore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLimitedIgnore_Type(), this.getLimitationType(), "type", null, 1, 1, LimitedIgnore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLimitedIgnore_ContainerMetaclass(), theEcorePackage.getEClass(), null, "containerMetaclass", null, 1, -1, LimitedIgnore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(branchSpecificationEClass, BranchSpecification.class, "BranchSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(branchSpecificationEClass, BranchSpecification.class, "BranchSpecification", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBranchSpecification_Branches(), this.getBranch(), null, "branches", null, 0, -1, BranchSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBranchSpecification_Condition(), theEcorePackage.getEString(), "condition", null, 0, 1, BranchSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBranch_Query(), ecorePackage.getEString(), "query", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCondition_Constraint(), ecorePackage.getEString(), "constraint", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unaryConditionEClass, UnaryCondition.class, "UnaryCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUnaryCondition_Operator(), this.getUnaryOperator(), "operator", null, 0, 1, UnaryCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(binaryConditionEClass, BinaryCondition.class, "BinaryCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBinaryCondition_Operator(), this.getBinaryOperator(), "operator", null, 1, 1, BinaryCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
+		initEEnum(unaryOperatorEEnum, UnaryOperator.class, "UnaryOperator");
+		addEEnumLiteral(unaryOperatorEEnum, UnaryOperator.NOT);
+
+		initEEnum(binaryOperatorEEnum, BinaryOperator.class, "BinaryOperator");
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.AND);
+		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.OR);
+
 		initEEnum(coveredContentsEEnum, CoveredContents.class, "CoveredContents");
 		addEEnumLiteral(coveredContentsEEnum, CoveredContents.ALL);
 		addEEnumLiteral(coveredContentsEEnum, CoveredContents.ONE);
 
-		initEEnum(conditionTypeEEnum, ConditionType.class, "ConditionType");
-		addEEnumLiteral(conditionTypeEEnum, ConditionType.CONTAINED_BY);
-		addEEnumLiteral(conditionTypeEEnum, ConditionType.NOT_CONTAINED_BY);
+		initEEnum(limitationTypeEEnum, LimitationType.class, "LimitationType");
+		addEEnumLiteral(limitationTypeEEnum, LimitationType.CONTAINED_BY);
+		addEEnumLiteral(limitationTypeEEnum, LimitationType.NOT_CONTAINED_BY);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Condition Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Limitation Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getConditionType()
+ * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getLimitationType()
  * @model
  * @generated
  */
-public enum ConditionType implements Enumerator {
+public enum LimitationType implements Enumerator {
 	/**
 	 * The '<em><b>Contained By</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -26,7 +26,9 @@ public enum ConditionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CONTAINED_BY(0, "ContainedBy", "ContainedBy"), /**
+	CONTAINED_BY(0, "containedBy", "ContainedBy"),
+
+	/**
 	 * The '<em><b>Not Contained By</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,14 +36,14 @@ public enum ConditionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NOT_CONTAINED_BY(1, "NotContainedBy", "NotContainedBy");
+	NOT_CONTAINED_BY(1, "notContainedBy", "NotContainedBy");
 
 	/**
 	 * The '<em><b>Contained By</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #CONTAINED_BY
-	 * @model name="ContainedBy"
+	 * @model name="containedBy" literal="ContainedBy"
 	 * @generated
 	 * @ordered
 	 */
@@ -52,43 +54,43 @@ public enum ConditionType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NOT_CONTAINED_BY
-	 * @model name="NotContainedBy"
+	 * @model name="notContainedBy" literal="NotContainedBy"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int NOT_CONTAINED_BY_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Condition Type</b></em>' enumerators.
+	 * An array of all the '<em><b>Limitation Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ConditionType[] VALUES_ARRAY =
-		new ConditionType[] {
+	private static final LimitationType[] VALUES_ARRAY =
+		new LimitationType[] {
 			CONTAINED_BY,
 			NOT_CONTAINED_BY,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Condition Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Limitation Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ConditionType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<LimitationType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Condition Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Limitation Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ConditionType get(String literal) {
+	public static LimitationType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ConditionType result = VALUES_ARRAY[i];
+			LimitationType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -97,16 +99,16 @@ public enum ConditionType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Condition Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Limitation Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ConditionType getByName(String name) {
+	public static LimitationType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ConditionType result = VALUES_ARRAY[i];
+			LimitationType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -115,14 +117,14 @@ public enum ConditionType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Condition Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Limitation Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ConditionType get(int value) {
+	public static LimitationType get(int value) {
 		switch (value) {
 			case CONTAINED_BY_VALUE: return CONTAINED_BY;
 			case NOT_CONTAINED_BY_VALUE: return NOT_CONTAINED_BY;
@@ -157,7 +159,7 @@ public enum ConditionType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ConditionType(int value, String name, String literal) {
+	private LimitationType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -201,4 +203,4 @@ public enum ConditionType implements Enumerator {
 		return literal;
 	}
 	
-} //ConditionType
+} //LimitationType

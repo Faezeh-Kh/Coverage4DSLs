@@ -2,6 +2,8 @@
  */
 package DSLSpecificCoverage;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link DSLSpecificCoverage.Rule#getDescription <em>Description</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.Rule#getCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getRule()
@@ -21,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Rule extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,4 +45,17 @@ public interface Rule extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Condition</b></em>' containment reference list.
+	 * The list contents are of type {@link DSLSpecificCoverage.Condition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Condition</em>' containment reference list.
+	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getRule_Condition()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Condition> getCondition();
+
 } // Rule

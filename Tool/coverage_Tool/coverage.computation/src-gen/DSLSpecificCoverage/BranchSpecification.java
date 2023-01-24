@@ -4,7 +4,6 @@ package DSLSpecificCoverage;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Branch Specification</b></em>'.
@@ -15,11 +14,10 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link DSLSpecificCoverage.BranchSpecification#getBranches <em>Branches</em>}</li>
- *   <li>{@link DSLSpecificCoverage.BranchSpecification#getCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getBranchSpecification()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface BranchSpecification extends SpecializationRule {
@@ -34,27 +32,5 @@ public interface BranchSpecification extends SpecializationRule {
 	 * @generated
 	 */
 	EList<Branch> getBranches();
-
-	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' attribute.
-	 * @see #setCondition(String)
-	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getBranchSpecification_Condition()
-	 * @model
-	 * @generated
-	 */
-	String getCondition();
-
-	/**
-	 * Sets the value of the '{@link DSLSpecificCoverage.BranchSpecification#getCondition <em>Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' attribute.
-	 * @see #getCondition()
-	 * @generated
-	 */
-	void setCondition(String value);
 
 } // BranchSpecification

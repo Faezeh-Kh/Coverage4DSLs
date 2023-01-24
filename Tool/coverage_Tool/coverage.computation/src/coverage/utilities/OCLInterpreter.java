@@ -14,19 +14,16 @@ import org.eclipse.ocl.ParserException;
 import org.eclipse.ocl.Query;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
 import org.eclipse.ocl.expressions.OCLExpression;
+import org.eclipse.ocl.helper.ConstraintKind;
 import org.eclipse.ocl.helper.OCLHelper;
 
 public class OCLInterpreter {
 
 	@SuppressWarnings("rawtypes")
 	protected OCL ocl = null;
+	
 	@SuppressWarnings("rawtypes")
 	protected OCLHelper oclHelper = null;
-
-	protected OCLExpression<EClassifier> expression = null;
-	protected Query<EClassifier, EClass, EObject> queryEval = null;
-	
-	private ArrayList<EObject> resultAsObject;
 
 	public OCLInterpreter() {
 		ocl = OCL.newInstance(EcoreEnvironmentFactory.INSTANCE);
@@ -35,8 +32,8 @@ public class OCLInterpreter {
 
 	@SuppressWarnings("unchecked")
 	public ArrayList<EObject> runQuery(EObject context, String query) {
-		// The root element of the dsl is the context for ocl
 		oclHelper.setContext(context.eClass());
+		OCLExpression<EClassifier> expression = null;
 		try {
 			expression = oclHelper.createQuery(query);
 		} catch (ParserException e) {
@@ -44,10 +41,10 @@ public class OCLInterpreter {
 			e.printStackTrace();
 			return null;
 		}
-		queryEval = ocl.createQuery(expression);
+		Query<EClassifier, EClass, EObject> queryEval = ocl.createQuery(expression);
 		// the ocl query will be evaluated on the context element
 		Object res = queryEval.evaluate(context);
-		resultAsObject = new ArrayList<>();
+		ArrayList<EObject> resultAsObject = new ArrayList<>();
 		if (res instanceof Collection<?>) {
 			if (res instanceof LinkedHashSet<?>) {
 				LinkedHashSet<?> queryResult =  (LinkedHashSet<?>) res;
@@ -75,11 +72,17 @@ public class OCLInterpreter {
 		return resultAsObject;
 	}
 
-	public void tearDown() throws Exception {
-		oclHelper = null;
-		ocl = null;
-		expression = null;
-		queryEval = null;
-		Runtime.getRuntime().gc();
+	public boolean constraintIsStisfied(EObject context, String constraint) {
+		oclHelper.setContext(context.eClass());
+		Object oclConstraint;
+		try {
+			oclConstraint = oclHelper.createConstraint(ConstraintKind.INVARIANT, constraint);
+		} catch (ParserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		//TODO
+		return false;
 	}
 }
