@@ -65,7 +65,7 @@ public class TDLTestSuiteCoverage {
 			calculateObjectCoveragePercentage();
 			setObjectCoverageInfos();
 		}
-		if (!branch_tsCoverageStatus.isEmpty()) {
+		if (branch_tsCoverageStatus != null && !branch_tsCoverageStatus.isEmpty()) {
 			calculateBranchCoveragePercentage();
 			setBranchCoverageInfos();
 		}
