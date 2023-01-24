@@ -72,7 +72,7 @@ public class OCLInterpreter {
 		return resultAsObject;
 	}
 
-	public boolean constraintIsStisfied(EObject context, String constraint) {
+	public boolean isConstraintSatisfied(EObject context, String constraint) {
 		oclHelper.setContext(context.eClass());
 		Object oclConstraint;
 		try {
@@ -82,7 +82,7 @@ public class OCLInterpreter {
 			e.printStackTrace();
 			return false;
 		}
-		//TODO
+		
 		return false;
 	}
 }
