@@ -10,7 +10,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
+import DSLSpecificCoverage.BinaryCondition;
+import DSLSpecificCoverage.BinaryOperator;
 import DSLSpecificCoverage.BranchSpecification;
+import DSLSpecificCoverage.Condition;
 import DSLSpecificCoverage.LimitationType;
 import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Context;
@@ -19,8 +22,11 @@ import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.CoveredContents;
 import DSLSpecificCoverage.Ignore;
 import DSLSpecificCoverage.Rule;
+import DSLSpecificCoverage.UnaryCondition;
+import DSLSpecificCoverage.UnaryOperator;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
+import coverage.utilities.OCLInterpreter;
 
 public class DSLSpecificCoverageExecutor {
 
@@ -35,25 +41,29 @@ public class DSLSpecificCoverageExecutor {
 		for (Rule rule:rules) {
 			if (rule instanceof CoverageOfReferenced) {
 				updateCoverableClasses((CoverageOfReferenced) rule);
-				eObjects.forEach(object -> 
-					inferReferenceCoverage((CoverageOfReferenced) rule, object));
+				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
+					.forEach(object -> inferReferenceCoverage((CoverageOfReferenced) rule, object));
 			}
 			else if (rule instanceof CoverageByContent) {
 				updateCoverableClasses((CoverageByContent) rule);
-				eObjects.forEach(object -> 
-					inferContainerCoverage((CoverageByContent) rule, object));
+				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
+					.forEach(object -> inferContainerCoverage((CoverageByContent) rule, object));
 			}
 			else if (rule instanceof LimitedIgnore) {
-				eObjects.forEach(object -> 
-					runLimitedIgnoreRule((LimitedIgnore) rule, object));
+				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
+					.forEach(object -> runLimitedIgnoreRule((LimitedIgnore) rule, object));
 			}
 			else if (rule instanceof Ignore) {
 				updateCoverableClasses((Ignore) rule);
-				eObjects.forEach(object -> 
-					runIgnoreRule((Ignore) rule, object));
+				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
+					.forEach(object -> runIgnoreRule((Ignore) rule, object));
 			}
 			else if (rule instanceof BranchSpecification) {
-				branchingRule_contextObjects.put((BranchSpecification) rule, eObjects);
+				List<EObject> eObjectsSatisfyingCondition = eObjects.stream()
+						.filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
+						.toList();
+				branchingRule_contextObjects.put((BranchSpecification) rule, eObjectsSatisfyingCondition);
+				//TODO: check if the eObjectsSatisfyingCondition is not cleared in each iteration
 			}
 		}
 	}
@@ -181,6 +191,36 @@ public class DSLSpecificCoverageExecutor {
 		EStructuralFeature matchedFeature = rootElement.eClass().getEAllStructuralFeatures().stream().
 				filter(f -> f.getName().equals(featureName)).findFirst().get();
 		return matchedFeature;
+	}
+	
+	private boolean isRuleConditionSatisfied(EList<Condition> conditions, EObject object) {
+		boolean result = false;
+		for (int i=0; i<conditions.size(); i++) {
+			Condition condition = conditions.get(i);
+			result = evaluateCondition(condition, object);
+			if (condition instanceof BinaryCondition bcondition) {
+				//for binaryConditions, evaluate the next condition
+				boolean result2 = evaluateCondition(conditions.get(++i), object);
+				if (bcondition.getOperator() == BinaryOperator.AND) {
+					result = result & result2;
+				}else if (bcondition.getOperator() == BinaryOperator.OR) {
+					result = result || result2;
+				}
+			}
+		}
+		return result;
+	}
+	
+	private boolean evaluateCondition(Condition condition, EObject object) {
+		OCLInterpreter oclRunner = new OCLInterpreter();
+		String constraint = condition.getConstraint();
+		constraint = constraint.substring(1, constraint.length()-1);
+		boolean result = oclRunner.isConstraintSatisfied(object, constraint);
+		if (condition instanceof UnaryCondition ucondition 
+				&& ucondition.getOperator() == UnaryOperator.NOT) {
+			return !result;
+		}
+		return result;
 	}
 	
 	public boolean hasBranchSpecificationRule() {
