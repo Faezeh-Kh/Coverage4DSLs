@@ -562,13 +562,19 @@ class MemberAssignmentAspect{
 		//Assert the value of the member assignment
 		if (_self.memberSpec instanceof DataInstanceUse){
 			val memberValue = _self.memberSpec as DataInstanceUse
-			var boolean result = false
-			if (memberValue.dataInstance !== null){//there is only one value
+			var boolean result = true
+			if (memberValue.dataInstance !== null && featureValue instanceof EObject){
+				//there is only one value
 				val tdlValue = memberValue.dataInstance as StructuredDataInstance
 				result = tdlValue.equals2eobject(featureValue as EObject)
-			}else{//there is a list of values
+			}
+			else if (!memberValue.item.isEmpty && featureValue instanceof EList){
+				//there is a list of values
 				for(i:0..<memberValue.item.size){
-					
+					val memberItemValue = memberValue.item.get(i) as DataInstanceUse
+					val tdlItemValue = memberItemValue as StructuredDataInstance
+					val EList<EObject> featureValues = featureValue as EList
+					result = tdlItemValue.equals2eobject(featureValues.get(i))
 				}
 			}
 			return result ? TDLTestResultUtil.PASS: TDLTestResultUtil.FAIL 
