@@ -36,7 +36,8 @@ public class DSLSpecificCoverageHandler {
 	}
 
 	private String getDSLCoverageComputationId(Path dslFilePath) {
-		Resource dslRes = (new ResourceSetImpl()).getResource(URI.createURI(dslFilePath.toString()), true);
+		String path = dslFilePath.toString().replace("\\\\", "/");
+		Resource dslRes = (new ResourceSetImpl()).getResource(URI.createPlatformPluginURI(path, false), true);
 		Dsl dsl = (Dsl)dslRes.getContents().get(0);
 		return dsl.getEntry(COVERAGE_ID) != null ? dsl.getEntry(COVERAGE_ID).getValue().toString() : null;
 	}

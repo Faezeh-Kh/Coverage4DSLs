@@ -42,7 +42,7 @@ public abstract class AbstractEngine implements ISequentialExecutionEngine{
 	@Override
 	public void setUp(String MUTPath, String DSLPath) {
 		_modelLocation = MUTPath;
-		_siriusRepresentationLocation = MUTPath.split(File.separator)[1] + File.separator + "representations.aird";
+		//_siriusRepresentationLocation = MUTPath.split(File.separator)[1] + File.separator + "representations.aird";
 		_delay = "0";
 		_language = this.getDslName(DSLPath);
 		_entryPointModelElement = File.separator;
@@ -120,7 +120,8 @@ public abstract class AbstractEngine implements ISequentialExecutionEngine{
 	}
 
 	private String getDslName(String dslFilePath) {
-		Resource dslRes = (new ResourceSetImpl()).getResource(URI.createURI(dslFilePath), true);
+		dslFilePath = dslFilePath.replace("\\", "/");
+		Resource dslRes = (new ResourceSetImpl()).getResource(URI.createPlatformPluginURI(dslFilePath, false), true);
 		Dsl dsl = (Dsl)dslRes.getContents().get(0);
 		return dsl.getEntry("name").getValue().toString();
 	}
