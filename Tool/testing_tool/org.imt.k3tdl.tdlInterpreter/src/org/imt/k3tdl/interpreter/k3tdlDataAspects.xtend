@@ -1,9 +1,6 @@
 package org.imt.k3tdl.interpreter
 
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
-
-
-
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import java.util.ArrayList
 import org.eclipse.emf.common.util.EList
@@ -13,7 +10,6 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.transaction.RecordingCommand
 import org.eclipse.emf.transaction.TransactionalEditingDomain
 import org.eclipse.emf.transaction.util.TransactionUtil
-import org.etsi.mts.tdl.Package
 import org.etsi.mts.tdl.DataInstance
 import org.etsi.mts.tdl.DataInstanceUse
 import org.etsi.mts.tdl.DataType
@@ -21,6 +17,7 @@ import org.etsi.mts.tdl.DataUse
 import org.etsi.mts.tdl.LiteralValueUse
 import org.etsi.mts.tdl.Member
 import org.etsi.mts.tdl.MemberAssignment
+import org.etsi.mts.tdl.Package
 import org.etsi.mts.tdl.ParameterBinding
 import org.etsi.mts.tdl.SimpleDataInstance
 import org.etsi.mts.tdl.SpecialValueUse
@@ -152,14 +149,16 @@ class StructuredDataInstanceAspect extends DataInstanceAspect{
 		return matchedElements
 	}
 
-	def EObject getMatchedMUTElementByContainer (ArrayList<EObject> equalEObjectsByContainer){
+	def EObject getMatchedMUTElementByContainer (ArrayList<EObject> equalEObjectsByFeature){
 		val tdlDataContainer = _self.findContainerOfTdlData
 		if (tdlDataContainer === null){ 
 			return null
 		}
 		var ArrayList<EObject> equalContainers = new ArrayList
- 		for (i : 0 ..<equalEObjectsByContainer.size){
- 			val eobjectContainer = equalEObjectsByContainer.get(i).eContainer
+		var EObject matchedEObject = null
+ 		for (i : 0 ..<equalEObjectsByFeature.size){
+ 			matchedEObject = equalEObjectsByFeature.get(i)
+ 			val eobjectContainer = matchedEObject.eContainer
  			if (tdlDataContainer.equals2eobject(eobjectContainer)){
  				equalContainers.add(eobjectContainer)
  			}
@@ -167,8 +166,8 @@ class StructuredDataInstanceAspect extends DataInstanceAspect{
  		if (equalContainers.empty){
  			return null
  		}
- 		else if (equalContainers.size>1){
- 			return equalContainers.get(0)
+ 		else if (equalContainers.size==1){
+ 			return matchedEObject
  		}
  		else{
  			var ArrayList<EObject> eobjects2check = new ArrayList
@@ -567,17 +566,24 @@ class MemberAssignmentAspect{
 				//there is only one value
 				val tdlValue = memberValue.dataInstance as StructuredDataInstance
 				result = tdlValue.equals2eobject(featureValue as EObject)
+				return result ? TDLTestResultUtil.PASS: TDLTestResultUtil.FAIL 
 			}
 			else if (!memberValue.item.isEmpty && featureValue instanceof EList){
 				//there is a list of values
-				for(i:0..<memberValue.item.size){
-					val memberItemValue = memberValue.item.get(i) as DataInstanceUse
-					val tdlItemValue = memberItemValue as StructuredDataInstance
-					val EList<EObject> featureValues = featureValue as EList
-					result = tdlItemValue.equals2eobject(featureValues.get(i))
+				try{
+					for(i:0..<memberValue.item.size){
+						val memberItemValue = (memberValue.item.get(i) as DataInstanceUse).dataInstance as StructuredDataInstance
+						val EList<EObject> featureValues = featureValue as EList
+						result = memberItemValue.equals2eobject(featureValues.get(i))
+						if (!result){
+							throw new InterruptedException()
+						}
+					}
+				}catch (InterruptedException e) {
+			    	return result ? TDLTestResultUtil.PASS: TDLTestResultUtil.FAIL 
 				}
+				return result ? TDLTestResultUtil.PASS: TDLTestResultUtil.FAIL 
 			}
-			return result ? TDLTestResultUtil.PASS: TDLTestResultUtil.FAIL 
 		}
 		return _self.memberSpec.assertEquals(featureValue)
 	} 
