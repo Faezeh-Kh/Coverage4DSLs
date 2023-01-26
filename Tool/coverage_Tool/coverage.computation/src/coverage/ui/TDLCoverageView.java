@@ -176,7 +176,7 @@ public class TDLCoverageView extends ViewPart{
 		Group testCoverage = new Group(contents, SWT.NULL);
 		FillLayout fill = new FillLayout(SWT.VERTICAL);
 		testCoverage.setLayout(fill);
-		testCoverage.setText("Coverage");
+		testCoverage.setText("Coverage status");
 		gd = new GridData(GridData.FILL_HORIZONTAL | GridData.FILL_VERTICAL);
 		gd.horizontalAlignment = SWT.FILL;
 		gd.verticalAlignment = SWT.FILL;
@@ -264,7 +264,12 @@ public class TDLCoverageView extends ViewPart{
 				return ((List<?>) parentElement).toArray();
 			}
 			if (parentElement instanceof TDLTestSuiteCoverage tsCoverage) {
-				return tsCoverage.getCoverageOfModelObjects().toArray();
+				if (coverageTypeFilterIndex == 0) {
+					return tsCoverage.getCoverageOfModelObjects().toArray();
+				}
+				else if(coverageTypeFilterIndex == 1) {
+					return tsCoverage.getCoverageOfBranches().toArray();
+				}
 			}
 			return new Object[0]; 
 		}
@@ -275,7 +280,12 @@ public class TDLCoverageView extends ViewPart{
 				return (String) element;
 			}
 			if (element instanceof TDLTestSuiteCoverage) {
-				return "Test Suite Coverage";
+				if (coverageTypeFilterIndex == 0) {
+					return "Test Suite Model Element Coverage";
+				}
+				else if(coverageTypeFilterIndex == 1) {
+					return "Test Suite Branch Coverage";
+				}
 			}
 			return null;
 		}
@@ -286,7 +296,12 @@ public class TDLCoverageView extends ViewPart{
 				return ((List<?>) element).size() > 0;
 			}
 			if (element instanceof TDLTestSuiteCoverage tsCoverage) {
-				return tsCoverage.getCoverageOfModelObjects().size() > 0;
+				if (coverageTypeFilterIndex == 0) {
+					return tsCoverage.getCoverageOfModelObjects().size() > 0;
+				}
+				else if(coverageTypeFilterIndex == 1) {
+					return tsCoverage.getCoverageOfBranches().size() > 0;
+				}
 			}
 			return false;
 		}
@@ -420,10 +435,13 @@ public class TDLCoverageView extends ViewPart{
 		public boolean select(Viewer viewer, Object parentElement, Object element) {
 			if (coverageTypeFilterIndex == -1 || coverageTypeFilterIndex == 0) {
 				return true;
-			}else if (coverageTypeFilterIndex == 2){
+			}
+			else if (coverageTypeFilterIndex == 1){
 				if (element instanceof ObjectCoverageStatus cInfo) {
 					List<ObjectCoverageStatus> branchCoverageInfos = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfBranches();
-					return branchCoverageInfos.stream().anyMatch(info -> info.getModelObject() == cInfo.getModelObject());
+					if (cInfo.getModelObject() != null) {
+						return branchCoverageInfos.stream().anyMatch(info -> info.getModelObject() == cInfo.getModelObject());
+					}
 				}
 			}
 			return false;
