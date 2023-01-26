@@ -34,7 +34,7 @@ public class DSLSpecificBranchCoverage {
 				BranchSpecification branchingRule = rule_contextObjects.getKey();
 				for (Branch branchSpecification:branchingRule.getBranches()) {
 					String query2getBranch = branchSpecification.getQuery();
-					ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch.substring(1, query2getBranch.length()-1));
+					ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch);
 					if (queryResult != null && !queryResult.isEmpty()) {
 						branchingRoot_branches.get(branchingRoot).addAll(queryResult);
 						allBranches.addAll(queryResult);
@@ -44,7 +44,8 @@ public class DSLSpecificBranchCoverage {
 		}
 		for(EObject object:testCaseCoverage.getModelObjects()) {
 			if (allBranches.contains(object)) {
-				testCaseCoverage.getTcBranchCoverageStatus().put(object, testCaseCoverage.getObjectCoverage(object));
+				testCaseCoverage.getBranchObjects().add(object);
+				testCaseCoverage.getTcBranchCoverageStatus().add(testCaseCoverage.getObjectCoverage(object));
 			}
 		}
 	}

@@ -36,7 +36,8 @@ public class TDLTestCaseCoverage {
 	
 	double tcObjectCoveragePercentage;
 	
-	private HashMap<EObject, String> branch_tcCoverageStatus;
+	private List<EObject> branchObjects;
+	private List<String> tcBranchCoverageStatus;
 	double tcBranchCoveragePercentage;
 	
 	public TDLTestCaseCoverage() {
@@ -117,7 +118,8 @@ public class TDLTestCaseCoverage {
 		}
 		//if there are branchSpecificationRules, compute the branch coverage
 		if (executor.hasBranchSpecificationRule()) {
-			branch_tcCoverageStatus = new HashMap<>();
+			branchObjects = new ArrayList<>();
+			tcBranchCoverageStatus = new ArrayList<>();
 			executor.runBranchCoverageRules();
 			
 		}
@@ -175,13 +177,13 @@ public class TDLTestCaseCoverage {
 		}catch (NumberFormatException e) {
 			System.out.println("NumberFormatException:" + tcObjectCoveragePercentage);
 		}
-		System.out.println(this.testCase.getName() + " coverage: " + 
+		System.out.println(this.testCase.getName() + "-model element coverage: " + 
 				numOfCoveredObjs + "/" + numOfCoverableElements + " = " + tcObjectCoveragePercentage +"%");
 	}
 	
 	public void calculateBranchCoveragePercentage() {
-		int numOfBranches = branch_tcCoverageStatus.size();
-		int numOfCoveredBranches = (int) branch_tcCoverageStatus.values().stream()
+		int numOfBranches = branchObjects.size();
+		int numOfCoveredBranches = (int) tcBranchCoverageStatus.stream()
 				.filter(coverage -> coverage == TDLCoverageUtil.COVERED).count();
 		tcBranchCoveragePercentage = (double)(numOfCoveredBranches*100)/numOfBranches;
 		try {
@@ -190,7 +192,7 @@ public class TDLTestCaseCoverage {
 		}catch (NumberFormatException e) {
 			System.out.println("NumberFormatException:" + tcBranchCoveragePercentage);
 		}
-		System.out.println(testCase.getName() + "Branch coverage: " + 
+		System.out.println(testCase.getName() + "-branch coverage: " + 
 				numOfCoveredBranches + "/" + numOfBranches + " = " + tcBranchCoveragePercentage +"%");
 	}
 	
@@ -213,21 +215,29 @@ public class TDLTestCaseCoverage {
 	public TestDescription getTestCase() {
 		return testCase;
 	}
+	
 	public void setTestCase(TestDescription testCase) {
 		this.testCase = testCase;
 	}
+	
 	public String getTestCaseName() {
 		return testCase.getName();
 	}
+	
 	public List<EObject> getModelObjects() {
 		return modelObjects;
 	}
+	
 	public List<String> getTcObjectCoverageStatus() {
 		return tcObjectCoverageStatus;
 	}
-	
-	public HashMap<EObject, String> getTcBranchCoverageStatus() {
-		return branch_tcCoverageStatus;
+
+	public List<EObject> getBranchObjects() {
+		return branchObjects;
+	}
+
+	public List<String> getTcBranchCoverageStatus() {
+		return tcBranchCoverageStatus;
 	}
 
 	public double getTcObjectCoveragePercentage() {
@@ -239,7 +249,7 @@ public class TDLTestCaseCoverage {
 	}
 	
 	public boolean hasBranchCoverageInformation() {
-		return branch_tcCoverageStatus == null ? false : true;
+		return tcBranchCoverageStatus == null ? false : true;
 	}
 	
 }

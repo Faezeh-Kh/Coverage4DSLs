@@ -22,8 +22,10 @@ public class TDLTestSuiteCoverage {
 	public List<ObjectCoverageStatus> coverageOfModelObjects;
 	private ObjectCoverageStatus objectCoverageOverallResult;
 	
-	private HashMap<EObject, String> branch_tsCoverageStatus;
+	private List<EObject> branchObjects;
+	private List<String> tsBranchCoverageStatus;
 	double tsBranchCoveragePercentage;
+	
 	public List<ObjectCoverageStatus> coverageOfBranches;
 	private ObjectCoverageStatus branchCoverageOverallResult;
 	
@@ -65,7 +67,7 @@ public class TDLTestSuiteCoverage {
 			calculateObjectCoveragePercentage();
 			setObjectCoverageInfos();
 		}
-		if (branch_tsCoverageStatus != null && !branch_tsCoverageStatus.isEmpty()) {
+		if (tsBranchCoverageStatus != null && !tsBranchCoverageStatus.isEmpty()) {
 			calculateBranchCoveragePercentage();
 			setBranchCoverageInfos();
 		}
@@ -77,7 +79,8 @@ public class TDLTestSuiteCoverage {
 		if (tsObjectCoverageStatus.size() == 0) {
 			modelObjects.addAll(tcCoverageObj.getModelObjects());
 			tsObjectCoverageStatus.addAll(tcCoverageObj.getTcObjectCoverageStatus());
-		}else {
+		}
+		else {
 			for (int i=0; i<tcCoverageObj.getTcObjectCoverageStatus().size(); i++) {
 				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus().get(i);
 				if (tcCoverage == TDLCoverageUtil.COVERED & tsObjectCoverageStatus.get(i) != TDLCoverageUtil.COVERED) {
@@ -88,23 +91,24 @@ public class TDLTestSuiteCoverage {
 	}
 	
 	private void computeBranchCoverage(TDLTestCaseCoverage tcCoverageObj) {
-		if (branch_tsCoverageStatus == null) {
-			branch_tsCoverageStatus = new HashMap<>();
+		if (tsBranchCoverageStatus == null) {
+			branchObjects = new ArrayList<>();
+			tsBranchCoverageStatus = new ArrayList<>();
 			coverageOfBranches = new ArrayList<>();
 			branchCoverageOverallResult = new ObjectCoverageStatus();
 		}
 		
 		branchCoverageOverallResult.getCoverage().add(tcCoverageObj.getTcBranchCoveragePercentage() + "");
 		//if it is the first test case, copy the whole test case object coverage status for the test suite
-		if (branch_tsCoverageStatus.size() == 0) {
-			branch_tsCoverageStatus.putAll(tcCoverageObj.getTcBranchCoverageStatus());
-		}else {
-			for (Entry<EObject, String> branch_tcCoverage:tcCoverageObj.getTcBranchCoverageStatus().entrySet()) {
-				EObject branchObject = branch_tcCoverage.getKey();
-				String branchObjectCoverage = branch_tcCoverage.getValue();
-				if (branchObjectCoverage == TDLCoverageUtil.COVERED 
-						& branch_tsCoverageStatus.get(branchObject) != TDLCoverageUtil.COVERED) {
-					branch_tsCoverageStatus.put(branchObject, TDLCoverageUtil.COVERED);
+		if (tsBranchCoverageStatus.size() == 0) {
+			branchObjects.addAll(tcCoverageObj.getBranchObjects());
+			tsBranchCoverageStatus.addAll(tcCoverageObj.getTcBranchCoverageStatus());
+		}
+		else {
+			for (int i=0; i<tcCoverageObj.getTcBranchCoverageStatus().size(); i++) {
+				String tcCoverage = tcCoverageObj.getTcBranchCoverageStatus().get(i);
+				if (tcCoverage == TDLCoverageUtil.COVERED & tsBranchCoverageStatus.get(i) != TDLCoverageUtil.COVERED) {
+					tsBranchCoverageStatus.set(i, TDLCoverageUtil.COVERED);
 				}
 			}
 		}
@@ -130,14 +134,14 @@ public class TDLTestSuiteCoverage {
 			System.out.println("NumberFormatException:" + tsBranchCoveragePercentage);
 		}
 		objectCoverageOverallResult.getCoverage().add(tsObjectCoveragePercentage + "");
-		System.out.println("Test suite coverage: " + 
+		System.out.println("Test suite model element coverage: " + 
 				numOfCoveredObjs + "/" + numOfCoverableElements + " = " + tsObjectCoveragePercentage +"%");
 	
 	}
 
 	public void calculateBranchCoveragePercentage() {
-		int numOfBranches = branch_tsCoverageStatus.size();
-		int numOfCoveredBranches = (int) branch_tsCoverageStatus.values().stream()
+		int numOfBranches = tsBranchCoverageStatus.size();
+		int numOfCoveredBranches = (int) tsBranchCoverageStatus.stream()
 				.filter(coverage -> coverage == TDLCoverageUtil.COVERED).count();
 		tsBranchCoveragePercentage = (double)(numOfCoveredBranches*100)/numOfBranches;
 		try {
@@ -146,12 +150,11 @@ public class TDLTestSuiteCoverage {
 		}catch (NumberFormatException e) {
 			System.out.println("NumberFormatException:" + tsBranchCoveragePercentage);
 		}
-		System.out.println("Test suite Branch coverage: " + 
+		System.out.println("Test suite branch coverage: " + 
 				numOfCoveredBranches + "/" + numOfBranches + " = " + tsBranchCoveragePercentage +"%");
 	}
 	
 	public void setObjectCoverageInfos() {
-		List<EObject> modelObjects = this.modelObjects;
 		//for each model object, the coverage information must be set
 		for (int i=0; i<modelObjects.size(); i++) {
 			ObjectCoverageStatus objectCoverage = new ObjectCoverageStatus();
@@ -172,26 +175,22 @@ public class TDLTestSuiteCoverage {
 	}
 	
 	public void setBranchCoverageInfos() {
-		//if there is branch coverage information, set data for that too
-		if (branchCoverageOverallResult != null) {
-			for (Entry <EObject, String> branch_coverage : branch_tsCoverageStatus.entrySet()) {
-				EObject branchObject = branch_coverage.getKey();
-				ObjectCoverageStatus branchCoverage = new ObjectCoverageStatus();
-				branchCoverage.setModelObject(branchObject);
-				branchCoverage.setMetaclass(branchObject.eClass());
-				for (TDLTestCaseCoverage tcCoverageObj : tcCoverages) {
-					String tcBranchCoverage = tcCoverageObj.getTcBranchCoverageStatus().get(branchObject);
-					branchCoverage.getCoverage().add(tcBranchCoverage);
-				}
-				String tsBranchCoverage = branch_coverage.getValue();
-				branchCoverage.getCoverage().add(tsBranchCoverage);
-				coverageOfBranches.add(branchCoverage);
+		for (int i=0; i<branchObjects.size(); i++) {
+			ObjectCoverageStatus branchCoverage = new ObjectCoverageStatus();
+			branchCoverage.setModelObject(branchObjects.get(i));
+			branchCoverage.setMetaclass(branchObjects.get(i).eClass());
+			for (TDLTestCaseCoverage tcCoverageObj : tcCoverages) {
+				String tcBranchCoverage = tcCoverageObj.getTcBranchCoverageStatus().get(i);
+				branchCoverage.getCoverage().add(tcBranchCoverage);
 			}
-			//add the overall result as the last row of the info array
-			branchCoverageOverallResult.setMetaclass(null);
-			branchCoverageOverallResult.setModelObject(null);
-			coverageOfBranches.add(branchCoverageOverallResult);
+			String tsBranchCoverage = tsBranchCoverageStatus.get(i);
+			branchCoverage.getCoverage().add(tsBranchCoverage);
+			coverageOfBranches.add(branchCoverage);
 		}
+		//add the overall result as the last row of the info array
+		branchCoverageOverallResult.setMetaclass(null);
+		branchCoverageOverallResult.setModelObject(null);
+		coverageOfBranches.add(branchCoverageOverallResult);
 	}
 	
 	public List<ObjectCoverageStatus> getCoverageOfModelObjects(){

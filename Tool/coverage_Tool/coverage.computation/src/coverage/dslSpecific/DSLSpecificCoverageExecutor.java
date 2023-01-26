@@ -63,7 +63,6 @@ public class DSLSpecificCoverageExecutor {
 						.filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 						.toList();
 				branchingRule_contextObjects.put((BranchSpecification) rule, eObjectsSatisfyingCondition);
-				//TODO: check if the eObjectsSatisfyingCondition is not cleared in each iteration
 			}
 		}
 	}
@@ -194,6 +193,9 @@ public class DSLSpecificCoverageExecutor {
 	}
 	
 	private boolean isRuleConditionSatisfied(EList<Condition> conditions, EObject object) {
+		if (conditions.isEmpty()) {
+			return true;
+		}
 		boolean result = false;
 		for (int i=0; i<conditions.size(); i++) {
 			Condition condition = conditions.get(i);
@@ -214,7 +216,6 @@ public class DSLSpecificCoverageExecutor {
 	private boolean evaluateCondition(Condition condition, EObject object) {
 		OCLInterpreter oclRunner = new OCLInterpreter();
 		String constraint = condition.getConstraint();
-		constraint = constraint.substring(1, constraint.length()-1);
 		boolean result = oclRunner.isConstraintSatisfied(object, constraint);
 		if (condition instanceof UnaryCondition ucondition 
 				&& ucondition.getOperator() == UnaryOperator.NOT) {
