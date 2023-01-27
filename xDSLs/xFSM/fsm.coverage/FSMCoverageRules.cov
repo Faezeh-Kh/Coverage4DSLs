@@ -3,7 +3,7 @@ ruleset FSMCoverage{
 	context State{
 		has branches{
 			description "A State with two or more outgoing transitions defines a branch"
-			condition "self.outgoingTransitions.size()>1"
+			condition "self.outgoingTransitions->size()>1"
 			queryBranch "self.outgoingTransitions"
 		}
 	}
