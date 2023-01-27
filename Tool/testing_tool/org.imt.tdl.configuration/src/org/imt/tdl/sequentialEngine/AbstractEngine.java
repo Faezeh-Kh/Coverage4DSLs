@@ -41,11 +41,11 @@ public abstract class AbstractEngine implements ISequentialExecutionEngine{
 	
 	@Override
 	public void setUp(String MUTPath, String DSLPath) {
-		_modelLocation = MUTPath;
+		_modelLocation = MUTPath.replace("\\", "/");
 		//_siriusRepresentationLocation = MUTPath.split(File.separator)[1] + File.separator + "representations.aird";
 		_delay = "0";
 		_language = this.getDslName(DSLPath);
-		_entryPointModelElement = File.separator;
+		_entryPointModelElement = "/";
 		_entryPointMethod = getModelEntryPointMethodName();
 		_animationFirstBreak = false;
 		_modelInitializationMethod = getModelInitializationMethodName();
