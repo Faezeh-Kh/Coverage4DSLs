@@ -28,9 +28,11 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	private DSLProcessor dslProcessor;
 	private Path DSLPath;
 	private EPackage metamodelRootElement;
-	private Set<String> coverableClasses = new HashSet<>();
-	private Set<String> extendedClassesWithoutStep = new HashSet<>();
-
+	private Set<String> coverableClasses_me = new HashSet<>();
+	private Set<String> extendedClassesWithoutStep_me = new HashSet<>();
+	private Set<String> coverableClasses_b = new HashSet<>();
+	private Set<String> extendedClassesWithoutStep_b = new HashSet<>();
+	
 	private List<EClass> classesWithDynamicFeatures = new ArrayList<>();
 	private List<EClass> dynamicClasses = new ArrayList<>();
 	
@@ -67,8 +69,10 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	}
 	
 	public void runCoverageComputation() {
-		coverableClasses.clear();
-		extendedClassesWithoutStep.clear();
+		coverableClasses_me.clear();
+		extendedClassesWithoutStep_me.clear();
+		coverableClasses_b.clear();
+		extendedClassesWithoutStep_b.clear();
 		dynamicClasses.clear();
 		classesWithDynamicFeatures.clear();
 		dslSpecificCoverage = null;
@@ -84,8 +88,10 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	
 	private void findCoverableClassesFromDSLSemantics(){
 		dslProcessor.findDSLExtendedClasses();
-		extendedClassesWithoutStep.addAll(dslProcessor.getExtendedClassesWithoutStep());
-		coverableClasses.addAll(dslProcessor.getExtendedClassesWithStep());
+		extendedClassesWithoutStep_me.addAll(dslProcessor.getExtendedClassesWithoutStep());
+		coverableClasses_me.addAll(dslProcessor.getExtendedClassesWithStep());
+		extendedClassesWithoutStep_b.addAll(extendedClassesWithoutStep_me);
+		coverableClasses_b.addAll(coverableClasses_me);
 		checkInheritanceForNotCoverableClasses();
 	}
 	
@@ -95,8 +101,8 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 		for (EClassifier clazz: metamodelRootElement.getEClassifiers()) {
 			String className = clazz.getName();
 			if (clazz instanceof EClass eclazz) {
-				if (!coverableClasses.contains(className) && 
-						!extendedClassesWithoutStep.contains(className)) {
+				if (!coverableClasses_me.contains(className) && 
+						!extendedClassesWithoutStep_me.contains(className)) {
 					checkInheritance(eclazz);
 				}
 				checkDynamicAspectsOfClass(eclazz);	
@@ -106,8 +112,9 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	
 	private void checkInheritance(EClass eClazz) {
 		for (EClass superClass:eClazz.getEAllSuperTypes()) {
-			if (coverableClasses.contains(superClass.getName())) {
-				coverableClasses.add(eClazz.getName());
+			if (coverableClasses_me.contains(superClass.getName())) {
+				coverableClasses_me.add(eClazz.getName());
+				coverableClasses_b.add(eClazz.getName());
 				break;
 			}
 		}
@@ -136,41 +143,83 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 		return (featureDynamicAnnotations != null && featureDynamicAnnotations.size() > 0);
 	}
 
-	public boolean isClassCoverable(EClass clazz) {
-		return coverableClasses.contains(clazz.getName());
+	public boolean isClassCoverable(EClass clazz, String metric) {
+		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
+			return coverableClasses_me.contains(clazz.getName());
+		}
+		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
+			return coverableClasses_b.contains(clazz.getName());
+		}
+		return false;
 	}
 	
 	//add a class and all of its sub classes
-	public void addCoverableClass(EClass clazz) {
-		if (!coverableClasses.contains(clazz.getName())) {
-			coverableClasses.add(clazz.getName());
-			List<String> notCoverableSubClasses = metamodelRootElement.getEClassifiers().stream().
-					filter(c -> c instanceof EClass).map(c -> (EClass) c).
-					filter(c -> c.getEAllSuperTypes().stream().
-							filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-							&& !coverableClasses.contains(c.getName())
-							&& !extendedClassesWithoutStep.contains(c.getName())).
-					map (c -> c.getName()).collect(Collectors.toList());
-				coverableClasses.addAll(notCoverableSubClasses);
+	public void addCoverableClass(EClass clazz, String metric) {
+		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
+			if (!coverableClasses_me.contains(clazz.getName())) {
+				coverableClasses_me.add(clazz.getName());
+				List<String> notCoverableSubClasses = metamodelRootElement.getEClassifiers().stream().
+						filter(c -> c instanceof EClass).map(c -> (EClass) c).
+						filter(c -> c.getEAllSuperTypes().stream().
+								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
+								&& !coverableClasses_me.contains(c.getName())
+								&& !extendedClassesWithoutStep_me.contains(c.getName())).
+						map (c -> c.getName()).collect(Collectors.toList());
+					coverableClasses_me.addAll(notCoverableSubClasses);
+			}
+		}
+		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
+			if (!coverableClasses_b.contains(clazz.getName())) {
+				coverableClasses_b.add(clazz.getName());
+				List<String> notCoverableSubClasses = metamodelRootElement.getEClassifiers().stream().
+						filter(c -> c instanceof EClass).map(c -> (EClass) c).
+						filter(c -> c.getEAllSuperTypes().stream().
+								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
+								&& !coverableClasses_b.contains(c.getName())
+								&& !extendedClassesWithoutStep_b.contains(c.getName())).
+						map (c -> c.getName()).collect(Collectors.toList());
+					coverableClasses_b.addAll(notCoverableSubClasses);
+			}
 		}
 	}
 	
-	public void removeCoverableClass(EClass clazz) {
-		if (coverableClasses.contains(clazz.getName())) {
-			coverableClasses.remove(clazz.getName());
+	public void removeCoverableClass(EClass clazz, String metric) {
+		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
+			if (coverableClasses_me.contains(clazz.getName())) {
+				coverableClasses_me.remove(clazz.getName());
+			}
+		}
+		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
+			if (coverableClasses_b.contains(clazz.getName())) {
+				coverableClasses_b.remove(clazz.getName());
+			}
 		}
 	}
 	//remove a class and all of its sub classes
-	public void removeCoverableClass_subClass(EClass clazz) {
-		if (coverableClasses.contains(clazz.getName())) {
-			coverableClasses.remove(clazz.getName());
-			List<String> coverableSubClasses = metamodelRootElement.getEClassifiers().stream().
-					filter(c -> c instanceof EClass).map(c -> (EClass) c).
-					filter(c -> c.getEAllSuperTypes().stream().
-							filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-							&& coverableClasses.contains(c.getName())).
-					map (c -> c.getName()).collect(Collectors.toList());
-				coverableClasses.removeAll(coverableSubClasses);
+	public void removeCoverableClass_subClass(EClass clazz, String metric) {
+		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
+			if (coverableClasses_me.contains(clazz.getName())) {
+				coverableClasses_me.remove(clazz.getName());
+				List<String> coverableSubClasses = metamodelRootElement.getEClassifiers().stream().
+						filter(c -> c instanceof EClass).map(c -> (EClass) c).
+						filter(c -> c.getEAllSuperTypes().stream().
+								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
+								&& coverableClasses_me.contains(c.getName())).
+						map (c -> c.getName()).collect(Collectors.toList());
+					coverableClasses_me.removeAll(coverableSubClasses);
+			}
+		}
+		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
+			if (coverableClasses_b.contains(clazz.getName())) {
+				coverableClasses_b.remove(clazz.getName());
+				List<String> coverableSubClasses = metamodelRootElement.getEClassifiers().stream().
+						filter(c -> c instanceof EClass).map(c -> (EClass) c).
+						filter(c -> c.getEAllSuperTypes().stream().
+								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
+								&& coverableClasses_b.contains(c.getName())).
+						map (c -> c.getName()).collect(Collectors.toList());
+					coverableClasses_b.removeAll(coverableSubClasses);
+			}
 		}
 	}
 	

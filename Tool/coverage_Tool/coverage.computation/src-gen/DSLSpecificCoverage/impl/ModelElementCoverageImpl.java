@@ -3,24 +3,24 @@
 package DSLSpecificCoverage.impl;
 
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
-import DSLSpecificCoverage.SpecializationRule;
+import DSLSpecificCoverage.ModelElementCoverage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Specialization Rule</b></em>'.
+ * An implementation of the model object '<em><b>Model Element Coverage</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class SpecializationRuleImpl extends RuleImpl implements SpecializationRule {
+public class ModelElementCoverageImpl extends CoverageMetricImpl implements ModelElementCoverage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SpecializationRuleImpl() {
+	protected ModelElementCoverageImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class SpecializationRuleImpl extends RuleImpl implements Special
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DSLSpecificCoveragePackage.Literals.SPECIALIZATION_RULE;
+		return DSLSpecificCoveragePackage.Literals.MODEL_ELEMENT_COVERAGE;
 	}
 
-} //SpecializationRuleImpl
+} //ModelElementCoverageImpl

@@ -9,9 +9,26 @@ DomainSpecificCoverage returns DomainSpecificCoverage:
 	name=EString
 	'{'
 		'import' 'metamodel' metamodel=[ecore::EPackage|EString]
-		contexts+=Context ( "," contexts+=Context)* 
+		coverageMetrics+=CoverageMetric ( "," coverageMetrics+=CoverageMetric)* 
 	'}';
 
+CoverageMetric returns CoverageMetric:
+	ModelElementCoverage | BranchCoverage;
+	
+	
+ModelElementCoverage returns ModelElementCoverage:
+	'ModelElementCoverageRuleset'
+	'{'
+	 	contexts+=Context ( "," contexts+=Context)*
+	'}';
+	
+BranchCoverage returns BranchCoverage:
+	'BranchCoverageRuleset'
+	'{'
+	 	(contexts+=Context ( "," contexts+=Context)*)?
+	 	branchSpecifications+=BranchSpecification ("," branchSpecifications+=BranchSpecification)*
+	'}';
+	 
 EString returns ecore::EString:
 	STRING | ID;
 
@@ -22,7 +39,7 @@ Context returns Context:
 	'}';
 
 Rule returns Rule:
-	Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore | BranchSpecification ;
+	Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore ;
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
@@ -54,6 +71,7 @@ CoverageByContent returns CoverageByContent:
 BranchSpecification returns BranchSpecification:
 	'has' 'branches' '{' 
 		('description' description=EString)?
+		context=[ecore::EClass|EString]
 		('condition' condition=Condition)?
 		branches += Branch (',' branches += Branch)* 
 	'}';

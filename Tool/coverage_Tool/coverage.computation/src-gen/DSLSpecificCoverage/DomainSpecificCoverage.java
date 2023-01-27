@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EPackage;
  * </p>
  * <ul>
  *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getName <em>Name</em>}</li>
- *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getContexts <em>Contexts</em>}</li>
  *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getMetamodel <em>Metamodel</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getCoverageMetrics <em>Coverage Metrics</em>}</li>
  * </ul>
  *
  * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage()
@@ -49,18 +49,6 @@ public interface DomainSpecificCoverage extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Contexts</b></em>' containment reference list.
-	 * The list contents are of type {@link DSLSpecificCoverage.Context}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contexts</em>' containment reference list.
-	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_Contexts()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<Context> getContexts();
-
-	/**
 	 * Returns the value of the '<em><b>Metamodel</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,5 +69,17 @@ public interface DomainSpecificCoverage extends EObject {
 	 * @generated
 	 */
 	void setMetamodel(EPackage value);
+
+	/**
+	 * Returns the value of the '<em><b>Coverage Metrics</b></em>' containment reference list.
+	 * The list contents are of type {@link DSLSpecificCoverage.CoverageMetric}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Coverage Metrics</em>' containment reference list.
+	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_CoverageMetrics()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<CoverageMetric> getCoverageMetrics();
 
 } // DomainSpecificCoverage

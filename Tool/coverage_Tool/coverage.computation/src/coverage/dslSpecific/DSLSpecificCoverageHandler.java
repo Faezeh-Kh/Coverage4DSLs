@@ -14,7 +14,7 @@ import coverage.computation.TDLCoverageUtil;
 
 public class DSLSpecificCoverageHandler {
 	
-	private static final String COVERAGE_POINT_ID = "org.imt.tdl.coverage.extensionpoint.DSLSpecificCoverage";
+	private static final String COVERAGE_POINT_ID = "coverage.extensionpoint.DSLSpecificCoverage";
 	private static final String COVERAGE_ID = "coverageId";
 	
 	public IDSLSpecificCoverage getDSLSpecificCoverage() {

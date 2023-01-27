@@ -16,8 +16,8 @@ class COVFormatter extends AbstractFormatter2 {
 
 	def dispatch void format(DomainSpecificCoverage domainSpecificCoverage, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (context : domainSpecificCoverage.contexts) {
-			context.format
+		for (metric : domainSpecificCoverage.coverageMetrics) {
+			metric.format
 		}
 	}
 

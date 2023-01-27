@@ -1,6 +1,5 @@
 package coverage.dslSpecific;
 
-import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -10,7 +9,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
-import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.Condition;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
@@ -27,10 +25,11 @@ import coverage.utilities.OCLInterpreter;
 public class DSLSpecificCoverageExecutor {
 
 	private TDLTestCaseCoverage testCaseCoverage;
-	private HashMap<BranchSpecification, List<EObject>> branchingRule_contextObjects = new HashMap<>();
+	private String metric;
 	
-	public DSLSpecificCoverageExecutor (TDLTestCaseCoverage testCaseCoverage) {
+	public DSLSpecificCoverageExecutor (TDLTestCaseCoverage testCaseCoverage, String metric) {
 		this.testCaseCoverage = testCaseCoverage;
+		this.metric = metric;
 	}
 	//apply all the rules on the object (NOTE: rule's context = object type)
 	public void applyCoverageRules(EList<Rule> rules, List<EObject> eObjects) {
@@ -54,12 +53,6 @@ public class DSLSpecificCoverageExecutor {
 				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 					.forEach(object -> runIgnoreRule((Ignore) rule, object));
 			}
-			else if (rule instanceof BranchSpecification) {
-				List<EObject> eObjectsSatisfyingCondition = eObjects.stream()
-						.filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
-						.toList();
-				branchingRule_contextObjects.put((BranchSpecification) rule, eObjectsSatisfyingCondition);
-			}
 		}
 	}
 	
@@ -70,23 +63,23 @@ public class DSLSpecificCoverageExecutor {
 	private void updateCoverableClasses(CoverageOfReferenced rule) {
 		rule.getReference().stream().forEach(r -> 
 			TDLCoverageUtil.getInstance().addCoverableClass(
-				(EClass) r.getEType()));
+				(EClass) r.getEType(), metric));
 		
 	}
 	
 	private void updateCoverableClasses(Ignore rule) {
 		if (rule.isIgnoreSubtypes()) {
 			TDLCoverageUtil.getInstance().removeCoverableClass_subClass(
-					((Context) rule.eContainer()).getMetaclass());
+					((Context) rule.eContainer()).getMetaclass(), metric);
 		}
 		else {
 			TDLCoverageUtil.getInstance().removeCoverableClass(
-					((Context) rule.eContainer()).getMetaclass());
+					((Context) rule.eContainer()).getMetaclass(), metric);
 		}
 	}
 	
 	private void addCoverableClass(EClass c) {
-		TDLCoverageUtil.getInstance().addCoverableClass(c);
+		TDLCoverageUtil.getInstance().addCoverableClass(c, metric);
 	}
 
 	private void inferReferenceCoverage(CoverageOfReferenced r, EObject object) {
@@ -97,12 +90,12 @@ public class DSLSpecificCoverageExecutor {
 				if (referencedObject != null) { 
 					if (referencedObject instanceof EObject) {
 						testCaseCoverage.setObjectCoverage(
-								(EObject) referencedObject, testCaseCoverage.getObjectCoverage(object));
+								(EObject) referencedObject, testCaseCoverage.getObjectCoverage(object, metric), metric);
 					}
 					else if (referencedObject instanceof EObjectContainmentEList<?>) {
 						((EObjectContainmentEList<?>) referencedObject).
 							forEach(o -> testCaseCoverage.setObjectCoverage(
-									(EObject) o, testCaseCoverage.getObjectCoverage(object)));
+									(EObject) o, testCaseCoverage.getObjectCoverage(object, metric), metric));
 					}
 				}
 			}
@@ -119,7 +112,7 @@ public class DSLSpecificCoverageExecutor {
 		if (containedObject instanceof EObject) {
 			EObject containee = (EObject) containedObject;
 			testCaseCoverage.setObjectCoverage(
-					object, testCaseCoverage.getObjectCoverage(containee));
+					object, testCaseCoverage.getObjectCoverage(containee, metric), metric);
 		}
 		else if (containedObject instanceof EObjectContainmentEList<?>) {
 			//if several objects are contained, set coverage based on the rule's multiplicity
@@ -135,25 +128,25 @@ public class DSLSpecificCoverageExecutor {
 	private void coverContainerIfOneContaineeCovered(EObjectContainmentEList<?> containedObjects) {
 		String containeeCoverage = TDLCoverageUtil.NOT_COVERED;
 		for (Object containee:containedObjects) {
-			containeeCoverage = testCaseCoverage.getObjectCoverage((EObject) containee);
+			containeeCoverage = testCaseCoverage.getObjectCoverage((EObject) containee, metric);
 			if (containeeCoverage == TDLCoverageUtil.COVERED) {
 				break;
 			}
 		}
 		testCaseCoverage.setObjectCoverage(
-				((EObject) containedObjects.get(0)).eContainer(), containeeCoverage);
+				((EObject) containedObjects.get(0)).eContainer(), containeeCoverage, metric);
 	}
 	
 	private void coverContainerIfAllContaineeCovered(EObjectContainmentEList<?> containedObjects) {
 		int CoveredContentsCounter = 0;
 		for (Object containee:containedObjects) {
-			String containeeCoverage = testCaseCoverage.getObjectCoverage((EObject) containee);
+			String containeeCoverage = testCaseCoverage.getObjectCoverage((EObject) containee, metric);
 			if (containeeCoverage == TDLCoverageUtil.COVERED) {
 				CoveredContentsCounter++;
 			}
 		}
 		if (CoveredContentsCounter == containedObjects.size()) {
-			testCaseCoverage.setObjectCoverage(((EObject) containedObjects.get(0)).eContainer(), TDLCoverageUtil.COVERED);
+			testCaseCoverage.setObjectCoverage(((EObject) containedObjects.get(0)).eContainer(), TDLCoverageUtil.COVERED, metric);
 		}
 	}
 	
@@ -162,14 +155,14 @@ public class DSLSpecificCoverageExecutor {
 			//ignore EObjects contained by one of the ContainerType classes
 			if (rule.getContainerMetaclass().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
-				testCaseCoverage.setObjectNotCoverable(object);
+				testCaseCoverage.setObjectNotCoverable(object, metric);
 			}
 		}
 		else if (rule.getType() == LimitationType.NOT_CONTAINED_BY) {
 			//ignore EObjects that are not contained by any of the ContainerType classes
 			if (!rule.getContainerMetaclass().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
-				testCaseCoverage.setObjectNotCoverable(object);
+				testCaseCoverage.setObjectNotCoverable(object, metric);
 			}
 		}
 	}
@@ -179,7 +172,7 @@ public class DSLSpecificCoverageExecutor {
 				((Context) rule.eContainer()).getMetaclass().getName())) {
 			return;
 		}
-		testCaseCoverage.setObjectNotCoverable(object);
+		testCaseCoverage.setObjectNotCoverable(object, metric);
 	}
 	
 	private EStructuralFeature getMatchedFeature(EObject rootElement, String featureName){
@@ -199,14 +192,5 @@ public class DSLSpecificCoverageExecutor {
 		OCLInterpreter oclRunner = new OCLInterpreter();
 		String constraint = condition.getOCLConstraint();
 		return oclRunner.isConstraintSatisfied(object, constraint);
-	}
-	
-	public boolean hasBranchSpecificationRule() {
-		return branchingRule_contextObjects.size() == 0 ? false : true;
-	}
-	
-	public void runBranchCoverageRules() {
-		DSLSpecificBranchCoverage branchCoverageExecutor = new DSLSpecificBranchCoverage(branchingRule_contextObjects);
-		branchCoverageExecutor.runBranchCoverageComputation(testCaseCoverage);
 	}
 }

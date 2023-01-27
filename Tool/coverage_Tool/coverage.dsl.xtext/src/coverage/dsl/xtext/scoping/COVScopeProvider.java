@@ -15,6 +15,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 
+import DSLSpecificCoverage.BranchCoverage;
+import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
 import DSLSpecificCoverage.CoverageOfReferenced;
@@ -65,6 +67,14 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 			EList<EReference> containments = ((Context)((CoverageByContent) context).eContainer())
 												.getMetaclass().getEAllContainments();
 			return Scopes.scopeFor(containments);
+		}
+		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getBranchSpecification_Context())) {
+			Collection<EClass> allClasses = ((DomainSpecificCoverage)((BranchCoverage)((BranchSpecification) context).eContainer()).eContainer())
+												.getMetamodel().getEClassifiers().stream()
+												.filter(EClass.class::isInstance)
+												.map(EClass.class::cast)
+												.collect(Collectors.toCollection(BasicEList::new));
+			return Scopes.scopeFor(allClasses);
 		}
 		return super.getScope(context, reference);
 	}

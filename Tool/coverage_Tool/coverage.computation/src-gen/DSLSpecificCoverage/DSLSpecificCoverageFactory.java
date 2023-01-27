@@ -103,6 +103,24 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	Condition createCondition();
 
 	/**
+	 * Returns a new object of class '<em>Model Element Coverage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Element Coverage</em>'.
+	 * @generated
+	 */
+	ModelElementCoverage createModelElementCoverage();
+
+	/**
+	 * Returns a new object of class '<em>Branch Coverage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Branch Coverage</em>'.
+	 * @generated
+	 */
+	BranchCoverage createBranchCoverage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

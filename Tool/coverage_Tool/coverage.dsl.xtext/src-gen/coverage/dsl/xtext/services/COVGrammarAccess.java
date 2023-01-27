@@ -38,12 +38,12 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Assignment cMetamodelAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final CrossReference cMetamodelEPackageCrossReference_5_0 = (CrossReference)cMetamodelAssignment_5.eContents().get(0);
 		private final RuleCall cMetamodelEPackageEStringParserRuleCall_5_0_1 = (RuleCall)cMetamodelEPackageCrossReference_5_0.eContents().get(1);
-		private final Assignment cContextsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cContextsContextParserRuleCall_6_0 = (RuleCall)cContextsAssignment_6.eContents().get(0);
+		private final Assignment cCoverageMetricsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cCoverageMetricsCoverageMetricParserRuleCall_6_0 = (RuleCall)cCoverageMetricsAssignment_6.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cContextsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cContextsContextParserRuleCall_7_1_0 = (RuleCall)cContextsAssignment_7_1.eContents().get(0);
+		private final Assignment cCoverageMetricsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cCoverageMetricsCoverageMetricParserRuleCall_7_1_0 = (RuleCall)cCoverageMetricsAssignment_7_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//DomainSpecificCoverage returns DomainSpecificCoverage:
@@ -51,7 +51,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//    name=EString
 		//    '{'
 		//        'import' 'metamodel' metamodel=[ecore::EPackage|EString]
-		//        contexts+=Context ( "," contexts+=Context)*
+		//        coverageMetrics+=CoverageMetric ( "," coverageMetrics+=CoverageMetric)*
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -59,7 +59,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//name=EString
 		//'{'
 		//    'import' 'metamodel' metamodel=[ecore::EPackage|EString]
-		//    contexts+=Context ( "," contexts+=Context)*
+		//    coverageMetrics+=CoverageMetric ( "," coverageMetrics+=CoverageMetric)*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -90,26 +90,181 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//EString
 		public RuleCall getMetamodelEPackageEStringParserRuleCall_5_0_1() { return cMetamodelEPackageEStringParserRuleCall_5_0_1; }
 		
-		//contexts+=Context
-		public Assignment getContextsAssignment_6() { return cContextsAssignment_6; }
+		//coverageMetrics+=CoverageMetric
+		public Assignment getCoverageMetricsAssignment_6() { return cCoverageMetricsAssignment_6; }
 		
-		//Context
-		public RuleCall getContextsContextParserRuleCall_6_0() { return cContextsContextParserRuleCall_6_0; }
+		//CoverageMetric
+		public RuleCall getCoverageMetricsCoverageMetricParserRuleCall_6_0() { return cCoverageMetricsCoverageMetricParserRuleCall_6_0; }
 		
-		//( "," contexts+=Context)*
+		//( "," coverageMetrics+=CoverageMetric)*
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//","
 		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 		
-		//contexts+=Context
-		public Assignment getContextsAssignment_7_1() { return cContextsAssignment_7_1; }
+		//coverageMetrics+=CoverageMetric
+		public Assignment getCoverageMetricsAssignment_7_1() { return cCoverageMetricsAssignment_7_1; }
 		
-		//Context
-		public RuleCall getContextsContextParserRuleCall_7_1_0() { return cContextsContextParserRuleCall_7_1_0; }
+		//CoverageMetric
+		public RuleCall getCoverageMetricsCoverageMetricParserRuleCall_7_1_0() { return cCoverageMetricsCoverageMetricParserRuleCall_7_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+	}
+	public class CoverageMetricElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.CoverageMetric");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cModelElementCoverageParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cBranchCoverageParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//CoverageMetric returns CoverageMetric:
+		//    ModelElementCoverage | BranchCoverage;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ModelElementCoverage | BranchCoverage
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//ModelElementCoverage
+		public RuleCall getModelElementCoverageParserRuleCall_0() { return cModelElementCoverageParserRuleCall_0; }
+		
+		//BranchCoverage
+		public RuleCall getBranchCoverageParserRuleCall_1() { return cBranchCoverageParserRuleCall_1; }
+	}
+	public class ModelElementCoverageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.ModelElementCoverage");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cModelElementCoverageRulesetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cContextsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cContextsContextParserRuleCall_2_0 = (RuleCall)cContextsAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cContextsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cContextsContextParserRuleCall_3_1_0 = (RuleCall)cContextsAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//ModelElementCoverage returns ModelElementCoverage:
+		//    'ModelElementCoverageRuleset'
+		//    '{'
+		//         contexts+=Context ( "," contexts+=Context)*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ModelElementCoverageRuleset'
+		//'{'
+		//     contexts+=Context ( "," contexts+=Context)*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'ModelElementCoverageRuleset'
+		public Keyword getModelElementCoverageRulesetKeyword_0() { return cModelElementCoverageRulesetKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//contexts+=Context
+		public Assignment getContextsAssignment_2() { return cContextsAssignment_2; }
+		
+		//Context
+		public RuleCall getContextsContextParserRuleCall_2_0() { return cContextsContextParserRuleCall_2_0; }
+		
+		//( "," contexts+=Context)*
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		
+		//contexts+=Context
+		public Assignment getContextsAssignment_3_1() { return cContextsAssignment_3_1; }
+		
+		//Context
+		public RuleCall getContextsContextParserRuleCall_3_1_0() { return cContextsContextParserRuleCall_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class BranchCoverageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.BranchCoverage");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBranchCoverageRulesetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cContextsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cContextsContextParserRuleCall_2_0_0 = (RuleCall)cContextsAssignment_2_0.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cContextsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cContextsContextParserRuleCall_2_1_1_0 = (RuleCall)cContextsAssignment_2_1_1.eContents().get(0);
+		private final Assignment cBranchSpecificationsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cBranchSpecificationsBranchSpecificationParserRuleCall_3_0 = (RuleCall)cBranchSpecificationsAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cBranchSpecificationsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cBranchSpecificationsBranchSpecificationParserRuleCall_4_1_0 = (RuleCall)cBranchSpecificationsAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//BranchCoverage returns BranchCoverage:
+		//    'BranchCoverageRuleset'
+		//    '{'
+		//         (contexts+=Context ( "," contexts+=Context)*)?
+		//         branchSpecifications+=BranchSpecification ("," branchSpecifications+=BranchSpecification)*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'BranchCoverageRuleset'
+		//'{'
+		//     (contexts+=Context ( "," contexts+=Context)*)?
+		//     branchSpecifications+=BranchSpecification ("," branchSpecifications+=BranchSpecification)*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'BranchCoverageRuleset'
+		public Keyword getBranchCoverageRulesetKeyword_0() { return cBranchCoverageRulesetKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//(contexts+=Context ( "," contexts+=Context)*)?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//contexts+=Context
+		public Assignment getContextsAssignment_2_0() { return cContextsAssignment_2_0; }
+		
+		//Context
+		public RuleCall getContextsContextParserRuleCall_2_0_0() { return cContextsContextParserRuleCall_2_0_0; }
+		
+		//( "," contexts+=Context)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
+		
+		//","
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
+		
+		//contexts+=Context
+		public Assignment getContextsAssignment_2_1_1() { return cContextsAssignment_2_1_1; }
+		
+		//Context
+		public RuleCall getContextsContextParserRuleCall_2_1_1_0() { return cContextsContextParserRuleCall_2_1_1_0; }
+		
+		//branchSpecifications+=BranchSpecification
+		public Assignment getBranchSpecificationsAssignment_3() { return cBranchSpecificationsAssignment_3; }
+		
+		//BranchSpecification
+		public RuleCall getBranchSpecificationsBranchSpecificationParserRuleCall_3_0() { return cBranchSpecificationsBranchSpecificationParserRuleCall_3_0; }
+		
+		//("," branchSpecifications+=BranchSpecification)*
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//","
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+		
+		//branchSpecifications+=BranchSpecification
+		public Assignment getBranchSpecificationsAssignment_4_1() { return cBranchSpecificationsAssignment_4_1; }
+		
+		//BranchSpecification
+		public RuleCall getBranchSpecificationsBranchSpecificationParserRuleCall_4_1_0() { return cBranchSpecificationsBranchSpecificationParserRuleCall_4_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.EString");
@@ -206,13 +361,12 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cCoverageOfReferencedParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cCoverageByContentParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cLimitedIgnoreParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cBranchSpecificationParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//Rule returns Rule:
-		//    Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore | BranchSpecification ;
+		//    Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore | BranchSpecification
+		//Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Ignore
@@ -226,9 +380,6 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		
 		//LimitedIgnore
 		public RuleCall getLimitedIgnoreParserRuleCall_3() { return cLimitedIgnoreParserRuleCall_3; }
-		
-		//BranchSpecification
-		public RuleCall getBranchSpecificationParserRuleCall_4() { return cBranchSpecificationParserRuleCall_4; }
 	}
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.EBoolean");
@@ -597,21 +748,25 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cDescriptionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cDescriptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cDescriptionEStringParserRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cConditionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cConditionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cConditionConditionParserRuleCall_4_1_0 = (RuleCall)cConditionAssignment_4_1.eContents().get(0);
-		private final Assignment cBranchesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cBranchesBranchParserRuleCall_5_0 = (RuleCall)cBranchesAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cBranchesAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cBranchesBranchParserRuleCall_6_1_0 = (RuleCall)cBranchesAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cContextAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cContextEClassCrossReference_4_0 = (CrossReference)cContextAssignment_4.eContents().get(0);
+		private final RuleCall cContextEClassEStringParserRuleCall_4_0_1 = (RuleCall)cContextEClassCrossReference_4_0.eContents().get(1);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cConditionKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cConditionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cConditionConditionParserRuleCall_5_1_0 = (RuleCall)cConditionAssignment_5_1.eContents().get(0);
+		private final Assignment cBranchesAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBranchesBranchParserRuleCall_6_0 = (RuleCall)cBranchesAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cBranchesAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cBranchesBranchParserRuleCall_7_1_0 = (RuleCall)cBranchesAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//BranchSpecification returns BranchSpecification:
 		//    'has' 'branches' '{'
 		//        ('description' description=EString)?
+		//        context=[ecore::EClass|EString]
 		//        ('condition' condition=Condition)?
 		//        branches += Branch (',' branches += Branch)*
 		//    '}';
@@ -619,6 +774,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		
 		//'has' 'branches' '{'
 		//    ('description' description=EString)?
+		//    context=[ecore::EClass|EString]
 		//    ('condition' condition=Condition)?
 		//    branches += Branch (',' branches += Branch)*
 		//'}'
@@ -645,38 +801,47 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//EString
 		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
 		
+		//context=[ecore::EClass|EString]
+		public Assignment getContextAssignment_4() { return cContextAssignment_4; }
+		
+		//[ecore::EClass|EString]
+		public CrossReference getContextEClassCrossReference_4_0() { return cContextEClassCrossReference_4_0; }
+		
+		//EString
+		public RuleCall getContextEClassEStringParserRuleCall_4_0_1() { return cContextEClassEStringParserRuleCall_4_0_1; }
+		
 		//('condition' condition=Condition)?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'condition'
-		public Keyword getConditionKeyword_4_0() { return cConditionKeyword_4_0; }
+		public Keyword getConditionKeyword_5_0() { return cConditionKeyword_5_0; }
 		
 		//condition=Condition
-		public Assignment getConditionAssignment_4_1() { return cConditionAssignment_4_1; }
+		public Assignment getConditionAssignment_5_1() { return cConditionAssignment_5_1; }
 		
 		//Condition
-		public RuleCall getConditionConditionParserRuleCall_4_1_0() { return cConditionConditionParserRuleCall_4_1_0; }
+		public RuleCall getConditionConditionParserRuleCall_5_1_0() { return cConditionConditionParserRuleCall_5_1_0; }
 		
 		//branches += Branch
-		public Assignment getBranchesAssignment_5() { return cBranchesAssignment_5; }
+		public Assignment getBranchesAssignment_6() { return cBranchesAssignment_6; }
 		
 		//Branch
-		public RuleCall getBranchesBranchParserRuleCall_5_0() { return cBranchesBranchParserRuleCall_5_0; }
+		public RuleCall getBranchesBranchParserRuleCall_6_0() { return cBranchesBranchParserRuleCall_6_0; }
 		
 		//(',' branches += Branch)*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 		
 		//','
-		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 		
 		//branches += Branch
-		public Assignment getBranchesAssignment_6_1() { return cBranchesAssignment_6_1; }
+		public Assignment getBranchesAssignment_7_1() { return cBranchesAssignment_7_1; }
 		
 		//Branch
-		public RuleCall getBranchesBranchParserRuleCall_6_1_0() { return cBranchesBranchParserRuleCall_6_1_0; }
+		public RuleCall getBranchesBranchParserRuleCall_7_1_0() { return cBranchesBranchParserRuleCall_7_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 	public class BranchElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.Branch");
@@ -773,6 +938,9 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	private final DomainSpecificCoverageElements pDomainSpecificCoverage;
+	private final CoverageMetricElements pCoverageMetric;
+	private final ModelElementCoverageElements pModelElementCoverage;
+	private final BranchCoverageElements pBranchCoverage;
 	private final EStringElements pEString;
 	private final ContextElements pContext;
 	private final RuleElements pRule;
@@ -797,6 +965,9 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pDomainSpecificCoverage = new DomainSpecificCoverageElements();
+		this.pCoverageMetric = new CoverageMetricElements();
+		this.pModelElementCoverage = new ModelElementCoverageElements();
+		this.pBranchCoverage = new BranchCoverageElements();
 		this.pEString = new EStringElements();
 		this.pContext = new ContextElements();
 		this.pRule = new RuleElements();
@@ -844,7 +1015,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	//    name=EString
 	//    '{'
 	//        'import' 'metamodel' metamodel=[ecore::EPackage|EString]
-	//        contexts+=Context ( "," contexts+=Context)*
+	//        coverageMetrics+=CoverageMetric ( "," coverageMetrics+=CoverageMetric)*
 	//    '}';
 	public DomainSpecificCoverageElements getDomainSpecificCoverageAccess() {
 		return pDomainSpecificCoverage;
@@ -852,6 +1023,43 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	public ParserRule getDomainSpecificCoverageRule() {
 		return getDomainSpecificCoverageAccess().getRule();
+	}
+	
+	//CoverageMetric returns CoverageMetric:
+	//    ModelElementCoverage | BranchCoverage;
+	public CoverageMetricElements getCoverageMetricAccess() {
+		return pCoverageMetric;
+	}
+	
+	public ParserRule getCoverageMetricRule() {
+		return getCoverageMetricAccess().getRule();
+	}
+	
+	//ModelElementCoverage returns ModelElementCoverage:
+	//    'ModelElementCoverageRuleset'
+	//    '{'
+	//         contexts+=Context ( "," contexts+=Context)*
+	//    '}';
+	public ModelElementCoverageElements getModelElementCoverageAccess() {
+		return pModelElementCoverage;
+	}
+	
+	public ParserRule getModelElementCoverageRule() {
+		return getModelElementCoverageAccess().getRule();
+	}
+	
+	//BranchCoverage returns BranchCoverage:
+	//    'BranchCoverageRuleset'
+	//    '{'
+	//         (contexts+=Context ( "," contexts+=Context)*)?
+	//         branchSpecifications+=BranchSpecification ("," branchSpecifications+=BranchSpecification)*
+	//    '}';
+	public BranchCoverageElements getBranchCoverageAccess() {
+		return pBranchCoverage;
+	}
+	
+	public ParserRule getBranchCoverageRule() {
+		return getBranchCoverageAccess().getRule();
 	}
 	
 	//EString returns ecore::EString:
@@ -878,7 +1086,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Rule returns Rule:
-	//    Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore | BranchSpecification ;
+	//    Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore ;
 	public RuleElements getRuleAccess() {
 		return pRule;
 	}
@@ -951,6 +1159,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	//BranchSpecification returns BranchSpecification:
 	//    'has' 'branches' '{'
 	//        ('description' description=EString)?
+	//        context=[ecore::EClass|EString]
 	//        ('condition' condition=Condition)?
 	//        branches += Branch (',' branches += Branch)*
 	//    '}';

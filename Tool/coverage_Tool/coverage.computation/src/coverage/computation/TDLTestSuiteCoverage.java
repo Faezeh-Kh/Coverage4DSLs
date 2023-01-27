@@ -72,15 +72,15 @@ public class TDLTestSuiteCoverage {
 	}
 	
 	private void computeModelElementCoverage(TDLTestCaseCoverage tcCoverageObj) {
-		objectCoverageOverallResult.getCoverage().add(tcCoverageObj.getTcObjectCoveragePercentage() + "");
+		objectCoverageOverallResult.getCoverage().add(tcCoverageObj.getTcMECoveragePercentage() + "");
 		//if it is the first test case, copy the whole test case object coverage status for the test suite
 		if (tsObjectCoverageStatus.size() == 0) {
 			modelObjects.addAll(tcCoverageObj.getModelObjects());
-			tsObjectCoverageStatus.addAll(tcCoverageObj.getTcObjectCoverageStatus());
+			tsObjectCoverageStatus.addAll(tcCoverageObj.getTcObjectCoverageStatus4me());
 		}
 		else {
-			for (int i=0; i<tcCoverageObj.getTcObjectCoverageStatus().size(); i++) {
-				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus().get(i);
+			for (int i=0; i<tcCoverageObj.getTcObjectCoverageStatus4me().size(); i++) {
+				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus4me().get(i);
 				if (tcCoverage == TDLCoverageUtil.COVERED & tsObjectCoverageStatus.get(i) != TDLCoverageUtil.COVERED) {
 					tsObjectCoverageStatus.set(i, TDLCoverageUtil.COVERED);
 				}
@@ -159,7 +159,7 @@ public class TDLTestSuiteCoverage {
 			objectCoverage.setModelObject(modelObjects.get(i));
 			objectCoverage.setMetaclass(modelObjects.get(i).eClass());
 			for (TDLTestCaseCoverage tcCoverageObj : tcCoverages) {
-				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus().get(i);
+				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus4me().get(i);
 				objectCoverage.getCoverage().add(tcCoverage);
 			}
 			String tsCoverage = tsObjectCoverageStatus.get(i);

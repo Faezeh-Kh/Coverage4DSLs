@@ -2,7 +2,7 @@
  */
 package DSLSpecificCoverage.impl;
 
-import DSLSpecificCoverage.Context;
+import DSLSpecificCoverage.CoverageMetric;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.DomainSpecificCoverage;
 
@@ -32,8 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getName <em>Name</em>}</li>
- *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getContexts <em>Contexts</em>}</li>
  *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getMetamodel <em>Metamodel</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getCoverageMetrics <em>Coverage Metrics</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,16 +60,6 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getContexts() <em>Contexts</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContexts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Context> contexts;
-
-	/**
 	 * The cached value of the '{@link #getMetamodel() <em>Metamodel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,6 +68,16 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected EPackage metamodel;
+
+	/**
+	 * The cached value of the '{@link #getCoverageMetrics() <em>Coverage Metrics</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoverageMetrics()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CoverageMetric> coverageMetrics;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,18 +124,6 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Context> getContexts() {
-		if (contexts == null) {
-			contexts = new EObjectContainmentEList<Context>(Context.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS);
-		}
-		return contexts;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EPackage getMetamodel() {
 		if (metamodel != null && metamodel.eIsProxy()) {
 			InternalEObject oldMetamodel = (InternalEObject)metamodel;
@@ -174,11 +162,23 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<CoverageMetric> getCoverageMetrics() {
+		if (coverageMetrics == null) {
+			coverageMetrics = new EObjectContainmentEList<CoverageMetric>(CoverageMetric.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS);
+		}
+		return coverageMetrics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				return ((InternalEList<?>)getContexts()).basicRemove(otherEnd, msgs);
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS:
+				return ((InternalEList<?>)getCoverageMetrics()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -193,11 +193,11 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				return getName();
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				return getContexts();
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
 				if (resolve) return getMetamodel();
 				return basicGetMetamodel();
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS:
+				return getCoverageMetrics();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,12 +214,12 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				setName((String)newValue);
 				return;
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				getContexts().clear();
-				getContexts().addAll((Collection<? extends Context>)newValue);
-				return;
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
 				setMetamodel((EPackage)newValue);
+				return;
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS:
+				getCoverageMetrics().clear();
+				getCoverageMetrics().addAll((Collection<? extends CoverageMetric>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,11 +236,11 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				getContexts().clear();
-				return;
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
 				setMetamodel((EPackage)null);
+				return;
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS:
+				getCoverageMetrics().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -256,10 +256,10 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				return contexts != null && !contexts.isEmpty();
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
 				return metamodel != null;
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS:
+				return coverageMetrics != null && !coverageMetrics.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

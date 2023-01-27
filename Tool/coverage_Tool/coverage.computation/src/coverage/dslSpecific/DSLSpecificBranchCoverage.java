@@ -40,14 +40,31 @@ public class DSLSpecificBranchCoverage {
 						allBranches.addAll(queryResult);
 					}						
 				}
+				if (branchingRoot_branches.get(branchingRoot).size() == 1) {
+					EObject nextBranch = findNextAdjacentEObject(branchingRoot);
+					branchingRoot_branches.get(branchingRoot).add(nextBranch);
+					allBranches.add(nextBranch);
+				}
 			}			
 		}
 		for(EObject object:testCaseCoverage.getModelObjects()) {
 			if (allBranches.contains(object)) {
 				testCaseCoverage.getBranchObjects().add(object);
-				testCaseCoverage.getTcBranchCoverageStatus().add(testCaseCoverage.getObjectCoverage(object));
+				testCaseCoverage.getTcBranchCoverageStatus().add(testCaseCoverage.getObjectCoverage(object, TDLTestCaseCoverage.BRANCHCOVERAGE));
 			}
 		}
+	}
+
+	private EObject findNextAdjacentEObject(EObject branchingRoot) {
+		EObject container = branchingRoot.eContainer();
+		if (container == null) {
+			return null;
+		}
+		int index = container.eContents().indexOf(branchingRoot);
+		if (container.eContents().size() > index + 1) {
+			return container.eContents().get(index+1);
+		}
+		return findNextAdjacentEObject(container);
 	}
 
 	public HashMap<BranchSpecification, List<EObject>> getBranchingRule_contextObjects() {

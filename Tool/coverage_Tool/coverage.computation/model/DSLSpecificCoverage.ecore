@@ -4,10 +4,10 @@
     nsPrefix="DSLSpecificCoverage">
   <eClassifiers xsi:type="ecore:EClass" name="DomainSpecificCoverage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" lowerBound="1"
-        upperBound="-1" eType="#//Context" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metamodel" lowerBound="1"
         eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EPackage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coverageMetrics" lowerBound="1"
+        upperBound="-1" eType="#//CoverageMetric" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Context">
     <eStructuralFeatures xsi:type="ecore:EReference" name="metaclass" lowerBound="1"
@@ -22,8 +22,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InclusionRule" abstract="true" eSuperTypes="#//Rule"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExclusionRule" abstract="true" eSuperTypes="#//Rule"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SpecializationRule" abstract="true"
-      eSuperTypes="#//Rule"/>
   <eClassifiers xsi:type="ecore:EClass" name="CoverageOfReferenced" eSuperTypes="#//InclusionRule">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
@@ -43,9 +41,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerMetaclass" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BranchSpecification" eSuperTypes="#//SpecializationRule">
+  <eClassifiers xsi:type="ecore:EClass" name="BranchSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
+        eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="branches" upperBound="-1"
         eType="#//Branch" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Branch">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="OCLQuery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -60,5 +63,14 @@
   <eClassifiers xsi:type="ecore:EEnum" name="LimitationType">
     <eLiterals name="containedBy" literal="ContainedBy"/>
     <eLiterals name="notContainedBy" value="1" literal="NotContainedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoverageMetric" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contexts" upperBound="-1"
+        eType="#//Context" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelElementCoverage" eSuperTypes="#//CoverageMetric"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BranchCoverage" eSuperTypes="#//CoverageMetric">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchSpecifications" lowerBound="1"
+        upperBound="-1" eType="#//BranchSpecification" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

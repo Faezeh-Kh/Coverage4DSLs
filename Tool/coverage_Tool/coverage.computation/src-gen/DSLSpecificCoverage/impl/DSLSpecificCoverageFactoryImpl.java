@@ -66,6 +66,8 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: return createBranchSpecification();
 			case DSLSpecificCoveragePackage.BRANCH: return createBranch();
 			case DSLSpecificCoveragePackage.CONDITION: return createCondition();
+			case DSLSpecificCoveragePackage.MODEL_ELEMENT_COVERAGE: return createModelElementCoverage();
+			case DSLSpecificCoveragePackage.BRANCH_COVERAGE: return createBranchCoverage();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -193,6 +195,26 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public Condition createCondition() {
 		ConditionImpl condition = new ConditionImpl();
 		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelElementCoverage createModelElementCoverage() {
+		ModelElementCoverageImpl modelElementCoverage = new ModelElementCoverageImpl();
+		return modelElementCoverage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BranchCoverage createBranchCoverage() {
+		BranchCoverageImpl branchCoverage = new BranchCoverageImpl();
+		return branchCoverage;
 	}
 
 	/**

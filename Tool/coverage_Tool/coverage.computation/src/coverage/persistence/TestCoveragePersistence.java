@@ -82,13 +82,13 @@ public class TestCoveragePersistence implements IEngineAddon{
 		   TestDescription copiedTestCase = (TestDescription) optionalTC.get();
 		   TestCaseCoverage testCaseCoverage = TestCoverageFactory.eINSTANCE.createTestCaseCoverage();
 		   testCaseCoverage.setTestCase(copiedTestCase);
-		   testCaseCoverage.setCoveragePercentage(tcCoverageObject.getTcObjectCoveragePercentage());
+		   testCaseCoverage.setCoveragePercentage(tcCoverageObject.getTcMECoveragePercentage());
 		   copyMUTResource(tcCoverageObject.getMUTResource(), copiedTestCase.getName());
 		   for (int i=0; i<tcCoverageObject.getModelObjects().size(); i++) {
 			   ModelObjectCoverageStatus tcModelObjectCoverageStatus = TestCoverageFactory.eINSTANCE.createModelObjectCoverageStatus();
 			   EObject modelObject = tcCoverageObject.getModelObjects().get(i);
 			   tcModelObjectCoverageStatus.setModelObject(getEObjectFromCopiedMUT(modelObject));
-			   String tcCoverage = tcCoverageObject.getTcObjectCoverageStatus().get(i);
+			   String tcCoverage = tcCoverageObject.getTcObjectCoverageStatus4me().get(i);
 			   tcModelObjectCoverageStatus.setCoverageStatus(getCoverageStatus(tcCoverage));
 			   testCaseCoverage.getTcObjectCoverageStatus().add(tcModelObjectCoverageStatus);
 		   }

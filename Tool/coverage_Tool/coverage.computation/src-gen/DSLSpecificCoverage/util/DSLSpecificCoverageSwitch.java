@@ -98,13 +98,6 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DSLSpecificCoveragePackage.SPECIALIZATION_RULE: {
-				SpecializationRule specializationRule = (SpecializationRule)theEObject;
-				T result = caseSpecializationRule(specializationRule);
-				if (result == null) result = caseRule(specializationRule);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED: {
 				CoverageOfReferenced coverageOfReferenced = (CoverageOfReferenced)theEObject;
 				T result = caseCoverageOfReferenced(coverageOfReferenced);
@@ -140,8 +133,6 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: {
 				BranchSpecification branchSpecification = (BranchSpecification)theEObject;
 				T result = caseBranchSpecification(branchSpecification);
-				if (result == null) result = caseSpecializationRule(branchSpecification);
-				if (result == null) result = caseRule(branchSpecification);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,6 +145,26 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 			case DSLSpecificCoveragePackage.CONDITION: {
 				Condition condition = (Condition)theEObject;
 				T result = caseCondition(condition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.COVERAGE_METRIC: {
+				CoverageMetric coverageMetric = (CoverageMetric)theEObject;
+				T result = caseCoverageMetric(coverageMetric);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.MODEL_ELEMENT_COVERAGE: {
+				ModelElementCoverage modelElementCoverage = (ModelElementCoverage)theEObject;
+				T result = caseModelElementCoverage(modelElementCoverage);
+				if (result == null) result = caseCoverageMetric(modelElementCoverage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DSLSpecificCoveragePackage.BRANCH_COVERAGE: {
+				BranchCoverage branchCoverage = (BranchCoverage)theEObject;
+				T result = caseBranchCoverage(branchCoverage);
+				if (result == null) result = caseCoverageMetric(branchCoverage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -233,21 +244,6 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExclusionRule(ExclusionRule object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Specialization Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Specialization Rule</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSpecializationRule(SpecializationRule object) {
 		return null;
 	}
 
@@ -353,6 +349,51 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCondition(Condition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Coverage Metric</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Coverage Metric</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCoverageMetric(CoverageMetric object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model Element Coverage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model Element Coverage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModelElementCoverage(ModelElementCoverage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Branch Coverage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Branch Coverage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBranchCoverage(BranchCoverage object) {
 		return null;
 	}
 
