@@ -10,20 +10,16 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
-import DSLSpecificCoverage.BinaryCondition;
-import DSLSpecificCoverage.BinaryOperator;
 import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.Condition;
-import DSLSpecificCoverage.LimitationType;
-import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
 import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.CoveredContents;
 import DSLSpecificCoverage.Ignore;
+import DSLSpecificCoverage.LimitationType;
+import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Rule;
-import DSLSpecificCoverage.UnaryCondition;
-import DSLSpecificCoverage.UnaryOperator;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
 import coverage.utilities.OCLInterpreter;
@@ -192,36 +188,17 @@ public class DSLSpecificCoverageExecutor {
 		return matchedFeature;
 	}
 	
-	private boolean isRuleConditionSatisfied(EList<Condition> conditions, EObject object) {
-		if (conditions.isEmpty()) {
+	private boolean isRuleConditionSatisfied(Condition condition, EObject object) {
+		if (condition == null) {
 			return true;
 		}
-		boolean result = false;
-		for (int i=0; i<conditions.size(); i++) {
-			Condition condition = conditions.get(i);
-			result = evaluateCondition(condition, object);
-			if (condition instanceof BinaryCondition bcondition) {
-				//for binaryConditions, evaluate the next condition
-				boolean result2 = evaluateCondition(conditions.get(++i), object);
-				if (bcondition.getOperator() == BinaryOperator.AND) {
-					result = result & result2;
-				}else if (bcondition.getOperator() == BinaryOperator.OR) {
-					result = result || result2;
-				}
-			}
-		}
-		return result;
+		return evaluateCondition(condition, object);
 	}
 	
 	private boolean evaluateCondition(Condition condition, EObject object) {
 		OCLInterpreter oclRunner = new OCLInterpreter();
-		String constraint = condition.getConstraint();
-		boolean result = oclRunner.isConstraintSatisfied(object, constraint);
-		if (condition instanceof UnaryCondition ucondition 
-				&& ucondition.getOperator() == UnaryOperator.NOT) {
-			return !result;
-		}
-		return result;
+		String constraint = condition.getOCLConstraint();
+		return oclRunner.isConstraintSatisfied(object, constraint);
 	}
 	
 	public boolean hasBranchSpecificationRule() {
