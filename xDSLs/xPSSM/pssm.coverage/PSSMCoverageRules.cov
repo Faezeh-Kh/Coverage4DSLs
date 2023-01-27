@@ -41,8 +41,7 @@ ruleset PSSMCoverage{
 	context State{
 		has branches{
 			description "if a State has more than one outgoing transition, each transition defines a branch"
-			condition "self.outgoingTransitions.size()>1" 
-				AND "outgoingTransitions -> forall(x1, x2| x1<>x2 implies x1.trigger <> x2.trigger or x1.constraint <> x2.constraint)"
+			condition "self.outgoingTransitions.size()>1 && outgoingTransitions -> forall(x1, x2| x1<>x2 implies x1.trigger <> x2.trigger or x1.constraint <> x2.constraint)"
 			queryBranch "self.outgoingTransitions"
 		}
 	}
