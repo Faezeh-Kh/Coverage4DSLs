@@ -78,7 +78,7 @@ public class TDLCoverageView extends ViewPart{
 	
 	@Override
 	public void createPartControl(Composite parent) {
-		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTsCoveragePercentage() == 0) {
+		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTsObjectCoveragePercentage() == 0) {
 			TDLCoverageUtil.getInstance().runCoverageComputation();
 		}
 		Composite contents = new Group(parent, SWT.NULL);
