@@ -1,7 +1,6 @@
 package coverage.utilities;
 
 import java.util.ArrayList;
-
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -15,7 +14,6 @@ import org.eclipse.ocl.Query;
 import org.eclipse.ocl.ecore.Constraint;
 import org.eclipse.ocl.ecore.EcoreEnvironmentFactory;
 import org.eclipse.ocl.expressions.OCLExpression;
-import org.eclipse.ocl.helper.ConstraintKind;
 import org.eclipse.ocl.helper.OCLHelper;
 
 public class OCLInterpreter {
