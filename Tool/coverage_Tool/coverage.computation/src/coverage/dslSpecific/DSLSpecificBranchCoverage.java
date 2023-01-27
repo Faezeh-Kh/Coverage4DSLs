@@ -33,7 +33,7 @@ public class DSLSpecificBranchCoverage {
 				}
 				BranchSpecification branchingRule = rule_contextObjects.getKey();
 				for (Branch branchSpecification:branchingRule.getBranches()) {
-					String query2getBranch = branchSpecification.getQuery();
+					String query2getBranch = branchSpecification.getOCLQuery();
 					ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch);
 					if (queryResult != null && !queryResult.isEmpty()) {
 						branchingRoot_branches.get(branchingRoot).addAll(queryResult);
