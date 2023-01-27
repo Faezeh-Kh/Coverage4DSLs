@@ -39,16 +39,39 @@ public class TestCoveragePersistence implements IEngineAddon{
 		pathToReportsFiles = _executionContext.getWorkspace().getExecutionPath().toString();
 		Resource testSutieResource = getCopyOfTestSuite(_executionContext);
 
-		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTsCoveragePercentage() == 0) {
+		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTsObjectCoveragePercentage() == 0) {
 			TDLCoverageUtil.getInstance().runCoverageComputation();
 		}
 		
+		TestSuiteCoverage tsModelElementCoverage = createTestSuiteModelElementCoverage(testSutieResource);
+		saveCoverageReport(tsModelElementCoverage, "modelElementCoverageReport");
+		
+		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getBranchObjects() != null) {
+			TestSuiteCoverage tsBranchCoverage = createTestSuiteBranchCoverage(testSutieResource);
+			saveCoverageReport(tsBranchCoverage, "branchCoverageReport");
+		}
+	}
+		
+	private void saveCoverageReport(TestSuiteCoverage tsCoverage, String coverageType) {
+		//create a resource for the test coverage
+		URI tsCoverageURI = URI.createURI(pathToReportsFiles + File.separator + coverageType + ".xmi", false);
+		Resource tsCoverageResource = (new ResourceSetImpl()).createResource(tsCoverageURI);
+		tsCoverageResource.getContents().add(tsCoverage);
+		//saving resources
+		try {
+			tsCoverageResource.save(null);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private TestSuiteCoverage createTestSuiteModelElementCoverage (Resource testSutieResource) {
 	   //create test coverage according to the TDLTestCoverage.ecore structure
 	   org.etsi.mts.tdl.Package copiedTestSuite = (org.etsi.mts.tdl.Package) testSutieResource.getContents().get(0);
 	   TDLTestSuiteCoverage tsCoveragObject = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
 	   TestSuiteCoverage testSuiteCoverage = TestCoverageFactory.eINSTANCE.createTestSuiteCoverage();
 	   testSuiteCoverage.setTestSuite(copiedTestSuite);
-	   testSuiteCoverage.setCoveragePercentage(tsCoveragObject.getTsCoveragePercentage());
+	   testSuiteCoverage.setCoveragePercentage(tsCoveragObject.getTsObjectCoveragePercentage());
 	   
 	   for (TDLTestCaseCoverage tcCoverageObject : tsCoveragObject.getTcCoverages()) {
 		   String testCaseName = tcCoverageObject.getTestCaseName();
@@ -80,18 +103,51 @@ public class TestCoveragePersistence implements IEngineAddon{
 		   tsModelObjectCoverageStatus.setCoverageStatus(getCoverageStatus(tsCoverage));
 		   testSuiteCoverage.getTsObjectCoverageStatus().add(tsModelObjectCoverageStatus);
 	   }
-	   //create a resource for the test coverage
-	   URI testCoverageURI = URI.createURI(pathToReportsFiles + File.separator + "testCoverage.xmi", false);
-	   Resource testCoverageResource = (new ResourceSetImpl()).createResource(testCoverageURI);
-	   testCoverageResource.getContents().add(testSuiteCoverage);
-	   //saving resources
-	   try {
-		   testCoverageResource.save(null);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	   return testSuiteCoverage;
 	}
-		
+	
+	private TestSuiteCoverage createTestSuiteBranchCoverage (Resource testSutieResource) {
+	   //create test coverage according to the TDLTestCoverage.ecore structure
+	   org.etsi.mts.tdl.Package copiedTestSuite = (org.etsi.mts.tdl.Package) testSutieResource.getContents().get(0);
+	   TDLTestSuiteCoverage tsCoverageObject = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+	   TestSuiteCoverage testSuiteCoverage = TestCoverageFactory.eINSTANCE.createTestSuiteCoverage();
+	   testSuiteCoverage.setTestSuite(copiedTestSuite);
+	   testSuiteCoverage.setCoveragePercentage(tsCoverageObject.getTsBranchCoveragePercentage());
+	   
+	   for (TDLTestCaseCoverage tcCoverageObject : tsCoverageObject.getTcCoverages()) {
+		   String testCaseName = tcCoverageObject.getTestCaseName();
+		   Optional<PackageableElement> optionalTC = copiedTestSuite.getPackagedElement().stream().
+				   filter(p -> p instanceof TestDescription).
+				   filter(t -> t.getName().equals(testCaseName))
+				   .findFirst();
+		   if (optionalTC.isEmpty()) { break; }
+		   TestDescription copiedTestCase = (TestDescription) optionalTC.get();
+		   TestCaseCoverage testCaseCoverage = TestCoverageFactory.eINSTANCE.createTestCaseCoverage();
+		   testCaseCoverage.setTestCase(copiedTestCase);
+		   testCaseCoverage.setCoveragePercentage(tcCoverageObject.getTcBranchCoveragePercentage());
+		   copyMUTResource(tcCoverageObject.getMUTResource(), copiedTestCase.getName());
+		   for (int i=0; i<tcCoverageObject.getBranchObjects().size(); i++) {
+			   ModelObjectCoverageStatus tcBranchObjectCoverageStatus = TestCoverageFactory.eINSTANCE.createModelObjectCoverageStatus();
+			   EObject branchObject = tcCoverageObject.getBranchObjects().get(i);
+			   tcBranchObjectCoverageStatus.setModelObject(getEObjectFromCopiedMUT(branchObject));
+			   String tcCoverage = tcCoverageObject.getTcBranchCoverageStatus().get(i);
+			   tcBranchObjectCoverageStatus.setCoverageStatus(getCoverageStatus(tcCoverage));
+			   testCaseCoverage.getTcObjectCoverageStatus().add(tcBranchObjectCoverageStatus);
+		   }
+		   testSuiteCoverage.getTestCaseCoverages().add(testCaseCoverage);
+	   }
+	   
+	   for (int i=0; i<tsCoverageObject.getBranchObjects().size(); i++) {
+		   ModelObjectCoverageStatus tsBranchObjectCoverageStatus = TestCoverageFactory.eINSTANCE.createModelObjectCoverageStatus();
+		   EObject branchObject = tsCoverageObject.getBranchObjects().get(i);
+		   tsBranchObjectCoverageStatus.setModelObject(getEObjectFromCopiedMUT(branchObject));
+		   String tsCoverage = tsCoverageObject.getTsBranchCoverageStatus().get(i);
+		   tsBranchObjectCoverageStatus.setCoverageStatus(getCoverageStatus(tsCoverage));
+		   testSuiteCoverage.getTsObjectCoverageStatus().add(tsBranchObjectCoverageStatus);
+	   }
+	   return testSuiteCoverage;
+	}
+	
 	private CoverageStatus getCoverageStatus(String coverage) {
 		if (coverage == TDLCoverageUtil.COVERED) {
 			return CoverageStatus.COVERED;
