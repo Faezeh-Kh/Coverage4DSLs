@@ -6,21 +6,14 @@ import DSLSpecificCoverage.Condition;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.Rule;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,14 +51,14 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference list.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Condition> condition;
+	protected Condition condition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,11 +105,42 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Condition> getCondition() {
-		if (condition == null) {
-			condition = new EObjectContainmentEList<Condition>(Condition.class, this, DSLSpecificCoveragePackage.RULE__CONDITION);
-		}
+	public Condition getCondition() {
 		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCondition(Condition newCondition, NotificationChain msgs) {
+		Condition oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.RULE__CONDITION, oldCondition, newCondition);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(Condition newCondition) {
+		if (newCondition != condition) {
+			NotificationChain msgs = null;
+			if (condition != null)
+				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DSLSpecificCoveragePackage.RULE__CONDITION, null, msgs);
+			if (newCondition != null)
+				msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DSLSpecificCoveragePackage.RULE__CONDITION, null, msgs);
+			msgs = basicSetCondition(newCondition, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.RULE__CONDITION, newCondition, newCondition));
 	}
 
 	/**
@@ -128,7 +152,7 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.RULE__CONDITION:
-				return ((InternalEList<?>)getCondition()).basicRemove(otherEnd, msgs);
+				return basicSetCondition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -154,7 +178,6 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -162,8 +185,7 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 				setDescription((String)newValue);
 				return;
 			case DSLSpecificCoveragePackage.RULE__CONDITION:
-				getCondition().clear();
-				getCondition().addAll((Collection<? extends Condition>)newValue);
+				setCondition((Condition)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,7 +203,7 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case DSLSpecificCoveragePackage.RULE__CONDITION:
-				getCondition().clear();
+				setCondition((Condition)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -198,7 +220,7 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 			case DSLSpecificCoveragePackage.RULE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case DSLSpecificCoveragePackage.RULE__CONDITION:
-				return condition != null && !condition.isEmpty();
+				return condition != null;
 		}
 		return super.eIsSet(featureID);
 	}

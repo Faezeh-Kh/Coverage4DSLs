@@ -8,13 +8,6 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>DSLSpecificCoverage.ecore</foreignModel>
   <genPackages prefix="DSLSpecificCoverage" disposableProviderFactory="true" ecorePackage="DSLSpecificCoverage.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//UnaryOperator">
-      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//UnaryOperator/NOT"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//BinaryOperator">
-      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//BinaryOperator/AND"/>
-      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//BinaryOperator/OR"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//CoveredContents">
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ALL"/>
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ONE"/>
@@ -57,16 +50,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchSpecification/branches"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Branch">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Branch/query"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Branch/OCLQuery"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Condition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Condition/constraint"/>
-    </genClasses>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//UnaryCondition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//UnaryCondition/operator"/>
-    </genClasses>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//BinaryCondition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//BinaryCondition/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Condition/OCLConstraint"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

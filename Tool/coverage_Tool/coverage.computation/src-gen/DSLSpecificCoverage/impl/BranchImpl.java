@@ -20,31 +20,31 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link DSLSpecificCoverage.impl.BranchImpl#getQuery <em>Query</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.BranchImpl#getOCLQuery <em>OCL Query</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	/**
-	 * The default value of the '{@link #getQuery() <em>Query</em>}' attribute.
+	 * The default value of the '{@link #getOCLQuery() <em>OCL Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuery()
+	 * @see #getOCLQuery()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String QUERY_EDEFAULT = null;
+	protected static final String OCL_QUERY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getQuery() <em>Query</em>}' attribute.
+	 * The cached value of the '{@link #getOCLQuery() <em>OCL Query</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuery()
+	 * @see #getOCLQuery()
 	 * @generated
 	 * @ordered
 	 */
-	protected String query = QUERY_EDEFAULT;
+	protected String oclQuery = OCL_QUERY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getQuery() {
-		return query;
+	public String getOCLQuery() {
+		return oclQuery;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuery(String newQuery) {
-		String oldQuery = query;
-		query = newQuery;
+	public void setOCLQuery(String newOCLQuery) {
+		String oldOCLQuery = oclQuery;
+		oclQuery = newOCLQuery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.BRANCH__QUERY, oldQuery, query));
+			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.BRANCH__OCL_QUERY, oldOCLQuery, oclQuery));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.BRANCH__QUERY:
-				return getQuery();
+			case DSLSpecificCoveragePackage.BRANCH__OCL_QUERY:
+				return getOCLQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.BRANCH__QUERY:
-				setQuery((String)newValue);
+			case DSLSpecificCoveragePackage.BRANCH__OCL_QUERY:
+				setOCLQuery((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.BRANCH__QUERY:
-				setQuery(QUERY_EDEFAULT);
+			case DSLSpecificCoveragePackage.BRANCH__OCL_QUERY:
+				setOCLQuery(OCL_QUERY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.BRANCH__QUERY:
-				return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
+			case DSLSpecificCoveragePackage.BRANCH__OCL_QUERY:
+				return OCL_QUERY_EDEFAULT == null ? oclQuery != null : !OCL_QUERY_EDEFAULT.equals(oclQuery);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +154,8 @@ public class BranchImpl extends MinimalEObjectImpl.Container implements Branch {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (query: ");
-		result.append(query);
+		result.append(" (OCLQuery: ");
+		result.append(oclQuery);
 		result.append(')');
 		return result.toString();
 	}

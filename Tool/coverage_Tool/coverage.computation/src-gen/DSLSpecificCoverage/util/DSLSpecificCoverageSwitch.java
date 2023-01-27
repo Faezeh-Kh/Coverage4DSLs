@@ -157,20 +157,6 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DSLSpecificCoveragePackage.UNARY_CONDITION: {
-				UnaryCondition unaryCondition = (UnaryCondition)theEObject;
-				T result = caseUnaryCondition(unaryCondition);
-				if (result == null) result = caseCondition(unaryCondition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DSLSpecificCoveragePackage.BINARY_CONDITION: {
-				BinaryCondition binaryCondition = (BinaryCondition)theEObject;
-				T result = caseBinaryCondition(binaryCondition);
-				if (result == null) result = caseCondition(binaryCondition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -367,36 +353,6 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCondition(Condition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unary Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unary Condition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUnaryCondition(UnaryCondition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Binary Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Binary Condition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBinaryCondition(BinaryCondition object) {
 		return null;
 	}
 

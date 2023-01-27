@@ -65,8 +65,7 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 			case DSLSpecificCoveragePackage.LIMITED_IGNORE: return createLimitedIgnore();
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: return createBranchSpecification();
 			case DSLSpecificCoveragePackage.BRANCH: return createBranch();
-			case DSLSpecificCoveragePackage.UNARY_CONDITION: return createUnaryCondition();
-			case DSLSpecificCoveragePackage.BINARY_CONDITION: return createBinaryCondition();
+			case DSLSpecificCoveragePackage.CONDITION: return createCondition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,10 +79,6 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case DSLSpecificCoveragePackage.UNARY_OPERATOR:
-				return createUnaryOperatorFromString(eDataType, initialValue);
-			case DSLSpecificCoveragePackage.BINARY_OPERATOR:
-				return createBinaryOperatorFromString(eDataType, initialValue);
 			case DSLSpecificCoveragePackage.COVERED_CONTENTS:
 				return createCoveredContentsFromString(eDataType, initialValue);
 			case DSLSpecificCoveragePackage.LIMITATION_TYPE:
@@ -101,10 +96,6 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case DSLSpecificCoveragePackage.UNARY_OPERATOR:
-				return convertUnaryOperatorToString(eDataType, instanceValue);
-			case DSLSpecificCoveragePackage.BINARY_OPERATOR:
-				return convertBinaryOperatorToString(eDataType, instanceValue);
 			case DSLSpecificCoveragePackage.COVERED_CONTENTS:
 				return convertCoveredContentsToString(eDataType, instanceValue);
 			case DSLSpecificCoveragePackage.LIMITATION_TYPE:
@@ -199,59 +190,9 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnaryCondition createUnaryCondition() {
-		UnaryConditionImpl unaryCondition = new UnaryConditionImpl();
-		return unaryCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BinaryCondition createBinaryCondition() {
-		BinaryConditionImpl binaryCondition = new BinaryConditionImpl();
-		return binaryCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnaryOperator createUnaryOperatorFromString(EDataType eDataType, String initialValue) {
-		UnaryOperator result = UnaryOperator.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertUnaryOperatorToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BinaryOperator createBinaryOperatorFromString(EDataType eDataType, String initialValue) {
-		BinaryOperator result = BinaryOperator.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertBinaryOperatorToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
 	}
 
 	/**

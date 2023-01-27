@@ -94,22 +94,13 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	Branch createBranch();
 
 	/**
-	 * Returns a new object of class '<em>Unary Condition</em>'.
+	 * Returns a new object of class '<em>Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unary Condition</em>'.
+	 * @return a new object of class '<em>Condition</em>'.
 	 * @generated
 	 */
-	UnaryCondition createUnaryCondition();
-
-	/**
-	 * Returns a new object of class '<em>Binary Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Binary Condition</em>'.
-	 * @generated
-	 */
-	BinaryCondition createBinaryCondition();
+	Condition createCondition();
 
 	/**
 	 * Returns the package supported by this factory.

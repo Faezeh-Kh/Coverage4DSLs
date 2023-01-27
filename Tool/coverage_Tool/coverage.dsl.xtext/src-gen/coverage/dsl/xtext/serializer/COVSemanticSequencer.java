@@ -3,9 +3,9 @@
  */
 package coverage.dsl.xtext.serializer;
 
-import DSLSpecificCoverage.BinaryCondition;
 import DSLSpecificCoverage.Branch;
 import DSLSpecificCoverage.BranchSpecification;
+import DSLSpecificCoverage.Condition;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
 import DSLSpecificCoverage.CoverageOfReferenced;
@@ -13,7 +13,6 @@ import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.DomainSpecificCoverage;
 import DSLSpecificCoverage.Ignore;
 import DSLSpecificCoverage.LimitedIgnore;
-import DSLSpecificCoverage.UnaryCondition;
 import com.google.inject.Inject;
 import coverage.dsl.xtext.services.COVGrammarAccess;
 import java.util.Set;
@@ -41,14 +40,14 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == DSLSpecificCoveragePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case DSLSpecificCoveragePackage.BINARY_CONDITION:
-				sequence_BinaryCondition(context, (BinaryCondition) semanticObject); 
-				return; 
 			case DSLSpecificCoveragePackage.BRANCH:
 				sequence_Branch(context, (Branch) semanticObject); 
 				return; 
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION:
 				sequence_BranchSpecification(context, (BranchSpecification) semanticObject); 
+				return; 
+			case DSLSpecificCoveragePackage.CONDITION:
+				sequence_Condition(context, (Condition) semanticObject); 
 				return; 
 			case DSLSpecificCoveragePackage.CONTEXT:
 				sequence_Context(context, (Context) semanticObject); 
@@ -68,9 +67,6 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DSLSpecificCoveragePackage.LIMITED_IGNORE:
 				sequence_LimitedIgnore(context, (LimitedIgnore) semanticObject); 
 				return; 
-			case DSLSpecificCoveragePackage.UNARY_CONDITION:
-				sequence_UnaryCondition(context, (UnaryCondition) semanticObject); 
-				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -79,35 +75,11 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Condition returns BinaryCondition
-	 *     BinaryCondition returns BinaryCondition
-	 *
-	 * Constraint:
-	 *     (constraint=EString operator=BinaryOperator)
-	 * </pre>
-	 */
-	protected void sequence_BinaryCondition(ISerializationContext context, BinaryCondition semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.CONDITION__CONSTRAINT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.CONDITION__CONSTRAINT));
-			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.BINARY_CONDITION__OPERATOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.BINARY_CONDITION__OPERATOR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBinaryConditionAccess().getConstraintEStringParserRuleCall_0_0(), semanticObject.getConstraint());
-		feeder.accept(grammarAccess.getBinaryConditionAccess().getOperatorBinaryOperatorEnumRuleCall_1_0(), semanticObject.getOperator());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
 	 *     Rule returns BranchSpecification
 	 *     BranchSpecification returns BranchSpecification
 	 *
 	 * Constraint:
-	 *     (description=EString? (condition+=Condition condition+=Condition*)? branches+=Branch branches+=Branch*)
+	 *     (description=EString? condition=Condition? branches+=Branch branches+=Branch*)
 	 * </pre>
 	 */
 	protected void sequence_BranchSpecification(ISerializationContext context, BranchSpecification semanticObject) {
@@ -121,16 +93,36 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Branch returns Branch
 	 *
 	 * Constraint:
-	 *     query=EString
+	 *     OCLQuery=EString
 	 * </pre>
 	 */
 	protected void sequence_Branch(ISerializationContext context, Branch semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.BRANCH__QUERY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.BRANCH__QUERY));
+			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.BRANCH__OCL_QUERY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.BRANCH__OCL_QUERY));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBranchAccess().getQueryEStringParserRuleCall_1_0(), semanticObject.getQuery());
+		feeder.accept(grammarAccess.getBranchAccess().getOCLQueryEStringParserRuleCall_1_0(), semanticObject.getOCLQuery());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Condition returns Condition
+	 *
+	 * Constraint:
+	 *     OCLConstraint=EString
+	 * </pre>
+	 */
+	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DSLSpecificCoveragePackage.Literals.CONDITION__OCL_CONSTRAINT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.CONDITION__OCL_CONSTRAINT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0(), semanticObject.getOCLConstraint());
 		feeder.finish();
 	}
 	
@@ -156,7 +148,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CoverageByContent returns CoverageByContent
 	 *
 	 * Constraint:
-	 *     (multiplicity=CoveredContents containmentReference=[EReference|EString] description=EString? (condition+=Condition condition+=Condition*)?)
+	 *     (multiplicity=CoveredContents containmentReference=[EReference|EString] description=EString? condition=Condition?)
 	 * </pre>
 	 */
 	protected void sequence_CoverageByContent(ISerializationContext context, CoverageByContent semanticObject) {
@@ -171,7 +163,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CoverageOfReferenced returns CoverageOfReferenced
 	 *
 	 * Constraint:
-	 *     (reference+=[EReference|EString] reference+=[EReference|EString]* description=EString? (condition+=Condition condition+=Condition*)?)
+	 *     (reference+=[EReference|EString] reference+=[EReference|EString]* description=EString? condition=Condition?)
 	 * </pre>
 	 */
 	protected void sequence_CoverageOfReferenced(ISerializationContext context, CoverageOfReferenced semanticObject) {
@@ -200,7 +192,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Ignore returns Ignore
 	 *
 	 * Constraint:
-	 *     (ignoreSubtypes=EBoolean? description=EString? (condition+=Condition condition+=Condition*)?)
+	 *     (ignoreSubtypes=EBoolean? description=EString? condition=Condition?)
 	 * </pre>
 	 */
 	protected void sequence_Ignore(ISerializationContext context, Ignore semanticObject) {
@@ -215,31 +207,10 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     LimitedIgnore returns LimitedIgnore
 	 *
 	 * Constraint:
-	 *     (
-	 *         type=LimitationType 
-	 *         containerMetaclass+=[EClass|EString] 
-	 *         containerMetaclass+=[EClass|EString]* 
-	 *         description=EString? 
-	 *         (condition+=Condition condition+=Condition*)?
-	 *     )
+	 *     (type=LimitationType containerMetaclass+=[EClass|EString] containerMetaclass+=[EClass|EString]* description=EString? condition=Condition?)
 	 * </pre>
 	 */
 	protected void sequence_LimitedIgnore(ISerializationContext context, LimitedIgnore semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Condition returns UnaryCondition
-	 *     UnaryCondition returns UnaryCondition
-	 *
-	 * Constraint:
-	 *     (operator=UnaryOperator? constraint=EString)
-	 * </pre>
-	 */
-	protected void sequence_UnaryCondition(ISerializationContext context, UnaryCondition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

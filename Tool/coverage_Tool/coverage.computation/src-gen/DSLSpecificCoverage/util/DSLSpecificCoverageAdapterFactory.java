@@ -120,14 +120,6 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 				return createConditionAdapter();
 			}
 			@Override
-			public Adapter caseUnaryCondition(UnaryCondition object) {
-				return createUnaryConditionAdapter();
-			}
-			@Override
-			public Adapter caseBinaryCondition(BinaryCondition object) {
-				return createBinaryConditionAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -326,34 +318,6 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.UnaryCondition <em>Unary Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.UnaryCondition
-	 * @generated
-	 */
-	public Adapter createUnaryConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.BinaryCondition <em>Binary Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.BinaryCondition
-	 * @generated
-	 */
-	public Adapter createBinaryConditionAdapter() {
 		return null;
 	}
 

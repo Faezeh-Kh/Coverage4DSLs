@@ -20,31 +20,31 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link DSLSpecificCoverage.impl.ConditionImpl#getConstraint <em>Constraint</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.ConditionImpl#getOCLConstraint <em>OCL Constraint</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ConditionImpl extends MinimalEObjectImpl.Container implements Condition {
+public class ConditionImpl extends MinimalEObjectImpl.Container implements Condition {
 	/**
-	 * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
+	 * The default value of the '{@link #getOCLConstraint() <em>OCL Constraint</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstraint()
+	 * @see #getOCLConstraint()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONSTRAINT_EDEFAULT = null;
+	protected static final String OCL_CONSTRAINT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
+	 * The cached value of the '{@link #getOCLConstraint() <em>OCL Constraint</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstraint()
+	 * @see #getOCLConstraint()
 	 * @generated
 	 * @ordered
 	 */
-	protected String constraint = CONSTRAINT_EDEFAULT;
+	protected String oclConstraint = OCL_CONSTRAINT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getConstraint() {
-		return constraint;
+	public String getOCLConstraint() {
+		return oclConstraint;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstraint(String newConstraint) {
-		String oldConstraint = constraint;
-		constraint = newConstraint;
+	public void setOCLConstraint(String newOCLConstraint) {
+		String oldOCLConstraint = oclConstraint;
+		oclConstraint = newOCLConstraint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.CONDITION__CONSTRAINT, oldConstraint, constraint));
+			eNotify(new ENotificationImpl(this, Notification.SET, DSLSpecificCoveragePackage.CONDITION__OCL_CONSTRAINT, oldOCLConstraint, oclConstraint));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.CONDITION__CONSTRAINT:
-				return getConstraint();
+			case DSLSpecificCoveragePackage.CONDITION__OCL_CONSTRAINT:
+				return getOCLConstraint();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.CONDITION__CONSTRAINT:
-				setConstraint((String)newValue);
+			case DSLSpecificCoveragePackage.CONDITION__OCL_CONSTRAINT:
+				setOCLConstraint((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.CONDITION__CONSTRAINT:
-				setConstraint(CONSTRAINT_EDEFAULT);
+			case DSLSpecificCoveragePackage.CONDITION__OCL_CONSTRAINT:
+				setOCLConstraint(OCL_CONSTRAINT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case DSLSpecificCoveragePackage.CONDITION__CONSTRAINT:
-				return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
+			case DSLSpecificCoveragePackage.CONDITION__OCL_CONSTRAINT:
+				return OCL_CONSTRAINT_EDEFAULT == null ? oclConstraint != null : !OCL_CONSTRAINT_EDEFAULT.equals(oclConstraint);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +154,8 @@ public abstract class ConditionImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (constraint: ");
-		result.append(constraint);
+		result.append(" (OCLConstraint: ");
+		result.append(oclConstraint);
 		result.append(')');
 		return result.toString();
 	}

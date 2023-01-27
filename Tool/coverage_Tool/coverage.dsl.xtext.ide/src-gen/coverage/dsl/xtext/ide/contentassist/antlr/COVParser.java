@@ -34,8 +34,6 @@ public class COVParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 			builder.put(grammarAccess.getRuleAccess().getAlternatives(), "rule__Rule__Alternatives");
 			builder.put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
-			builder.put(grammarAccess.getConditionAccess().getAlternatives(), "rule__Condition__Alternatives");
-			builder.put(grammarAccess.getBinaryOperatorAccess().getAlternatives(), "rule__BinaryOperator__Alternatives");
 			builder.put(grammarAccess.getCoveredContentsAccess().getAlternatives(), "rule__CoveredContents__Alternatives");
 			builder.put(grammarAccess.getLimitationTypeAccess().getAlternatives(), "rule__LimitationType__Alternatives");
 			builder.put(grammarAccess.getDomainSpecificCoverageAccess().getGroup(), "rule__DomainSpecificCoverage__Group__0");
@@ -63,8 +61,6 @@ public class COVParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getBranchSpecificationAccess().getGroup_4(), "rule__BranchSpecification__Group_4__0");
 			builder.put(grammarAccess.getBranchSpecificationAccess().getGroup_6(), "rule__BranchSpecification__Group_6__0");
 			builder.put(grammarAccess.getBranchAccess().getGroup(), "rule__Branch__Group__0");
-			builder.put(grammarAccess.getUnaryConditionAccess().getGroup(), "rule__UnaryCondition__Group__0");
-			builder.put(grammarAccess.getBinaryConditionAccess().getGroup(), "rule__BinaryCondition__Group__0");
 			builder.put(grammarAccess.getDomainSpecificCoverageAccess().getNameAssignment_1(), "rule__DomainSpecificCoverage__NameAssignment_1");
 			builder.put(grammarAccess.getDomainSpecificCoverageAccess().getMetamodelAssignment_5(), "rule__DomainSpecificCoverage__MetamodelAssignment_5");
 			builder.put(grammarAccess.getDomainSpecificCoverageAccess().getContextsAssignment_6(), "rule__DomainSpecificCoverage__ContextsAssignment_6");
@@ -75,33 +71,25 @@ public class COVParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getIgnoreAccess().getIgnoreSubtypesAssignment_3_1(), "rule__Ignore__IgnoreSubtypesAssignment_3_1");
 			builder.put(grammarAccess.getIgnoreAccess().getDescriptionAssignment_5_1(), "rule__Ignore__DescriptionAssignment_5_1");
 			builder.put(grammarAccess.getIgnoreAccess().getConditionAssignment_6_1(), "rule__Ignore__ConditionAssignment_6_1");
-			builder.put(grammarAccess.getIgnoreAccess().getConditionAssignment_6_2(), "rule__Ignore__ConditionAssignment_6_2");
 			builder.put(grammarAccess.getLimitedIgnoreAccess().getTypeAssignment_1(), "rule__LimitedIgnore__TypeAssignment_1");
 			builder.put(grammarAccess.getLimitedIgnoreAccess().getContainerMetaclassAssignment_2(), "rule__LimitedIgnore__ContainerMetaclassAssignment_2");
 			builder.put(grammarAccess.getLimitedIgnoreAccess().getContainerMetaclassAssignment_3_1(), "rule__LimitedIgnore__ContainerMetaclassAssignment_3_1");
 			builder.put(grammarAccess.getLimitedIgnoreAccess().getDescriptionAssignment_4_1(), "rule__LimitedIgnore__DescriptionAssignment_4_1");
 			builder.put(grammarAccess.getLimitedIgnoreAccess().getConditionAssignment_5_1(), "rule__LimitedIgnore__ConditionAssignment_5_1");
-			builder.put(grammarAccess.getLimitedIgnoreAccess().getConditionAssignment_5_2(), "rule__LimitedIgnore__ConditionAssignment_5_2");
 			builder.put(grammarAccess.getCoverageOfReferencedAccess().getReferenceAssignment_1(), "rule__CoverageOfReferenced__ReferenceAssignment_1");
 			builder.put(grammarAccess.getCoverageOfReferencedAccess().getReferenceAssignment_2_1(), "rule__CoverageOfReferenced__ReferenceAssignment_2_1");
 			builder.put(grammarAccess.getCoverageOfReferencedAccess().getDescriptionAssignment_3_1(), "rule__CoverageOfReferenced__DescriptionAssignment_3_1");
 			builder.put(grammarAccess.getCoverageOfReferencedAccess().getConditionAssignment_4_1(), "rule__CoverageOfReferenced__ConditionAssignment_4_1");
-			builder.put(grammarAccess.getCoverageOfReferencedAccess().getConditionAssignment_4_2(), "rule__CoverageOfReferenced__ConditionAssignment_4_2");
 			builder.put(grammarAccess.getCoverageByContentAccess().getMultiplicityAssignment_2(), "rule__CoverageByContent__MultiplicityAssignment_2");
 			builder.put(grammarAccess.getCoverageByContentAccess().getContainmentReferenceAssignment_3(), "rule__CoverageByContent__ContainmentReferenceAssignment_3");
 			builder.put(grammarAccess.getCoverageByContentAccess().getDescriptionAssignment_5_1(), "rule__CoverageByContent__DescriptionAssignment_5_1");
 			builder.put(grammarAccess.getCoverageByContentAccess().getConditionAssignment_6_1(), "rule__CoverageByContent__ConditionAssignment_6_1");
-			builder.put(grammarAccess.getCoverageByContentAccess().getConditionAssignment_6_2(), "rule__CoverageByContent__ConditionAssignment_6_2");
 			builder.put(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_3_1(), "rule__BranchSpecification__DescriptionAssignment_3_1");
 			builder.put(grammarAccess.getBranchSpecificationAccess().getConditionAssignment_4_1(), "rule__BranchSpecification__ConditionAssignment_4_1");
-			builder.put(grammarAccess.getBranchSpecificationAccess().getConditionAssignment_4_2(), "rule__BranchSpecification__ConditionAssignment_4_2");
 			builder.put(grammarAccess.getBranchSpecificationAccess().getBranchesAssignment_5(), "rule__BranchSpecification__BranchesAssignment_5");
 			builder.put(grammarAccess.getBranchSpecificationAccess().getBranchesAssignment_6_1(), "rule__BranchSpecification__BranchesAssignment_6_1");
-			builder.put(grammarAccess.getBranchAccess().getQueryAssignment_1(), "rule__Branch__QueryAssignment_1");
-			builder.put(grammarAccess.getUnaryConditionAccess().getOperatorAssignment_0(), "rule__UnaryCondition__OperatorAssignment_0");
-			builder.put(grammarAccess.getUnaryConditionAccess().getConstraintAssignment_1(), "rule__UnaryCondition__ConstraintAssignment_1");
-			builder.put(grammarAccess.getBinaryConditionAccess().getConstraintAssignment_0(), "rule__BinaryCondition__ConstraintAssignment_0");
-			builder.put(grammarAccess.getBinaryConditionAccess().getOperatorAssignment_1(), "rule__BinaryCondition__OperatorAssignment_1");
+			builder.put(grammarAccess.getBranchAccess().getOCLQueryAssignment_1(), "rule__Branch__OCLQueryAssignment_1");
+			builder.put(grammarAccess.getConditionAccess().getOCLConstraintAssignment(), "rule__Condition__OCLConstraintAssignment");
 		}
 	}
 	

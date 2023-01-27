@@ -499,7 +499,7 @@ ruleIgnore returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
 						}
-						add(
+						set(
 							$current,
 							"condition",
 							lv_condition_9_0,
@@ -508,25 +508,6 @@ ruleIgnore returns [EObject current=null]
 					}
 				)
 			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getIgnoreAccess().getConditionConditionParserRuleCall_6_2_0());
-					}
-					lv_condition_10_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
-						}
-						add(
-							$current,
-							"condition",
-							lv_condition_10_0,
-							"coverage.dsl.xtext.COV.Condition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)*
 		)?
 	)
 ;
@@ -648,7 +629,7 @@ ruleLimitedIgnore returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getLimitedIgnoreRule());
 						}
-						add(
+						set(
 							$current,
 							"condition",
 							lv_condition_8_0,
@@ -657,25 +638,6 @@ ruleLimitedIgnore returns [EObject current=null]
 					}
 				)
 			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getConditionConditionParserRuleCall_5_2_0());
-					}
-					lv_condition_9_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getLimitedIgnoreRule());
-						}
-						add(
-							$current,
-							"condition",
-							lv_condition_9_0,
-							"coverage.dsl.xtext.COV.Condition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)*
 		)?
 	)
 ;
@@ -778,7 +740,7 @@ ruleCoverageOfReferenced returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCoverageOfReferencedRule());
 						}
-						add(
+						set(
 							$current,
 							"condition",
 							lv_condition_7_0,
@@ -787,25 +749,6 @@ ruleCoverageOfReferenced returns [EObject current=null]
 					}
 				)
 			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getConditionConditionParserRuleCall_4_2_0());
-					}
-					lv_condition_8_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCoverageOfReferencedRule());
-						}
-						add(
-							$current,
-							"condition",
-							lv_condition_8_0,
-							"coverage.dsl.xtext.COV.Condition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)*
 		)?
 	)
 ;
@@ -913,7 +856,7 @@ ruleCoverageByContent returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCoverageByContentRule());
 						}
-						add(
+						set(
 							$current,
 							"condition",
 							lv_condition_8_0,
@@ -922,25 +865,6 @@ ruleCoverageByContent returns [EObject current=null]
 					}
 				)
 			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCoverageByContentAccess().getConditionConditionParserRuleCall_6_2_0());
-					}
-					lv_condition_9_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCoverageByContentRule());
-						}
-						add(
-							$current,
-							"condition",
-							lv_condition_9_0,
-							"coverage.dsl.xtext.COV.Condition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)*
 		)?
 	)
 ;
@@ -1013,7 +937,7 @@ ruleBranchSpecification returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
 						}
-						add(
+						set(
 							$current,
 							"condition",
 							lv_condition_6_0,
@@ -1022,32 +946,13 @@ ruleBranchSpecification returns [EObject current=null]
 					}
 				)
 			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getConditionConditionParserRuleCall_4_2_0());
-					}
-					lv_condition_7_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
-						}
-						add(
-							$current,
-							"condition",
-							lv_condition_7_0,
-							"coverage.dsl.xtext.COV.Condition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)*
 		)?
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getBranchSpecificationAccess().getBranchesBranchParserRuleCall_5_0());
 				}
-				lv_branches_8_0=ruleBranch
+				lv_branches_7_0=ruleBranch
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
@@ -1055,23 +960,23 @@ ruleBranchSpecification returns [EObject current=null]
 					add(
 						$current,
 						"branches",
-						lv_branches_8_0,
+						lv_branches_7_0,
 						"coverage.dsl.xtext.COV.Branch");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_9=','
+			otherlv_8=','
 			{
-				newLeafNode(otherlv_9, grammarAccess.getBranchSpecificationAccess().getCommaKeyword_6_0());
+				newLeafNode(otherlv_8, grammarAccess.getBranchSpecificationAccess().getCommaKeyword_6_0());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getBranchesBranchParserRuleCall_6_1_0());
 					}
-					lv_branches_10_0=ruleBranch
+					lv_branches_9_0=ruleBranch
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
@@ -1079,16 +984,16 @@ ruleBranchSpecification returns [EObject current=null]
 						add(
 							$current,
 							"branches",
-							lv_branches_10_0,
+							lv_branches_9_0,
 							"coverage.dsl.xtext.COV.Branch");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_11='}'
+		otherlv_10='}'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getBranchSpecificationAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_10, grammarAccess.getBranchSpecificationAccess().getRightCurlyBracketKeyword_7());
 		}
 	)
 ;
@@ -1116,17 +1021,17 @@ ruleBranch returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getBranchAccess().getQueryEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getBranchAccess().getOCLQueryEStringParserRuleCall_1_0());
 				}
-				lv_query_1_0=ruleEString
+				lv_OCLQuery_1_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBranchRule());
 					}
 					set(
 						$current,
-						"query",
-						lv_query_1_0,
+						"OCLQuery",
+						lv_OCLQuery_1_0,
 						"coverage.dsl.xtext.COV.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -1151,181 +1056,23 @@ ruleCondition returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		{
-			newCompositeNode(grammarAccess.getConditionAccess().getUnaryConditionParserRuleCall_0());
-		}
-		this_UnaryCondition_0=ruleUnaryCondition
-		{
-			$current = $this_UnaryCondition_0.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getConditionAccess().getBinaryConditionParserRuleCall_1());
-		}
-		this_BinaryCondition_1=ruleBinaryCondition
-		{
-			$current = $this_BinaryCondition_1.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleUnaryCondition
-entryRuleUnaryCondition returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getUnaryConditionRule()); }
-	iv_ruleUnaryCondition=ruleUnaryCondition
-	{ $current=$iv_ruleUnaryCondition.current; }
-	EOF;
-
-// Rule UnaryCondition
-ruleUnaryCondition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getUnaryConditionAccess().getOperatorUnaryOperatorEnumRuleCall_0_0());
-				}
-				lv_operator_0_0=ruleUnaryOperator
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getUnaryConditionRule());
-					}
-					set(
-						$current,
-						"operator",
-						lv_operator_0_0,
-						"coverage.dsl.xtext.COV.UnaryOperator");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getUnaryConditionAccess().getConstraintEStringParserRuleCall_1_0());
-				}
-				lv_constraint_1_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getUnaryConditionRule());
-					}
-					set(
-						$current,
-						"constraint",
-						lv_constraint_1_0,
-						"coverage.dsl.xtext.COV.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRuleBinaryCondition
-entryRuleBinaryCondition returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getBinaryConditionRule()); }
-	iv_ruleBinaryCondition=ruleBinaryCondition
-	{ $current=$iv_ruleBinaryCondition.current; }
-	EOF;
-
-// Rule BinaryCondition
-ruleBinaryCondition returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getBinaryConditionAccess().getConstraintEStringParserRuleCall_0_0());
-				}
-				lv_constraint_0_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBinaryConditionRule());
-					}
-					set(
-						$current,
-						"constraint",
-						lv_constraint_0_0,
-						"coverage.dsl.xtext.COV.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getBinaryConditionAccess().getOperatorBinaryOperatorEnumRuleCall_1_0());
-				}
-				lv_operator_1_0=ruleBinaryOperator
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBinaryConditionRule());
-					}
-					set(
-						$current,
-						"operator",
-						lv_operator_1_0,
-						"coverage.dsl.xtext.COV.BinaryOperator");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Rule BinaryOperator
-ruleBinaryOperator returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			enumLiteral_0='AND'
 			{
-				$current = grammarAccess.getBinaryOperatorAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getBinaryOperatorAccess().getANDEnumLiteralDeclaration_0());
+				newCompositeNode(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0());
+			}
+			lv_OCLConstraint_0_0=ruleEString
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getConditionRule());
+				}
+				set(
+					$current,
+					"OCLConstraint",
+					lv_OCLConstraint_0_0,
+					"coverage.dsl.xtext.COV.EString");
+				afterParserOrEnumRuleCall();
 			}
 		)
-		    |
-		(
-			enumLiteral_1='OR'
-			{
-				$current = grammarAccess.getBinaryOperatorAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getBinaryOperatorAccess().getOREnumLiteralDeclaration_1());
-			}
-		)
-	)
-;
-
-// Rule UnaryOperator
-ruleUnaryOperator returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		enumLiteral_0='NOT'
-		{
-			$current = grammarAccess.getUnaryOperatorAccess().getNOTEnumLiteralDeclaration().getEnumLiteral().getInstance();
-			newLeafNode(enumLiteral_0, grammarAccess.getUnaryOperatorAccess().getNOTEnumLiteralDeclaration());
-		}
 	)
 ;
 
