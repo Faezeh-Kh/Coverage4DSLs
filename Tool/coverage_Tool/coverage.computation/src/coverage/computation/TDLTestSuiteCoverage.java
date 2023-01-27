@@ -3,9 +3,7 @@ package coverage.computation;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map.Entry;
 
 import org.eclipse.emf.ecore.EObject;
 import org.etsi.mts.tdl.Package;
@@ -197,6 +195,15 @@ public class TDLTestSuiteCoverage {
 		return this.coverageOfModelObjects;
 	}
 	
+	public List<EObject> getBranchObjects() {
+		return branchObjects;
+	}
+	public List<String> getTsBranchCoverageStatus() {
+		return tsBranchCoverageStatus;
+	}
+	public double getTsBranchCoveragePercentage() {
+		return tsBranchCoveragePercentage;
+	}
 	public List<ObjectCoverageStatus> getCoverageOfBranches() {
 		return coverageOfBranches;
 	}
@@ -215,10 +222,11 @@ public class TDLTestSuiteCoverage {
 	public List<TDLTestCaseCoverage> getTcCoverages() {
 		return tcCoverages;
 	}
-	public double getTsCoveragePercentage() {
+	public double getTsObjectCoveragePercentage() {
 		return tsObjectCoveragePercentage;
 	}
 	public List<String> getTsObjectCoverageStatus() {
 		return tsObjectCoverageStatus;
 	}
+	
 }
