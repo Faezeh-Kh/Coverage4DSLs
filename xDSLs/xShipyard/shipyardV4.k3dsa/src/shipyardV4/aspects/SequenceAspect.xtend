@@ -60,10 +60,14 @@ class SequenceAspect {
 	    	}else if(_self.result === null){// we skip the passedSequence as deprecated 
 					_self.result=ShipyardOperationalSemanticsUtils.RESULT_PASS
 			}
-	    }else if (_self.result===null){ // case No execution environment on input
-			_self.result=ShipyardOperationalSemanticsUtils.RESULT_PASS;
-		}
+	    }else{
+	    	if (_self.result===null){ // case No execution environment on input
+				_self.result=ShipyardOperationalSemanticsUtils.RESULT_PASS;
+			}
+			_self.simulatedResult = _self.result
+	    } 
 
+		println("Sequence simulation result is: " + _self.simulatedResult);
 		/**
 		 * Process Triggers
 		 */
