@@ -741,16 +741,16 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	public class BranchSpecificationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.BranchSpecification");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHasKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cBranchesKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cDescriptionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cDescriptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cDescriptionEStringParserRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
-		private final Assignment cContextAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cContextEClassCrossReference_4_0 = (CrossReference)cContextAssignment_4.eContents().get(0);
-		private final RuleCall cContextEClassEStringParserRuleCall_4_0_1 = (RuleCall)cContextEClassCrossReference_4_0.eContents().get(1);
+		private final Assignment cContextAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cContextEClassCrossReference_0_0 = (CrossReference)cContextAssignment_0.eContents().get(0);
+		private final RuleCall cContextEClassEStringParserRuleCall_0_0_1 = (RuleCall)cContextEClassCrossReference_0_0.eContents().get(1);
+		private final Keyword cHasKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cBranchesKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cDescriptionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cDescriptionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cDescriptionEStringParserRuleCall_4_1_0 = (RuleCall)cDescriptionAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cConditionKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cConditionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
@@ -764,51 +764,49 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//BranchSpecification returns BranchSpecification:
-		//    'has' 'branches' '{'
+		//    context=[ecore::EClass|EString] 'has' 'branches' '{'
 		//        ('description' description=EString)?
-		//        context=[ecore::EClass|EString]
 		//        ('condition' condition=Condition)?
 		//        branches += Branch (',' branches += Branch)*
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'has' 'branches' '{'
+		//context=[ecore::EClass|EString] 'has' 'branches' '{'
 		//    ('description' description=EString)?
-		//    context=[ecore::EClass|EString]
 		//    ('condition' condition=Condition)?
 		//    branches += Branch (',' branches += Branch)*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
-		//'has'
-		public Keyword getHasKeyword_0() { return cHasKeyword_0; }
-		
-		//'branches'
-		public Keyword getBranchesKeyword_1() { return cBranchesKeyword_1; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-		
-		//('description' description=EString)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'description'
-		public Keyword getDescriptionKeyword_3_0() { return cDescriptionKeyword_3_0; }
-		
-		//description=EString
-		public Assignment getDescriptionAssignment_3_1() { return cDescriptionAssignment_3_1; }
-		
-		//EString
-		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
-		
 		//context=[ecore::EClass|EString]
-		public Assignment getContextAssignment_4() { return cContextAssignment_4; }
+		public Assignment getContextAssignment_0() { return cContextAssignment_0; }
 		
 		//[ecore::EClass|EString]
-		public CrossReference getContextEClassCrossReference_4_0() { return cContextEClassCrossReference_4_0; }
+		public CrossReference getContextEClassCrossReference_0_0() { return cContextEClassCrossReference_0_0; }
 		
 		//EString
-		public RuleCall getContextEClassEStringParserRuleCall_4_0_1() { return cContextEClassEStringParserRuleCall_4_0_1; }
+		public RuleCall getContextEClassEStringParserRuleCall_0_0_1() { return cContextEClassEStringParserRuleCall_0_0_1; }
+		
+		//'has'
+		public Keyword getHasKeyword_1() { return cHasKeyword_1; }
+		
+		//'branches'
+		public Keyword getBranchesKeyword_2() { return cBranchesKeyword_2; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		
+		//('description' description=EString)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'description'
+		public Keyword getDescriptionKeyword_4_0() { return cDescriptionKeyword_4_0; }
+		
+		//description=EString
+		public Assignment getDescriptionAssignment_4_1() { return cDescriptionAssignment_4_1; }
+		
+		//EString
+		public RuleCall getDescriptionEStringParserRuleCall_4_1_0() { return cDescriptionEStringParserRuleCall_4_1_0; }
 		
 		//('condition' condition=Condition)?
 		public Group getGroup_5() { return cGroup_5; }
@@ -1157,9 +1155,8 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//BranchSpecification returns BranchSpecification:
-	//    'has' 'branches' '{'
+	//    context=[ecore::EClass|EString] 'has' 'branches' '{'
 	//        ('description' description=EString)?
-	//        context=[ecore::EClass|EString]
 	//        ('condition' condition=Condition)?
 	//        branches += Branch (',' branches += Branch)*
 	//    '}';

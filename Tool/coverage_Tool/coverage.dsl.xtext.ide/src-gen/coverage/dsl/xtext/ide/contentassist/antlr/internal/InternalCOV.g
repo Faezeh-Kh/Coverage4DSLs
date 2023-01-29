@@ -2934,9 +2934,9 @@ rule__BranchSpecification__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getHasKeyword_0()); }
-	'has'
-	{ after(grammarAccess.getBranchSpecificationAccess().getHasKeyword_0()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getContextAssignment_0()); }
+	(rule__BranchSpecification__ContextAssignment_0)
+	{ after(grammarAccess.getBranchSpecificationAccess().getContextAssignment_0()); }
 )
 ;
 finally {
@@ -2961,9 +2961,9 @@ rule__BranchSpecification__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_1()); }
-	'branches'
-	{ after(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_1()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getHasKeyword_1()); }
+	'has'
+	{ after(grammarAccess.getBranchSpecificationAccess().getHasKeyword_1()); }
 )
 ;
 finally {
@@ -2988,9 +2988,9 @@ rule__BranchSpecification__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2()); }
-	'{'
-	{ after(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_2()); }
+	'branches'
+	{ after(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_2()); }
 )
 ;
 finally {
@@ -3015,9 +3015,9 @@ rule__BranchSpecification__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getGroup_3()); }
-	(rule__BranchSpecification__Group_3__0)?
-	{ after(grammarAccess.getBranchSpecificationAccess().getGroup_3()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_3()); }
+	'{'
+	{ after(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_3()); }
 )
 ;
 finally {
@@ -3042,9 +3042,9 @@ rule__BranchSpecification__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getContextAssignment_4()); }
-	(rule__BranchSpecification__ContextAssignment_4)
-	{ after(grammarAccess.getBranchSpecificationAccess().getContextAssignment_4()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getGroup_4()); }
+	(rule__BranchSpecification__Group_4__0)?
+	{ after(grammarAccess.getBranchSpecificationAccess().getGroup_4()); }
 )
 ;
 finally {
@@ -3159,53 +3159,53 @@ finally {
 }
 
 
-rule__BranchSpecification__Group_3__0
+rule__BranchSpecification__Group_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__BranchSpecification__Group_3__0__Impl
-	rule__BranchSpecification__Group_3__1
+	rule__BranchSpecification__Group_4__0__Impl
+	rule__BranchSpecification__Group_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BranchSpecification__Group_3__0__Impl
+rule__BranchSpecification__Group_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_3_0()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_4_0()); }
 	'description'
-	{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_3_0()); }
+	{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BranchSpecification__Group_3__1
+rule__BranchSpecification__Group_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__BranchSpecification__Group_3__1__Impl
+	rule__BranchSpecification__Group_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BranchSpecification__Group_3__1__Impl
+rule__BranchSpecification__Group_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_3_1()); }
-	(rule__BranchSpecification__DescriptionAssignment_3_1)
-	{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_3_1()); }
+	{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_4_1()); }
+	(rule__BranchSpecification__DescriptionAssignment_4_1)
+	{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_4_1()); }
 )
 ;
 finally {
@@ -3838,34 +3838,34 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BranchSpecification__DescriptionAssignment_3_1
+rule__BranchSpecification__ContextAssignment_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_3_1_0()); }
-		ruleEString
-		{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_3_1_0()); }
+		{ before(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_0_0()); }
+		(
+			{ before(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_0_0_1()); }
+			ruleEString
+			{ after(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_0_0_1()); }
+		)
+		{ after(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BranchSpecification__ContextAssignment_4
+rule__BranchSpecification__DescriptionAssignment_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_4_0()); }
-		(
-			{ before(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_4_0_1()); }
-			ruleEString
-			{ after(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_4_0_1()); }
-		)
-		{ after(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_4_0()); }
+		{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_4_1_0()); }
+		ruleEString
+		{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_4_1_0()); }
 	)
 ;
 finally {

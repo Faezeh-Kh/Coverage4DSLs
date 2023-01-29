@@ -69,9 +69,8 @@ CoverageByContent returns CoverageByContent:
 		
 
 BranchSpecification returns BranchSpecification:
-	'has' 'branches' '{' 
+	context=[ecore::EClass|EString] 'has' 'branches' '{' 
 		('description' description=EString)?
-		context=[ecore::EClass|EString]
 		('condition' condition=Condition)?
 		branches += Branch (',' branches += Branch)* 
 	'}';

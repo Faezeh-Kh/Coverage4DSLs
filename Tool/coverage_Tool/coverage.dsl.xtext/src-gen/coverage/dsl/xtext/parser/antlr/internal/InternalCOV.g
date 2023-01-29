@@ -1108,43 +1108,6 @@ ruleBranchSpecification returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='has'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getBranchSpecificationAccess().getHasKeyword_0());
-		}
-		otherlv_1='branches'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_1());
-		}
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			otherlv_3='description'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_3_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_3_1_0());
-					}
-					lv_description_4_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
-						}
-						set(
-							$current,
-							"description",
-							lv_description_4_0,
-							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
 		(
 			(
 				{
@@ -1153,7 +1116,7 @@ ruleBranchSpecification returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_4_0());
+					newCompositeNode(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_0_0());
 				}
 				ruleEString
 				{
@@ -1161,6 +1124,43 @@ ruleBranchSpecification returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_1='has'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getBranchSpecificationAccess().getHasKeyword_1());
+		}
+		otherlv_2='branches'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_2());
+		}
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			otherlv_4='description'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_4_1_0());
+					}
+					lv_description_5_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
+						}
+						set(
+							$current,
+							"description",
+							lv_description_5_0,
+							"coverage.dsl.xtext.COV.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
 		(
 			otherlv_6='condition'
 			{

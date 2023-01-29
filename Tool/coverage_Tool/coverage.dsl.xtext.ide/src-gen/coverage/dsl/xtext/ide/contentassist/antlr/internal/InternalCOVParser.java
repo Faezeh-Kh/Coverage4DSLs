@@ -8952,21 +8952,31 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BranchSpecification__Group__0__Impl"
-    // InternalCOV.g:2931:1: rule__BranchSpecification__Group__0__Impl : ( 'has' ) ;
+    // InternalCOV.g:2931:1: rule__BranchSpecification__Group__0__Impl : ( ( rule__BranchSpecification__ContextAssignment_0 ) ) ;
     public final void rule__BranchSpecification__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:2935:1: ( ( 'has' ) )
-            // InternalCOV.g:2936:1: ( 'has' )
+            // InternalCOV.g:2935:1: ( ( ( rule__BranchSpecification__ContextAssignment_0 ) ) )
+            // InternalCOV.g:2936:1: ( ( rule__BranchSpecification__ContextAssignment_0 ) )
             {
-            // InternalCOV.g:2936:1: ( 'has' )
-            // InternalCOV.g:2937:2: 'has'
+            // InternalCOV.g:2936:1: ( ( rule__BranchSpecification__ContextAssignment_0 ) )
+            // InternalCOV.g:2937:2: ( rule__BranchSpecification__ContextAssignment_0 )
             {
-             before(grammarAccess.getBranchSpecificationAccess().getHasKeyword_0()); 
-            match(input,37,FOLLOW_2); 
-             after(grammarAccess.getBranchSpecificationAccess().getHasKeyword_0()); 
+             before(grammarAccess.getBranchSpecificationAccess().getContextAssignment_0()); 
+            // InternalCOV.g:2938:2: ( rule__BranchSpecification__ContextAssignment_0 )
+            // InternalCOV.g:2938:3: rule__BranchSpecification__ContextAssignment_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__BranchSpecification__ContextAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBranchSpecificationAccess().getContextAssignment_0()); 
 
             }
 
@@ -8998,7 +9008,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:2950:1: ( rule__BranchSpecification__Group__1__Impl rule__BranchSpecification__Group__2 )
             // InternalCOV.g:2951:2: rule__BranchSpecification__Group__1__Impl rule__BranchSpecification__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_26);
             rule__BranchSpecification__Group__1__Impl();
 
             state._fsp--;
@@ -9027,21 +9037,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BranchSpecification__Group__1__Impl"
-    // InternalCOV.g:2958:1: rule__BranchSpecification__Group__1__Impl : ( 'branches' ) ;
+    // InternalCOV.g:2958:1: rule__BranchSpecification__Group__1__Impl : ( 'has' ) ;
     public final void rule__BranchSpecification__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:2962:1: ( ( 'branches' ) )
-            // InternalCOV.g:2963:1: ( 'branches' )
+            // InternalCOV.g:2962:1: ( ( 'has' ) )
+            // InternalCOV.g:2963:1: ( 'has' )
             {
-            // InternalCOV.g:2963:1: ( 'branches' )
-            // InternalCOV.g:2964:2: 'branches'
+            // InternalCOV.g:2963:1: ( 'has' )
+            // InternalCOV.g:2964:2: 'has'
             {
-             before(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_1()); 
-            match(input,38,FOLLOW_2); 
-             after(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_1()); 
+             before(grammarAccess.getBranchSpecificationAccess().getHasKeyword_1()); 
+            match(input,37,FOLLOW_2); 
+             after(grammarAccess.getBranchSpecificationAccess().getHasKeyword_1()); 
 
             }
 
@@ -9073,7 +9083,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:2977:1: ( rule__BranchSpecification__Group__2__Impl rule__BranchSpecification__Group__3 )
             // InternalCOV.g:2978:2: rule__BranchSpecification__Group__2__Impl rule__BranchSpecification__Group__3
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_4);
             rule__BranchSpecification__Group__2__Impl();
 
             state._fsp--;
@@ -9102,21 +9112,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BranchSpecification__Group__2__Impl"
-    // InternalCOV.g:2985:1: rule__BranchSpecification__Group__2__Impl : ( '{' ) ;
+    // InternalCOV.g:2985:1: rule__BranchSpecification__Group__2__Impl : ( 'branches' ) ;
     public final void rule__BranchSpecification__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:2989:1: ( ( '{' ) )
-            // InternalCOV.g:2990:1: ( '{' )
+            // InternalCOV.g:2989:1: ( ( 'branches' ) )
+            // InternalCOV.g:2990:1: ( 'branches' )
             {
-            // InternalCOV.g:2990:1: ( '{' )
-            // InternalCOV.g:2991:2: '{'
+            // InternalCOV.g:2990:1: ( 'branches' )
+            // InternalCOV.g:2991:2: 'branches'
             {
-             before(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_2()); 
+            match(input,38,FOLLOW_2); 
+             after(grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_2()); 
 
             }
 
@@ -9148,7 +9158,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:3004:1: ( rule__BranchSpecification__Group__3__Impl rule__BranchSpecification__Group__4 )
             // InternalCOV.g:3005:2: rule__BranchSpecification__Group__3__Impl rule__BranchSpecification__Group__4
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__BranchSpecification__Group__3__Impl();
 
             state._fsp--;
@@ -9177,42 +9187,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BranchSpecification__Group__3__Impl"
-    // InternalCOV.g:3012:1: rule__BranchSpecification__Group__3__Impl : ( ( rule__BranchSpecification__Group_3__0 )? ) ;
+    // InternalCOV.g:3012:1: rule__BranchSpecification__Group__3__Impl : ( '{' ) ;
     public final void rule__BranchSpecification__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3016:1: ( ( ( rule__BranchSpecification__Group_3__0 )? ) )
-            // InternalCOV.g:3017:1: ( ( rule__BranchSpecification__Group_3__0 )? )
+            // InternalCOV.g:3016:1: ( ( '{' ) )
+            // InternalCOV.g:3017:1: ( '{' )
             {
-            // InternalCOV.g:3017:1: ( ( rule__BranchSpecification__Group_3__0 )? )
-            // InternalCOV.g:3018:2: ( rule__BranchSpecification__Group_3__0 )?
+            // InternalCOV.g:3017:1: ( '{' )
+            // InternalCOV.g:3018:2: '{'
             {
-             before(grammarAccess.getBranchSpecificationAccess().getGroup_3()); 
-            // InternalCOV.g:3019:2: ( rule__BranchSpecification__Group_3__0 )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
-
-            if ( (LA25_0==30) ) {
-                alt25=1;
-            }
-            switch (alt25) {
-                case 1 :
-                    // InternalCOV.g:3019:3: rule__BranchSpecification__Group_3__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__BranchSpecification__Group_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getBranchSpecificationAccess().getGroup_3()); 
+             before(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
 
@@ -9273,31 +9262,42 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BranchSpecification__Group__4__Impl"
-    // InternalCOV.g:3039:1: rule__BranchSpecification__Group__4__Impl : ( ( rule__BranchSpecification__ContextAssignment_4 ) ) ;
+    // InternalCOV.g:3039:1: rule__BranchSpecification__Group__4__Impl : ( ( rule__BranchSpecification__Group_4__0 )? ) ;
     public final void rule__BranchSpecification__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3043:1: ( ( ( rule__BranchSpecification__ContextAssignment_4 ) ) )
-            // InternalCOV.g:3044:1: ( ( rule__BranchSpecification__ContextAssignment_4 ) )
+            // InternalCOV.g:3043:1: ( ( ( rule__BranchSpecification__Group_4__0 )? ) )
+            // InternalCOV.g:3044:1: ( ( rule__BranchSpecification__Group_4__0 )? )
             {
-            // InternalCOV.g:3044:1: ( ( rule__BranchSpecification__ContextAssignment_4 ) )
-            // InternalCOV.g:3045:2: ( rule__BranchSpecification__ContextAssignment_4 )
+            // InternalCOV.g:3044:1: ( ( rule__BranchSpecification__Group_4__0 )? )
+            // InternalCOV.g:3045:2: ( rule__BranchSpecification__Group_4__0 )?
             {
-             before(grammarAccess.getBranchSpecificationAccess().getContextAssignment_4()); 
-            // InternalCOV.g:3046:2: ( rule__BranchSpecification__ContextAssignment_4 )
-            // InternalCOV.g:3046:3: rule__BranchSpecification__ContextAssignment_4
-            {
-            pushFollow(FOLLOW_2);
-            rule__BranchSpecification__ContextAssignment_4();
+             before(grammarAccess.getBranchSpecificationAccess().getGroup_4()); 
+            // InternalCOV.g:3046:2: ( rule__BranchSpecification__Group_4__0 )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA25_0==30) ) {
+                alt25=1;
+            }
+            switch (alt25) {
+                case 1 :
+                    // InternalCOV.g:3046:3: rule__BranchSpecification__Group_4__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__BranchSpecification__Group_4__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getBranchSpecificationAccess().getContextAssignment_4()); 
+             after(grammarAccess.getBranchSpecificationAccess().getGroup_4()); 
 
             }
 
@@ -9673,23 +9673,23 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BranchSpecification__Group__8__Impl"
 
 
-    // $ANTLR start "rule__BranchSpecification__Group_3__0"
-    // InternalCOV.g:3162:1: rule__BranchSpecification__Group_3__0 : rule__BranchSpecification__Group_3__0__Impl rule__BranchSpecification__Group_3__1 ;
-    public final void rule__BranchSpecification__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__BranchSpecification__Group_4__0"
+    // InternalCOV.g:3162:1: rule__BranchSpecification__Group_4__0 : rule__BranchSpecification__Group_4__0__Impl rule__BranchSpecification__Group_4__1 ;
+    public final void rule__BranchSpecification__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3166:1: ( rule__BranchSpecification__Group_3__0__Impl rule__BranchSpecification__Group_3__1 )
-            // InternalCOV.g:3167:2: rule__BranchSpecification__Group_3__0__Impl rule__BranchSpecification__Group_3__1
+            // InternalCOV.g:3166:1: ( rule__BranchSpecification__Group_4__0__Impl rule__BranchSpecification__Group_4__1 )
+            // InternalCOV.g:3167:2: rule__BranchSpecification__Group_4__0__Impl rule__BranchSpecification__Group_4__1
             {
             pushFollow(FOLLOW_3);
-            rule__BranchSpecification__Group_3__0__Impl();
+            rule__BranchSpecification__Group_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__BranchSpecification__Group_3__1();
+            rule__BranchSpecification__Group_4__1();
 
             state._fsp--;
 
@@ -9708,12 +9708,12 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BranchSpecification__Group_3__0"
+    // $ANTLR end "rule__BranchSpecification__Group_4__0"
 
 
-    // $ANTLR start "rule__BranchSpecification__Group_3__0__Impl"
-    // InternalCOV.g:3174:1: rule__BranchSpecification__Group_3__0__Impl : ( 'description' ) ;
-    public final void rule__BranchSpecification__Group_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BranchSpecification__Group_4__0__Impl"
+    // InternalCOV.g:3174:1: rule__BranchSpecification__Group_4__0__Impl : ( 'description' ) ;
+    public final void rule__BranchSpecification__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9724,9 +9724,9 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:3179:1: ( 'description' )
             // InternalCOV.g:3180:2: 'description'
             {
-             before(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_3_0()); 
+             before(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_4_0()); 
             match(input,30,FOLLOW_2); 
-             after(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_3_0()); 
+             after(grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_4_0()); 
 
             }
 
@@ -9745,21 +9745,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BranchSpecification__Group_3__0__Impl"
+    // $ANTLR end "rule__BranchSpecification__Group_4__0__Impl"
 
 
-    // $ANTLR start "rule__BranchSpecification__Group_3__1"
-    // InternalCOV.g:3189:1: rule__BranchSpecification__Group_3__1 : rule__BranchSpecification__Group_3__1__Impl ;
-    public final void rule__BranchSpecification__Group_3__1() throws RecognitionException {
+    // $ANTLR start "rule__BranchSpecification__Group_4__1"
+    // InternalCOV.g:3189:1: rule__BranchSpecification__Group_4__1 : rule__BranchSpecification__Group_4__1__Impl ;
+    public final void rule__BranchSpecification__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3193:1: ( rule__BranchSpecification__Group_3__1__Impl )
-            // InternalCOV.g:3194:2: rule__BranchSpecification__Group_3__1__Impl
+            // InternalCOV.g:3193:1: ( rule__BranchSpecification__Group_4__1__Impl )
+            // InternalCOV.g:3194:2: rule__BranchSpecification__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__BranchSpecification__Group_3__1__Impl();
+            rule__BranchSpecification__Group_4__1__Impl();
 
             state._fsp--;
 
@@ -9778,35 +9778,35 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BranchSpecification__Group_3__1"
+    // $ANTLR end "rule__BranchSpecification__Group_4__1"
 
 
-    // $ANTLR start "rule__BranchSpecification__Group_3__1__Impl"
-    // InternalCOV.g:3200:1: rule__BranchSpecification__Group_3__1__Impl : ( ( rule__BranchSpecification__DescriptionAssignment_3_1 ) ) ;
-    public final void rule__BranchSpecification__Group_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__BranchSpecification__Group_4__1__Impl"
+    // InternalCOV.g:3200:1: rule__BranchSpecification__Group_4__1__Impl : ( ( rule__BranchSpecification__DescriptionAssignment_4_1 ) ) ;
+    public final void rule__BranchSpecification__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3204:1: ( ( ( rule__BranchSpecification__DescriptionAssignment_3_1 ) ) )
-            // InternalCOV.g:3205:1: ( ( rule__BranchSpecification__DescriptionAssignment_3_1 ) )
+            // InternalCOV.g:3204:1: ( ( ( rule__BranchSpecification__DescriptionAssignment_4_1 ) ) )
+            // InternalCOV.g:3205:1: ( ( rule__BranchSpecification__DescriptionAssignment_4_1 ) )
             {
-            // InternalCOV.g:3205:1: ( ( rule__BranchSpecification__DescriptionAssignment_3_1 ) )
-            // InternalCOV.g:3206:2: ( rule__BranchSpecification__DescriptionAssignment_3_1 )
+            // InternalCOV.g:3205:1: ( ( rule__BranchSpecification__DescriptionAssignment_4_1 ) )
+            // InternalCOV.g:3206:2: ( rule__BranchSpecification__DescriptionAssignment_4_1 )
             {
-             before(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_3_1()); 
-            // InternalCOV.g:3207:2: ( rule__BranchSpecification__DescriptionAssignment_3_1 )
-            // InternalCOV.g:3207:3: rule__BranchSpecification__DescriptionAssignment_3_1
+             before(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_4_1()); 
+            // InternalCOV.g:3207:2: ( rule__BranchSpecification__DescriptionAssignment_4_1 )
+            // InternalCOV.g:3207:3: rule__BranchSpecification__DescriptionAssignment_4_1
             {
             pushFollow(FOLLOW_2);
-            rule__BranchSpecification__DescriptionAssignment_3_1();
+            rule__BranchSpecification__DescriptionAssignment_4_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_3_1()); 
+             after(grammarAccess.getBranchSpecificationAccess().getDescriptionAssignment_4_1()); 
 
             }
 
@@ -9825,7 +9825,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BranchSpecification__Group_3__1__Impl"
+    // $ANTLR end "rule__BranchSpecification__Group_4__1__Impl"
 
 
     // $ANTLR start "rule__BranchSpecification__Group_5__0"
@@ -11538,26 +11538,34 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__CoverageByContent__ConditionAssignment_6_1"
 
 
-    // $ANTLR start "rule__BranchSpecification__DescriptionAssignment_3_1"
-    // InternalCOV.g:3841:1: rule__BranchSpecification__DescriptionAssignment_3_1 : ( ruleEString ) ;
-    public final void rule__BranchSpecification__DescriptionAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__BranchSpecification__ContextAssignment_0"
+    // InternalCOV.g:3841:1: rule__BranchSpecification__ContextAssignment_0 : ( ( ruleEString ) ) ;
+    public final void rule__BranchSpecification__ContextAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3845:1: ( ( ruleEString ) )
-            // InternalCOV.g:3846:2: ( ruleEString )
+            // InternalCOV.g:3845:1: ( ( ( ruleEString ) ) )
+            // InternalCOV.g:3846:2: ( ( ruleEString ) )
             {
-            // InternalCOV.g:3846:2: ( ruleEString )
-            // InternalCOV.g:3847:3: ruleEString
+            // InternalCOV.g:3846:2: ( ( ruleEString ) )
+            // InternalCOV.g:3847:3: ( ruleEString )
             {
-             before(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_3_1_0()); 
+             before(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_0_0()); 
+            // InternalCOV.g:3848:3: ( ruleEString )
+            // InternalCOV.g:3849:4: ruleEString
+            {
+             before(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_0_0_1()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_3_1_0()); 
+             after(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_0_0_1()); 
+
+            }
+
+             after(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_0_0()); 
 
             }
 
@@ -11576,37 +11584,29 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BranchSpecification__DescriptionAssignment_3_1"
+    // $ANTLR end "rule__BranchSpecification__ContextAssignment_0"
 
 
-    // $ANTLR start "rule__BranchSpecification__ContextAssignment_4"
-    // InternalCOV.g:3856:1: rule__BranchSpecification__ContextAssignment_4 : ( ( ruleEString ) ) ;
-    public final void rule__BranchSpecification__ContextAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__BranchSpecification__DescriptionAssignment_4_1"
+    // InternalCOV.g:3860:1: rule__BranchSpecification__DescriptionAssignment_4_1 : ( ruleEString ) ;
+    public final void rule__BranchSpecification__DescriptionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:3860:1: ( ( ( ruleEString ) ) )
-            // InternalCOV.g:3861:2: ( ( ruleEString ) )
+            // InternalCOV.g:3864:1: ( ( ruleEString ) )
+            // InternalCOV.g:3865:2: ( ruleEString )
             {
-            // InternalCOV.g:3861:2: ( ( ruleEString ) )
-            // InternalCOV.g:3862:3: ( ruleEString )
+            // InternalCOV.g:3865:2: ( ruleEString )
+            // InternalCOV.g:3866:3: ruleEString
             {
-             before(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_4_0()); 
-            // InternalCOV.g:3863:3: ( ruleEString )
-            // InternalCOV.g:3864:4: ruleEString
-            {
-             before(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_4_0_1()); 
+             before(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getBranchSpecificationAccess().getContextEClassEStringParserRuleCall_4_0_1()); 
-
-            }
-
-             after(grammarAccess.getBranchSpecificationAccess().getContextEClassCrossReference_4_0()); 
+             after(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_4_1_0()); 
 
             }
 
@@ -11625,7 +11625,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__BranchSpecification__ContextAssignment_4"
+    // $ANTLR end "rule__BranchSpecification__DescriptionAssignment_4_1"
 
 
     // $ANTLR start "rule__BranchSpecification__ConditionAssignment_5_1"
@@ -11847,7 +11847,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000600000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000400002L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000002002000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000002000030L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000704200000L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000704000000L});
@@ -11861,8 +11861,8 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000040000030L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000008080000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x00000080C0000000L});
 
 }

@@ -101,7 +101,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     BranchSpecification returns BranchSpecification
 	 *
 	 * Constraint:
-	 *     (description=EString? context=[EClass|EString] condition=Condition? branches+=Branch branches+=Branch*)
+	 *     (context=[EClass|EString] description=EString? condition=Condition? branches+=Branch branches+=Branch*)
 	 * </pre>
 	 */
 	protected void sequence_BranchSpecification(ISerializationContext context, BranchSpecification semanticObject) {
