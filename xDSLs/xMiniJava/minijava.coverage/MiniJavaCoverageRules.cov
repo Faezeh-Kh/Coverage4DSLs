@@ -23,16 +23,22 @@ ruleset MiniJavaCoverage{
 	BranchCoverageRuleset{
 		context Block{
 			covered when ONE statements iscovered
-		}
-		IfStatement has branches{
-			queryBranch "self.thenBlock",
-			queryBranch "self.elseBlock"
 		},
-		WhileStatement has branches{
-			queryBranch "self.block"
+		context IfStatement{
+			has branches{
+				queryBranch "self.thenBlock",
+				queryBranch "self.elseBlock"
+			}
 		},
-		ForStatement has branches{
-			queryBranch "self.block"
-		}
+		context WhileStatement{
+			has branches{
+				queryBranch "self.block"
+			}
+		},
+		context ForStatement{
+			has branches{
+				queryBranch "self.block"
+			}
+		} 
 	}
 }

@@ -23,10 +23,9 @@ ModelElementCoverage returns ModelElementCoverage:
 	'}';
 	
 BranchCoverage returns BranchCoverage:
-	'BranchCoverageRuleset'
+	{BranchCoverage} 'BranchCoverageRuleset'
 	'{'
 	 	(contexts+=Context ( "," contexts+=Context)*)?
-	 	branchSpecifications+=BranchSpecification ("," branchSpecifications+=BranchSpecification)*
 	'}';
 	 
 EString returns ecore::EString:
@@ -39,7 +38,7 @@ Context returns Context:
 	'}';
 
 Rule returns Rule:
-	Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore ;
+	Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore | BranchSpecification;
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
@@ -69,7 +68,7 @@ CoverageByContent returns CoverageByContent:
 		
 
 BranchSpecification returns BranchSpecification:
-	context=[ecore::EClass|EString] 'has' 'branches' '{' 
+	'has' 'branches' '{' 
 		('description' description=EString)?
 		('condition' condition=Condition)?
 		branches += Branch (',' branches += Branch)* 

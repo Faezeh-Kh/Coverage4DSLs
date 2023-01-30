@@ -87,7 +87,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     BranchCoverage returns BranchCoverage
 	 *
 	 * Constraint:
-	 *     ((contexts+=Context contexts+=Context*)? branchSpecifications+=BranchSpecification branchSpecifications+=BranchSpecification*)
+	 *     (contexts+=Context contexts+=Context*)
 	 * </pre>
 	 */
 	protected void sequence_BranchCoverage(ISerializationContext context, BranchCoverage semanticObject) {
@@ -98,10 +98,11 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     Rule returns BranchSpecification
 	 *     BranchSpecification returns BranchSpecification
 	 *
 	 * Constraint:
-	 *     (context=[EClass|EString] description=EString? condition=Condition? branches+=Branch branches+=Branch*)
+	 *     (description=EString? condition=Condition? branches+=Branch branches+=Branch*)
 	 * </pre>
 	 */
 	protected void sequence_BranchSpecification(ISerializationContext context, BranchSpecification semanticObject) {

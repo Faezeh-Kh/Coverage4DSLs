@@ -31,12 +31,16 @@ ruleset ArduinoCoverage{
 		}
 	},
 	BranchCoverageRuleset{
-		Control has branches{
-			description "all the subclasses of Control inherits this branch specification (Repeat, If, While)"
-			queryBranch "self.block"
+		context Control {
+			has branches{
+				description "all the subclasses of Control inherits this branch specification (Repeat, If, While)"
+				queryBranch "self.block"
+			}
 		},
-		If has branches{
-			queryBranch "self.elseBlock"
-		}
+		context If{
+			has branches{
+				queryBranch "self.elseBlock"
+			}
+		} 
 	}
 }

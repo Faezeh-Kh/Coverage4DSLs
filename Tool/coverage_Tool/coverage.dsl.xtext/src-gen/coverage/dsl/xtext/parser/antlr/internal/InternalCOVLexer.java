@@ -672,10 +672,10 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1372:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalCOV.g:1372:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCOV.g:1321:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalCOV.g:1321:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalCOV.g:1372:11: ( '^' )?
+            // InternalCOV.g:1321:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -684,7 +684,7 @@ public class InternalCOVLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalCOV.g:1372:11: '^'
+                    // InternalCOV.g:1321:11: '^'
                     {
                     match('^'); 
 
@@ -702,7 +702,7 @@ public class InternalCOVLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalCOV.g:1372:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalCOV.g:1321:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -751,10 +751,10 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1374:10: ( ( '0' .. '9' )+ )
-            // InternalCOV.g:1374:12: ( '0' .. '9' )+
+            // InternalCOV.g:1323:10: ( ( '0' .. '9' )+ )
+            // InternalCOV.g:1323:12: ( '0' .. '9' )+
             {
-            // InternalCOV.g:1374:12: ( '0' .. '9' )+
+            // InternalCOV.g:1323:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -768,7 +768,7 @@ public class InternalCOVLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalCOV.g:1374:13: '0' .. '9'
+            	    // InternalCOV.g:1323:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -800,10 +800,10 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1376:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalCOV.g:1376:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCOV.g:1325:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalCOV.g:1325:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalCOV.g:1376:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalCOV.g:1325:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -821,10 +821,10 @@ public class InternalCOVLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalCOV.g:1376:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalCOV.g:1325:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalCOV.g:1376:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalCOV.g:1325:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -840,7 +840,7 @@ public class InternalCOVLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalCOV.g:1376:21: '\\\\' .
+                    	    // InternalCOV.g:1325:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -848,7 +848,7 @@ public class InternalCOVLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCOV.g:1376:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalCOV.g:1325:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -873,10 +873,10 @@ public class InternalCOVLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalCOV.g:1376:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalCOV.g:1325:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalCOV.g:1376:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalCOV.g:1325:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -892,7 +892,7 @@ public class InternalCOVLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalCOV.g:1376:54: '\\\\' .
+                    	    // InternalCOV.g:1325:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -900,7 +900,7 @@ public class InternalCOVLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalCOV.g:1376:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalCOV.g:1325:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -943,12 +943,12 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1378:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalCOV.g:1378:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalCOV.g:1327:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalCOV.g:1327:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalCOV.g:1378:24: ( options {greedy=false; } : . )*
+            // InternalCOV.g:1327:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -973,7 +973,7 @@ public class InternalCOVLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalCOV.g:1378:52: .
+            	    // InternalCOV.g:1327:52: .
             	    {
             	    matchAny(); 
 
@@ -1003,12 +1003,12 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1380:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalCOV.g:1380:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalCOV.g:1329:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalCOV.g:1329:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalCOV.g:1380:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalCOV.g:1329:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1021,7 +1021,7 @@ public class InternalCOVLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalCOV.g:1380:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalCOV.g:1329:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1041,7 +1041,7 @@ public class InternalCOVLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalCOV.g:1380:40: ( ( '\\r' )? '\\n' )?
+            // InternalCOV.g:1329:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1050,9 +1050,9 @@ public class InternalCOVLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalCOV.g:1380:41: ( '\\r' )? '\\n'
+                    // InternalCOV.g:1329:41: ( '\\r' )? '\\n'
                     {
-                    // InternalCOV.g:1380:41: ( '\\r' )?
+                    // InternalCOV.g:1329:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1061,7 +1061,7 @@ public class InternalCOVLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalCOV.g:1380:41: '\\r'
+                            // InternalCOV.g:1329:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1093,10 +1093,10 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1382:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalCOV.g:1382:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCOV.g:1331:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalCOV.g:1331:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalCOV.g:1382:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalCOV.g:1331:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1150,8 +1150,8 @@ public class InternalCOVLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalCOV.g:1384:16: ( . )
-            // InternalCOV.g:1384:18: .
+            // InternalCOV.g:1333:16: ( . )
+            // InternalCOV.g:1333:18: .
             {
             matchAny(); 
 

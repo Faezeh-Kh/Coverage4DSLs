@@ -148,6 +148,7 @@ public class TDLTestSuiteCoverage {
 		}catch (NumberFormatException e) {
 			System.out.println("NumberFormatException:" + tsBranchCoveragePercentage);
 		}
+		branchCoverageOverallResult.getCoverage().add(tsBranchCoveragePercentage + "");
 		System.out.println("Test suite branch coverage: " + 
 				numOfCoveredBranches + "/" + numOfBranches + " = " + tsBranchCoveragePercentage +"%");
 	}
@@ -192,7 +193,7 @@ public class TDLTestSuiteCoverage {
 	}
 	
 	public List<ObjectCoverageStatus> getCoverageOfModelObjects(){
-		return this.coverageOfModelObjects;
+		return coverageOfModelObjects;
 	}
 	
 	public List<EObject> getBranchObjects() {

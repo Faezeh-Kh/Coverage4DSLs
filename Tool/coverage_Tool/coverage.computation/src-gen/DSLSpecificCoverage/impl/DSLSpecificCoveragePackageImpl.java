@@ -433,35 +433,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBranchSpecification_Description() {
-		return (EAttribute)branchSpecificationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getBranchSpecification_Branches() {
-		return (EReference)branchSpecificationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBranchSpecification_Condition() {
-		return (EReference)branchSpecificationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBranchSpecification_Context() {
-		return (EReference)branchSpecificationEClass.getEStructuralFeatures().get(1);
+		return (EReference)branchSpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -534,15 +507,6 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 */
 	public EClass getBranchCoverage() {
 		return branchCoverageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBranchCoverage_BranchSpecifications() {
-		return (EReference)branchCoverageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -623,10 +587,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		createEReference(limitedIgnoreEClass, LIMITED_IGNORE__CONTAINER_METACLASS);
 
 		branchSpecificationEClass = createEClass(BRANCH_SPECIFICATION);
-		createEAttribute(branchSpecificationEClass, BRANCH_SPECIFICATION__DESCRIPTION);
-		createEReference(branchSpecificationEClass, BRANCH_SPECIFICATION__CONTEXT);
 		createEReference(branchSpecificationEClass, BRANCH_SPECIFICATION__BRANCHES);
-		createEReference(branchSpecificationEClass, BRANCH_SPECIFICATION__CONDITION);
 
 		branchEClass = createEClass(BRANCH);
 		createEAttribute(branchEClass, BRANCH__OCL_QUERY);
@@ -640,7 +601,6 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		modelElementCoverageEClass = createEClass(MODEL_ELEMENT_COVERAGE);
 
 		branchCoverageEClass = createEClass(BRANCH_COVERAGE);
-		createEReference(branchCoverageEClass, BRANCH_COVERAGE__BRANCH_SPECIFICATIONS);
 
 		// Create enums
 		coveredContentsEEnum = createEEnum(COVERED_CONTENTS);
@@ -684,6 +644,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		coverageByContentEClass.getESuperTypes().add(this.getInclusionRule());
 		ignoreEClass.getESuperTypes().add(this.getExclusionRule());
 		limitedIgnoreEClass.getESuperTypes().add(this.getExclusionRule());
+		branchSpecificationEClass.getESuperTypes().add(this.getRule());
 		modelElementCoverageEClass.getESuperTypes().add(this.getCoverageMetric());
 		branchCoverageEClass.getESuperTypes().add(this.getCoverageMetric());
 
@@ -720,10 +681,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEReference(getLimitedIgnore_ContainerMetaclass(), theEcorePackage.getEClass(), null, "containerMetaclass", null, 1, -1, LimitedIgnore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchSpecificationEClass, BranchSpecification.class, "BranchSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBranchSpecification_Description(), ecorePackage.getEString(), "description", null, 0, 1, BranchSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBranchSpecification_Context(), theEcorePackage.getEClass(), null, "context", null, 1, 1, BranchSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBranchSpecification_Branches(), this.getBranch(), null, "branches", null, 0, -1, BranchSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBranchSpecification_Condition(), this.getCondition(), null, "condition", null, 0, 1, BranchSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBranch_OCLQuery(), ecorePackage.getEString(), "OCLQuery", null, 0, 1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -737,7 +695,6 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEClass(modelElementCoverageEClass, ModelElementCoverage.class, "ModelElementCoverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(branchCoverageEClass, BranchCoverage.class, "BranchCoverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBranchCoverage_BranchSpecifications(), this.getBranchSpecification(), null, "branchSpecifications", null, 1, -1, BranchCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(coveredContentsEEnum, CoveredContents.class, "CoveredContents");

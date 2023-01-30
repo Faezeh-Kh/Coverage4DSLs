@@ -133,6 +133,7 @@ public class DSLSpecificCoverageSwitch<T> extends Switch<T> {
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: {
 				BranchSpecification branchSpecification = (BranchSpecification)theEObject;
 				T result = caseBranchSpecification(branchSpecification);
+				if (result == null) result = caseRule(branchSpecification);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -117,7 +117,6 @@ public class TDLTestCaseCoverage {
 		tcObjectCoverageStatus4me = new ArrayList<>(tcObjectCoverageStatusByTrace);
 		
 		//finding contexts and their instances
-		meCoverageContext_eobjects= new HashMap<>();
 		setMECoverageContext_objects(modelElementCoverage);
 		
 		//apply domain specific coverage while the coverage matrix changes
@@ -135,12 +134,16 @@ public class TDLTestCaseCoverage {
 	}
 
 	private void runBranchCoverage(BranchCoverage branchCoverage) {
-		//the initial coverage status is the one calculated using the trace
-		tcObjectCoverageStatus4b = new ArrayList<>(tcObjectCoverageStatusByTrace);
-		
+		//set the initial coverage status
+		if (tcObjectCoverageStatus4me != null) {
+			//if there is a modelElementCoverage ruleset, consider it as the initial coverage
+			tcObjectCoverageStatus4b = new ArrayList<>(tcObjectCoverageStatus4me);
+		}
+		else {
+			//otherwise, use the one calculated using the trace
+			tcObjectCoverageStatus4b = new ArrayList<>(tcObjectCoverageStatusByTrace);
+		}
 		//finding contexts and their instances
-		branchCoverageContext_eobjects= new HashMap<>();
-		branchingRule_contextObjects= new HashMap<>();
 		setBranchCoverageContext_objects(branchCoverage);
 		
 		//apply domain specific coverage while the coverage matrix changes
@@ -186,6 +189,7 @@ public class TDLTestCaseCoverage {
 	}
 	
 	private void setMECoverageContext_objects(ModelElementCoverage metric) {
+		meCoverageContext_eobjects= new HashMap<>();
 		metric.getContexts().forEach(c -> 
 			meCoverageContext_eobjects.put(c, new ArrayList<>()));
 		//find the eobjects related to the rule's context
@@ -198,24 +202,36 @@ public class TDLTestCaseCoverage {
 	}
 	
 	private void setBranchCoverageContext_objects(BranchCoverage bc) {
-		bc.getContexts().forEach(c -> 
-			branchCoverageContext_eobjects.put(c, new ArrayList<>()));
-		//find the eobjects related to the rule's context
-		for (Entry<Context,List<EObject>> entry:branchCoverageContext_eobjects.entrySet()) {
-			String contextName = entry.getKey().getMetaclass().getName();
-			entry.getValue().addAll(modelObjects.stream()
-					.filter(o -> isContextInstance(contextName, o))
-					.toList());
+		//if ModelElementCoverage is computed, use its contexts_eobjects
+		if (meCoverageContext_eobjects != null) {
+			branchCoverageContext_eobjects= new HashMap<>(meCoverageContext_eobjects);
+		}
+		else {
+			branchCoverageContext_eobjects= new HashMap<>();
 		}
 		
-		bc.getBranchSpecifications().forEach(bs -> 
-			branchingRule_contextObjects.put(bs, new ArrayList<>()));
+		bc.getContexts().stream()
+			.filter(c -> branchCoverageContext_eobjects.get(c) == null)
+			.forEach(c -> branchCoverageContext_eobjects.put(c, new ArrayList<>()));
+		
+		//find the eobjects related to the rule's context
+		for (Entry<Context,List<EObject>> entry:branchCoverageContext_eobjects.entrySet()) {
+			if (entry.getValue().isEmpty()) {
+				String contextName = entry.getKey().getMetaclass().getName();
+				entry.getValue().addAll(modelObjects.stream()
+						.filter(o -> isContextInstance(contextName, o))
+						.toList());
+			}
+			entry.getKey().getRules().stream()
+				.filter(r -> r instanceof BranchSpecification)
+				.map(r -> (BranchSpecification) r)
+				.forEach(bs -> branchingRule_contextObjects.put(bs, new ArrayList<>()));
+		}
+		
 		//find the eobjects related to the branch specification contexts
 		for (Entry<BranchSpecification,List<EObject>> entry:branchingRule_contextObjects.entrySet()) {
-			String contextName = entry.getKey().getContext().getName();
-			entry.getValue().addAll(modelObjects.stream()
-					.filter(o -> isContextInstance(contextName, o))
-					.toList());
+			Context context = (Context) entry.getKey().eContainer();
+			entry.getValue().addAll(branchCoverageContext_eobjects.get(context));
 		}
 	}
 	

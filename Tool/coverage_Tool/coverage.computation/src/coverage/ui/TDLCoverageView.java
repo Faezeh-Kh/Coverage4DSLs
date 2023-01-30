@@ -394,7 +394,7 @@ public class TDLCoverageView extends ViewPart{
 						columnText = this.eObjectLabelProvider(cInfo.getModelObject()).replaceAll("\\s", "");
 						columnText = columnText.substring(metaclassName.length());
 					}
-					break;
+					break;	
 				default:
 					columnText = cInfo.getCoverage().get(columnIndex-2);
 					if (columnText == TDLCoverageUtil.COVERED) {
@@ -441,6 +441,9 @@ public class TDLCoverageView extends ViewPart{
 					List<ObjectCoverageStatus> branchCoverageInfos = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfBranches();
 					if (cInfo.getModelObject() != null) {
 						return branchCoverageInfos.stream().anyMatch(info -> info.getModelObject() == cInfo.getModelObject());
+					}
+					else {
+						return true;
 					}
 				}
 			}

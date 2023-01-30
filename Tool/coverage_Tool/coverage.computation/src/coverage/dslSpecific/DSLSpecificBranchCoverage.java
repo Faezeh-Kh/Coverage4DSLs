@@ -40,13 +40,18 @@ public class DSLSpecificBranchCoverage {
 						allBranches.addAll(queryResult);
 					}						
 				}
-				if (branchingRoot_branches.get(branchingRoot).size() == 1) {
-					EObject nextBranch = findNextAdjacentEObject(branchingRoot);
-					branchingRoot_branches.get(branchingRoot).add(nextBranch);
-					allBranches.add(nextBranch);
-				}
 			}			
 		}
+		
+		//after applying all branching rules, if there is only one branch for a root, add another branch based on the next adjacent element
+		for (EObject branchingRoot : branchingRoot_branches.keySet()) {
+			if (branchingRoot_branches.get(branchingRoot).size() == 1) {
+				EObject nextBranch = findNextAdjacentEObject(branchingRoot);
+				branchingRoot_branches.get(branchingRoot).add(nextBranch);
+				allBranches.add(nextBranch);
+			}
+		}
+		
 		for(EObject object:testCaseCoverage.getModelObjects()) {
 			if (allBranches.contains(object)) {
 				testCaseCoverage.getBranchObjects().add(object);
