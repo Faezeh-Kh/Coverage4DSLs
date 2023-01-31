@@ -1,0 +1,22 @@
+ruleset ArduinoBranchCoverage{
+	
+	import metamodel arduino
+	import ruleset ArduinoModelElementCoverage
+	
+	context Control {
+		has branches{
+			description "all the subclasses of Control inherits this branch specification (Repeat, If, While)"
+			ExplicitBranches "self.block" covered when executed
+		}
+	},
+	context If{
+		has branches{
+			condition "self.elseBlock <> null"
+			ExplicitBranches "self.elseBlock" covered when executed
+		}, 
+		has branches{
+			condition "self.elseBlock = null"
+			ImplicitBranches covered when "self.block" not-executed
+		}
+	} 
+}

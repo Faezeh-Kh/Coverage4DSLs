@@ -3,4 +3,4 @@ ecore = platform:/resource/pssm.abstractsyntax/model/statemachines.ecore
 k3 = pssm.semantics.AttributeValueAspect,pssm.semantics.BehaviorAspect,pssm.semantics.BooleanAttributeValueAspect,pssm.semantics.BooleanConstraintAspect,pssm.semantics.CallEventOccurrenceAspect,pssm.semantics.ConstraintAspect,pssm.semantics.EventOccurrenceAspect,pssm.semantics.FinalStateAspect,pssm.semantics.IntegerAttributeValueAspect,pssm.semantics.IntegerConstraintAspect,pssm.semantics.OperationBehaviorAspect,pssm.semantics.PseudostateAspect,pssm.semantics.RegionAspect,pssm.semantics.SignalEventOccurrenceAspect,pssm.semantics.StateAspect,pssm.semantics.StateMachineAspect,pssm.semantics.StringAttributeValueAspect,pssm.semantics.StringConstraintAspect,pssm.semantics.TransitionAspect,pssm.semantics.VertexAspect
 behavioralInterface = platform:/plugin/pssm.behavioralinterface/pssmInterface.bi
 implemRelId = pssm.reactive.relationships.implementation_relationship
-coverageRules = platform:/resource/pssm.coverage/PSSMCoverageRules.cov
+coverageRules = platform:/resource/pssm.coverage/PSSMModelElementCoverageRules.cov, platform:/resource/pssm.coverage/PSSMBranchCoverageRules.cov

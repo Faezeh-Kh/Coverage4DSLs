@@ -17,7 +17,6 @@ import org.eclipse.xtext.scoping.Scopes;
 
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
-import DSLSpecificCoverage.CoverageMetric;
 import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.DomainSpecificCoverage;
@@ -42,7 +41,7 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 			return Scopes.scopeFor(allPackages);			
 		}
 		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getContext_Metaclass())) {
-			Collection<EClass> allClasses = ((DomainSpecificCoverage)((CoverageMetric)((Context) context).eContainer()).eContainer())
+			Collection<EClass> allClasses = ((DomainSpecificCoverage)((Context) context).eContainer())
 												.getMetamodel().getEClassifiers().stream()
 												.filter(EClass.class::isInstance)
 												.map(EClass.class::cast)
@@ -50,7 +49,7 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 			return Scopes.scopeFor(allClasses);
 		}
 		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getLimitedIgnore_ContainerMetaclass())) {
-		Collection<EClass> allClasses = ((DomainSpecificCoverage)((CoverageMetric)((Context)((LimitedIgnore) context).eContainer()).eContainer()).eContainer())
+		Collection<EClass> allClasses = ((DomainSpecificCoverage)((Context)((LimitedIgnore) context).eContainer()).eContainer())
 											.getMetamodel().getEClassifiers().stream()
 											.filter(EClass.class::isInstance)
 											.map(EClass.class::cast)

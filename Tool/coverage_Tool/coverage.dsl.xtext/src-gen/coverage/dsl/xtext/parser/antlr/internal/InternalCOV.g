@@ -129,240 +129,100 @@ ruleDomainSpecificCoverage returns [EObject current=null]
 			)
 		)
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDomainSpecificCoverageAccess().getCoverageMetricsCoverageMetricParserRuleCall_6_0());
-				}
-				lv_coverageMetrics_6_0=ruleCoverageMetric
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDomainSpecificCoverageRule());
-					}
-					add(
-						$current,
-						"coverageMetrics",
-						lv_coverageMetrics_6_0,
-						"coverage.dsl.xtext.COV.CoverageMetric");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_7=','
+			otherlv_6='import'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getDomainSpecificCoverageAccess().getCommaKeyword_7_0());
+				newLeafNode(otherlv_6, grammarAccess.getDomainSpecificCoverageAccess().getImportKeyword_6_0());
+			}
+			otherlv_7='ruleset'
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDomainSpecificCoverageAccess().getRulesetKeyword_6_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDomainSpecificCoverageAccess().getCoverageMetricsCoverageMetricParserRuleCall_7_1_0());
-					}
-					lv_coverageMetrics_8_0=ruleCoverageMetric
-					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDomainSpecificCoverageRule());
+							$current = createModelElement(grammarAccess.getDomainSpecificCoverageRule());
 						}
-						add(
-							$current,
-							"coverageMetrics",
-							lv_coverageMetrics_8_0,
-							"coverage.dsl.xtext.COV.CoverageMetric");
-						afterParserOrEnumRuleCall();
 					}
-				)
-			)
-		)*
-		otherlv_9='}'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getDomainSpecificCoverageAccess().getRightCurlyBracketKeyword_8());
-		}
-	)
-;
-
-// Entry rule entryRuleCoverageMetric
-entryRuleCoverageMetric returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCoverageMetricRule()); }
-	iv_ruleCoverageMetric=ruleCoverageMetric
-	{ $current=$iv_ruleCoverageMetric.current; }
-	EOF;
-
-// Rule CoverageMetric
-ruleCoverageMetric returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			newCompositeNode(grammarAccess.getCoverageMetricAccess().getModelElementCoverageParserRuleCall_0());
-		}
-		this_ModelElementCoverage_0=ruleModelElementCoverage
-		{
-			$current = $this_ModelElementCoverage_0.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getCoverageMetricAccess().getBranchCoverageParserRuleCall_1());
-		}
-		this_BranchCoverage_1=ruleBranchCoverage
-		{
-			$current = $this_BranchCoverage_1.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleModelElementCoverage
-entryRuleModelElementCoverage returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getModelElementCoverageRule()); }
-	iv_ruleModelElementCoverage=ruleModelElementCoverage
-	{ $current=$iv_ruleModelElementCoverage.current; }
-	EOF;
-
-// Rule ModelElementCoverage
-ruleModelElementCoverage returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='ModelElementCoverageRuleset'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getModelElementCoverageAccess().getModelElementCoverageRulesetKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getModelElementCoverageAccess().getLeftCurlyBracketKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getModelElementCoverageAccess().getContextsContextParserRuleCall_2_0());
-				}
-				lv_contexts_2_0=ruleContext
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getModelElementCoverageRule());
-					}
-					add(
-						$current,
-						"contexts",
-						lv_contexts_2_0,
-						"coverage.dsl.xtext.COV.Context");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_3=','
-			{
-				newLeafNode(otherlv_3, grammarAccess.getModelElementCoverageAccess().getCommaKeyword_3_0());
-			}
-			(
-				(
 					{
-						newCompositeNode(grammarAccess.getModelElementCoverageAccess().getContextsContextParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getDomainSpecificCoverageAccess().getImportsDomainSpecificCoverageCrossReference_6_2_0());
 					}
-					lv_contexts_4_0=ruleContext
+					ruleEString
 					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getModelElementCoverageRule());
-						}
-						add(
-							$current,
-							"contexts",
-							lv_contexts_4_0,
-							"coverage.dsl.xtext.COV.Context");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-		otherlv_5='}'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getModelElementCoverageAccess().getRightCurlyBracketKeyword_4());
-		}
-	)
-;
-
-// Entry rule entryRuleBranchCoverage
-entryRuleBranchCoverage returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getBranchCoverageRule()); }
-	iv_ruleBranchCoverage=ruleBranchCoverage
-	{ $current=$iv_ruleBranchCoverage.current; }
-	EOF;
-
-// Rule BranchCoverage
-ruleBranchCoverage returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='BranchCoverageRuleset'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getBranchCoverageAccess().getBranchCoverageRulesetKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getBranchCoverageAccess().getLeftCurlyBracketKeyword_1());
-		}
-		(
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBranchCoverageAccess().getContextsContextParserRuleCall_2_0_0());
-					}
-					lv_contexts_2_0=ruleContext
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBranchCoverageRule());
-						}
-						add(
-							$current,
-							"contexts",
-							lv_contexts_2_0,
-							"coverage.dsl.xtext.COV.Context");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_3=','
+				otherlv_9=','
 				{
-					newLeafNode(otherlv_3, grammarAccess.getBranchCoverageAccess().getCommaKeyword_2_1_0());
+					newLeafNode(otherlv_9, grammarAccess.getDomainSpecificCoverageAccess().getCommaKeyword_6_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getBranchCoverageAccess().getContextsContextParserRuleCall_2_1_1_0());
-						}
-						lv_contexts_4_0=ruleContext
-						{
 							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getBranchCoverageRule());
+								$current = createModelElement(grammarAccess.getDomainSpecificCoverageRule());
 							}
-							add(
-								$current,
-								"contexts",
-								lv_contexts_4_0,
-								"coverage.dsl.xtext.COV.Context");
+						}
+						{
+							newCompositeNode(grammarAccess.getDomainSpecificCoverageAccess().getImportsDomainSpecificCoverageCrossReference_6_3_1_0());
+						}
+						ruleEString
+						{
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
 		)?
-		otherlv_5='}'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDomainSpecificCoverageAccess().getContextsContextParserRuleCall_7_0());
+				}
+				lv_contexts_11_0=ruleContext
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDomainSpecificCoverageRule());
+					}
+					add(
+						$current,
+						"contexts",
+						lv_contexts_11_0,
+						"coverage.dsl.xtext.COV.Context");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_12=','
+			{
+				newLeafNode(otherlv_12, grammarAccess.getDomainSpecificCoverageAccess().getCommaKeyword_8_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDomainSpecificCoverageAccess().getContextsContextParserRuleCall_8_1_0());
+					}
+					lv_contexts_13_0=ruleContext
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDomainSpecificCoverageRule());
+						}
+						add(
+							$current,
+							"contexts",
+							lv_contexts_13_0,
+							"coverage.dsl.xtext.COV.Context");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+		otherlv_14='}'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getBranchCoverageAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_14, grammarAccess.getDomainSpecificCoverageAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;
@@ -520,29 +380,29 @@ ruleRule returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getRuleAccess().getCoverageOfReferencedParserRuleCall_1());
+			newCompositeNode(grammarAccess.getRuleAccess().getLimitedIgnoreParserRuleCall_1());
 		}
-		this_CoverageOfReferenced_1=ruleCoverageOfReferenced
+		this_LimitedIgnore_1=ruleLimitedIgnore
 		{
-			$current = $this_CoverageOfReferenced_1.current;
+			$current = $this_LimitedIgnore_1.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getRuleAccess().getCoverageByContentParserRuleCall_2());
+			newCompositeNode(grammarAccess.getRuleAccess().getCoverageOfReferencedParserRuleCall_2());
 		}
-		this_CoverageByContent_2=ruleCoverageByContent
+		this_CoverageOfReferenced_2=ruleCoverageOfReferenced
 		{
-			$current = $this_CoverageByContent_2.current;
+			$current = $this_CoverageOfReferenced_2.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getRuleAccess().getLimitedIgnoreParserRuleCall_3());
+			newCompositeNode(grammarAccess.getRuleAccess().getCoverageByContentParserRuleCall_3());
 		}
-		this_LimitedIgnore_3=ruleLimitedIgnore
+		this_CoverageByContent_3=ruleCoverageByContent
 		{
-			$current = $this_LimitedIgnore_3.current;
+			$current = $this_CoverageByContent_3.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -610,79 +470,17 @@ ruleIgnore returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='ignore'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getIgnoreAccess().getIgnoreKeyword_1());
-		}
-		otherlv_2='('
-		{
-			newLeafNode(otherlv_2, grammarAccess.getIgnoreAccess().getLeftParenthesisKeyword_2());
-		}
 		(
-			otherlv_3='subtypes'
+			otherlv_1='when'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getIgnoreAccess().getSubtypesKeyword_3_0());
+				newLeafNode(otherlv_1, grammarAccess.getIgnoreAccess().getWhenKeyword_1_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getIgnoreAccess().getIgnoreSubtypesEBooleanParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getIgnoreAccess().getConditionConditionParserRuleCall_1_1_0());
 					}
-					lv_ignoreSubtypes_4_0=ruleEBoolean
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
-						}
-						set(
-							$current,
-							"ignoreSubtypes",
-							lv_ignoreSubtypes_4_0,
-							"coverage.dsl.xtext.COV.EBoolean");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		otherlv_5=')'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getIgnoreAccess().getRightParenthesisKeyword_4());
-		}
-		(
-			otherlv_6='description'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getIgnoreAccess().getDescriptionKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getIgnoreAccess().getDescriptionEStringParserRuleCall_5_1_0());
-					}
-					lv_description_7_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
-						}
-						set(
-							$current,
-							"description",
-							lv_description_7_0,
-							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_8='condition'
-			{
-				newLeafNode(otherlv_8, grammarAccess.getIgnoreAccess().getConditionKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getIgnoreAccess().getConditionConditionParserRuleCall_6_1_0());
-					}
-					lv_condition_9_0=ruleCondition
+					lv_condition_2_0=ruleCondition
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
@@ -690,8 +488,70 @@ ruleIgnore returns [EObject current=null]
 						set(
 							$current,
 							"condition",
-							lv_condition_9_0,
+							lv_condition_2_0,
 							"coverage.dsl.xtext.COV.Condition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='ignore'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getIgnoreAccess().getIgnoreKeyword_2());
+		}
+		otherlv_4='('
+		{
+			newLeafNode(otherlv_4, grammarAccess.getIgnoreAccess().getLeftParenthesisKeyword_3());
+		}
+		(
+			otherlv_5='subtypes'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getIgnoreAccess().getSubtypesKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getIgnoreAccess().getIgnoreSubtypesEBooleanParserRuleCall_4_1_0());
+					}
+					lv_ignoreSubtypes_6_0=ruleEBoolean
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
+						}
+						set(
+							$current,
+							"ignoreSubtypes",
+							lv_ignoreSubtypes_6_0,
+							"coverage.dsl.xtext.COV.EBoolean");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_7=')'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getIgnoreAccess().getRightParenthesisKeyword_5());
+		}
+		(
+			otherlv_8='description'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getIgnoreAccess().getDescriptionKeyword_6_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getIgnoreAccess().getDescriptionEStringParserRuleCall_6_1_0());
+					}
+					lv_description_9_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getIgnoreRule());
+						}
+						set(
+							$current,
+							"description",
+							lv_description_9_0,
+							"coverage.dsl.xtext.COV.EString");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -716,16 +576,48 @@ ruleLimitedIgnore returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='ignoreif'
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getLimitedIgnoreAccess().getLimitedIgnoreAction_0(),
+					$current);
+			}
+		)
+		(
+			otherlv_1='when'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getLimitedIgnoreAccess().getWhenKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getConditionConditionParserRuleCall_1_1_0());
+					}
+					lv_condition_2_0=ruleCondition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getLimitedIgnoreRule());
+						}
+						set(
+							$current,
+							"condition",
+							lv_condition_2_0,
+							"coverage.dsl.xtext.COV.Condition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='ignoreif'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getLimitedIgnoreAccess().getIgnoreifKeyword_0());
+			newLeafNode(otherlv_3, grammarAccess.getLimitedIgnoreAccess().getIgnoreifKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getTypeLimitationTypeEnumRuleCall_1_0());
+					newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getTypeLimitationTypeEnumRuleCall_3_0());
 				}
-				lv_type_1_0=ruleLimitationType
+				lv_type_4_0=ruleLimitationType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getLimitedIgnoreRule());
@@ -733,7 +625,7 @@ ruleLimitedIgnore returns [EObject current=null]
 					set(
 						$current,
 						"type",
-						lv_type_1_0,
+						lv_type_4_0,
 						"coverage.dsl.xtext.COV.LimitationType");
 					afterParserOrEnumRuleCall();
 				}
@@ -747,7 +639,7 @@ ruleLimitedIgnore returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getContainerMetaclassEClassCrossReference_2_0());
+					newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getContainerMetaclassEClassCrossReference_4_0());
 				}
 				ruleEString
 				{
@@ -756,9 +648,9 @@ ruleLimitedIgnore returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_3=','
+			otherlv_6=','
 			{
-				newLeafNode(otherlv_3, grammarAccess.getLimitedIgnoreAccess().getCommaKeyword_3_0());
+				newLeafNode(otherlv_6, grammarAccess.getLimitedIgnoreAccess().getCommaKeyword_5_0());
 			}
 			(
 				(
@@ -768,7 +660,7 @@ ruleLimitedIgnore returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getContainerMetaclassEClassCrossReference_3_1_0());
+						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getContainerMetaclassEClassCrossReference_5_1_0());
 					}
 					ruleEString
 					{
@@ -778,16 +670,16 @@ ruleLimitedIgnore returns [EObject current=null]
 			)
 		)*
 		(
-			otherlv_5='description'
+			otherlv_8='description'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getLimitedIgnoreAccess().getDescriptionKeyword_4_0());
+				newLeafNode(otherlv_8, grammarAccess.getLimitedIgnoreAccess().getDescriptionKeyword_6_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getDescriptionEStringParserRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getDescriptionEStringParserRuleCall_6_1_0());
 					}
-					lv_description_6_0=ruleEString
+					lv_description_9_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getLimitedIgnoreRule());
@@ -795,33 +687,8 @@ ruleLimitedIgnore returns [EObject current=null]
 						set(
 							$current,
 							"description",
-							lv_description_6_0,
+							lv_description_9_0,
 							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_7='condition'
-			{
-				newLeafNode(otherlv_7, grammarAccess.getLimitedIgnoreAccess().getConditionKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getLimitedIgnoreAccess().getConditionConditionParserRuleCall_5_1_0());
-					}
-					lv_condition_8_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getLimitedIgnoreRule());
-						}
-						set(
-							$current,
-							"condition",
-							lv_condition_8_0,
-							"coverage.dsl.xtext.COV.Condition");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -846,9 +713,41 @@ ruleCoverageOfReferenced returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='covers'
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getCoverageOfReferencedAccess().getCoverageOfReferencedAction_0(),
+					$current);
+			}
+		)
+		(
+			otherlv_1='when'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getCoverageOfReferencedAccess().getWhenKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getConditionConditionParserRuleCall_1_1_0());
+					}
+					lv_condition_2_0=ruleCondition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getCoverageOfReferencedRule());
+						}
+						set(
+							$current,
+							"condition",
+							lv_condition_2_0,
+							"coverage.dsl.xtext.COV.Condition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='covers'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCoverageOfReferencedAccess().getCoversKeyword_0());
+			newLeafNode(otherlv_3, grammarAccess.getCoverageOfReferencedAccess().getCoversKeyword_2());
 		}
 		(
 			(
@@ -858,7 +757,7 @@ ruleCoverageOfReferenced returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getReferenceEReferenceCrossReference_1_0());
+					newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getReferenceEReferenceCrossReference_3_0());
 				}
 				ruleEString
 				{
@@ -867,9 +766,9 @@ ruleCoverageOfReferenced returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_2=','
+			otherlv_5=','
 			{
-				newLeafNode(otherlv_2, grammarAccess.getCoverageOfReferencedAccess().getCommaKeyword_2_0());
+				newLeafNode(otherlv_5, grammarAccess.getCoverageOfReferencedAccess().getCommaKeyword_4_0());
 			}
 			(
 				(
@@ -879,7 +778,7 @@ ruleCoverageOfReferenced returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getReferenceEReferenceCrossReference_2_1_0());
+						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getReferenceEReferenceCrossReference_4_1_0());
 					}
 					ruleEString
 					{
@@ -889,16 +788,16 @@ ruleCoverageOfReferenced returns [EObject current=null]
 			)
 		)*
 		(
-			otherlv_4='description'
+			otherlv_7='description'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getCoverageOfReferencedAccess().getDescriptionKeyword_3_0());
+				newLeafNode(otherlv_7, grammarAccess.getCoverageOfReferencedAccess().getDescriptionKeyword_5_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getDescriptionEStringParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getDescriptionEStringParserRuleCall_5_1_0());
 					}
-					lv_description_5_0=ruleEString
+					lv_description_8_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCoverageOfReferencedRule());
@@ -906,33 +805,8 @@ ruleCoverageOfReferenced returns [EObject current=null]
 						set(
 							$current,
 							"description",
-							lv_description_5_0,
+							lv_description_8_0,
 							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_6='condition'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getCoverageOfReferencedAccess().getConditionKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCoverageOfReferencedAccess().getConditionConditionParserRuleCall_4_1_0());
-					}
-					lv_condition_7_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCoverageOfReferencedRule());
-						}
-						set(
-							$current,
-							"condition",
-							lv_condition_7_0,
-							"coverage.dsl.xtext.COV.Condition");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -957,20 +831,52 @@ ruleCoverageByContent returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='covered'
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getCoverageByContentAccess().getCoverageByContentAction_0(),
+					$current);
+			}
+		)
+		(
+			otherlv_1='when'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getCoverageByContentAccess().getWhenKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getCoverageByContentAccess().getConditionConditionParserRuleCall_1_1_0());
+					}
+					lv_condition_2_0=ruleCondition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getCoverageByContentRule());
+						}
+						set(
+							$current,
+							"condition",
+							lv_condition_2_0,
+							"coverage.dsl.xtext.COV.Condition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='covered'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCoverageByContentAccess().getCoveredKeyword_0());
+			newLeafNode(otherlv_3, grammarAccess.getCoverageByContentAccess().getCoveredKeyword_2());
 		}
-		otherlv_1='when'
+		otherlv_4='when'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getCoverageByContentAccess().getWhenKeyword_1());
+			newLeafNode(otherlv_4, grammarAccess.getCoverageByContentAccess().getWhenKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCoverageByContentAccess().getMultiplicityCoveredContentsEnumRuleCall_2_0());
+					newCompositeNode(grammarAccess.getCoverageByContentAccess().getMultiplicityCoveredContentsEnumRuleCall_4_0());
 				}
-				lv_multiplicity_2_0=ruleCoveredContents
+				lv_multiplicity_5_0=ruleCoveredContents
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCoverageByContentRule());
@@ -978,7 +884,7 @@ ruleCoverageByContent returns [EObject current=null]
 					set(
 						$current,
 						"multiplicity",
-						lv_multiplicity_2_0,
+						lv_multiplicity_5_0,
 						"coverage.dsl.xtext.COV.CoveredContents");
 					afterParserOrEnumRuleCall();
 				}
@@ -992,7 +898,7 @@ ruleCoverageByContent returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getCoverageByContentAccess().getContainmentReferenceEReferenceCrossReference_3_0());
+					newCompositeNode(grammarAccess.getCoverageByContentAccess().getContainmentReferenceEReferenceCrossReference_5_0());
 				}
 				ruleEString
 				{
@@ -1000,21 +906,21 @@ ruleCoverageByContent returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_4='iscovered'
+		otherlv_7='iscovered'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getCoverageByContentAccess().getIscoveredKeyword_4());
+			newLeafNode(otherlv_7, grammarAccess.getCoverageByContentAccess().getIscoveredKeyword_6());
 		}
 		(
-			otherlv_5='description'
+			otherlv_8='description'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getCoverageByContentAccess().getDescriptionKeyword_5_0());
+				newLeafNode(otherlv_8, grammarAccess.getCoverageByContentAccess().getDescriptionKeyword_7_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCoverageByContentAccess().getDescriptionEStringParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getCoverageByContentAccess().getDescriptionEStringParserRuleCall_7_1_0());
 					}
-					lv_description_6_0=ruleEString
+					lv_description_9_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCoverageByContentRule());
@@ -1022,33 +928,8 @@ ruleCoverageByContent returns [EObject current=null]
 						set(
 							$current,
 							"description",
-							lv_description_6_0,
+							lv_description_9_0,
 							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_7='condition'
-			{
-				newLeafNode(otherlv_7, grammarAccess.getCoverageByContentAccess().getConditionKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCoverageByContentAccess().getConditionConditionParserRuleCall_6_1_0());
-					}
-					lv_condition_8_0=ruleCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCoverageByContentRule());
-						}
-						set(
-							$current,
-							"condition",
-							lv_condition_8_0,
-							"coverage.dsl.xtext.COV.Condition");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1073,54 +954,24 @@ ruleBranchSpecification returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='has'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getBranchSpecificationAccess().getHasKeyword_0());
-		}
-		otherlv_1='branches'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getBranchSpecificationAccess().getBranchesKeyword_1());
-		}
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2());
-		}
 		(
-			otherlv_3='description'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_3_0());
+				$current = forceCreateModelElement(
+					grammarAccess.getBranchSpecificationAccess().getBranchSpecificationAction_0(),
+					$current);
+			}
+		)
+		(
+			otherlv_1='when'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getBranchSpecificationAccess().getWhenKeyword_1_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getConditionConditionParserRuleCall_1_1_0());
 					}
-					lv_description_4_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
-						}
-						set(
-							$current,
-							"description",
-							lv_description_4_0,
-							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_5='condition'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getBranchSpecificationAccess().getConditionKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getConditionConditionParserRuleCall_4_1_0());
-					}
-					lv_condition_6_0=ruleCondition
+					lv_condition_2_0=ruleCondition
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
@@ -1128,19 +979,23 @@ ruleBranchSpecification returns [EObject current=null]
 						set(
 							$current,
 							"condition",
-							lv_condition_6_0,
+							lv_condition_2_0,
 							"coverage.dsl.xtext.COV.Condition");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getBranchSpecificationAccess().getLeftCurlyBracketKeyword_2());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getBranchSpecificationAccess().getBranchesBranchParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getBranchSpecificationAccess().getBranchesBranchParserRuleCall_3_0());
 				}
-				lv_branches_7_0=ruleBranch
+				lv_branches_4_0=ruleBranch
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
@@ -1148,23 +1003,23 @@ ruleBranchSpecification returns [EObject current=null]
 					add(
 						$current,
 						"branches",
-						lv_branches_7_0,
+						lv_branches_4_0,
 						"coverage.dsl.xtext.COV.Branch");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_8=','
+			otherlv_5=','
 			{
-				newLeafNode(otherlv_8, grammarAccess.getBranchSpecificationAccess().getCommaKeyword_6_0());
+				newLeafNode(otherlv_5, grammarAccess.getBranchSpecificationAccess().getCommaKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getBranchesBranchParserRuleCall_6_1_0());
+						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getBranchesBranchParserRuleCall_4_1_0());
 					}
-					lv_branches_9_0=ruleBranch
+					lv_branches_6_0=ruleBranch
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
@@ -1172,16 +1027,41 @@ ruleBranchSpecification returns [EObject current=null]
 						add(
 							$current,
 							"branches",
-							lv_branches_9_0,
+							lv_branches_6_0,
 							"coverage.dsl.xtext.COV.Branch");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_10='}'
+		(
+			otherlv_7='description'
+			{
+				newLeafNode(otherlv_7, grammarAccess.getBranchSpecificationAccess().getDescriptionKeyword_5_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_5_1_0());
+					}
+					lv_description_8_0=ruleEString
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
+						}
+						set(
+							$current,
+							"description",
+							lv_description_8_0,
+							"coverage.dsl.xtext.COV.EString");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getBranchSpecificationAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_9, grammarAccess.getBranchSpecificationAccess().getRightCurlyBracketKeyword_6());
 		}
 	)
 ;
@@ -1202,19 +1082,55 @@ ruleBranch returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='queryBranch'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getBranchAccess().getQueryBranchKeyword_0());
+			newCompositeNode(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_0());
+		}
+		this_ExplicitBranch_0=ruleExplicitBranch
+		{
+			$current = $this_ExplicitBranch_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_1());
+		}
+		this_ImplicitBranch_1=ruleImplicitBranch
+		{
+			$current = $this_ImplicitBranch_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleExplicitBranch
+entryRuleExplicitBranch returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getExplicitBranchRule()); }
+	iv_ruleExplicitBranch=ruleExplicitBranch
+	{ $current=$iv_ruleExplicitBranch.current; }
+	EOF;
+
+// Rule ExplicitBranch
+ruleExplicitBranch returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='branch'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getExplicitBranchAccess().getBranchKeyword_0());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getBranchAccess().getOCLQueryEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0());
 				}
 				lv_OCLQuery_1_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBranchRule());
+						$current = createModelElementForParent(grammarAccess.getExplicitBranchRule());
 					}
 					set(
 						$current,
@@ -1225,6 +1141,40 @@ ruleBranch returns [EObject current=null]
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleImplicitBranch
+entryRuleImplicitBranch returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getImplicitBranchRule()); }
+	iv_ruleImplicitBranch=ruleImplicitBranch
+	{ $current=$iv_ruleImplicitBranch.current; }
+	EOF;
+
+// Rule ImplicitBranch
+ruleImplicitBranch returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getImplicitBranchAccess().getImplicitBranchAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='branch'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getImplicitBranchAccess().getBranchKeyword_1());
+		}
+		otherlv_2='else'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getImplicitBranchAccess().getElseKeyword_2());
+		}
 	)
 ;
 

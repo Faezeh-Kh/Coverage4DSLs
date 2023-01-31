@@ -29,6 +29,6 @@
   <eClassifiers xsi:type="ecore:EEnum" name="CoverageStatus">
     <eLiterals name="COVERED"/>
     <eLiterals name="NOTCOVERED" value="1"/>
-    <eLiterals name="NOTTRACED" value="2" literal="NOTTRACED"/>
+    <eLiterals name="NOSTATUS" value="2" literal="NOSTATUS"/>
   </eClassifiers>
 </ecore:EPackage>

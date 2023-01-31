@@ -14,35 +14,31 @@ public class TDLTestSuiteCoverage {
 	private List<TDLTestCaseCoverage> tcCoverages;
 
 	private List<EObject> modelObjects;
-	private List<String> tsObjectCoverageStatus;
-	double tsObjectCoveragePercentage;
+	private List<String> tsObjectCoverageStatusByTrace;
+	double tsCoveragePercentageByTrace;
 	
-	public List<ObjectCoverageStatus> coverageOfModelObjects;
-	private ObjectCoverageStatus objectCoverageOverallResult;
+	private List<String> tsObjectCoverageStatus4me;
+	double tsCoveragePercentage4me;
 	
 	private List<EObject> branchObjects;
 	private List<String> tsBranchCoverageStatus;
 	double tsBranchCoveragePercentage;
 	
+	public List<ObjectCoverageStatus> coverageOfModelObjectsByTrace;
+	private ObjectCoverageStatus objectCoverageOverallResultByTrace;
+	public List<ObjectCoverageStatus> coverageOfModelObjects4me;
+	private ObjectCoverageStatus objectCoverageOverallResult4me;
 	public List<ObjectCoverageStatus> coverageOfBranches;
 	private ObjectCoverageStatus branchCoverageOverallResult;
 	
 	public TDLTestSuiteCoverage() {
 		tcCoverages = new ArrayList<>();
 		modelObjects = new ArrayList<>();
-		
-		tsObjectCoverageStatus = new ArrayList<>();
-		tsObjectCoveragePercentage = 0;
-
-		coverageOfModelObjects = new ArrayList<>();
-		objectCoverageOverallResult = new ObjectCoverageStatus();
 	}
+	
 	//for every test case of the test suite, add its coverage to the list
 	public void addTCCoverage(TDLTestCaseCoverage tcCoverage) {
-		this.tcCoverages.add(tcCoverage);
-	}
-	public List<TDLTestCaseCoverage> getTCCoverages() {
-		return this.tcCoverages;
+		tcCoverages.add(tcCoverage);
 	}
 	
 	//Calculating coverage of the test suite based on its test cases coverage
@@ -55,14 +51,21 @@ public class TDLTestSuiteCoverage {
 			}
 			tcCoverageObj.calculateTCCoverage();
 			
-			computeModelElementCoverage(tcCoverageObj);
+			computeCoverageByTrace(tcCoverageObj);
 			
-			if (tcCoverageObj.hasBranchCoverageInformation()) {
+			if (tcCoverageObj.hasModelElementCoverage()) {
+				computeModelElementCoverage(tcCoverageObj);
+			}
+			if (tcCoverageObj.hasBranchCoverage()) {
 				computeBranchCoverage(tcCoverageObj);
 			}
 		}
-		if (!tsObjectCoverageStatus.isEmpty()) {
-			calculateObjectCoveragePercentage();
+		
+		calculateObjectCoveragePercentage(TDLTestCaseCoverage.TRACEBASEDCOVERAGE);
+		setObjectCoverageInfosByTrace();
+		
+		if (tsObjectCoverageStatus4me != null && !tsObjectCoverageStatus4me.isEmpty()) {
+			calculateObjectCoveragePercentage(TDLTestCaseCoverage.MODELELEMENTCOVERAGE);
 			setObjectCoverageInfos();
 		}
 		if (tsBranchCoverageStatus != null && !tsBranchCoverageStatus.isEmpty()) {
@@ -71,18 +74,42 @@ public class TDLTestSuiteCoverage {
 		}
 	}
 	
-	private void computeModelElementCoverage(TDLTestCaseCoverage tcCoverageObj) {
-		objectCoverageOverallResult.getCoverage().add(tcCoverageObj.getTcMECoveragePercentage() + "");
+	private void computeCoverageByTrace(TDLTestCaseCoverage tcCoverageObj) {
+		if (tsObjectCoverageStatusByTrace == null) {
+			tsObjectCoverageStatusByTrace = new ArrayList<>();
+			objectCoverageOverallResultByTrace = new ObjectCoverageStatus();
+		}
+		objectCoverageOverallResultByTrace.getCoverage().add(tcCoverageObj.getTcCoveragePercentageByTrace() + "");
 		//if it is the first test case, copy the whole test case object coverage status for the test suite
-		if (tsObjectCoverageStatus.size() == 0) {
-			modelObjects.addAll(tcCoverageObj.getModelObjects());
-			tsObjectCoverageStatus.addAll(tcCoverageObj.getTcObjectCoverageStatus4me());
+		if (tsObjectCoverageStatusByTrace.size() == 0) {
+			modelObjects.addAll(tcCoverageObj.getAllModelObjects());
+			tsObjectCoverageStatusByTrace.addAll(tcCoverageObj.getTcObjectCoverageStatusByTrace());
+		}
+		else {
+			for (int i=0; i<tcCoverageObj.getTcObjectCoverageStatusByTrace().size(); i++) {
+				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatusByTrace().get(i);
+				if (tcCoverage == TDLCoverageUtil.COVERED & tsObjectCoverageStatusByTrace.get(i) != TDLCoverageUtil.COVERED) {
+					tsObjectCoverageStatusByTrace.set(i, TDLCoverageUtil.COVERED);
+				}
+			}
+		}
+	}
+
+	private void computeModelElementCoverage(TDLTestCaseCoverage tcCoverageObj) {
+		if (tsObjectCoverageStatus4me == null) {
+			tsObjectCoverageStatus4me = new ArrayList<>();
+			objectCoverageOverallResult4me = new ObjectCoverageStatus();
+		}
+		objectCoverageOverallResult4me.getCoverage().add(tcCoverageObj.getTcMECoveragePercentage() + "");
+		//if it is the first test case, copy the whole test case object coverage status for the test suite
+		if (tsObjectCoverageStatus4me.size() == 0) {
+			tsObjectCoverageStatus4me.addAll(tcCoverageObj.getTcObjectCoverageStatus4me());
 		}
 		else {
 			for (int i=0; i<tcCoverageObj.getTcObjectCoverageStatus4me().size(); i++) {
 				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus4me().get(i);
-				if (tcCoverage == TDLCoverageUtil.COVERED & tsObjectCoverageStatus.get(i) != TDLCoverageUtil.COVERED) {
-					tsObjectCoverageStatus.set(i, TDLCoverageUtil.COVERED);
+				if (tcCoverage == TDLCoverageUtil.COVERED & tsObjectCoverageStatus4me.get(i) != TDLCoverageUtil.COVERED) {
+					tsObjectCoverageStatus4me.set(i, TDLCoverageUtil.COVERED);
 				}
 			}
 		}
@@ -112,29 +139,43 @@ public class TDLTestSuiteCoverage {
 		}
 	}
 	
-	public void calculateObjectCoveragePercentage() {
+	public void calculateObjectCoveragePercentage(String metric) {
+		if (metric == TDLTestCaseCoverage.TRACEBASEDCOVERAGE) {
+			tsCoveragePercentageByTrace = computeCoveragePercentage(tsObjectCoverageStatusByTrace, metric);
+			objectCoverageOverallResultByTrace.getCoverage().add(tsCoveragePercentageByTrace + "");
+		}
+		else if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
+			tsCoveragePercentage4me = computeCoveragePercentage(tsObjectCoverageStatus4me, metric);
+			objectCoverageOverallResult4me.getCoverage().add(tsCoveragePercentage4me + "");
+		}
+		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
+			calculateBranchCoveragePercentage();
+		}
+		
+	}
+	
+	private double computeCoveragePercentage(List<String> coverageStatus, String metric) {
 		int numOfCoveredObjs = 0;
 		int numOfNotCoverableElements = 0;
-		for (String coverage:tsObjectCoverageStatus) {
-			if (coverage == TDLCoverageUtil.NOT_TRACED) {
+		for (String coverage:coverageStatus) {
+			if (coverage == TDLCoverageUtil.NOSTATUS) {
 				numOfNotCoverableElements++;
 			}
 			else if (coverage == TDLCoverageUtil.COVERED) {
 				numOfCoveredObjs++;
 			}
 		}
-		int numOfCoverableElements = tsObjectCoverageStatus.size() - numOfNotCoverableElements;
-		tsObjectCoveragePercentage = (double)(numOfCoveredObjs*100)/numOfCoverableElements;
+		int numOfCoverableElements = coverageStatus.size() - numOfNotCoverableElements;
+		double percentage = (double)(numOfCoveredObjs*100)/numOfCoverableElements;
 		try {
-			BigDecimal bd = new BigDecimal(tsObjectCoveragePercentage).setScale(2, RoundingMode.HALF_UP);
-			tsObjectCoveragePercentage = bd.doubleValue();
+			BigDecimal bd = new BigDecimal(percentage).setScale(2, RoundingMode.HALF_UP);
+			percentage = bd.doubleValue();
 		}catch (NumberFormatException e) {
-			System.out.println("NumberFormatException:" + tsBranchCoveragePercentage);
+			System.out.println("NumberFormatException:" + percentage);
 		}
-		objectCoverageOverallResult.getCoverage().add(tsObjectCoveragePercentage + "");
-		System.out.println("Test suite model element coverage: " + 
-				numOfCoveredObjs + "/" + numOfCoverableElements + " = " + tsObjectCoveragePercentage +"%");
-	
+		System.out.println(testSuite.getName() + "-coverage-"+ metric + ": " + 
+				numOfCoveredObjs + "/" + numOfCoverableElements + " = " + percentage +"%");
+		return percentage;
 	}
 
 	public void calculateBranchCoveragePercentage() {
@@ -153,7 +194,29 @@ public class TDLTestSuiteCoverage {
 				numOfCoveredBranches + "/" + numOfBranches + " = " + tsBranchCoveragePercentage +"%");
 	}
 	
+	public void setObjectCoverageInfosByTrace() {
+		coverageOfModelObjectsByTrace = new ArrayList<>();
+		//for each model object, the coverage information must be set
+		for (int i=0; i<modelObjects.size(); i++) {
+			ObjectCoverageStatus objectCoverage = new ObjectCoverageStatus();
+			objectCoverage.setModelObject(modelObjects.get(i));
+			objectCoverage.setMetaclass(modelObjects.get(i).eClass());
+			for (TDLTestCaseCoverage tcCoverageObj : tcCoverages) {
+				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatusByTrace().get(i);
+				objectCoverage.getCoverage().add(tcCoverage);
+			}
+			String tsCoverage = tsObjectCoverageStatusByTrace.get(i);
+			objectCoverage.getCoverage().add(tsCoverage);
+			coverageOfModelObjectsByTrace.add(objectCoverage);
+		}
+		//add the overall result as the last row of the info array
+		objectCoverageOverallResultByTrace.setMetaclass(null);
+		objectCoverageOverallResultByTrace.setModelObject(null);
+		coverageOfModelObjectsByTrace.add(objectCoverageOverallResultByTrace);
+	}
+	
 	public void setObjectCoverageInfos() {
+		coverageOfModelObjects4me = new ArrayList<>();
 		//for each model object, the coverage information must be set
 		for (int i=0; i<modelObjects.size(); i++) {
 			ObjectCoverageStatus objectCoverage = new ObjectCoverageStatus();
@@ -163,14 +226,14 @@ public class TDLTestSuiteCoverage {
 				String tcCoverage = tcCoverageObj.getTcObjectCoverageStatus4me().get(i);
 				objectCoverage.getCoverage().add(tcCoverage);
 			}
-			String tsCoverage = tsObjectCoverageStatus.get(i);
+			String tsCoverage = tsObjectCoverageStatus4me.get(i);
 			objectCoverage.getCoverage().add(tsCoverage);
-			coverageOfModelObjects.add(objectCoverage);
+			coverageOfModelObjects4me.add(objectCoverage);
 		}
 		//add the overall result as the last row of the info array
-		objectCoverageOverallResult.setMetaclass(null);
-		objectCoverageOverallResult.setModelObject(null);
-		coverageOfModelObjects.add(objectCoverageOverallResult);
+		objectCoverageOverallResult4me.setMetaclass(null);
+		objectCoverageOverallResult4me.setModelObject(null);
+		coverageOfModelObjects4me.add(objectCoverageOverallResult4me);
 	}
 	
 	public void setBranchCoverageInfos() {
@@ -192,42 +255,83 @@ public class TDLTestSuiteCoverage {
 		coverageOfBranches.add(branchCoverageOverallResult);
 	}
 	
-	public List<ObjectCoverageStatus> getCoverageOfModelObjects(){
-		return coverageOfModelObjects;
+	public boolean hasModelElementCoverage () {
+		return tsObjectCoverageStatus4me == null ? false:true;
 	}
 	
-	public List<EObject> getBranchObjects() {
-		return branchObjects;
+	public boolean hasBranchCoverage () {
+		return tsBranchCoverageStatus == null ? false:true;
 	}
-	public List<String> getTsBranchCoverageStatus() {
-		return tsBranchCoverageStatus;
-	}
-	public double getTsBranchCoveragePercentage() {
-		return tsBranchCoveragePercentage;
-	}
-	public List<ObjectCoverageStatus> getCoverageOfBranches() {
-		return coverageOfBranches;
-	}
+	
 	public Package getTestSuite() {
 		return testSuite;
 	}
+	
 	public void setTestSuite(Package testSuite) {
 		this.testSuite = testSuite;
 	}
+	
 	public String getTestSuiteName() {
 		return testSuite.getName();
 	}
-	public List<EObject> getModelObjects() {
-		return modelObjects;
-	}
+
 	public List<TDLTestCaseCoverage> getTcCoverages() {
 		return tcCoverages;
 	}
-	public double getTsObjectCoveragePercentage() {
-		return tsObjectCoveragePercentage;
+
+	public List<EObject> getModelObjects() {
+		return modelObjects;
 	}
-	public List<String> getTsObjectCoverageStatus() {
-		return tsObjectCoverageStatus;
+
+	public List<String> getTsObjectCoverageStatusByTrace() {
+		return tsObjectCoverageStatusByTrace;
 	}
-	
+
+	public double getTsCoveragePercentageByTrace() {
+		return tsCoveragePercentageByTrace;
+	}
+
+	public List<String> getTsObjectCoverageStatus4me() {
+		return tsObjectCoverageStatus4me;
+	}
+
+	public double getTsCoveragePercentage4me() {
+		return tsCoveragePercentage4me;
+	}
+
+	public List<EObject> getBranchObjects() {
+		return branchObjects;
+	}
+
+	public List<String> getTsBranchCoverageStatus() {
+		return tsBranchCoverageStatus;
+	}
+
+	public double getTsBranchCoveragePercentage() {
+		return tsBranchCoveragePercentage;
+	}
+
+	public List<ObjectCoverageStatus> getCoverageOfModelObjectsByTrace() {
+		return coverageOfModelObjectsByTrace;
+	}
+
+	public ObjectCoverageStatus getObjectCoverageOverallResultByTrace() {
+		return objectCoverageOverallResultByTrace;
+	}
+
+	public List<ObjectCoverageStatus> getCoverageOfModelObjects4me() {
+		return coverageOfModelObjects4me;
+	}
+
+	public ObjectCoverageStatus getObjectCoverageOverallResult4me() {
+		return objectCoverageOverallResult4me;
+	}
+
+	public List<ObjectCoverageStatus> getCoverageOfBranches() {
+		return coverageOfBranches;
+	}
+
+	public ObjectCoverageStatus getBranchCoverageOverallResult() {
+		return branchCoverageOverallResult;
+	}
 }

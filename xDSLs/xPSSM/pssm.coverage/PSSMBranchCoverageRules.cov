@@ -1,0 +1,11 @@
+ruleset PSSMBranchCoverage{
+	import metamodel statemachines
+	import ruleset PSSMBranchCoverage
+	context State{
+		has branches{
+			description "if a State has more than one outgoing transition, each transition defines a branch"
+			condition "self.outgoingTransitions->size()>1 and self.outgoingTransitions->forAll(x1:Transition,x2:Transition|x1<>x2 implies x1.triggers<>x2.triggers or x1.constraint<>x2.constraint)"
+			ExplicitBranches "self.outgoingTransitions" covered when executed
+		}
+	}
+}

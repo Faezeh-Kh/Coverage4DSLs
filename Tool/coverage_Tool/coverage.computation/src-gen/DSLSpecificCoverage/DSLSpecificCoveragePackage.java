@@ -86,13 +86,22 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int DOMAIN_SPECIFIC_COVERAGE__METAMODEL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Coverage Metrics</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS = 2;
+	int DOMAIN_SPECIFIC_COVERAGE__CONTEXTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Imports</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_SPECIFIC_COVERAGE__IMPORTS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Domain Specific Coverage</em>' class.
@@ -101,7 +110,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_SPECIFIC_COVERAGE_FEATURE_COUNT = 3;
+	int DOMAIN_SPECIFIC_COVERAGE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Domain Specific Coverage</em>' class.
@@ -597,16 +606,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranch()
 	 * @generated
 	 */
-	int BRANCH = 10;
-
-	/**
-	 * The feature id for the '<em><b>OCL Query</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH__OCL_QUERY = 0;
+	int BRANCH = 13;
 
 	/**
 	 * The number of structural features of the '<em>Branch</em>' class.
@@ -615,7 +615,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_FEATURE_COUNT = 1;
+	int BRANCH_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Branch</em>' class.
@@ -625,6 +625,43 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @ordered
 	 */
 	int BRANCH_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ExplicitBranchImpl <em>Explicit Branch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.ExplicitBranchImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getExplicitBranch()
+	 * @generated
+	 */
+	int EXPLICIT_BRANCH = 10;
+
+	/**
+	 * The feature id for the '<em><b>OCL Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPLICIT_BRANCH__OCL_QUERY = BRANCH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Explicit Branch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPLICIT_BRANCH_FEATURE_COUNT = BRANCH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Explicit Branch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPLICIT_BRANCH_OPERATION_COUNT = BRANCH_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ConditionImpl <em>Condition</em>}' class.
@@ -664,115 +701,32 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int CONDITION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link DSLSpecificCoverage.impl.CoverageMetricImpl <em>Coverage Metric</em>}' class.
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ImplicitBranchImpl <em>Implicit Branch</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see DSLSpecificCoverage.impl.CoverageMetricImpl
-	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoverageMetric()
+	 * @see DSLSpecificCoverage.impl.ImplicitBranchImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getImplicitBranch()
 	 * @generated
 	 */
-	int COVERAGE_METRIC = 12;
+	int IMPLICIT_BRANCH = 12;
 
 	/**
-	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Implicit Branch</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_METRIC__CONTEXTS = 0;
+	int IMPLICIT_BRANCH_FEATURE_COUNT = BRANCH_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Coverage Metric</em>' class.
+	 * The number of operations of the '<em>Implicit Branch</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COVERAGE_METRIC_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Coverage Metric</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COVERAGE_METRIC_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ModelElementCoverageImpl <em>Model Element Coverage</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see DSLSpecificCoverage.impl.ModelElementCoverageImpl
-	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getModelElementCoverage()
-	 * @generated
-	 */
-	int MODEL_ELEMENT_COVERAGE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_COVERAGE__CONTEXTS = COVERAGE_METRIC__CONTEXTS;
-
-	/**
-	 * The number of structural features of the '<em>Model Element Coverage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_COVERAGE_FEATURE_COUNT = COVERAGE_METRIC_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Model Element Coverage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT_COVERAGE_OPERATION_COUNT = COVERAGE_METRIC_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link DSLSpecificCoverage.impl.BranchCoverageImpl <em>Branch Coverage</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see DSLSpecificCoverage.impl.BranchCoverageImpl
-	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranchCoverage()
-	 * @generated
-	 */
-	int BRANCH_COVERAGE = 14;
-
-	/**
-	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_COVERAGE__CONTEXTS = COVERAGE_METRIC__CONTEXTS;
-
-	/**
-	 * The number of structural features of the '<em>Branch Coverage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_COVERAGE_FEATURE_COUNT = COVERAGE_METRIC_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Branch Coverage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BRANCH_COVERAGE_OPERATION_COUNT = COVERAGE_METRIC_OPERATION_COUNT + 0;
+	int IMPLICIT_BRANCH_OPERATION_COUNT = BRANCH_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.CoveredContents <em>Covered Contents</em>}' enum.
@@ -782,7 +736,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoveredContents()
 	 * @generated
 	 */
-	int COVERED_CONTENTS = 15;
+	int COVERED_CONTENTS = 14;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.LimitationType <em>Limitation Type</em>}' enum.
@@ -792,7 +746,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getLimitationType()
 	 * @generated
 	 */
-	int LIMITATION_TYPE = 16;
+	int LIMITATION_TYPE = 15;
 
 
 	/**
@@ -828,15 +782,26 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EReference getDomainSpecificCoverage_Metamodel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link DSLSpecificCoverage.DomainSpecificCoverage#getCoverageMetrics <em>Coverage Metrics</em>}'.
+	 * Returns the meta object for the containment reference list '{@link DSLSpecificCoverage.DomainSpecificCoverage#getContexts <em>Contexts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Coverage Metrics</em>'.
-	 * @see DSLSpecificCoverage.DomainSpecificCoverage#getCoverageMetrics()
+	 * @return the meta object for the containment reference list '<em>Contexts</em>'.
+	 * @see DSLSpecificCoverage.DomainSpecificCoverage#getContexts()
 	 * @see #getDomainSpecificCoverage()
 	 * @generated
 	 */
-	EReference getDomainSpecificCoverage_CoverageMetrics();
+	EReference getDomainSpecificCoverage_Contexts();
+
+	/**
+	 * Returns the meta object for the reference list '{@link DSLSpecificCoverage.DomainSpecificCoverage#getImports <em>Imports</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Imports</em>'.
+	 * @see DSLSpecificCoverage.DomainSpecificCoverage#getImports()
+	 * @see #getDomainSpecificCoverage()
+	 * @generated
+	 */
+	EReference getDomainSpecificCoverage_Imports();
 
 	/**
 	 * Returns the meta object for class '{@link DSLSpecificCoverage.Context <em>Context</em>}'.
@@ -1050,25 +1015,25 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EReference getBranchSpecification_Branches();
 
 	/**
-	 * Returns the meta object for class '{@link DSLSpecificCoverage.Branch <em>Branch</em>}'.
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.ExplicitBranch <em>Explicit Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Branch</em>'.
-	 * @see DSLSpecificCoverage.Branch
+	 * @return the meta object for class '<em>Explicit Branch</em>'.
+	 * @see DSLSpecificCoverage.ExplicitBranch
 	 * @generated
 	 */
-	EClass getBranch();
+	EClass getExplicitBranch();
 
 	/**
-	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.Branch#getOCLQuery <em>OCL Query</em>}'.
+	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.ExplicitBranch#getOCLQuery <em>OCL Query</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>OCL Query</em>'.
-	 * @see DSLSpecificCoverage.Branch#getOCLQuery()
-	 * @see #getBranch()
+	 * @see DSLSpecificCoverage.ExplicitBranch#getOCLQuery()
+	 * @see #getExplicitBranch()
 	 * @generated
 	 */
-	EAttribute getBranch_OCLQuery();
+	EAttribute getExplicitBranch_OCLQuery();
 
 	/**
 	 * Returns the meta object for class '{@link DSLSpecificCoverage.Condition <em>Condition</em>}'.
@@ -1092,45 +1057,24 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EAttribute getCondition_OCLConstraint();
 
 	/**
-	 * Returns the meta object for class '{@link DSLSpecificCoverage.CoverageMetric <em>Coverage Metric</em>}'.
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.ImplicitBranch <em>Implicit Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Coverage Metric</em>'.
-	 * @see DSLSpecificCoverage.CoverageMetric
+	 * @return the meta object for class '<em>Implicit Branch</em>'.
+	 * @see DSLSpecificCoverage.ImplicitBranch
 	 * @generated
 	 */
-	EClass getCoverageMetric();
+	EClass getImplicitBranch();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link DSLSpecificCoverage.CoverageMetric#getContexts <em>Contexts</em>}'.
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.Branch <em>Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contexts</em>'.
-	 * @see DSLSpecificCoverage.CoverageMetric#getContexts()
-	 * @see #getCoverageMetric()
+	 * @return the meta object for class '<em>Branch</em>'.
+	 * @see DSLSpecificCoverage.Branch
 	 * @generated
 	 */
-	EReference getCoverageMetric_Contexts();
-
-	/**
-	 * Returns the meta object for class '{@link DSLSpecificCoverage.ModelElementCoverage <em>Model Element Coverage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Model Element Coverage</em>'.
-	 * @see DSLSpecificCoverage.ModelElementCoverage
-	 * @generated
-	 */
-	EClass getModelElementCoverage();
-
-	/**
-	 * Returns the meta object for class '{@link DSLSpecificCoverage.BranchCoverage <em>Branch Coverage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Branch Coverage</em>'.
-	 * @see DSLSpecificCoverage.BranchCoverage
-	 * @generated
-	 */
-	EClass getBranchCoverage();
+	EClass getBranch();
 
 	/**
 	 * Returns the meta object for enum '{@link DSLSpecificCoverage.CoveredContents <em>Covered Contents</em>}'.
@@ -1202,12 +1146,20 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		EReference DOMAIN_SPECIFIC_COVERAGE__METAMODEL = eINSTANCE.getDomainSpecificCoverage_Metamodel();
 
 		/**
-		 * The meta object literal for the '<em><b>Coverage Metrics</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Contexts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN_SPECIFIC_COVERAGE__COVERAGE_METRICS = eINSTANCE.getDomainSpecificCoverage_CoverageMetrics();
+		EReference DOMAIN_SPECIFIC_COVERAGE__CONTEXTS = eINSTANCE.getDomainSpecificCoverage_Contexts();
+
+		/**
+		 * The meta object literal for the '<em><b>Imports</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_SPECIFIC_COVERAGE__IMPORTS = eINSTANCE.getDomainSpecificCoverage_Imports();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ContextImpl <em>Context</em>}' class.
@@ -1388,14 +1340,14 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		EReference BRANCH_SPECIFICATION__BRANCHES = eINSTANCE.getBranchSpecification_Branches();
 
 		/**
-		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.BranchImpl <em>Branch</em>}' class.
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ExplicitBranchImpl <em>Explicit Branch</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see DSLSpecificCoverage.impl.BranchImpl
-		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranch()
+		 * @see DSLSpecificCoverage.impl.ExplicitBranchImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getExplicitBranch()
 		 * @generated
 		 */
-		EClass BRANCH = eINSTANCE.getBranch();
+		EClass EXPLICIT_BRANCH = eINSTANCE.getExplicitBranch();
 
 		/**
 		 * The meta object literal for the '<em><b>OCL Query</b></em>' attribute feature.
@@ -1403,7 +1355,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BRANCH__OCL_QUERY = eINSTANCE.getBranch_OCLQuery();
+		EAttribute EXPLICIT_BRANCH__OCL_QUERY = eINSTANCE.getExplicitBranch_OCLQuery();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ConditionImpl <em>Condition</em>}' class.
@@ -1424,42 +1376,24 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		EAttribute CONDITION__OCL_CONSTRAINT = eINSTANCE.getCondition_OCLConstraint();
 
 		/**
-		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.CoverageMetricImpl <em>Coverage Metric</em>}' class.
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ImplicitBranchImpl <em>Implicit Branch</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see DSLSpecificCoverage.impl.CoverageMetricImpl
-		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoverageMetric()
+		 * @see DSLSpecificCoverage.impl.ImplicitBranchImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getImplicitBranch()
 		 * @generated
 		 */
-		EClass COVERAGE_METRIC = eINSTANCE.getCoverageMetric();
+		EClass IMPLICIT_BRANCH = eINSTANCE.getImplicitBranch();
 
 		/**
-		 * The meta object literal for the '<em><b>Contexts</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.BranchImpl <em>Branch</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.BranchImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranch()
 		 * @generated
 		 */
-		EReference COVERAGE_METRIC__CONTEXTS = eINSTANCE.getCoverageMetric_Contexts();
-
-		/**
-		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ModelElementCoverageImpl <em>Model Element Coverage</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see DSLSpecificCoverage.impl.ModelElementCoverageImpl
-		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getModelElementCoverage()
-		 * @generated
-		 */
-		EClass MODEL_ELEMENT_COVERAGE = eINSTANCE.getModelElementCoverage();
-
-		/**
-		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.BranchCoverageImpl <em>Branch Coverage</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see DSLSpecificCoverage.impl.BranchCoverageImpl
-		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranchCoverage()
-		 * @generated
-		 */
-		EClass BRANCH_COVERAGE = eINSTANCE.getBranchCoverage();
+		EClass BRANCH = eINSTANCE.getBranch();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.CoveredContents <em>Covered Contents</em>}' enum.

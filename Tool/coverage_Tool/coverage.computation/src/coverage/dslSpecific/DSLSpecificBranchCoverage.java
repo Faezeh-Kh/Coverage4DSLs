@@ -1,5 +1,7 @@
 package coverage.dslSpecific;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,22 +11,32 @@ import org.eclipse.emf.ecore.EObject;
 
 import DSLSpecificCoverage.Branch;
 import DSLSpecificCoverage.BranchSpecification;
+import DSLSpecificCoverage.ExplicitBranch;
+import DSLSpecificCoverage.ImplicitBranch;
+import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
 import coverage.utilities.OCLInterpreter;
 
 public class DSLSpecificBranchCoverage {
 
-	private HashMap<BranchSpecification, List<EObject>> branchingRule_contextObjects = new HashMap<>();
+	private DSLSpecificCoverageExecutor dslSpecificCoverageExecutor;
+	private TDLTestCaseCoverage testCaseCoverage;
+	private HashMap<BranchSpecification, List<EObject>> branchingRule_contextObjects;
+	
 	private HashMap<EObject, ArrayList<EObject>> branchingRoot_branches = new HashMap<>();
-
-	public DSLSpecificBranchCoverage(HashMap<BranchSpecification, List<EObject>> branchingRule_contextObjects) {
-		this.branchingRule_contextObjects = branchingRule_contextObjects;
+	private List<EObject> branchObjects;
+	private List<String> tcBranchCoverageStatus;
+	double tcBranchCoveragePercentage;
+	
+	public DSLSpecificBranchCoverage(DSLSpecificCoverageExecutor executor) {
+		this.dslSpecificCoverageExecutor = executor;
+		testCaseCoverage = executor.getTestCaseCoverage();
+		branchingRule_contextObjects = executor.getBranchingRule_contextObjects();
 	}
 	
-	public void runBranchCoverageComputation(TDLTestCaseCoverage testCaseCoverage) {
-		ArrayList<EObject> allBranches = new ArrayList<>();
+	public void runBranchCoverageComputation() {
 		OCLInterpreter oclLauncher = new OCLInterpreter();
-		//for every branching object, run the query specified by the rule to find its branches
+		//for every branching root, find its branches
 		for(Entry<BranchSpecification, List<EObject>> rule_contextObjects:branchingRule_contextObjects.entrySet()) {
 			for (EObject branchingRoot:rule_contextObjects.getValue()) {
 				//because of the inheritance relationship, an object might be already added by other rules
@@ -32,51 +44,61 @@ public class DSLSpecificBranchCoverage {
 					branchingRoot_branches.put(branchingRoot, new ArrayList<>());
 				}
 				BranchSpecification branchingRule = rule_contextObjects.getKey();
-				for (Branch branchSpecification:branchingRule.getBranches()) {
-					String query2getBranch = branchSpecification.getOCLQuery();
-					ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch);
-					if (queryResult != null && !queryResult.isEmpty()) {
-						branchingRoot_branches.get(branchingRoot).addAll(queryResult);
-						allBranches.addAll(queryResult);
-					}						
+				for (Branch branch:branchingRule.getBranches()) {
+					if (branch instanceof ExplicitBranch explicitBranch) {
+						String query2getBranch = explicitBranch.getOCLQuery();
+						ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch);
+						if (queryResult != null && !queryResult.isEmpty()) {
+							branchingRoot_branches.get(branchingRoot).addAll(queryResult);
+							for (EObject branchObject:queryResult) {
+								branchObjects.add(branchObject);
+								tcBranchCoverageStatus.add(dslSpecificCoverageExecutor.getObjectCoverage(branchObject));
+							}
+						}	
+					}
+					else if(branch instanceof ImplicitBranch implicitBranch) {
+						branchingRoot_branches.get(branchingRoot).add(implicitBranch);
+						branchObjects.add(implicitBranch);
+						//TODO: how to check if the implicit branch is covered
+					}
 				}
 			}			
 		}
-		
-		//after applying all branching rules, if there is only one branch for a root, add another branch based on the next adjacent element
-		for (EObject branchingRoot : branchingRoot_branches.keySet()) {
-			if (branchingRoot_branches.get(branchingRoot).size() == 1) {
-				EObject nextBranch = findNextAdjacentEObject(branchingRoot);
-				branchingRoot_branches.get(branchingRoot).add(nextBranch);
-				allBranches.add(nextBranch);
-			}
-		}
-		
-		for(EObject object:testCaseCoverage.getModelObjects()) {
-			if (allBranches.contains(object)) {
-				testCaseCoverage.getBranchObjects().add(object);
-				testCaseCoverage.getTcBranchCoverageStatus().add(testCaseCoverage.getObjectCoverage(object, TDLTestCaseCoverage.BRANCHCOVERAGE));
-			}
-		}
+		calculateBranchCoveragePercentage();
 	}
 
-	private EObject findNextAdjacentEObject(EObject branchingRoot) {
-		EObject container = branchingRoot.eContainer();
-		if (container == null) {
-			return null;
+	public void calculateBranchCoveragePercentage() {
+		int numOfBranches = branchObjects.size();
+		int numOfCoveredBranches = (int) tcBranchCoverageStatus.stream()
+				.filter(coverage -> coverage == TDLCoverageUtil.COVERED).count();
+		tcBranchCoveragePercentage = (double)(numOfCoveredBranches*100)/numOfBranches;
+		try {
+		BigDecimal bd = new BigDecimal(tcBranchCoveragePercentage).setScale(2, RoundingMode.HALF_UP);
+		tcBranchCoveragePercentage = bd.doubleValue();
+		}catch (NumberFormatException e) {
+			System.out.println("NumberFormatException:" + tcBranchCoveragePercentage);
 		}
-		int index = container.eContents().indexOf(branchingRoot);
-		if (container.eContents().size() > index + 1) {
-			return container.eContents().get(index+1);
-		}
-		return findNextAdjacentEObject(container);
+		System.out.println(testCaseCoverage.getTestCaseName() + "-Branch coverage: " + 
+				numOfCoveredBranches + "/" + numOfBranches + " = " + tcBranchCoveragePercentage +"%");
 	}
-
+	
 	public HashMap<BranchSpecification, List<EObject>> getBranchingRule_contextObjects() {
 		return branchingRule_contextObjects;
 	}
 
 	public HashMap<EObject, ArrayList<EObject>> getBranchingRoot_branches() {
 		return branchingRoot_branches;
+	}
+
+	public List<EObject> getBranchObjects() {
+		return branchObjects;
+	}
+
+	public List<String> getTcBranchCoverageStatus() {
+		return tcBranchCoverageStatus;
+	}
+
+	public double getTcBranchCoveragePercentage() {
+		return tcBranchCoveragePercentage;
 	}
 }

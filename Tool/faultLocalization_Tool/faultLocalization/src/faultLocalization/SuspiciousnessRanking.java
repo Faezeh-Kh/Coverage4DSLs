@@ -65,12 +65,16 @@ public class SuspiciousnessRanking {
 		testSuiteResult = TDLTestResultUtil.getInstance().getTestSuiteResult();
 		errorVector = testSuiteResult.getTestCaseResults();
 		testSuiteCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
-		coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjects);
+		if (testSuiteCoverage.coverageOfModelObjects4me == null) {
+			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjectsByTrace);
+		}else {
+			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjects4me);
+		}
 		//the row of the matrix containing coverage percentages should be removed 
 		coverageMatix.removeIf(element -> element.getMetaclass() == null);
 		//if the element is not coverable, remove it from the matrix
 		coverageMatix.removeIf(element -> 
-			element.getCoverage().get(element.getCoverage().size()-1) == TDLCoverageUtil.NOT_TRACED);
+			element.getCoverage().get(element.getCoverage().size()-1) == TDLCoverageUtil.NOSTATUS);
 		elementsSBFLMeasures.clear();
 	}
 	
@@ -102,12 +106,16 @@ public class SuspiciousnessRanking {
 		testSuiteResult = tsResult;
 		errorVector = testSuiteResult.getTestCaseResults();
 		testSuiteCoverage = tsCoverage;
-		coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjects);
+		if (testSuiteCoverage.coverageOfModelObjects4me == null) {
+			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjectsByTrace);
+		}else {
+			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjects4me);
+		}
 		//the row of the matrix containing coverage percentages should be removed 
 		coverageMatix.removeIf(element -> element.getMetaclass() == null);
 		//if the element is not coverable, remove it from the matrix
 		coverageMatix.removeIf(element -> 
-			element.getCoverage().get(element.getCoverage().size()-1) == TDLCoverageUtil.NOT_TRACED);
+			element.getCoverage().get(element.getCoverage().size()-1) == TDLCoverageUtil.NOSTATUS);
 		elementsSBFLMeasures.clear();
 	}
 	
@@ -129,7 +137,7 @@ public class SuspiciousnessRanking {
 			int NU = 0;//total number of test cases that do not cover a coverable model element 
 			for (int j=0; j<elementCoverageStatus.size()-1; j++) {
 				elementSBFLMeasures.getCoverage().add(elementCoverageStatus.get(j));
-				String testCaseName = testSuiteCoverage.getTCCoverages().get(j).getTestCaseName();
+				String testCaseName = testSuiteCoverage.getTcCoverages().get(j).getTestCaseName();
 				//find the result of the test case
 				String testCaseVerdict = "";
 				for (TDLTestCaseResult testResult:errorVector) {

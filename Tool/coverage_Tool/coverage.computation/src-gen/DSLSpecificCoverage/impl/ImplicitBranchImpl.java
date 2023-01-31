@@ -3,24 +3,24 @@
 package DSLSpecificCoverage.impl;
 
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
-import DSLSpecificCoverage.ModelElementCoverage;
+import DSLSpecificCoverage.ImplicitBranch;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model Element Coverage</b></em>'.
+ * An implementation of the model object '<em><b>Implicit Branch</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ModelElementCoverageImpl extends CoverageMetricImpl implements ModelElementCoverage {
+public class ImplicitBranchImpl extends BranchImpl implements ImplicitBranch {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModelElementCoverageImpl() {
+	protected ImplicitBranchImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ModelElementCoverageImpl extends CoverageMetricImpl implements Mode
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DSLSpecificCoveragePackage.Literals.MODEL_ELEMENT_COVERAGE;
+		return DSLSpecificCoveragePackage.Literals.IMPLICIT_BRANCH;
 	}
 
-} //ModelElementCoverageImpl
+} //ImplicitBranchImpl

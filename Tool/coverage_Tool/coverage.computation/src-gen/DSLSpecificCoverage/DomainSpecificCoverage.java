@@ -18,7 +18,8 @@ import org.eclipse.emf.ecore.EPackage;
  * <ul>
  *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getName <em>Name</em>}</li>
  *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getMetamodel <em>Metamodel</em>}</li>
- *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getCoverageMetrics <em>Coverage Metrics</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getContexts <em>Contexts</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.DomainSpecificCoverage#getImports <em>Imports</em>}</li>
  * </ul>
  *
  * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage()
@@ -71,15 +72,27 @@ public interface DomainSpecificCoverage extends EObject {
 	void setMetamodel(EPackage value);
 
 	/**
-	 * Returns the value of the '<em><b>Coverage Metrics</b></em>' containment reference list.
-	 * The list contents are of type {@link DSLSpecificCoverage.CoverageMetric}.
+	 * Returns the value of the '<em><b>Contexts</b></em>' containment reference list.
+	 * The list contents are of type {@link DSLSpecificCoverage.Context}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coverage Metrics</em>' containment reference list.
-	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_CoverageMetrics()
+	 * @return the value of the '<em>Contexts</em>' containment reference list.
+	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_Contexts()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<CoverageMetric> getCoverageMetrics();
+	EList<Context> getContexts();
+
+	/**
+	 * Returns the value of the '<em><b>Imports</b></em>' reference list.
+	 * The list contents are of type {@link DSLSpecificCoverage.DomainSpecificCoverage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Imports</em>' reference list.
+	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_Imports()
+	 * @model
+	 * @generated
+	 */
+	EList<DomainSpecificCoverage> getImports();
 
 } // DomainSpecificCoverage
