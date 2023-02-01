@@ -40,6 +40,10 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	public static final String NOT_COVERED = "not covered";
 	public static final String NOSTATUS = "no status";
 	
+	public static final String TRACEBASEDCOVERAGE = "basedOnTrace";
+	public static final String DSLSPECIFICCOVERAGE = "dslSpecific";
+	public static final String BRANCHCOVERAGE = "branchCoverage";
+	
 	private IDSLSpecificCoverage dslSpecificCoverageExtension;
 	private List<DomainSpecificCoverage> dslSpecificCoverages;
 	
@@ -166,6 +170,7 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	}
 	
 	private void findDSLSpecificCoverage() {
+		dslSpecificCoverages = new ArrayList<>();
 		//check if there is a DSL-Specific coverage extension
 		DSLSpecificCoverageHandler dslSpecificCoverageHandler = new DSLSpecificCoverageHandler();
 		dslSpecificCoverageExtension = dslSpecificCoverageHandler.getDSLSpecificCoverage();
@@ -180,7 +185,7 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 			if (coverageFilesPathes != null) {
 				ResourceSet resSet = new ResourceSetImpl();
 				for (String path:coverageFilesPathes) {
-					resSet.getResource(URI.createURI(path), true);
+					resSet.getResource(URI.createURI(path.replaceFirst("resource", "plugin")), true);
 				}
 				EcoreUtil.resolveAll(resSet);
 				resSet.getResources().forEach(r -> dslSpecificCoverages.add((DomainSpecificCoverage) r.getContents().get(0)));
@@ -202,7 +207,6 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 			//there is only one coverage file
 			path2coverageFiles.add(path);
 		}
-		path2coverageFiles.forEach(p -> p = p.replaceFirst("resource", "plugin"));
 		return path2coverageFiles;
 	}
 }

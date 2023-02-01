@@ -65,11 +65,8 @@ public class SuspiciousnessRanking {
 		testSuiteResult = TDLTestResultUtil.getInstance().getTestSuiteResult();
 		errorVector = testSuiteResult.getTestCaseResults();
 		testSuiteCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
-		if (testSuiteCoverage.coverageOfModelObjects4me == null) {
-			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjectsByTrace);
-		}else {
-			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjects4me);
-		}
+		coverageMatix.addAll(testSuiteCoverage.getTsCoverageInfo(TDLCoverageUtil.DSLSPECIFICCOVERAGE));
+		
 		//the row of the matrix containing coverage percentages should be removed 
 		coverageMatix.removeIf(element -> element.getMetaclass() == null);
 		//if the element is not coverable, remove it from the matrix
@@ -106,11 +103,7 @@ public class SuspiciousnessRanking {
 		testSuiteResult = tsResult;
 		errorVector = testSuiteResult.getTestCaseResults();
 		testSuiteCoverage = tsCoverage;
-		if (testSuiteCoverage.coverageOfModelObjects4me == null) {
-			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjectsByTrace);
-		}else {
-			coverageMatix.addAll(testSuiteCoverage.coverageOfModelObjects4me);
-		}
+		coverageMatix.addAll(testSuiteCoverage.getTsCoverageInfo(TDLCoverageUtil.DSLSPECIFICCOVERAGE));
 		//the row of the matrix containing coverage percentages should be removed 
 		coverageMatix.removeIf(element -> element.getMetaclass() == null);
 		//if the element is not coverable, remove it from the matrix

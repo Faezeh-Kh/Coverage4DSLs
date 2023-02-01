@@ -2,9 +2,8 @@ package coverage.dslSpecific;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map.Entry;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -23,74 +22,88 @@ import DSLSpecificCoverage.CoverageByContent;
 import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.CoveredContents;
 import DSLSpecificCoverage.DomainSpecificCoverage;
+import DSLSpecificCoverage.ExclusionRule;
 import DSLSpecificCoverage.Ignore;
+import DSLSpecificCoverage.InclusionRule;
 import DSLSpecificCoverage.LimitationType;
 import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Rule;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
+import coverage.computation.TestCoverageReport;
 import coverage.utilities.OCLInterpreter;
 
 public class DSLSpecificCoverageExecutor {
 
 	private TDLTestCaseCoverage testCaseCoverage;
-	private Set<String> coverableClasses;
-	private List<EObject> allModelObjects;
+	
+	private DomainSpecificCoverage coverageRuleset;
 	private HashMap<Context, List<EObject>> coverageContext_eobjects = new HashMap<>();
 	
-	DSLSpecificBranchCoverage branchCoverageRunner;
-	public boolean hasBranchCoverage;
+	private TestCoverageReport tcDslSpecificCoverageReport;
+	private List<TestCoverageReport> tcCoverageReports = new ArrayList<>();
+	
 	private HashMap<BranchSpecification, List<EObject>> branchingRule_contextObjects = new HashMap<>();
 	
-	private List<String> tcObjectCoverageStatus;
-	private List<String> tcObjectCoverageStatus_pv;
-	double tcCoveragePercentage;
-	
-	public DSLSpecificCoverageExecutor (TDLTestCaseCoverage testCaseCoverage) {
+	public DSLSpecificCoverageExecutor (TDLTestCaseCoverage testCaseCoverage, DomainSpecificCoverage coverageRuleset) {
 		this.testCaseCoverage = testCaseCoverage;
-		allModelObjects = testCaseCoverage.getAllModelObjects();
-		coverableClasses = new HashSet<>(TDLCoverageUtil.getInstance().getCoverableClasses());
+		this.coverageRuleset = coverageRuleset;
 	}
 	
-	public void runDSLSpecificCoverage(DomainSpecificCoverage coverageRuleset) {
-		//the initial coverage status is the one computed by the trace
-		tcObjectCoverageStatus = new ArrayList<>(testCaseCoverage.getTcObjectCoverageStatusByTrace());
+	public void runDSLSpecificCoverage() {
+		String coverageTitle = TDLCoverageUtil.DSLSPECIFICCOVERAGE + "_" + coverageRuleset.getName();
+		tcDslSpecificCoverageReport = new TestCoverageReport(coverageTitle);
+		tcDslSpecificCoverageReport.setCoverableClasses(TDLCoverageUtil.getInstance().getCoverableClasses());
+		tcDslSpecificCoverageReport.setObjects(testCaseCoverage.getAllModelObjects());
 		
+		//the initial coverage status is the one computed by the trace
+		tcDslSpecificCoverageReport.setObjectCoverageStatus(testCaseCoverage.getTcObjectCoverageStatusByTrace());
+
 		//finding eobjects of each context
 		setCoverageContext_objects(coverageRuleset);
-				
+		coverageRuleset.getImports().forEach(crs -> setCoverageContext_objects(crs));
+		
 		//apply domain specific coverage while the coverage matrix changes
 		boolean isCoverageMatrixChanged = true;
 		while (isCoverageMatrixChanged) {
-			tcObjectCoverageStatus_pv = new ArrayList<>(tcObjectCoverageStatus);
+			List<String> objectCoverageStatus_pv = new ArrayList<>(tcDslSpecificCoverageReport.getObjectCoverageStatus());
 			coverageContext_eobjects.entrySet().stream()
 				.filter(entry -> !entry.getValue().isEmpty())
 				.forEach(entry -> applyCoverageRules(entry.getKey().getRules(), entry.getValue()));
-			isCoverageMatrixChanged = !Objects.equals(tcObjectCoverageStatus_pv, tcObjectCoverageStatus);
+			isCoverageMatrixChanged = !Objects.equals(objectCoverageStatus_pv, tcDslSpecificCoverageReport.getObjectCoverageStatus());
 		}
-		findNotCoverableObjects();
-		tcCoveragePercentage = testCaseCoverage.computeCoveragePercentage(tcObjectCoverageStatus,coverageRuleset.getName());
+		tcDslSpecificCoverageReport.findNotCoverableObjects();
+		tcDslSpecificCoverageReport.computeCoveragePercentage();
+		if (hasGenericRules()) {
+			tcDslSpecificCoverageReport.printCoverageResult(testCaseCoverage.getTestCaseName());
+			tcCoverageReports.add(tcDslSpecificCoverageReport);
+		}
 		
 		//if there are branchSpecification rules, compute branch coverage
 		if (!branchingRule_contextObjects.isEmpty()) {
-			hasBranchCoverage = true;
-			branchCoverageRunner = new DSLSpecificBranchCoverage(this);
-			branchCoverageRunner.runBranchCoverageComputation();
+			tcCoverageReports.add((new DSLSpecificBranchCoverage(this)).runBranchCoverageComputation());
 		}
 	}
-	
-	public double getTcCoveragePercentage() {
-		return tcCoveragePercentage;
+
+	private boolean hasGenericRules() {
+		for (Context context:coverageRuleset.getContexts()) {
+			if (context.getRules().stream().anyMatch(r -> 
+				r instanceof InclusionRule || r instanceof ExclusionRule)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private void setCoverageContext_objects(DomainSpecificCoverage coverageRuleset) {
 		coverageContext_eobjects= new HashMap<>();
-		coverageRuleset.getContexts().forEach(c -> coverageContext_eobjects.put(c, new ArrayList<>()));
-		//find the eobjects related to the rule's context
-		for (Entry<Context,List<EObject>> entry:coverageContext_eobjects.entrySet()) {
-			String contextName = entry.getKey().getMetaclass().getName();
-			entry.getValue().addAll(allModelObjects.stream()
-					.filter(o -> isContextInstance(contextName, o))
+		for (Context context : coverageRuleset.getContexts()) {
+			if (coverageContext_eobjects.get(context) == null) {
+				coverageContext_eobjects.put(context, new ArrayList<>());
+			}
+			coverageContext_eobjects.get(context).addAll(
+					testCaseCoverage.getAllModelObjects().stream()
+					.filter(o -> isContextInstance(context.getMetaclass().getName(), o))
 					.toList());
 		}
 	}
@@ -162,10 +175,12 @@ public class DSLSpecificCoverageExecutor {
 				Object referencedObject = object.eGet(ref);
 				if (referencedObject != null) { 
 					if (referencedObject instanceof EObject refObject) {
-						setObjectCoverage(refObject, getObjectCoverage(object));
+						tcDslSpecificCoverageReport.setObjectCoverage(refObject
+								, tcDslSpecificCoverageReport.getObjectCoverage(object));
 					}
 					else if (referencedObject instanceof EObjectContainmentEList<?> refObjects) {
-						refObjects.forEach(o -> setObjectCoverage((EObject) o, getObjectCoverage(object)));
+						refObjects.forEach(o -> tcDslSpecificCoverageReport.setObjectCoverage((EObject) o
+								, tcDslSpecificCoverageReport.getObjectCoverage(object)));
 					}
 				}
 			}
@@ -180,7 +195,8 @@ public class DSLSpecificCoverageExecutor {
 		if (containedObject == null) { return; }
 		
 		if (containedObject instanceof EObject containee) {
-			setObjectCoverage(object, getObjectCoverage(containee));
+			tcDslSpecificCoverageReport.setObjectCoverage(object
+					, tcDslSpecificCoverageReport.getObjectCoverage(containee));
 		}
 		else if (containedObject instanceof EObjectContainmentEList<?> containees) {
 			//if several objects are contained, set coverage based on the rule's multiplicity
@@ -196,24 +212,26 @@ public class DSLSpecificCoverageExecutor {
 	private void coverContainerIfOneContaineeCovered(EObjectContainmentEList<?> containedObjects) {
 		String containeeCoverage = TDLCoverageUtil.NOT_COVERED;
 		for (Object containee:containedObjects) {
-			containeeCoverage = getObjectCoverage((EObject) containee);
+			containeeCoverage = tcDslSpecificCoverageReport.getObjectCoverage((EObject) containee);
 			if (containeeCoverage == TDLCoverageUtil.COVERED) {
 				break;
 			}
 		}
-		setObjectCoverage(((EObject) containedObjects.get(0)).eContainer(), containeeCoverage);
+		tcDslSpecificCoverageReport.setObjectCoverage(((EObject) containedObjects.get(0)).eContainer()
+				, containeeCoverage);
 	}
 	
 	private void coverContainerIfAllContaineeCovered(EObjectContainmentEList<?> containedObjects) {
 		int CoveredContentsCounter = 0;
 		for (Object containee:containedObjects) {
-			String containeeCoverage = getObjectCoverage((EObject) containee);
+			String containeeCoverage = tcDslSpecificCoverageReport.getObjectCoverage((EObject) containee);
 			if (containeeCoverage == TDLCoverageUtil.COVERED) {
 				CoveredContentsCounter++;
 			}
 		}
 		if (CoveredContentsCounter == containedObjects.size()) {
-			setObjectCoverage(((EObject) containedObjects.get(0)).eContainer(), TDLCoverageUtil.COVERED);
+			tcDslSpecificCoverageReport.setObjectCoverage(((EObject) containedObjects.get(0)).eContainer()
+					, TDLCoverageUtil.COVERED);
 		}
 	}
 	
@@ -222,14 +240,14 @@ public class DSLSpecificCoverageExecutor {
 			//ignore EObjects contained by one of the ContainerType classes
 			if (rule.getContainerMetaclass().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
-				setObjectNotCoverable(object);
+				tcDslSpecificCoverageReport.setObjectNotCoverable(object);
 			}
 		}
 		else if (rule.getType() == LimitationType.NOT_CONTAINED_BY) {
 			//ignore EObjects that are not contained by any of the ContainerType classes
 			if (!rule.getContainerMetaclass().stream().
 				anyMatch(c -> c.getName().equals(object.eContainer().eClass().getName()))) {
-				setObjectNotCoverable(object);
+				tcDslSpecificCoverageReport.setObjectNotCoverable(object);
 			}
 		}
 	}
@@ -239,7 +257,7 @@ public class DSLSpecificCoverageExecutor {
 				((Context) rule.eContainer()).getMetaclass().getName())) {
 			return;
 		}
-		setObjectNotCoverable(object);
+		tcDslSpecificCoverageReport.setObjectNotCoverable(object);
 	}
 	
 	private EStructuralFeature getMatchedFeature(EObject rootElement, String featureName){
@@ -255,77 +273,43 @@ public class DSLSpecificCoverageExecutor {
 		return (new OCLInterpreter()).isConstraintSatisfied(object, condition.getOCLConstraint());
 	}
 	
-	public String getObjectCoverage(EObject object) {
-		int objectIndex = allModelObjects.indexOf(object);
-		if (objectIndex != -1){
-			return tcObjectCoverageStatus.get(objectIndex);
-		}
-		return null;
-	}
-	
-	public void setObjectCoverage(EObject object, String coverageStatus) {
-		int objectIndex = allModelObjects.indexOf(object);
-		if (objectIndex != -1) {
-			if (tcObjectCoverageStatus.get(objectIndex) != TDLCoverageUtil.COVERED){
-				tcObjectCoverageStatus.set(objectIndex, coverageStatus);
-			}
-		}
-	}
-	
-	public void setObjectNotCoverable(EObject object) {
-		int objectIndex = allModelObjects.indexOf(object);
-		if (objectIndex != -1){
-			tcObjectCoverageStatus.set(objectIndex, TDLCoverageUtil.NOSTATUS);
-		}
-	}
-	
-	//if not-covered eobjects are of the not-coverable types, set their status as not-coverable
-	private void findNotCoverableObjects() {
-		for (int i=0; i<tcObjectCoverageStatus.size(); i++) {
-			if (tcObjectCoverageStatus.get(i) == TDLCoverageUtil.NOT_COVERED &&
-					!coverableClasses.contains(allModelObjects.get(i).eClass().getName())) {
-				tcObjectCoverageStatus.set(i, TDLCoverageUtil.NOSTATUS);
-			}
-		}
-	}
-	
 	public boolean isClassCoverable(EClass clazz) {
-		return coverableClasses.contains(clazz.getName());
+		return tcDslSpecificCoverageReport.getCoverableClasses().contains(clazz.getName());
 	}
 	
 	//add a class and all of its sub classes
 	public void addCoverableClass(EClass clazz) {
-		if (!coverableClasses.contains(clazz.getName())) {
-			coverableClasses.add(clazz.getName());
+		if (!tcDslSpecificCoverageReport.getCoverableClasses().contains(clazz.getName())) {
+			tcDslSpecificCoverageReport.getCoverableClasses().add(clazz.getName());
 			List<String> notCoverableSubClasses = TDLCoverageUtil.getInstance()
 					.getMetamodelRootElement().getEClassifiers().stream()
 					.filter(c -> c instanceof EClass).map(c -> (EClass) c)
 					.filter(c -> c.getEAllSuperTypes().stream().
 							filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-							&& !coverableClasses.contains(c.getName())).
+							&& !tcDslSpecificCoverageReport.getCoverableClasses().contains(c.getName())).
 					map (c -> c.getName()).collect(Collectors.toList());
-				coverableClasses.addAll(notCoverableSubClasses);
+			tcDslSpecificCoverageReport.getCoverableClasses().addAll(notCoverableSubClasses);
 		}
 	}
 	
 	public void removeCoverableClass(EClass clazz) {
-		if (coverableClasses.contains(clazz.getName())) {
-			coverableClasses.remove(clazz.getName());
+		if (tcDslSpecificCoverageReport.getCoverableClasses().contains(clazz.getName())) {
+			tcDslSpecificCoverageReport.getCoverableClasses().remove(clazz.getName());
 		}
 	}
 	
 	//remove a class and all of its sub classes
 	public void removeCoverableClass_subClass(EClass clazz) {
-		if (coverableClasses.contains(clazz.getName())) {
-			coverableClasses.remove(clazz.getName());
+		if (tcDslSpecificCoverageReport.getCoverableClasses().contains(clazz.getName())) {
+			tcDslSpecificCoverageReport.getCoverableClasses().remove(clazz.getName());
 			List<String> coverableSubClasses = TDLCoverageUtil.getInstance()
 					.getMetamodelRootElement().getEClassifiers().stream()
 					.filter(c -> c instanceof EClass).map(c -> (EClass) c)
 					.filter(c -> c.getEAllSuperTypes().stream().
 							filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-							&& coverableClasses.contains(c.getName())).
+							&& tcDslSpecificCoverageReport.getCoverableClasses().contains(c.getName())).
 					map (c -> c.getName()).collect(Collectors.toList());
-				coverableClasses.removeAll(coverableSubClasses);
+			tcDslSpecificCoverageReport.getCoverableClasses().removeAll(coverableSubClasses);
 		}
 	}
 
@@ -334,11 +318,11 @@ public class DSLSpecificCoverageExecutor {
 	}
 
 	public Set<String> getCoverableClasses() {
-		return coverableClasses;
+		return tcDslSpecificCoverageReport.getCoverableClasses();
 	}
 
 	public List<EObject> getAllModelObjects() {
-		return allModelObjects;
+		return tcDslSpecificCoverageReport.getObjects();
 	}
 
 	public HashMap<Context, List<EObject>> getCoverageContext_eobjects() {
@@ -350,21 +334,26 @@ public class DSLSpecificCoverageExecutor {
 	}
 
 	public List<String> getTcObjectCoverageStatus() {
-		return tcObjectCoverageStatus;
+		return tcDslSpecificCoverageReport.getObjectCoverageStatus();
 	}
 
-	public double getTcBranchCoveragePercentage() {
-		return branchCoverageRunner.getTcBranchCoveragePercentage();
-	}
-
-	public List<String> getTcBranchCoverageStatus() {
-		return branchCoverageRunner.getTcBranchCoverageStatus();
-	}
-
-	public List<EObject> getBranchingObjects() {
-		return branchCoverageRunner.getBranchObjects();
+	public String getObjectCoverage(EObject object) {
+		return tcDslSpecificCoverageReport.getObjectCoverage(object);
 	}
 	
+	public TestCoverageReport getTcDslSpecificCoverageReport(String coverageType) {
+		try {
+			return tcCoverageReports.stream()
+					.filter(r -> r.getReportTitle().equals(coverageType))
+					.findFirst().get();
+		}catch (NoSuchElementException e) {
+			return null;
+		}
+	}
+
+	public List<TestCoverageReport> getTcCoverageReports() {
+		return tcCoverageReports;
+	}
 	
 	
 }
