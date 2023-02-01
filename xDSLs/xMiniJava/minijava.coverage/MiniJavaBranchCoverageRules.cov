@@ -6,27 +6,25 @@ ruleset MiniJavaBranchCoverage{
 		covered when ONE statements iscovered
 	},
 	context IfStatement{
-		has branches{
-			condition "self.elseBlock <> null"
-			ExplicitBranches "self.thenBlock" covered when executed,
-			ExplicitBranches "self.elseBlock" covered when executed
+		when "self.elseBlock <> null"{
+			branch "self.thenBlock",
+			branch "self.elseBlock"
 		},
-		has branches{
-			condition "self.elseBlock = null"
-			ExplicitBranches "self.thenBlock" covered when executed,
-			ImplicitBranches covered when "self.thenBlock" not-executed
+		when "self.elseBlock = null"{
+			branch "self.thenBlock",
+			branch else
 		}
 	},
 	context WhileStatement{
-		has branches{
-			ExplicitBranches "self.block" covered when executed,
-			ImplicitBranches covered when "self.block" not-executed
+		{
+			branch "self.block",
+			branch else
 		}
 	},
 	context ForStatement{
-		has branches{
-			ExplicitBranches "self.block" covered when executed,
-			ImplicitBranches covered when "self.block" not-executed
+		{
+			branch "self.block",
+			branch else
 		}
 	} 
 }

@@ -1,16 +1,15 @@
 ruleset ArduinoModelElementCoverage{
 	import metamodel arduino
 	context Project{
-		covered when ONE sketches iscovered 
-			description "a Project is covered if at least one of its Sketches are covered"
+		covered when ONE sketches iscovered
 	},
 	context Sketch{
 		covered when ONE block iscovered 
-			description "a Sketch is covered if at least one of its Blocks is covered"
+		description "a Sketch is covered if at least one of its Blocks is covered"
 	},
 	context Block{
 		covered when ONE instructions iscovered
-			description "a Block is covered if at least one of its instructions is covered"
+		description "a Block is covered if at least one of its instructions is covered"
 	},
 	context If{
 		covers ^condition
