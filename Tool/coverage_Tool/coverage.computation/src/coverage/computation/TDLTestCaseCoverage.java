@@ -14,6 +14,7 @@ import org.etsi.mts.tdl.TestDescription;
 
 import DSLSpecificCoverage.DomainSpecificCoverage;
 import coverage.dslSpecific.DSLSpecificCoverageExecutor;
+import coverage.report.TestCoverageReport;
 
 public class TDLTestCaseCoverage {
 	
@@ -23,8 +24,8 @@ public class TDLTestCaseCoverage {
 	private Trace<?, ?, ?> trace;
 	private List<EObject> objectsCapturedByTrace;
 	
-	List<TestCoverageReport> coverageReports;
-	TestCoverageReport tcCoverageByTraceReport;
+	private List<TestCoverageReport> coverageReports;
+	private TestCoverageReport tcCoverageByTraceReport;
 	
 	public TDLTestCaseCoverage() {
 		objectsCapturedByTrace = new ArrayList<>();

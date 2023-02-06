@@ -176,7 +176,7 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<Context> getContexts() {
 		if (contexts == null) {
-			contexts = new EObjectContainmentEList<Context>(Context.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS);
+			contexts = new EObjectContainmentEList.Resolving<Context>(Context.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS);
 		}
 		return contexts;
 	}

@@ -1,4 +1,4 @@
-package coverage.computation;
+package coverage.report;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
+
+import coverage.computation.TDLCoverageUtil;
 
 public class TestCoverageReport {
 
@@ -98,7 +100,7 @@ public class TestCoverageReport {
 				+ numOfCoverableElements+ " = " 
 				+ coveragePercentage +"%");
 	}
-	
+
 	public String getReportTitle() {
 		return reportTitle;
 	}

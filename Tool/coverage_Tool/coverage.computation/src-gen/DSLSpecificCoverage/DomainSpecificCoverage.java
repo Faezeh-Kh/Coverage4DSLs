@@ -78,7 +78,7 @@ public interface DomainSpecificCoverage extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts</em>' containment reference list.
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_Contexts()
-	 * @model containment="true" required="true"
+	 * @model containment="true" resolveProxies="true" required="true"
 	 * @generated
 	 */
 	EList<Context> getContexts();

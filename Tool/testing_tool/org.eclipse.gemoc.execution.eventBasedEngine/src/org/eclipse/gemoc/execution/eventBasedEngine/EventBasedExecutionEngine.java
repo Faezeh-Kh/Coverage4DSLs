@@ -11,6 +11,8 @@
 package org.eclipse.gemoc.execution.eventBasedEngine;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.Callable;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -126,20 +128,22 @@ public class EventBasedExecutionEngine extends
 
 	@Override
 	public void executeStep(Object caller, final StepCommand command, String className, String methodName) {
-		executeOperation(caller, new Object[0], className, methodName, new Runnable() {
+		executeOperation(caller, new Object[0], className, methodName, new Callable<Optional<Object>>() {
 			@Override
-			public void run() {
+			public Optional<Object> call() {
 				command.execute();
+				return Optional.empty();
 			}
 		});
 	}
 	
 	@Override
 	public void executeStep(Object caller, Object[] parameters, StepCommand command, String className, String methodName) {
-		executeOperation(caller, parameters, className, methodName, new Runnable() {
+		executeOperation(caller, parameters, className, methodName, new Callable<Optional<Object>>() {
 			@Override
-			public void run() {
+			public Optional<Object> call() {
 				command.execute();
+				return Optional.empty();
 			}
 		});
 	}

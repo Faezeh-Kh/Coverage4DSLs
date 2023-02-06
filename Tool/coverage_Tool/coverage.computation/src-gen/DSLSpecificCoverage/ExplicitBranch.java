@@ -20,7 +20,6 @@ package DSLSpecificCoverage;
  * @generated
  */
 public interface ExplicitBranch extends Branch {
-
 	/**
 	 * Returns the value of the '<em><b>OCL Query</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,4 +41,5 @@ public interface ExplicitBranch extends Branch {
 	 * @generated
 	 */
 	void setOCLQuery(String value);
+
 } // ExplicitBranch

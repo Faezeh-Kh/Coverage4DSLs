@@ -38,6 +38,7 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	
 	public static final String COVERED = "covered";
 	public static final String NOT_COVERED = "not covered";
+	public static final String PARTLY_COVERED = "partly covered";
 	public static final String NOSTATUS = "no status";
 	
 	public static final String TRACEBASEDCOVERAGE = "basedOnTrace";
@@ -184,9 +185,7 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 			List<String> coverageFilesPathes = getCoverageFilePath();
 			if (coverageFilesPathes != null) {
 				ResourceSet resSet = new ResourceSetImpl();
-				for (String path:coverageFilesPathes) {
-					resSet.getResource(URI.createURI(path.replaceFirst("resource", "plugin")), true);
-				}
+				coverageFilesPathes.forEach(path -> resSet.getResource(URI.createPlatformResourceURI(path.trim(), false), true));
 				EcoreUtil.resolveAll(resSet);
 				resSet.getResources().forEach(r -> dslSpecificCoverages.add((DomainSpecificCoverage) r.getContents().get(0)));
 			}

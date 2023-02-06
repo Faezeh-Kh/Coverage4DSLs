@@ -12,6 +12,7 @@
 package faultLocalization;
 
 import java.math.BigDecimal;
+
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,9 +23,9 @@ import org.imt.tdl.testResult.TDLTestCaseResult;
 import org.imt.tdl.testResult.TDLTestResultUtil;
 import org.imt.tdl.testResult.TDLTestSuiteResult;
 
-import coverage.computation.ObjectCoverageStatus;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestSuiteCoverage;
+import coverage.report.ObjectCoverageStatus;
 
 public class SuspiciousnessRanking {
 	

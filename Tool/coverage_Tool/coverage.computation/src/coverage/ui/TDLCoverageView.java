@@ -2,7 +2,6 @@ package coverage.ui;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -54,9 +53,9 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 
-import coverage.computation.ObjectCoverageStatus;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestSuiteCoverage;
+import coverage.report.ObjectCoverageStatus;
 
 public class TDLCoverageView extends ViewPart{
 
@@ -71,6 +70,8 @@ public class TDLCoverageView extends ViewPart{
 	private static final Color YELLOW = new Color(Display.getCurrent(), 255, 255, 102);
 
 	private static final Color GRAY = new Color(Display.getCurrent(), 237, 237, 237);
+	
+	private static final Color WHITE = new Color(Display.getCurrent(), 255, 255, 255);
 	
 	private static int coverageTypeFilterIndex = -1;
 	private static int coverageStatusFilterIndex = -1;
@@ -129,9 +130,11 @@ public class TDLCoverageView extends ViewPart{
         final Combo coverageStatusFilterCombo = new Combo(coverageStatusFilter, SWT.NONE);
         coverageStatusFilterCombo.add("All");
         coverageStatusFilterCombo.add("Covered");
+        coverageStatusFilterCombo.add("Partly-Covered");
+        coverageStatusFilterCombo.add("Covered & Partly-Covered");
         coverageStatusFilterCombo.add("Not-Covered");
         coverageStatusFilterCombo.add("Covered & Not-Covered");
-        coverageStatusFilterCombo.add("Not Coverable");
+        coverageStatusFilterCombo.add("Without Status");
         coverageStatusFilterCombo.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -265,15 +268,7 @@ public class TDLCoverageView extends ViewPart{
 			}
 			if (parentElement instanceof TDLTestSuiteCoverage tsCoverage) {
 				if(coverageTypeFilterIndex != -1) {
-					Iterator<List<ObjectCoverageStatus>> infoIterator = tsCoverage.getReport_coverageInfos().values().iterator();
-					int index = 0;
-					while (infoIterator.hasNext()) {
-						if (coverageTypeFilterIndex == index) {
-							return infoIterator.next().toArray();
-						}
-						infoIterator.next();
-						index++;
-					}
+					return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex).toArray();
 				}	
 			}
 			return new Object[0]; 
@@ -299,15 +294,7 @@ public class TDLCoverageView extends ViewPart{
 			}
 			if (element instanceof TDLTestSuiteCoverage tsCoverage) {
 				if (coverageTypeFilterIndex != -1) {
-					Iterator<List<ObjectCoverageStatus>> infoIterator = tsCoverage.getReport_coverageInfos().values().iterator();
-					int index = 0;
-					while (infoIterator.hasNext()) {
-						if (coverageTypeFilterIndex == index) {
-							return infoIterator.next().size()>0;
-						}
-						infoIterator.next();
-						index++;
-					}
+					return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex).size()>0;
 				}
 			}
 			return false;
@@ -361,13 +348,16 @@ public class TDLCoverageView extends ViewPart{
 					if (colText == TDLCoverageUtil.COVERED) {
 						return GREEN;
 					}
-					else if (colText == TDLCoverageUtil.NOSTATUS) {
+					else if (colText == TDLCoverageUtil.PARTLY_COVERED) {
 						return YELLOW;
 					}
 					else if (colText == TDLCoverageUtil.NOT_COVERED) {
 						return RED;
 					}
-					else return GRAY;
+					else if (colText == TDLCoverageUtil.NOSTATUS) {
+						return GRAY;
+					}
+					else return WHITE;
 				}
 			}
 			return null;
@@ -407,6 +397,9 @@ public class TDLCoverageView extends ViewPart{
 					if (columnText == TDLCoverageUtil.COVERED) {
 						columnText = "C";
 					} 
+					else if (columnText == TDLCoverageUtil.PARTLY_COVERED) {
+						columnText = "PC";
+					}
 					else if (columnText == TDLCoverageUtil.NOT_COVERED) {
 						columnText = "NC";
 					}
@@ -484,16 +477,27 @@ public class TDLCoverageView extends ViewPart{
 			}
 			else if (coverageStatusFilterIndex == 2) {//not covered elements
 				if (element instanceof ObjectCoverageStatus cInfo) {
+					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.PARTLY_COVERED;
+				}
+			}
+			else if (coverageStatusFilterIndex == 3) {//not covered elements
+				if (element instanceof ObjectCoverageStatus cInfo) {
+					String coverage = cInfo.getCoverage().get(cInfo.getCoverage().size()-1);
+					return  (coverage == TDLCoverageUtil.COVERED || coverage == TDLCoverageUtil.PARTLY_COVERED);
+				}
+			}
+			else if (coverageStatusFilterIndex == 4) {//not covered elements
+				if (element instanceof ObjectCoverageStatus cInfo) {
 					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOT_COVERED;
 				}
 			}
-			else if (coverageStatusFilterIndex == 3) {//covered and not covered elements
+			else if (coverageStatusFilterIndex == 5) {//covered and not covered elements
 				if (element instanceof ObjectCoverageStatus cInfo) {
 					String coverage = cInfo.getCoverage().get(cInfo.getCoverage().size()-1);
 					return  (coverage == TDLCoverageUtil.COVERED || coverage == TDLCoverageUtil.NOT_COVERED);
 				}
 			}
-			else if (coverageStatusFilterIndex == 4) {//elements that are not coverable
+			else if (coverageStatusFilterIndex == 6) {//elements that are not coverable
 				if (element instanceof ObjectCoverageStatus cInfo) {
 					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOSTATUS;
 				}

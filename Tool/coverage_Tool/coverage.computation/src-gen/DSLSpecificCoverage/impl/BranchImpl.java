@@ -4,7 +4,9 @@ package DSLSpecificCoverage.impl;
 
 import DSLSpecificCoverage.Branch;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**

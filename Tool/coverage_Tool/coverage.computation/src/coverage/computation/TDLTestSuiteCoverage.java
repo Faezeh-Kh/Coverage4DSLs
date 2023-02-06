@@ -1,12 +1,13 @@
 package coverage.computation;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 import org.etsi.mts.tdl.Package;
+
+import coverage.report.ObjectCoverageStatus;
+import coverage.report.TestCoverageReport;
 
 public class TDLTestSuiteCoverage {
 
@@ -14,7 +15,7 @@ public class TDLTestSuiteCoverage {
 	private List<TDLTestCaseCoverage> tcCoverages;
 
 	private List<TestCoverageReport> coverageReports;
-	private HashMap<TestCoverageReport,List<ObjectCoverageStatus>> report_coverageInfos;
+	private List<List<ObjectCoverageStatus>> tsCoverageInfos;
 	
 	public TDLTestSuiteCoverage() {
 		tcCoverages = new ArrayList<>();
@@ -35,7 +36,7 @@ public class TDLTestSuiteCoverage {
 				TDLCoverageUtil.getInstance().getDslSpecificCoverageExtension().ignoreModelObjects(tcCoverageObj.getMUTResource());
 			}
 			tcCoverageObj.calculateTCCoverage();
-			tcCoverageObj.coverageReports.forEach(report -> updateTestSuiteReport(report));
+			tcCoverageObj.getCoverageReports().forEach(report -> updateTestSuiteReport(report));
 		}
 		for (TestCoverageReport report:coverageReports) {
 			report.computeCoveragePercentage();
@@ -60,11 +61,12 @@ public class TDLTestSuiteCoverage {
 					tsCoverageReport.getObjectCoverageStatus().set(i, TDLCoverageUtil.COVERED);
 				}
 			}
+			
 		}
 	}
 	
 	public void createCoverageInfos() {
-		report_coverageInfos = new HashMap<>();
+		tsCoverageInfos = new ArrayList<>();
 		for (TestCoverageReport tsReport:coverageReports) {
 			List<ObjectCoverageStatus> coverageInfo4Objects = new ArrayList<>();
 			ObjectCoverageStatus percentageInfo = new ObjectCoverageStatus();
@@ -81,6 +83,7 @@ public class TDLTestSuiteCoverage {
 					objectCoverage.getCoverage().add(tcCoverage);
 				}
 				objectCoverage.getCoverage().add(tsReport.getObjectCoverageStatus().get(i));
+				
 				coverageInfo4Objects.add(objectCoverage);
 			}
 			//add the overall result as the last row of the info array
@@ -90,7 +93,7 @@ public class TDLTestSuiteCoverage {
 			}
 			percentageInfo.getCoverage().add(tsReport.getCoveragePercentage()+"");
 			coverageInfo4Objects.add(percentageInfo);
-			report_coverageInfos.put(tsReport,coverageInfo4Objects);
+			tsCoverageInfos.add(coverageInfo4Objects);
 		}
 	}
 	
@@ -114,8 +117,8 @@ public class TDLTestSuiteCoverage {
 		return coverageReports;
 	}
 
-	public HashMap<TestCoverageReport,List<ObjectCoverageStatus>> getReport_coverageInfos() {
-		return report_coverageInfos;
+	public List<List<ObjectCoverageStatus>> getTsCoverageInfos() {
+		return tsCoverageInfos;
 	}
 
 	public boolean isCoverageComputed() {
@@ -123,19 +126,18 @@ public class TDLTestSuiteCoverage {
 	}
 	
 	public TestCoverageReport getTsCoverageRepot(String reportTitle) {
-		Optional<TestCoverageReport> op = coverageReports.stream()
-				.filter(r -> r.getReportTitle().equals(reportTitle)).findFirst();
-		if (op.isPresent()) {
-			return op.get();
+		try {
+			return coverageReports.stream()
+					.filter(r -> r.getReportTitle().equals(reportTitle)).findFirst().get();
 		}
-		return null;
+		catch (NoSuchElementException e) {
+			return null;
+		}
 	}
 	
 	public List<ObjectCoverageStatus> getTsCoverageInfo(String reportTitle) {
 		try {
-			return report_coverageInfos.entrySet().stream()
-					.filter(entry -> entry.getKey().getReportTitle().equals(reportTitle))
-					.findFirst().get().getValue();
+			return tsCoverageInfos.get(coverageReports.indexOf(getTsCoverageRepot(reportTitle)));
 		}catch (NoSuchElementException e) {
 			return getTsCoverageInfo(TDLCoverageUtil.TRACEBASEDCOVERAGE);
 		}

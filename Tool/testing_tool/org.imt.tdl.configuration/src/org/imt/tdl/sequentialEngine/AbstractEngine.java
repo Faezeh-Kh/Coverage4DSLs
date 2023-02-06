@@ -1,7 +1,5 @@
 package org.imt.tdl.sequentialEngine;
 
-import java.io.File;
-
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.debug.core.DebugPlugin;

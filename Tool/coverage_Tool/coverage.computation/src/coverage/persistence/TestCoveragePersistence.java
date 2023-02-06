@@ -26,7 +26,7 @@ import TestCoverage.TestSuiteCoverage;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestCaseCoverage;
 import coverage.computation.TDLTestSuiteCoverage;
-import coverage.computation.TestCoverageReport;
+import coverage.report.TestCoverageReport;
 
 public class TestCoveragePersistence implements IEngineAddon{
 	
@@ -113,6 +113,9 @@ public class TestCoveragePersistence implements IEngineAddon{
 		}
 		else if (coverage == TDLCoverageUtil.NOT_COVERED) {
 			return CoverageStatus.NOTCOVERED;
+		}
+		else if (coverage == TDLCoverageUtil.PARTLY_COVERED) {
+			return CoverageStatus.PARTLYCOVERED;
 		}
 		else if (coverage == TDLCoverageUtil.NOSTATUS) {
 			return CoverageStatus.NOSTATUS;

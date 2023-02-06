@@ -1,6 +1,7 @@
-package coverage.computation;
+package coverage.report;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -10,6 +11,7 @@ public class ObjectCoverageStatus {
 	private EClass metaclass;
 	private EObject modelObject;
 	private ArrayList<String> coverage = new ArrayList<>();
+	private List<ObjectCoverageStatus> childrensStatus;
 	
 	public EObject getModelObject() {
 		return modelObject;
@@ -29,4 +31,11 @@ public class ObjectCoverageStatus {
 	public void setMetaclass(EClass metaclass) {
 		this.metaclass = metaclass;
 	}
+	public List<ObjectCoverageStatus> getChildrenStatus() {
+		return childrensStatus;
+	}
+	public void setChildrenStatus(List<ObjectCoverageStatus> childrensStatus) {
+		this.childrensStatus = childrensStatus;
+	}
+	
 }

@@ -11,6 +11,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="TestCoverage.ecore#//CoverageStatus">
       <genEnumLiterals ecoreEnumLiteral="TestCoverage.ecore#//CoverageStatus/COVERED"/>
       <genEnumLiterals ecoreEnumLiteral="TestCoverage.ecore#//CoverageStatus/NOTCOVERED"/>
+      <genEnumLiterals ecoreEnumLiteral="TestCoverage.ecore#//CoverageStatus/PARTLYCOVERED"/>
       <genEnumLiterals ecoreEnumLiteral="TestCoverage.ecore#//CoverageStatus/NOSTATUS"/>
     </genEnums>
     <genClasses ecoreClass="TestCoverage.ecore#//TestSuiteCoverage">

@@ -334,6 +334,7 @@ public class TestCoveragePackageImpl extends EPackageImpl implements TestCoverag
 		initEEnum(coverageStatusEEnum, CoverageStatus.class, "CoverageStatus");
 		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.COVERED);
 		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.NOTCOVERED);
+		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.PARTLYCOVERED);
 		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.NOSTATUS);
 
 		// Create resource

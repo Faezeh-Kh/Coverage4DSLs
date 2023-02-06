@@ -68,7 +68,7 @@ public class BranchSpecificationImpl extends RuleImpl implements BranchSpecifica
 	 */
 	public EList<Branch> getBranches() {
 		if (branches == null) {
-			branches = new EObjectContainmentEList<Branch>(Branch.class, this, DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__BRANCHES);
+			branches = new EObjectContainmentEList.Resolving<Branch>(Branch.class, this, DSLSpecificCoveragePackage.BRANCH_SPECIFICATION__BRANCHES);
 		}
 		return branches;
 	}

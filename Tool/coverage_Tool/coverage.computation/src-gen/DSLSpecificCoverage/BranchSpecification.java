@@ -28,7 +28,7 @@ public interface BranchSpecification extends Rule {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Branches</em>' containment reference list.
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getBranchSpecification_Branches()
-	 * @model containment="true" required="true"
+	 * @model containment="true" resolveProxies="true" required="true"
 	 * @generated
 	 */
 	EList<Branch> getBranches();

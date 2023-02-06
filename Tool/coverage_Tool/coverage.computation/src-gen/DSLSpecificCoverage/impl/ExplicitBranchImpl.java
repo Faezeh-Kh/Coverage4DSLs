@@ -6,7 +6,9 @@ import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.ExplicitBranch;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -32,6 +34,7 @@ public class ExplicitBranchImpl extends BranchImpl implements ExplicitBranch {
 	 * @ordered
 	 */
 	protected static final String OCL_QUERY_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getOCLQuery() <em>OCL Query</em>}' attribute.
 	 * <!-- begin-user-doc -->

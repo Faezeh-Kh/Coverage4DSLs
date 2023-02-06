@@ -4,7 +4,7 @@
     editorDirectory="/coverage.computation.editor/src-gen" modelPluginID="coverage.computation"
     modelName="DSLSpecificCoverage" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/coverage.computation.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    containmentProxies="true" complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true">
   <foreignModel>DSLSpecificCoverage.ecore</foreignModel>
   <genPackages prefix="DSLSpecificCoverage" disposableProviderFactory="true" ecorePackage="DSLSpecificCoverage.ecore#/">
