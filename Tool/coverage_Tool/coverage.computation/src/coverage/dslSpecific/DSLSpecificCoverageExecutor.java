@@ -2,7 +2,7 @@ package coverage.dslSpecific;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public class DSLSpecificCoverageExecutor {
 	private TestCoverageReport tcDslSpecificCoverageReport;
 	private List<TestCoverageReport> tcCoverageReports = new ArrayList<>();
 	
-	private HashMap<BranchSpecification, Set<EObject>> branchingRule_contextObjects = new HashMap<>();
+	private HashMap<BranchSpecification, LinkedHashSet<EObject>> branchingRule_contextObjects = new HashMap<>();
 	
 	public DSLSpecificCoverageExecutor (TDLTestCaseCoverage testCaseCoverage, DomainSpecificCoverage coverageRuleset) {
 		this.testCaseCoverage = testCaseCoverage;
@@ -85,7 +85,8 @@ public class DSLSpecificCoverageExecutor {
 		//if there are branchSpecification rules, compute branch coverage
 		if (!branchingRule_contextObjects.isEmpty()) {
 			updateObjectsCapturedByTrace();
-			tcCoverageReports.add((new DSLSpecificBranchCoverage(this)).runBranchCoverageComputation());
+			TestCoverageReport tcBranchCoverageReport = (new DSLSpecificBranchCoverage(this)).runBranchCoverageComputation();
+			tcCoverageReports.add(tcBranchCoverageReport);
 		}
 	}
 
@@ -147,7 +148,7 @@ public class DSLSpecificCoverageExecutor {
 					isRuleConditionSatisfied(rule.getCondition(), object)).toList();
 				if (!contextObjects.isEmpty()) {
 					if (branchingRule_contextObjects.get(branchRule) == null) {
-						branchingRule_contextObjects.put(branchRule, new HashSet<>());
+						branchingRule_contextObjects.put(branchRule, new LinkedHashSet<>());
 					}
 					branchingRule_contextObjects.get(branchRule).addAll(contextObjects);
 				}
@@ -376,7 +377,7 @@ public class DSLSpecificCoverageExecutor {
 		return coverageContext_eobjects;
 	}
 
-	public HashMap<BranchSpecification, Set<EObject>> getBranchingRule_contextObjects() {
+	public HashMap<BranchSpecification, LinkedHashSet<EObject>> getBranchingRule_contextObjects() {
 		return branchingRule_contextObjects;
 	}
 

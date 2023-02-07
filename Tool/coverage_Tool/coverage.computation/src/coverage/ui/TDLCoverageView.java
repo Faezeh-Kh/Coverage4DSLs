@@ -266,10 +266,18 @@ public class TDLCoverageView extends ViewPart{
 			if (parentElement instanceof List<?>) {
 				return ((List<?>) parentElement).toArray();
 			}
-			if (parentElement instanceof TDLTestSuiteCoverage tsCoverage) {
+			if (parentElement instanceof ObjectCoverageStatus coverageInfo) {
 				if(coverageTypeFilterIndex != -1) {
-					return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex).toArray();
-				}	
+					TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+					if (tsCoverage.getInfo_childrenInfos() != null &&
+							tsCoverage.getInfo_childrenInfos().get(coverageInfo) != null) {
+						return tsCoverage.getInfo_childrenInfos().get(coverageInfo).toArray();
+					}
+				}
+			}
+			if(coverageTypeFilterIndex != -1) {
+				TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+				return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex).toArray();
 			}
 			return new Object[0]; 
 		}
@@ -279,12 +287,7 @@ public class TDLCoverageView extends ViewPart{
 			if (element instanceof String) {
 				return (String) element;
 			}
-			if (element instanceof TDLTestSuiteCoverage tsCoverage) {
-				if (coverageTypeFilterIndex != -1) {
-					return  "Test Suite Coverage";
-				}
-			}
-			return null;
+			return  "Test Suite Coverage";
 		}
 
 		@Override
@@ -295,6 +298,15 @@ public class TDLCoverageView extends ViewPart{
 			if (element instanceof TDLTestSuiteCoverage tsCoverage) {
 				if (coverageTypeFilterIndex != -1) {
 					return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex).size()>0;
+				}
+			}
+			if (element instanceof ObjectCoverageStatus coverageInfo) {
+				if(coverageTypeFilterIndex != -1) {
+					TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+					if (tsCoverage.getInfo_childrenInfos() != null && 
+							tsCoverage.getInfo_childrenInfos().get(coverageInfo) != null) {
+						return true;
+					}
 				}
 			}
 			return false;
