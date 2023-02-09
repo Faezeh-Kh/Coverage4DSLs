@@ -218,7 +218,10 @@ public class TDLCoverageView extends ViewPart{
 					} catch (PartInitException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
+					} catch (NullPointerException e) {
+						System.out.println("Cannot find the related editor to open the object");
 					}
+					
 				}
 			}
 		});
