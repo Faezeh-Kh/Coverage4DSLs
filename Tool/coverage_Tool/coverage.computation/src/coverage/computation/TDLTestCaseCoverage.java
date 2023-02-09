@@ -78,8 +78,18 @@ public class TDLTestCaseCoverage {
 				tcCoverageByTraceReport.setObjectCoverage(object, TDLCoverageUtil.COVERED);
 			}
 		}
-		if (rootStep instanceof SequentialStep<?, ?> seqStep) {
-			seqStep.getSubSteps().forEach(s -> calculateCoverageBasedOnTrace(s));
+		else if (rootStep instanceof SequentialStep<?, ?> seqStep) {
+			//if the sequential step does not have any substep/small substep, we should add its caller
+			if (!seqStep.getSubSteps().stream().anyMatch(s -> s instanceof SmallStep<?>)) {
+				if (seqStep.getMseoccurrence() != null) {
+					EObject object = seqStep.getMseoccurrence().getMse().getCaller();
+					objectsCapturedByTrace.add(object);
+					tcCoverageByTraceReport.setObjectCoverage(object, TDLCoverageUtil.COVERED);
+				}
+			}
+			for (int i=0; i < seqStep.getSubSteps().size(); i++) {
+				calculateCoverageBasedOnTrace(seqStep.getSubSteps().get(i));
+			}
 		}
 	}
 	
