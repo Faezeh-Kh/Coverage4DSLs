@@ -82,8 +82,10 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 		dslProcessor = new DSLProcessor(DSLPath);
 		dslProcessor.loadDSLMetaclasses();
 		metamodelRootElement = dslProcessor.getMetamodelRootElement();
-		
 		findCoverableClassesFromDSLSemantics();
+		
+		dslSpecificCoverageExtension = null;
+		dslSpecificCoverages = null;
 		
 		testSuiteCoverage.calculateTSCoverage();
 	}
