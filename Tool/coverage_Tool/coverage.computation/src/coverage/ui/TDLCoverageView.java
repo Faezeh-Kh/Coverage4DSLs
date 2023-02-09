@@ -287,13 +287,7 @@ public class TDLCoverageView extends ViewPart{
 			if (element instanceof String) {
 				return (String) element;
 			}
-			if (element instanceof ObjectCoverageStatus coverageInfo) {
-				if(coverageTypeFilterIndex != -1) {
-					TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
-					return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex);
-				}
-			}
-			return  "Test Suite Coverage";
+			return TDLCoverageUtil.getInstance().getTestSuiteCoverage();
 		}
 
 		@Override
