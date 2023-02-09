@@ -40,7 +40,7 @@ public class DSLSpecificCoverageExecutor {
 	private HashMap<Context, List<EObject>> coverageContext_eobjects = new HashMap<>();
 	
 	private HashMap<EObject, List<EObject>> object2find_objects2add = new HashMap<>();
-	private List<EObject> objectsCapturedByTrace_extended;
+	private List<EObject> objectsCapturedByTrace_modified;
 	
 	private TestCoverageReport tcDslSpecificCoverageReport;
 	private List<TestCoverageReport> tcCoverageReports = new ArrayList<>();
@@ -65,7 +65,7 @@ public class DSLSpecificCoverageExecutor {
 		//finding eobjects of each context
 		setCoverageContext_objects(coverageRuleset);
 		coverageRuleset.getImports().forEach(crs -> setCoverageContext_objects(crs));
-		
+
 		//apply domain specific coverage while the coverage matrix changes
 		boolean isCoverageMatrixChanged = true;
 		while (isCoverageMatrixChanged) {
@@ -250,35 +250,6 @@ public class DSLSpecificCoverageExecutor {
 		}
 	}
 	
-	private void addObject2tracedObjects(EObject object2find, EObject object2add) {
-		if (object2find_objects2add.get(object2find) == null) {
-			object2find_objects2add.put(object2find, new ArrayList<>());
-		}
-		object2find_objects2add.get(object2find).add(object2add);
-	}
-	
-	private void updateObjectsCapturedByTrace() {
-		//extending the list of objects captured by trace based on the result of generic coverage rules.
-		objectsCapturedByTrace_extended = new ArrayList<>();
-		for (EObject capturedObject : testCaseCoverage.getObjectsCapturedByTrace()) {
-			if (object2find_objects2add.get(capturedObject) != null) {
-				List<EObject> objects2add = object2find_objects2add.get(capturedObject);
-				if (capturedObject.eContainer() == objects2add.get(0)) {
-					//put the object before all of its contained objects that are in the trace
-					objectsCapturedByTrace_extended.addAll(objects2add);
-					objectsCapturedByTrace_extended.add(capturedObject);
-				}else {
-					//put the reference object after the object2find
-					objectsCapturedByTrace_extended.add(capturedObject);
-					objectsCapturedByTrace_extended.addAll(objects2add);
-				}
-			}
-			else {
-				objectsCapturedByTrace_extended.add(capturedObject);
-			}
-		}
-	}
-	
 	private void runLimitedIgnoreRule(LimitedIgnore rule, EObject object) {
 		if (rule.getType() == LimitationType.CONTAINED_BY) {
 			//ignore EObjects contained by one of the ContainerType classes
@@ -302,6 +273,35 @@ public class DSLSpecificCoverageExecutor {
 			return;
 		}
 		tcDslSpecificCoverageReport.setObjectNotCoverable(object);
+	}
+	
+	private void addObject2tracedObjects(EObject object2find, EObject object2add) {
+		if (object2find_objects2add.get(object2find) == null) {
+			object2find_objects2add.put(object2find, new ArrayList<>());
+		}
+		object2find_objects2add.get(object2find).add(object2add);
+	}
+	
+	private void updateObjectsCapturedByTrace() {
+		//extending the list of objects captured by trace based on the result of generic coverage rules.
+		objectsCapturedByTrace_modified = new ArrayList<>();
+		for (EObject capturedObject : testCaseCoverage.getObjectsCapturedByTrace()) {
+			if (object2find_objects2add.get(capturedObject) != null) {
+				List<EObject> objects2add = object2find_objects2add.get(capturedObject);
+				if (capturedObject.eContainer() == objects2add.get(0)) {
+					//put the object before all of its contained objects that are in the trace
+					objectsCapturedByTrace_modified.addAll(objects2add);
+					objectsCapturedByTrace_modified.add(capturedObject);
+				}else {
+					//put the reference object after the object2find
+					objectsCapturedByTrace_modified.add(capturedObject);
+					objectsCapturedByTrace_modified.addAll(objects2add);
+				}
+			}
+			else {
+				objectsCapturedByTrace_modified.add(capturedObject);
+			}
+		}
 	}
 	
 	private EStructuralFeature getMatchedFeature(EObject rootElement, String featureName){
@@ -358,7 +358,7 @@ public class DSLSpecificCoverageExecutor {
 	}
 
 	public List<EObject> getObjectsCapturedByTrace_extended() {
-		return objectsCapturedByTrace_extended;
+		return objectsCapturedByTrace_modified;
 	}
 	
 	public TDLTestCaseCoverage getTestCaseCoverage() {
