@@ -217,7 +217,7 @@ public class TestCoveragePersistence implements IEngineAddon{
 	private EObject getEObjectFromCopiedMUT (EObject eobject) {
 		EcoreUtil.resolveAll(eobject);
 		if (modelObjects.stream().filter(o -> EcoreUtil.equals(o, eobject)).findFirst().isEmpty()) {
-			System.out.println("cannot find eobject " + eobject);
+			//System.out.println("cannot find eobject " + eobject);
 		}
 		Optional<EObject> matchedEObject = modelObjects.stream().filter(o -> EcoreUtil.equals(o, eobject)).findFirst();
 		if (matchedEObject.isPresent()) {
