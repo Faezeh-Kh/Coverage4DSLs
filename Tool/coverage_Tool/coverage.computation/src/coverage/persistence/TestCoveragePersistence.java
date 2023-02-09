@@ -46,10 +46,18 @@ public class TestCoveragePersistence implements IEngineAddon{
 	
 	@Override
 	public void engineStopped(IExecutionEngine<?> engine) {
-		if (!TDLCoverageUtil.getInstance().getTestSuiteCoverage().isCoverageComputed()) {
-			TDLCoverageUtil.getInstance().runCoverageComputation();
+		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage() == null) {
+		   System.out.println("There is no test coverage result to be saved. The test execution is interrupted due to some errors.");
+	    }
+		else {
+			if (!TDLCoverageUtil.getInstance().getTestSuiteCoverage().isCoverageComputed()) {
+				TDLCoverageUtil.getInstance().runCoverageComputation();
+			}
+			saveTestCoverageResult(engine.getExecutionContext());
 		}
-		IExecutionContext<?, ?, ?> _executionContext = engine.getExecutionContext();
+	}
+		
+	private void saveTestCoverageResult(IExecutionContext<?, ?, ?> _executionContext) {
 		URI modelURI = _executionContext.getResourceModel().getURI();
 		IPath testFilePath = new Path(URIHelper.removePlatformScheme(modelURI));
 		IPath _projectPath = testFilePath.removeLastSegments(testFilePath.segmentCount() - 1);
@@ -72,7 +80,7 @@ public class TestCoveragePersistence implements IEngineAddon{
 		TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageReports()
 			.forEach(r -> saveCoverageReport(r));
 	}
-		
+
 	private String generateSpecificExecutionFolderName() {
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		return "/execution-" + timeStamp;
