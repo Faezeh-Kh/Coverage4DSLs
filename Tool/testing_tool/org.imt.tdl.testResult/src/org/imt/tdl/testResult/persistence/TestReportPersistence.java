@@ -40,7 +40,15 @@ public class TestReportPersistence implements IEngineAddon{
 	
 	@Override
 	public void engineStopped(IExecutionEngine<?> engine) {
-		IExecutionContext<?, ?, ?> _executionContext = engine.getExecutionContext();
+		if (TDLTestResultUtil.getInstance().getTestSuiteResult() == null) {
+		   System.out.println("There is no test execution result to be saved. The test execution is interrupted due to some errors.");
+	    }
+		else {
+			saveTestReport(engine.getExecutionContext());
+		}
+	}
+
+	private void saveTestReport(IExecutionContext<?, ?, ?> _executionContext) {
 		URI modelURI = _executionContext.getResourceModel().getURI();
 		IPath testFilePath = new Path(URIHelper.removePlatformScheme(modelURI));
 		IPath _projectPath = testFilePath.removeLastSegments(testFilePath.segmentCount() - 1);
@@ -113,9 +121,9 @@ public class TestReportPersistence implements IEngineAddon{
 			testResultResource.save(null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	   }
+			e.printStackTrace();
+		}
+	}
 
 	private String generateSpecificExecutionFolderName() {
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
