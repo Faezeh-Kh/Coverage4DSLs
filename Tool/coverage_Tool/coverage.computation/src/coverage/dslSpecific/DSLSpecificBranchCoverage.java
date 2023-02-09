@@ -104,35 +104,48 @@ public class DSLSpecificBranchCoverage {
 
 	private String computeImplicitBranchCoverage(EObject branchingRoot) {
 		List<EObject> allCoveredObjects = dslSpecificCoverageExecutor.getObjectsCapturedByTrace_extended();
-		//check if there is any covered explicit branch
+		//if there is no covered explicit branch, the implicit branch is covered
 		if (!branchingRoot_branches.get(branchingRoot).stream()
 				.anyMatch(xb -> getExplicitBranchCoverage(branchingRoot, xb) == TDLCoverageUtil.COVERED)) {
 			//if no explicit branch is covered, then the implicit branch is covered
 			return TDLCoverageUtil.COVERED;
 		}
-		//check if between two observation of the branching root, there is no explicit branch, then the implicit branch is covered
 		int index1 = allCoveredObjects.indexOf(branchingRoot);
-		for (int index2 = index1 + 1
-				; index2 <= allCoveredObjects.lastIndexOf(branchingRoot)
-				; index2++) {
+		int lastIndex = allCoveredObjects.lastIndexOf(branchingRoot);
+		if (index1 == lastIndex) {
+			//if the branching root is captured once and the previous if does not return anything
+			//it means the explicit branch is covered and the implicit branch is not covered
+			return TDLCoverageUtil.NOT_COVERED;
+		}
+		//check if between two observation of the branching root or after the last observation, there is no explicit branch, then the implicit branch is covered
+		for (int index2 = index1 + 1; index2 < allCoveredObjects.size(); index2++) {
 			EObject capturedObject = allCoveredObjects.get(index2);
-			//if there is an element between two occurrences of the branching root
-			if (capturedObject == branchingRoot && index2 > index1 + 1) {
-				boolean isExplicitBranchCaptured = false;
-				for (int i = index1 + 1; i > index2; i++) {
-					EObject objectInBetween = allCoveredObjects.get(i);
-					isExplicitBranchCaptured = branchingRoot_branches.get(branchingRoot).stream()
-							.anyMatch(xb -> xb == objectInBetween);
-					if (isExplicitBranchCaptured) {
-						break;
+			//if there is an element between two occurrences of the branching root or after the last occurrence
+			if (capturedObject == branchingRoot) {
+				if (index2 > index1 + 1) {//if there are objects in between
+					boolean isExplicitBranchCaptured = false;
+					for (int i = index1 + 1; i < index2; i++) {
+						EObject objectInBetween = allCoveredObjects.get(i);
+						isExplicitBranchCaptured = branchingRoot_branches.get(branchingRoot).stream()
+								.anyMatch(xb -> xb == objectInBetween);
+						if (isExplicitBranchCaptured) {
+							break;
+						}
+					}
+					//if there is no explicit branch element between two occurrences of the branching root, the implicit branch is covered
+					if (!isExplicitBranchCaptured) {
+						return TDLCoverageUtil.COVERED;
 					}
 				}
-				//if there is no explicit branch element between two occurrences of the branching root, the implicit branch is covered
-				if (!isExplicitBranchCaptured) {
+				index1 = index2;
+			}
+			else if (index2 == allCoveredObjects.size()-1) {
+				//at the point, there is only one element after the last occurrence of the branching root
+				//if it is not an explicit branch, then the implicit branch is covered
+				if (!branchingRoot_branches.get(branchingRoot).stream().anyMatch(xb -> xb == capturedObject)) {
 					return TDLCoverageUtil.COVERED;
 				}
 			}
-			index1 = index2;
 		}
 		return TDLCoverageUtil.NOT_COVERED;
 	}
