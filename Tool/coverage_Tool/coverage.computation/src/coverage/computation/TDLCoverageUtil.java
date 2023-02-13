@@ -187,7 +187,7 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 			List<String> coverageFilesPathes = getCoverageFilePath();
 			if (coverageFilesPathes != null) {
 				ResourceSet resSet = new ResourceSetImpl();
-				coverageFilesPathes.forEach(path -> resSet.getResource(URI.createPlatformResourceURI(path.trim(), false), true));
+				coverageFilesPathes.forEach(path -> resSet.getResource(URI.createPlatformPluginURI(path.trim(), false), true));
 				EcoreUtil.resolveAll(resSet);
 				resSet.getResources().forEach(r -> dslSpecificCoverages.add((DomainSpecificCoverage) r.getContents().get(0)));
 			}

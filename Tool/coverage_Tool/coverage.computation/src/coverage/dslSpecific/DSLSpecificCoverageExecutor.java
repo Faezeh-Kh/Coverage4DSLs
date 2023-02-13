@@ -10,10 +10,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 
 import DSLSpecificCoverage.BranchSpecification;
@@ -24,6 +26,7 @@ import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.CoveredContents;
 import DSLSpecificCoverage.DomainSpecificCoverage;
 import DSLSpecificCoverage.Ignore;
+import DSLSpecificCoverage.Import;
 import DSLSpecificCoverage.LimitationType;
 import DSLSpecificCoverage.LimitedIgnore;
 import DSLSpecificCoverage.Rule;
@@ -39,7 +42,7 @@ public class DSLSpecificCoverageExecutor {
 	private DomainSpecificCoverage coverageRuleset;
 	private HashMap<Context, List<EObject>> coverageContext_eobjects = new HashMap<>();
 	
-	private HashMap<EObject, List<EObject>> object2find_objects2add = new HashMap<>();
+	private HashMap<EObject, LinkedHashSet<EObject>> object2find_objects2add = new HashMap<>();
 	private List<EObject> objectsCapturedByTrace_modified;
 	
 	private TestCoverageReport tcDslSpecificCoverageReport;
@@ -64,8 +67,15 @@ public class DSLSpecificCoverageExecutor {
 
 		//finding eobjects of each context
 		setCoverageContext_objects(coverageRuleset);
-		coverageRuleset.getImports().forEach(crs -> setCoverageContext_objects(crs));
-
+		for(Import importedRuleset:coverageRuleset.getImports()) {
+			DomainSpecificCoverage crs = importedRuleset.getImportedRuleset();
+			if (crs == null) {
+				URI importedURI = URI.createPlatformPluginURI(importedRuleset.getImportURI(), false);
+				Resource importedRes = coverageRuleset.eResource().getResourceSet().getResource(importedURI, false);
+				crs = (DomainSpecificCoverage) importedRes.getContents().get(0);
+			}
+			setCoverageContext_objects(crs);
+		}
 		//apply domain specific coverage while the coverage matrix changes
 		boolean isCoverageMatrixChanged = true;
 		while (isCoverageMatrixChanged) {
@@ -277,7 +287,7 @@ public class DSLSpecificCoverageExecutor {
 	
 	private void addObject2tracedObjects(EObject object2find, EObject object2add) {
 		if (object2find_objects2add.get(object2find) == null) {
-			object2find_objects2add.put(object2find, new ArrayList<>());
+			object2find_objects2add.put(object2find, new LinkedHashSet<>());
 		}
 		object2find_objects2add.get(object2find).add(object2add);
 	}
@@ -287,8 +297,8 @@ public class DSLSpecificCoverageExecutor {
 		objectsCapturedByTrace_modified = new ArrayList<>();
 		for (EObject capturedObject : testCaseCoverage.getObjectsCapturedByTrace()) {
 			if (object2find_objects2add.get(capturedObject) != null) {
-				List<EObject> objects2add = object2find_objects2add.get(capturedObject);
-				if (capturedObject.eContainer() == objects2add.get(0)) {
+				LinkedHashSet<EObject> objects2add = object2find_objects2add.get(capturedObject);
+				if (capturedObject.eContainer() == objects2add.iterator().next()) {
 					//put the object before all of its contained objects that are in the trace
 					objectsCapturedByTrace_modified.addAll(objects2add);
 					objectsCapturedByTrace_modified.add(capturedObject);
