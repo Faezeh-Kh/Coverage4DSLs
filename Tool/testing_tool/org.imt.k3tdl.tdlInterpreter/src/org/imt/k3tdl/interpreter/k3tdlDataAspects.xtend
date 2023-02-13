@@ -1,6 +1,7 @@
 package org.imt.k3tdl.interpreter
 
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
+
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import java.util.ArrayList
 import org.eclipse.emf.common.util.EList
@@ -24,7 +25,7 @@ import org.etsi.mts.tdl.SpecialValueUse
 import org.etsi.mts.tdl.StaticDataUse
 import org.etsi.mts.tdl.StructuredDataInstance
 import org.etsi.mts.tdl.StructuredDataType
-import org.imt.k3td.interpreter.utilities.EObjectFinderUtilities
+import org.imt.k3tdl.interpreter.utilities.EObjectFinderUtilities
 import org.imt.tdl.testResult.TDLTestResultUtil
 
 import static extension org.imt.k3tdl.interpreter.DataInstanceAspect.*
