@@ -190,8 +190,8 @@ public class TDLSBFLView extends ViewPart{
 				if (item == null || item.getData() == null) {
 					//do nothing
 				}
-				else if (item.getData() instanceof SBFLMeasures sbflMeasure) {
-					EObject eobjectToOpen = sbflMeasure.getModelObject();		
+				else if (item.getData() instanceof SBFLMeasures) {
+					EObject eobjectToOpen = ((SBFLMeasures) item.getData()).getModelObject();		
 					IFile fileToOpen = ResourcesPlugin.getWorkspace().getRoot().getFile(
 							new Path(eobjectToOpen.eResource().getURI().toPlatformString(true)));
 					IEditorDescriptor desc = PlatformUI.getWorkbench().getEditorRegistry().
@@ -199,13 +199,13 @@ public class TDLSBFLView extends ViewPart{
 					IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 					try {
 						IEditorPart editor = page.openEditor(new FileEditorInput(fileToOpen), desc.getId());
-						if (editor instanceof EcoreEditor ecoreEditor) {
-							TreeViewer tviewer = (TreeViewer) ecoreEditor.getViewer();
+						if (editor instanceof EcoreEditor) {
+							TreeViewer tviewer = (TreeViewer) ((EcoreEditor) editor).getViewer();
 							ResourceSet resSet =(ResourceSet) tviewer.getInput();
 							EObject eobjectToOpen2 = resSet.getResources().get(0).getEObject(
 									eobjectToOpen.eResource().getURIFragment(eobjectToOpen));
 							tviewer.setSelection(new StructuredSelection(eobjectToOpen2));
-						}else if (editor instanceof XtextEditor xtextEditor) {
+						}else if (editor instanceof XtextEditor) {
 							//TODO: how to reveal the object in the xtext editor
 						}
 					} catch (PartInitException e) {
@@ -297,8 +297,8 @@ public class TDLSBFLView extends ViewPart{
 			if (parentElement instanceof List<?>) {
 				return ((List<?>) parentElement).toArray();
 			}
-			if (parentElement instanceof SuspiciousnessRanking suspRanking) {
-				return suspRanking.getElementsSBFLMeasures().toArray();
+			if (parentElement instanceof SuspiciousnessRanking) {
+				return ((SuspiciousnessRanking) parentElement).getElementsSBFLMeasures().toArray();
 			}
 			return new Object[0]; 
 		}
@@ -319,8 +319,8 @@ public class TDLSBFLView extends ViewPart{
 			if (element instanceof List<?>) {
 				return ((List<?>) element).size() > 0;
 			}
-			if (element instanceof SuspiciousnessRanking suspRanking) {
-				return suspRanking.getElementsSBFLMeasures().size() > 0;
+			if (element instanceof SuspiciousnessRanking) {
+				return ((SuspiciousnessRanking) element).getElementsSBFLMeasures().size() > 0;
 			}
 			return false;
 		}
@@ -360,7 +360,8 @@ public class TDLSBFLView extends ViewPart{
 
 		@Override
 		public Color getBackground(Object element, int columnIndex) {
-			if (element instanceof SBFLMeasures sbflMeasures) {
+			if (element instanceof SBFLMeasures) {
+				 SBFLMeasures sbflMeasures =  (SBFLMeasures) element;
 				if (columnIndex > 1 && columnIndex < sbflMeasures.getCoverage().size() + 2) {
 					//the test case coverages
 					String tcEntry = sbflMeasures.getCoverage().get(columnIndex-2);
@@ -383,14 +384,15 @@ public class TDLSBFLView extends ViewPart{
 		@Override
 		public String getColumnText(Object element, int columnIndex) {
 			String columnText = "";
-			if (element instanceof String result) {
+			if (element instanceof String) {
 				switch (columnIndex) {
 				case 0:
-					columnText = result;
+					columnText = (String) element;
 					break;
 				}
 			}
-			if (element instanceof SBFLMeasures sbflMeasures) {
+			if (element instanceof SBFLMeasures) {
+				SBFLMeasures sbflMeasures =  (SBFLMeasures) element;
 				int sbflOperandsStartIndex = (sbflMeasures.getCoverage().size() + 2);
 				if (columnIndex == 0 && sbflMeasures.getMetaclass() != null) {
 					columnText = sbflMeasures.getMetaclass().getName();
@@ -488,7 +490,8 @@ private class ElementFilter extends ViewerFilter {
 		if (elementFilterIndex == -1 || elementFilterIndex == 0) {
 			return true;
 		}else {
-			if (element instanceof SBFLMeasures parameters) {
+			if (element instanceof SBFLMeasures) {
+				SBFLMeasures parameters =  (SBFLMeasures) element;
 				if (parameters.getMetaclass() == null) {
 					return false;
 				}else {

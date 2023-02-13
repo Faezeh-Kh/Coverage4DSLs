@@ -116,8 +116,9 @@ public class DSLSpecificCoverageExecutor {
 			}
 			coverageContext_eobjects.get(context).addAll(
 					testCaseCoverage.getAllModelObjects().stream()
-					.filter(o -> isContextInstance(context.getMetaclass().getName(), o))
-					.toList());
+						.filter(o -> isContextInstance(context.getMetaclass().getName(), o))
+						.collect(Collectors.toList())
+					);
 		}
 	}
 	
@@ -134,28 +135,33 @@ public class DSLSpecificCoverageExecutor {
 	//apply all the rules on the object (NOTE: rule's context = object type)
 	public void applyCoverageRules(EList<Rule> rules, List<EObject> eObjects) {
 		for (Rule rule:rules) {
-			if (rule instanceof Ignore ignoreRule) {
+			if (rule instanceof Ignore) {
+				Ignore ignoreRule = (Ignore) rule;
 				updateCoverableClasses(ignoreRule);
 				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 					.forEach(object -> runIgnoreRule(ignoreRule, object));
 			}
-			else if (rule instanceof LimitedIgnore limitedIgnoreRule) {
+			else if (rule instanceof LimitedIgnore) {
+				LimitedIgnore limitedIgnoreRule = (LimitedIgnore) rule;
 				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 					.forEach(object -> runLimitedIgnoreRule(limitedIgnoreRule, object));
 			}
-			else if (rule instanceof CoverageOfReferenced refRule) {
+			else if (rule instanceof CoverageOfReferenced) {
+				CoverageOfReferenced refRule = (CoverageOfReferenced) rule;
 				updateCoverableClasses(refRule);
 				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 					.forEach(object -> inferReferenceCoverage(refRule, object));
 			}
-			else if (rule instanceof CoverageByContent containmentRule) {
+			else if (rule instanceof CoverageByContent) {
+				CoverageByContent containmentRule = (CoverageByContent) rule;
 				updateCoverableClasses(containmentRule);
 				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 					.forEach(object -> inferContainerCoverage(containmentRule, object));
 			}
-			else if (rule instanceof BranchSpecification branchRule) {
+			else if (rule instanceof BranchSpecification) {
+				BranchSpecification branchRule = (BranchSpecification) rule; 
 				List<EObject> contextObjects = eObjects.stream().filter(object -> 
-					isRuleConditionSatisfied(rule.getCondition(), object)).toList();
+					isRuleConditionSatisfied(rule.getCondition(), object)).collect(Collectors.toList());
 				if (!contextObjects.isEmpty()) {
 					if (branchingRule_contextObjects.get(branchRule) == null) {
 						branchingRule_contextObjects.put(branchRule, new LinkedHashSet<>());
@@ -190,13 +196,15 @@ public class DSLSpecificCoverageExecutor {
 			if (ref != null) {
 				Object referencedObject = object.eGet(ref);
 				if (referencedObject != null) { 
-					if (referencedObject instanceof EObject refObject) {
+					if (referencedObject instanceof EObject) {
+						EObject refObject = (EObject) referencedObject;
 						tcDslSpecificCoverageReport.setObjectCoverage(refObject, coverageStatus);
 						if (coverageStatus == TDLCoverageUtil.COVERED) {
 							addObject2tracedObjects(object, refObject);
 						}
 					}
-					else if (referencedObject instanceof EObjectContainmentEList<?> refObjects) {
+					else if (referencedObject instanceof EObjectContainmentEList<?>) {
+						EObjectContainmentEList<?> refObjects = (EObjectContainmentEList<?>) referencedObject;
 						refObjects.forEach(o -> tcDslSpecificCoverageReport.setObjectCoverage((EObject) o, coverageStatus));
 						if (coverageStatus == TDLCoverageUtil.COVERED) {
 							refObjects.forEach(refObject -> addObject2tracedObjects(object, (EObject) refObject));
@@ -214,14 +222,16 @@ public class DSLSpecificCoverageExecutor {
 		Object containedObject = object.eGet(ref);
 		if (containedObject == null) { return; }
 		
-		if (containedObject instanceof EObject containee) {
+		if (containedObject instanceof EObject) {
+			EObject containee = (EObject) containedObject;
 			String coverageStatus = tcDslSpecificCoverageReport.getObjectCoverage(containee);
 			tcDslSpecificCoverageReport.setObjectCoverage(object, coverageStatus);
 			if (coverageStatus == TDLCoverageUtil.COVERED) {
 				addObject2tracedObjects(containee, object);
 			}
 		}
-		else if (containedObject instanceof EObjectContainmentEList<?> containees) {
+		else if (containedObject instanceof EObjectContainmentEList<?>) {
+			EObjectContainmentEList<?> containees = (EObjectContainmentEList<?>) containedObject;
 			//if several objects are contained, set coverage based on the rule's multiplicity
 			if (r.getMultiplicity() == CoveredContents.ONE) {
 				coverContainerIfOneContaineeCovered(containees);

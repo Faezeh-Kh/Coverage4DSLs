@@ -102,12 +102,12 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	public void checkInheritanceForNotCoverableClasses() {
 		for (EClassifier clazz: metamodelRootElement.getEClassifiers()) {
 			String className = clazz.getName();
-			if (clazz instanceof EClass eclazz) {
+			if (clazz instanceof EClass) {
 				if (!coverableClasses.contains(className) && 
 						!extendedClassesWithoutStep.contains(className)) {
-					checkInheritance(eclazz);
+					checkInheritance((EClass) clazz);
 				}
-				checkDynamicAspectsOfClass(eclazz);	
+				checkDynamicAspectsOfClass((EClass) clazz);	
 			}
 		}	
 	}

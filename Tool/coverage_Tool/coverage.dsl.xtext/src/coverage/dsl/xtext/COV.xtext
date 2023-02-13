@@ -9,9 +9,19 @@ DomainSpecificCoverage returns DomainSpecificCoverage:
 	name=EString
 	'{'
 		'import' 'metamodel' metamodel=[ecore::EPackage|EString]
-		('import' 'ruleset' imports+=[DomainSpecificCoverage|EString] ("," imports+=[DomainSpecificCoverage|EString])*)?
+		('import' 'ruleset' imports+=Import ("," imports+=Import)*)?
 		contexts+=Context ( "," contexts+=Context)*
 	'}';
+	
+Import returns Import:
+	{Import}
+	('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';') |
+	('from' importURI=STRING ';')|
+	(importedRuleset=[DomainSpecificCoverage|EString])
+	;
+
+QualifiedName: ID ('::' ID)*;
+ImportedFQN: QualifiedName ('::''*')?;
 	 
 EString returns ecore::EString:
 	STRING | ID;

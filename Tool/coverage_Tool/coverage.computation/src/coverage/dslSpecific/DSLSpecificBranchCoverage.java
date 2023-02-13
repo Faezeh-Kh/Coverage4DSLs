@@ -46,8 +46,8 @@ public class DSLSpecificBranchCoverage {
 				}
 				List<String> branchesCoverageStatus = new ArrayList<>();
 				for (Branch branch:rule_contextObjects.getKey().getBranches()) {
-					if (branch instanceof ExplicitBranch explicitBranch) {
-						String query2getBranch = explicitBranch.getOCLQuery();
+					if (branch instanceof ExplicitBranch) {
+						String query2getBranch = ((ExplicitBranch) branch).getOCLQuery();
 						ArrayList<EObject> queryResult = oclLauncher.runQuery(branchingRoot, query2getBranch);
 						if (queryResult != null && !queryResult.isEmpty()) {
 							branchingRoot_branches.get(branchingRoot).addAll(queryResult);
@@ -55,8 +55,8 @@ public class DSLSpecificBranchCoverage {
 									getExplicitBranchCoverage(branchingRoot, branchObject)));
 						}	
 					}
-					else if(branch instanceof ImplicitBranch implicitBranch) {
-						branchingRoot_branches.get(branchingRoot).add(implicitBranch);
+					else if(branch instanceof ImplicitBranch) {
+						branchingRoot_branches.get(branchingRoot).add((ImplicitBranch) branch);
 						branchesCoverageStatus.add(computeImplicitBranchCoverage(branchingRoot));
 					}
 				}
