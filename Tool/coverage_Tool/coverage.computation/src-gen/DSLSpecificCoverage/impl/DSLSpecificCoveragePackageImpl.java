@@ -16,6 +16,7 @@ import DSLSpecificCoverage.ExclusionRule;
 import DSLSpecificCoverage.ExplicitBranch;
 import DSLSpecificCoverage.Ignore;
 import DSLSpecificCoverage.ImplicitBranch;
+import DSLSpecificCoverage.Import;
 import DSLSpecificCoverage.InclusionRule;
 import DSLSpecificCoverage.LimitationType;
 import DSLSpecificCoverage.LimitedIgnore;
@@ -43,6 +44,13 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 * @generated
 	 */
 	private EClass domainSpecificCoverageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass importEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -256,6 +264,42 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 	 */
 	public EReference getDomainSpecificCoverage_Imports() {
 		return (EReference)domainSpecificCoverageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImport() {
+		return importEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImport_ImportedNamespace() {
+		return (EAttribute)importEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImport_ImportURI() {
+		return (EAttribute)importEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImport_ImportedRuleset() {
+		return (EReference)importEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -544,6 +588,11 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		createEReference(domainSpecificCoverageEClass, DOMAIN_SPECIFIC_COVERAGE__CONTEXTS);
 		createEReference(domainSpecificCoverageEClass, DOMAIN_SPECIFIC_COVERAGE__IMPORTS);
 
+		importEClass = createEClass(IMPORT);
+		createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
+		createEAttribute(importEClass, IMPORT__IMPORT_URI);
+		createEReference(importEClass, IMPORT__IMPORTED_RULESET);
+
 		contextEClass = createEClass(CONTEXT);
 		createEReference(contextEClass, CONTEXT__METACLASS);
 		createEReference(contextEClass, CONTEXT__RULES);
@@ -634,7 +683,12 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEAttribute(getDomainSpecificCoverage_Name(), ecorePackage.getEString(), "name", null, 1, 1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainSpecificCoverage_Metamodel(), theEcorePackage.getEPackage(), null, "metamodel", null, 1, 1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainSpecificCoverage_Contexts(), this.getContext(), null, "contexts", null, 1, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainSpecificCoverage_Imports(), this.getDomainSpecificCoverage(), null, "imports", null, 0, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainSpecificCoverage_Imports(), this.getImport(), null, "imports", null, 0, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImport_ImportedNamespace(), theEcorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImport_ImportURI(), theEcorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImport_ImportedRuleset(), this.getDomainSpecificCoverage(), null, "importedRuleset", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContext_Metaclass(), theEcorePackage.getEClass(), null, "metaclass", null, 1, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -84,15 +84,15 @@ public interface DomainSpecificCoverage extends EObject {
 	EList<Context> getContexts();
 
 	/**
-	 * Returns the value of the '<em><b>Imports</b></em>' reference list.
-	 * The list contents are of type {@link DSLSpecificCoverage.DomainSpecificCoverage}.
+	 * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
+	 * The list contents are of type {@link DSLSpecificCoverage.Import}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Imports</em>' reference list.
+	 * @return the value of the '<em>Imports</em>' containment reference list.
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getDomainSpecificCoverage_Imports()
-	 * @model
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
-	EList<DomainSpecificCoverage> getImports();
+	EList<Import> getImports();
 
 } // DomainSpecificCoverage

@@ -95,7 +95,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int DOMAIN_SPECIFIC_COVERAGE__CONTEXTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Imports</b></em>' reference list.
+	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,6 +122,61 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	int DOMAIN_SPECIFIC_COVERAGE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ImportImpl <em>Import</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see DSLSpecificCoverage.impl.ImportImpl
+	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getImport()
+	 * @generated
+	 */
+	int IMPORT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Imported Namespace</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT__IMPORTED_NAMESPACE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Import URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT__IMPORT_URI = 1;
+
+	/**
+	 * The feature id for the '<em><b>Imported Ruleset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT__IMPORTED_RULESET = 2;
+
+	/**
+	 * The number of structural features of the '<em>Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.impl.ContextImpl <em>Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +184,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getContext()
 	 * @generated
 	 */
-	int CONTEXT = 1;
+	int CONTEXT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Metaclass</b></em>' reference.
@@ -175,7 +230,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getRule()
 	 * @generated
 	 */
-	int RULE = 2;
+	int RULE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -221,7 +276,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getInclusionRule()
 	 * @generated
 	 */
-	int INCLUSION_RULE = 3;
+	int INCLUSION_RULE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -267,7 +322,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getExclusionRule()
 	 * @generated
 	 */
-	int EXCLUSION_RULE = 4;
+	int EXCLUSION_RULE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -313,7 +368,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoverageOfReferenced()
 	 * @generated
 	 */
-	int COVERAGE_OF_REFERENCED = 5;
+	int COVERAGE_OF_REFERENCED = 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -368,7 +423,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoverageByContent()
 	 * @generated
 	 */
-	int COVERAGE_BY_CONTENT = 6;
+	int COVERAGE_BY_CONTENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -432,7 +487,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getIgnore()
 	 * @generated
 	 */
-	int IGNORE = 7;
+	int IGNORE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -487,7 +542,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getLimitedIgnore()
 	 * @generated
 	 */
-	int LIMITED_IGNORE = 8;
+	int LIMITED_IGNORE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -551,7 +606,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranchSpecification()
 	 * @generated
 	 */
-	int BRANCH_SPECIFICATION = 9;
+	int BRANCH_SPECIFICATION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -606,7 +661,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getBranch()
 	 * @generated
 	 */
-	int BRANCH = 13;
+	int BRANCH = 14;
 
 	/**
 	 * The number of structural features of the '<em>Branch</em>' class.
@@ -634,7 +689,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getExplicitBranch()
 	 * @generated
 	 */
-	int EXPLICIT_BRANCH = 10;
+	int EXPLICIT_BRANCH = 11;
 
 	/**
 	 * The feature id for the '<em><b>OCL Query</b></em>' attribute.
@@ -671,7 +726,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 11;
+	int CONDITION = 12;
 
 	/**
 	 * The feature id for the '<em><b>OCL Constraint</b></em>' attribute.
@@ -708,7 +763,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getImplicitBranch()
 	 * @generated
 	 */
-	int IMPLICIT_BRANCH = 12;
+	int IMPLICIT_BRANCH = 13;
 
 	/**
 	 * The number of structural features of the '<em>Implicit Branch</em>' class.
@@ -736,7 +791,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getCoveredContents()
 	 * @generated
 	 */
-	int COVERED_CONTENTS = 14;
+	int COVERED_CONTENTS = 15;
 
 	/**
 	 * The meta object id for the '{@link DSLSpecificCoverage.LimitationType <em>Limitation Type</em>}' enum.
@@ -746,7 +801,7 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getLimitationType()
 	 * @generated
 	 */
-	int LIMITATION_TYPE = 15;
+	int LIMITATION_TYPE = 16;
 
 
 	/**
@@ -793,15 +848,58 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 	EReference getDomainSpecificCoverage_Contexts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link DSLSpecificCoverage.DomainSpecificCoverage#getImports <em>Imports</em>}'.
+	 * Returns the meta object for the containment reference list '{@link DSLSpecificCoverage.DomainSpecificCoverage#getImports <em>Imports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Imports</em>'.
+	 * @return the meta object for the containment reference list '<em>Imports</em>'.
 	 * @see DSLSpecificCoverage.DomainSpecificCoverage#getImports()
 	 * @see #getDomainSpecificCoverage()
 	 * @generated
 	 */
 	EReference getDomainSpecificCoverage_Imports();
+
+	/**
+	 * Returns the meta object for class '{@link DSLSpecificCoverage.Import <em>Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Import</em>'.
+	 * @see DSLSpecificCoverage.Import
+	 * @generated
+	 */
+	EClass getImport();
+
+	/**
+	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.Import#getImportedNamespace <em>Imported Namespace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Imported Namespace</em>'.
+	 * @see DSLSpecificCoverage.Import#getImportedNamespace()
+	 * @see #getImport()
+	 * @generated
+	 */
+	EAttribute getImport_ImportedNamespace();
+
+	/**
+	 * Returns the meta object for the attribute '{@link DSLSpecificCoverage.Import#getImportURI <em>Import URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Import URI</em>'.
+	 * @see DSLSpecificCoverage.Import#getImportURI()
+	 * @see #getImport()
+	 * @generated
+	 */
+	EAttribute getImport_ImportURI();
+
+	/**
+	 * Returns the meta object for the reference '{@link DSLSpecificCoverage.Import#getImportedRuleset <em>Imported Ruleset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Imported Ruleset</em>'.
+	 * @see DSLSpecificCoverage.Import#getImportedRuleset()
+	 * @see #getImport()
+	 * @generated
+	 */
+	EReference getImport_ImportedRuleset();
 
 	/**
 	 * Returns the meta object for class '{@link DSLSpecificCoverage.Context <em>Context</em>}'.
@@ -1154,12 +1252,46 @@ public interface DSLSpecificCoveragePackage extends EPackage {
 		EReference DOMAIN_SPECIFIC_COVERAGE__CONTEXTS = eINSTANCE.getDomainSpecificCoverage_Contexts();
 
 		/**
-		 * The meta object literal for the '<em><b>Imports</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference DOMAIN_SPECIFIC_COVERAGE__IMPORTS = eINSTANCE.getDomainSpecificCoverage_Imports();
+
+		/**
+		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ImportImpl <em>Import</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see DSLSpecificCoverage.impl.ImportImpl
+		 * @see DSLSpecificCoverage.impl.DSLSpecificCoveragePackageImpl#getImport()
+		 * @generated
+		 */
+		EClass IMPORT = eINSTANCE.getImport();
+
+		/**
+		 * The meta object literal for the '<em><b>Imported Namespace</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORT__IMPORTED_NAMESPACE = eINSTANCE.getImport_ImportedNamespace();
+
+		/**
+		 * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
+
+		/**
+		 * The meta object literal for the '<em><b>Imported Ruleset</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPORT__IMPORTED_RULESET = eINSTANCE.getImport_ImportedRuleset();
 
 		/**
 		 * The meta object literal for the '{@link DSLSpecificCoverage.impl.ContextImpl <em>Context</em>}' class.

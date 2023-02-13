@@ -58,6 +58,7 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE: return createDomainSpecificCoverage();
+			case DSLSpecificCoveragePackage.IMPORT: return createImport();
 			case DSLSpecificCoveragePackage.CONTEXT: return createContext();
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED: return createCoverageOfReferenced();
 			case DSLSpecificCoveragePackage.COVERAGE_BY_CONTENT: return createCoverageByContent();
@@ -114,6 +115,16 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public DomainSpecificCoverage createDomainSpecificCoverage() {
 		DomainSpecificCoverageImpl domainSpecificCoverage = new DomainSpecificCoverageImpl();
 		return domainSpecificCoverage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Import createImport() {
+		ImportImpl import_ = new ImportImpl();
+		return import_;
 	}
 
 	/**

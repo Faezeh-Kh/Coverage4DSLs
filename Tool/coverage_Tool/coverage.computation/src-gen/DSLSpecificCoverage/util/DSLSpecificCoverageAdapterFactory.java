@@ -72,6 +72,10 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 				return createDomainSpecificCoverageAdapter();
 			}
 			@Override
+			public Adapter caseImport(Import object) {
+				return createImportAdapter();
+			}
+			@Override
 			public Adapter caseContext(Context object) {
 				return createContextAdapter();
 			}
@@ -154,6 +158,20 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainSpecificCoverageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Import <em>Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see DSLSpecificCoverage.Import
+	 * @generated
+	 */
+	public Adapter createImportAdapter() {
 		return null;
 	}
 

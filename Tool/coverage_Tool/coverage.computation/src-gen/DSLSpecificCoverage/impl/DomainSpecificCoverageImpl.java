@@ -5,6 +5,7 @@ package DSLSpecificCoverage.impl;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.DomainSpecificCoverage;
+import DSLSpecificCoverage.Import;
 
 import java.util.Collection;
 
@@ -21,7 +22,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -82,14 +82,14 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	protected EList<Context> contexts;
 
 	/**
-	 * The cached value of the '{@link #getImports() <em>Imports</em>}' reference list.
+	 * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getImports()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DomainSpecificCoverage> imports;
+	protected EList<Import> imports;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,9 +186,9 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DomainSpecificCoverage> getImports() {
+	public EList<Import> getImports() {
 		if (imports == null) {
-			imports = new EObjectResolvingEList<DomainSpecificCoverage>(DomainSpecificCoverage.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS);
+			imports = new EObjectContainmentEList.Resolving<Import>(Import.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS);
 		}
 		return imports;
 	}
@@ -203,6 +203,8 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
 				return ((InternalEList<?>)getContexts()).basicRemove(otherEnd, msgs);
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
+				return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -249,7 +251,7 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 				return;
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
 				getImports().clear();
-				getImports().addAll((Collection<? extends DomainSpecificCoverage>)newValue);
+				getImports().addAll((Collection<? extends Import>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
