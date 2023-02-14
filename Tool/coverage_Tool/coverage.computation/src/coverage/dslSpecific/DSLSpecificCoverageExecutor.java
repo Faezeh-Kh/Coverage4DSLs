@@ -135,38 +135,38 @@ public class DSLSpecificCoverageExecutor {
 	//apply all the rules on the object (NOTE: rule's context = object type)
 	public void applyCoverageRules(EList<Rule> rules, List<EObject> eObjects) {
 		for (Rule rule:rules) {
+			List<EObject> validObjects = eObjects.stream()
+					.filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
+					.collect(Collectors.toList());
+			if (validObjects.isEmpty()) {
+				break;
+			}
 			if (rule instanceof Ignore) {
 				Ignore ignoreRule = (Ignore) rule;
 				updateCoverableClasses(ignoreRule);
-				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
-					.forEach(object -> runIgnoreRule(ignoreRule, object));
+				validObjects.forEach(object -> runIgnoreRule(ignoreRule, object));
 			}
 			else if (rule instanceof LimitedIgnore) {
 				LimitedIgnore limitedIgnoreRule = (LimitedIgnore) rule;
-				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
-					.forEach(object -> runLimitedIgnoreRule(limitedIgnoreRule, object));
+				validObjects.forEach(object -> runLimitedIgnoreRule(limitedIgnoreRule, object));
 			}
 			else if (rule instanceof CoverageOfReferenced) {
 				CoverageOfReferenced refRule = (CoverageOfReferenced) rule;
 				updateCoverableClasses(refRule);
-				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
-					.forEach(object -> inferReferenceCoverage(refRule, object));
+				validObjects.forEach(object -> inferReferenceCoverage(refRule, object));
 			}
 			else if (rule instanceof CoverageByContent) {
 				CoverageByContent containmentRule = (CoverageByContent) rule;
 				updateCoverableClasses(containmentRule);
-				eObjects.stream().filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
-					.forEach(object -> inferContainerCoverage(containmentRule, object));
+				validObjects.forEach(object -> inferContainerCoverage(containmentRule, object));
 			}
 			else if (rule instanceof BranchSpecification) {
 				BranchSpecification branchRule = (BranchSpecification) rule; 
-				List<EObject> contextObjects = eObjects.stream().filter(object -> 
-					isRuleConditionSatisfied(rule.getCondition(), object)).collect(Collectors.toList());
-				if (!contextObjects.isEmpty()) {
+				if (!validObjects.isEmpty()) {
 					if (branchingRule_contextObjects.get(branchRule) == null) {
 						branchingRule_contextObjects.put(branchRule, new LinkedHashSet<>());
 					}
-					branchingRule_contextObjects.get(branchRule).addAll(contextObjects);
+					branchingRule_contextObjects.get(branchRule).addAll(validObjects);
 				}
 			}
 		}
