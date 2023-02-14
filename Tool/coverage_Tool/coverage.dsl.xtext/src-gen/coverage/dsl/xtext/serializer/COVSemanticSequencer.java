@@ -136,7 +136,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CoverageByContent returns CoverageByContent
 	 *
 	 * Constraint:
-	 *     (condition=Condition? multiplicity=CoveredContents containmentReference=[EReference|EString] description=EString?)
+	 *     (condition=Condition? multiplicity=CoveredContents containmentReference=[EReference|EString]? description=EString?)
 	 * </pre>
 	 */
 	protected void sequence_CoverageByContent(ISerializationContext context, CoverageByContent semanticObject) {

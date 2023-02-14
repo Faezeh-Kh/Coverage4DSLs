@@ -651,6 +651,12 @@ rule__CoveredContents__Alternatives
 		('ONE')
 		{ after(grammarAccess.getCoveredContentsAccess().getONEEnumLiteralDeclaration_1()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getCoveredContentsAccess().getANYEnumLiteralDeclaration_2()); }
+		('anyContent')
+		{ after(grammarAccess.getCoveredContentsAccess().getANYEnumLiteralDeclaration_2()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1277,7 +1283,6 @@ rule__Import__Group_0_1__2
 	}
 :
 	rule__Import__Group_0_1__2__Impl
-	rule__Import__Group_0_1__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1292,32 +1297,6 @@ rule__Import__Group_0_1__2__Impl
 	{ before(grammarAccess.getImportAccess().getGroup_0_1_2()); }
 	(rule__Import__Group_0_1_2__0)?
 	{ after(grammarAccess.getImportAccess().getGroup_0_1_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Import__Group_0_1__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Import__Group_0_1__3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Import__Group_0_1__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getImportAccess().getSemicolonKeyword_0_1_3()); }
-	';'
-	{ after(grammarAccess.getImportAccess().getSemicolonKeyword_0_1_3()); }
 )
 ;
 finally {
@@ -1412,7 +1391,6 @@ rule__Import__Group_1__1
 	}
 :
 	rule__Import__Group_1__1__Impl
-	rule__Import__Group_1__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1427,32 +1405,6 @@ rule__Import__Group_1__1__Impl
 	{ before(grammarAccess.getImportAccess().getImportURIAssignment_1_1()); }
 	(rule__Import__ImportURIAssignment_1_1)
 	{ after(grammarAccess.getImportAccess().getImportURIAssignment_1_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Import__Group_1__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__Import__Group_1__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Import__Group_1__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getImportAccess().getSemicolonKeyword_1_2()); }
-	';'
-	{ after(grammarAccess.getImportAccess().getSemicolonKeyword_1_2()); }
 )
 ;
 finally {
@@ -3099,7 +3051,7 @@ rule__CoverageByContent__Group__5__Impl
 :
 (
 	{ before(grammarAccess.getCoverageByContentAccess().getContainmentReferenceAssignment_5()); }
-	(rule__CoverageByContent__ContainmentReferenceAssignment_5)
+	(rule__CoverageByContent__ContainmentReferenceAssignment_5)?
 	{ after(grammarAccess.getCoverageByContentAccess().getContainmentReferenceAssignment_5()); }
 )
 ;

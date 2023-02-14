@@ -686,8 +686,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEReference(getDomainSpecificCoverage_Imports(), this.getImport(), null, "imports", null, 0, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImport_ImportedNamespace(), theEcorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImport_ImportURI(), theEcorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImport_ImportedRuleset(), this.getDomainSpecificCoverage(), null, "importedRuleset", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -706,7 +706,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEReference(getCoverageOfReferenced_Reference(), theEcorePackage.getEReference(), null, "reference", null, 1, -1, CoverageOfReferenced.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(coverageByContentEClass, CoverageByContent.class, "CoverageByContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCoverageByContent_ContainmentReference(), theEcorePackage.getEReference(), null, "containmentReference", null, 1, 1, CoverageByContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCoverageByContent_ContainmentReference(), theEcorePackage.getEReference(), null, "containmentReference", null, 0, 1, CoverageByContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCoverageByContent_Multiplicity(), this.getCoveredContents(), "multiplicity", null, 1, 1, CoverageByContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ignoreEClass, Ignore.class, "Ignore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -723,7 +723,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEAttribute(getExplicitBranch_OCLQuery(), ecorePackage.getEString(), "OCLQuery", null, 1, 1, ExplicitBranch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCondition_OCLConstraint(), theEcorePackage.getEString(), "OCLConstraint", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_OCLConstraint(), ecorePackage.getEString(), "OCLConstraint", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(implicitBranchEClass, ImplicitBranch.class, "ImplicitBranch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -733,6 +733,7 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		initEEnum(coveredContentsEEnum, CoveredContents.class, "CoveredContents");
 		addEEnumLiteral(coveredContentsEEnum, CoveredContents.ALL);
 		addEEnumLiteral(coveredContentsEEnum, CoveredContents.ONE);
+		addEEnumLiteral(coveredContentsEEnum, CoveredContents.ANY);
 
 		initEEnum(limitationTypeEEnum, LimitationType.class, "LimitationType");
 		addEEnumLiteral(limitationTypeEEnum, LimitationType.CONTAINED_BY);

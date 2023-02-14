@@ -29,7 +29,7 @@ public interface CoverageByContent extends InclusionRule {
 	 * @return the value of the '<em>Containment Reference</em>' reference.
 	 * @see #setContainmentReference(EReference)
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getCoverageByContent_ContainmentReference()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EReference getContainmentReference();

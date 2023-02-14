@@ -162,38 +162,36 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cFromKeyword_0_1_2_0 = (Keyword)cGroup_0_1_2.eContents().get(0);
 		private final Assignment cImportURIAssignment_0_1_2_1 = (Assignment)cGroup_0_1_2.eContents().get(1);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_0_1_2_1_0 = (RuleCall)cImportURIAssignment_0_1_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_0_1_3 = (Keyword)cGroup_0_1.eContents().get(3);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cFromKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cImportURIAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_1_1_0 = (RuleCall)cImportURIAssignment_1_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		private final Assignment cImportedRulesetAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
 		private final CrossReference cImportedRulesetDomainSpecificCoverageCrossReference_2_0 = (CrossReference)cImportedRulesetAssignment_2.eContents().get(0);
 		private final RuleCall cImportedRulesetDomainSpecificCoverageEStringParserRuleCall_2_0_1 = (RuleCall)cImportedRulesetDomainSpecificCoverageCrossReference_2_0.eContents().get(1);
 		
 		//Import returns Import:
 		//    {Import}
-		//    ('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';') |
-		//    ('from' importURI=STRING ';')|
+		//    ('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?) |
+		//    ('from' importURI=STRING)|
 		//    (importedRuleset=[DomainSpecificCoverage|EString])
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Import}
-		//('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';') |
-		//('from' importURI=STRING ';')|
+		//('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?) |
+		//('from' importURI=STRING)|
 		//(importedRuleset=[DomainSpecificCoverage|EString])
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//{Import}
-		//('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';')
+		//('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?)
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//{Import}
 		public Action getImportAction_0_0() { return cImportAction_0_0; }
 		
-		//('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';')
+		//('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?)
 		public Group getGroup_0_1() { return cGroup_0_1; }
 		
 		//'with'
@@ -217,10 +215,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//STRING
 		public RuleCall getImportURISTRINGTerminalRuleCall_0_1_2_1_0() { return cImportURISTRINGTerminalRuleCall_0_1_2_1_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_0_1_3() { return cSemicolonKeyword_0_1_3; }
-		
-		//('from' importURI=STRING ';')
+		//('from' importURI=STRING)
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//'from'
@@ -231,9 +226,6 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		
 		//STRING
 		public RuleCall getImportURISTRINGTerminalRuleCall_1_1_0() { return cImportURISTRINGTerminalRuleCall_1_1_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_1_2() { return cSemicolonKeyword_1_2; }
 		
 		//(importedRuleset=[DomainSpecificCoverage|EString])
 		public Assignment getImportedRulesetAssignment_2() { return cImportedRulesetAssignment_2; }
@@ -727,13 +719,13 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//CoverageByContent returns Rule:
 		//    {CoverageByContent}
 		//    ('when' condition=Condition)?
-		//    'covered' 'when' multiplicity=CoveredContents containmentReference=[ecore::EReference|EString] 'iscovered'
+		//    'covered' 'when' multiplicity=CoveredContents (containmentReference=[ecore::EReference|EString])? 'iscovered'
 		//    ('description' description=EString)?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{CoverageByContent}
 		//('when' condition=Condition)?
-		//'covered' 'when' multiplicity=CoveredContents containmentReference=[ecore::EReference|EString] 'iscovered'
+		//'covered' 'when' multiplicity=CoveredContents (containmentReference=[ecore::EReference|EString])? 'iscovered'
 		//('description' description=EString)?
 		public Group getGroup() { return cGroup; }
 		
@@ -764,7 +756,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//CoveredContents
 		public RuleCall getMultiplicityCoveredContentsEnumRuleCall_4_0() { return cMultiplicityCoveredContentsEnumRuleCall_4_0; }
 		
-		//containmentReference=[ecore::EReference|EString]
+		//(containmentReference=[ecore::EReference|EString])?
 		public Assignment getContainmentReferenceAssignment_5() { return cContainmentReferenceAssignment_5; }
 		
 		//[ecore::EReference|EString]
@@ -965,12 +957,14 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cALLALLKeyword_0_0 = (Keyword)cALLEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cONEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cONEONEKeyword_1_0 = (Keyword)cONEEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cANYEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cANYAnyContentKeyword_2_0 = (Keyword)cANYEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum CoveredContents returns CoveredContents:
-		//    ALL = 'ALL' | ONE = 'ONE';
+		//    ALL = 'ALL' | ONE = 'ONE' | ANY = 'anyContent';
 		public EnumRule getRule() { return rule; }
 		
-		//ALL = 'ALL' | ONE = 'ONE'
+		//ALL = 'ALL' | ONE = 'ONE' | ANY = 'anyContent'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//ALL = 'ALL'
@@ -984,6 +978,12 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		
 		//'ONE'
 		public Keyword getONEONEKeyword_1_0() { return cONEONEKeyword_1_0; }
+		
+		//ANY = 'anyContent'
+		public EnumLiteralDeclaration getANYEnumLiteralDeclaration_2() { return cANYEnumLiteralDeclaration_2; }
+		
+		//'anyContent'
+		public Keyword getANYAnyContentKeyword_2_0() { return cANYAnyContentKeyword_2_0; }
 	}
 	public class LimitationTypeElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "coverage.dsl.xtext.COV.LimitationType");
@@ -1108,8 +1108,8 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	//Import returns Import:
 	//    {Import}
-	//    ('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';') |
-	//    ('from' importURI=STRING ';')|
+	//    ('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?) |
+	//    ('from' importURI=STRING)|
 	//    (importedRuleset=[DomainSpecificCoverage|EString])
 	//    ;
 	public ImportElements getImportAccess() {
@@ -1224,7 +1224,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	//CoverageByContent returns Rule:
 	//    {CoverageByContent}
 	//    ('when' condition=Condition)?
-	//    'covered' 'when' multiplicity=CoveredContents containmentReference=[ecore::EReference|EString] 'iscovered'
+	//    'covered' 'when' multiplicity=CoveredContents (containmentReference=[ecore::EReference|EString])? 'iscovered'
 	//    ('description' description=EString)?;
 	public CoverageByContentElements getCoverageByContentAccess() {
 		return pCoverageByContent;
@@ -1290,7 +1290,7 @@ public class COVGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//enum CoveredContents returns CoveredContents:
-	//    ALL = 'ALL' | ONE = 'ONE';
+	//    ALL = 'ALL' | ONE = 'ONE' | ANY = 'anyContent';
 	public CoveredContentsElements getCoveredContentsAccess() {
 		return eCoveredContents;
 	}

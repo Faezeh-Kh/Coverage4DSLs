@@ -15,8 +15,8 @@ DomainSpecificCoverage returns DomainSpecificCoverage:
 	
 Import returns Import:
 	{Import}
-	('with' importedNamespace=ImportedFQN ('from' importURI=STRING)? ';') |
-	('from' importURI=STRING ';')|
+	('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?) |
+	('from' importURI=STRING)|
 	(importedRuleset=[DomainSpecificCoverage|EString])
 	;
 
@@ -60,7 +60,7 @@ CoverageOfReferenced returns Rule:
 CoverageByContent returns Rule:
 	{CoverageByContent}
 	('when' condition=Condition)?
-	'covered' 'when' multiplicity=CoveredContents containmentReference=[ecore::EReference|EString] 'iscovered'
+	'covered' 'when' multiplicity=CoveredContents (containmentReference=[ecore::EReference|EString])? 'iscovered'
 	('description' description=EString)?;
 		
 
@@ -85,7 +85,7 @@ Condition returns Condition:
 	OCLConstraint=EString;
 	
 enum CoveredContents returns CoveredContents:
-	ALL = 'ALL' | ONE = 'ONE';
+	ALL = 'ALL' | ONE = 'ONE' | ANY = 'anyContent';
 
 enum LimitationType returns LimitationType:
 	containedBy = 'containedBy' | notContainedBy = 'notContainedBy';

@@ -216,32 +216,40 @@ public class DSLSpecificCoverageExecutor {
 	}
 
 	private void inferContainerCoverage(CoverageByContent r, EObject object) {
-		EReference ref = (EReference) getMatchedFeature(object, r.getContainmentReference().getName());
-		if (ref == null) { return;}
-		
-		Object containedObject = object.eGet(ref);
-		if (containedObject == null) { return; }
-		
-		if (containedObject instanceof EObject) {
-			EObject containee = (EObject) containedObject;
-			String coverageStatus = tcDslSpecificCoverageReport.getObjectCoverage(containee);
-			tcDslSpecificCoverageReport.setObjectCoverage(object, coverageStatus);
-			if (coverageStatus == TDLCoverageUtil.COVERED) {
-				addObject2tracedObjects(containee, object);
+		if (r.getContainmentReference() != null) {
+			EReference ref = (EReference) getMatchedFeature(object, r.getContainmentReference().getName());
+			if (ref == null) { return;}
+			
+			Object containedObject = object.eGet(ref);
+			if (containedObject == null) { return; }
+			
+			if (containedObject instanceof EObject) {
+				EObject containee = (EObject) containedObject;
+				String coverageStatus = tcDslSpecificCoverageReport.getObjectCoverage(containee);
+				tcDslSpecificCoverageReport.setObjectCoverage(object, coverageStatus);
+				if (coverageStatus == TDLCoverageUtil.COVERED) {
+					addObject2tracedObjects(containee, object);
+				}
+			}
+			else if (containedObject instanceof EObjectContainmentEList<?>) {
+				EObjectContainmentEList<?> containees = (EObjectContainmentEList<?>) containedObject;
+				//if several objects are contained, set coverage based on the rule's multiplicity
+				if (r.getMultiplicity() == CoveredContents.ONE) {
+					coverContainerIfOneContaineeCovered(containees);
+				}
+				else if (r.getMultiplicity() == CoveredContents.ALL){
+					coverContainerIfAllContaineeCovered(containees);
+				}
+				else if (r.getMultiplicity() == CoveredContents.ANY) {
+					coverContainerIfAnyContaineeCovered(object);
+				}	
 			}
 		}
-		else if (containedObject instanceof EObjectContainmentEList<?>) {
-			EObjectContainmentEList<?> containees = (EObjectContainmentEList<?>) containedObject;
-			//if several objects are contained, set coverage based on the rule's multiplicity
-			if (r.getMultiplicity() == CoveredContents.ONE) {
-				coverContainerIfOneContaineeCovered(containees);
-			}
-			else {
-				coverContainerIfAllContaineeCovered(containees);
-			}
+		else {
+			coverContainerIfAnyContaineeCovered(object);
 		}
 	}
-	
+
 	private void coverContainerIfOneContaineeCovered(EObjectContainmentEList<?> containedObjects) {
 		EObject container = ((EObject) containedObjects.get(0)).eContainer();
 		String containeeCoverage = TDLCoverageUtil.NOT_COVERED;
@@ -267,6 +275,19 @@ public class DSLSpecificCoverageExecutor {
 			EObject container = ((EObject) containedObjects.get(0)).eContainer();
 			tcDslSpecificCoverageReport.setObjectCoverage(container, TDLCoverageUtil.COVERED);
 			addObject2tracedObjects((EObject) containedObjects.get(0), container);
+		}
+	}
+	
+	private void coverContainerIfAnyContaineeCovered(EObject container) {
+		String coverageStatus = "";
+		while (container.eAllContents().hasNext()) {
+			EObject containee = container.eAllContents().next();
+			coverageStatus = tcDslSpecificCoverageReport.getObjectCoverage(containee);
+			if (coverageStatus == TDLCoverageUtil.COVERED) {
+				tcDslSpecificCoverageReport.setObjectCoverage(container, coverageStatus);
+				addObject2tracedObjects(containee, container);
+				break;
+			}
 		}
 	}
 	
@@ -308,15 +329,25 @@ public class DSLSpecificCoverageExecutor {
 		for (EObject capturedObject : testCaseCoverage.getObjectsCapturedByTrace()) {
 			if (object2find_objects2add.get(capturedObject) != null) {
 				LinkedHashSet<EObject> objects2add = object2find_objects2add.get(capturedObject);
-				if (capturedObject.eContainer() == objects2add.iterator().next()) {
-					//put the object before all of its contained objects that are in the trace
-					objectsCapturedByTrace_modified.addAll(objects2add);
-					objectsCapturedByTrace_modified.add(capturedObject);
-				}else {
-					//put the reference object after the object2find
-					objectsCapturedByTrace_modified.add(capturedObject);
-					objectsCapturedByTrace_modified.addAll(objects2add);
+				//check if the container of the captured object must be added
+				EObject container2add = objects2add.stream()
+						.filter(object2add -> object2add == capturedObject.eContainer())
+						.findFirst().orElse(null);
+				if (container2add != null) {
+					//if the container must be added, add it before all of its contained elements
+					int index = objectsCapturedByTrace_modified.size()-1;
+					while (objectsCapturedByTrace_modified.get(index).eContainer() == container2add && index >= 0) {
+						index--;
+					}
+					objectsCapturedByTrace_modified.add(index+1, container2add);
+					objects2add.remove(container2add);
 				}
+				
+				//add the captured object
+				objectsCapturedByTrace_modified.add(capturedObject);
+				
+				//add rest of the elements: they are the covered referenced elements
+				objectsCapturedByTrace_modified.addAll(objects2add);				
 			}
 			else {
 				objectsCapturedByTrace_modified.add(capturedObject);

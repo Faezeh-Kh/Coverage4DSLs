@@ -305,23 +305,19 @@ ruleImport returns [EObject current=null]
 						)
 					)
 				)?
-				otherlv_5=';'
-				{
-					newLeafNode(otherlv_5, grammarAccess.getImportAccess().getSemicolonKeyword_0_1_3());
-				}
 			)
 		)
 		    |
 		(
-			otherlv_6='from'
+			otherlv_5='from'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getImportAccess().getFromKeyword_1_0());
+				newLeafNode(otherlv_5, grammarAccess.getImportAccess().getFromKeyword_1_0());
 			}
 			(
 				(
-					lv_importURI_7_0=RULE_STRING
+					lv_importURI_6_0=RULE_STRING
 					{
-						newLeafNode(lv_importURI_7_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_1_0());
+						newLeafNode(lv_importURI_6_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_1_0());
 					}
 					{
 						if ($current==null) {
@@ -330,15 +326,11 @@ ruleImport returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"importURI",
-							lv_importURI_7_0,
+							lv_importURI_6_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
-			otherlv_8=';'
-			{
-				newLeafNode(otherlv_8, grammarAccess.getImportAccess().getSemicolonKeyword_1_2());
-			}
 		)
 		    |
 		(
@@ -1119,7 +1111,7 @@ ruleCoverageByContent returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_7='iscovered'
 		{
 			newLeafNode(otherlv_7, grammarAccess.getCoverageByContentAccess().getIscoveredKeyword_6());
@@ -1450,6 +1442,14 @@ ruleCoveredContents returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getCoveredContentsAccess().getONEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getCoveredContentsAccess().getONEEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='anyContent'
+			{
+				$current = grammarAccess.getCoveredContentsAccess().getANYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getCoveredContentsAccess().getANYEnumLiteralDeclaration_2());
 			}
 		)
 	)

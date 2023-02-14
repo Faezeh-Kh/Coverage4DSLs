@@ -7,7 +7,7 @@
     <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ANF08BpWEe2zMOptEwAPvA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BQLCkBpWEe2zMOptEwAPvA" name="DSLSpecificCoverage class diagram" repPath="#_BP1rYBpWEe2zMOptEwAPvA" changeId="66820b71-a997-4b27-a757-9dd99d66366a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BQLCkBpWEe2zMOptEwAPvA" name="DSLSpecificCoverage class diagram" repPath="#_BP1rYBpWEe2zMOptEwAPvA" changeId="ec0f73b9-e64a-4a21-9862-b9581312c0c6">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="DSLSpecificCoverage.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -40,7 +40,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_B2qa0xpWEe2zMOptEwAPvA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_B2pzxxpWEe2zMOptEwAPvA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B2pzyBpWEe2zMOptEwAPvA" x="648" y="666" height="93"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B2pzyBpWEe2zMOptEwAPvA" x="702" y="666" height="93"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_753AcJP_Ee2PrJAC2mPQDA" type="2002" element="_75o-AJP_Ee2PrJAC2mPQDA">
           <children xmi:type="notation:Node" xmi:id="_757R4JP_Ee2PrJAC2mPQDA" type="5006"/>
@@ -253,11 +253,15 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_xNf0J5tBEe2Srrf2dbUvhg" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_xNf0KJtBEe2Srrf2dbUvhg"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_oRYnQqx4Ee2ie_8y390wyA" type="3010" element="_oQ77QKx4Ee2ie_8y390wyA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_oRYnQ6x4Ee2ie_8y390wyA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_oRYnRKx4Ee2ie_8y390wyA"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_xNf0IZtBEe2Srrf2dbUvhg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_xNf0IptBEe2Srrf2dbUvhg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_xNcKJ5tBEe2Srrf2dbUvhg" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xNcKKJtBEe2Srrf2dbUvhg" x="468" y="666" height="93"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xNcKKJtBEe2Srrf2dbUvhg" x="540" y="666" height="111"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_BQfLohpWEe2zMOptEwAPvA"/>
         <edges xmi:type="notation:Edge" xmi:id="_d9qE0qugEe2Zaq-lckziWQ" type="4001" element="_d9gTwKugEe2Zaq-lckziWQ" source="_96FLwJP_Ee2PrJAC2mPQDA" target="_96GZ4JP_Ee2PrJAC2mPQDA">
@@ -706,8 +710,8 @@
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_d9Y_BKugEe2Zaq-lckziWQ" name=" containmentReference : EReference" tooltipText="">
           <target xmi:type="ecore:EReference" href="DSLSpecificCoverage.ecore#//CoverageByContent/containmentReference"/>
           <semanticElements xmi:type="ecore:EReference" href="DSLSpecificCoverage.ecore#//CoverageByContent/containmentReference"/>
-          <ownedStyle xmi:type="diagram:BundledImage" uid="_d9Y_BaugEe2Zaq-lckziWQ" labelAlignment="LEFT" description="_d9Wi0augEe2Zaq-lckziWQ" color="114,159,207">
-            <labelFormat>bold</labelFormat>
+          <ownedStyle xmi:type="diagram:BundledImage" uid="_yQjmN6x4Ee2ie_8y390wyA" labelAlignment="LEFT" color="114,159,207">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
         </ownedElements>
@@ -881,6 +885,14 @@
         <target xmi:type="ecore:EEnumLiteral" href="DSLSpecificCoverage.ecore#//CoveredContents/ONE"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="DSLSpecificCoverage.ecore#//CoveredContents/ONE"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_xNcJ0ZtBEe2Srrf2dbUvhg" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_oQ77QKx4Ee2ie_8y390wyA" name="ANY" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="DSLSpecificCoverage.ecore#//CoveredContents/ANY"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="DSLSpecificCoverage.ecore#//CoveredContents/ANY"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_oQ77Qax4Ee2ie_8y390wyA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

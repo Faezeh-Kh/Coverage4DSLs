@@ -11,6 +11,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//CoveredContents">
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ALL"/>
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ANY"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//LimitationType">
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//LimitationType/containedBy"/>

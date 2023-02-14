@@ -34,8 +34,7 @@
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CoverageByContent" eSuperTypes="#//InclusionRule">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containmentReference" lowerBound="1"
-        eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containmentReference" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" lowerBound="1"
         eType="#//CoveredContents"/>
   </eClassifiers>
@@ -63,6 +62,7 @@
   <eClassifiers xsi:type="ecore:EEnum" name="CoveredContents">
     <eLiterals name="ALL"/>
     <eLiterals name="ONE" value="1"/>
+    <eLiterals name="ANY" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LimitationType">
     <eLiterals name="containedBy" literal="ContainedBy"/>
