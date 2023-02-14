@@ -3,6 +3,7 @@ package org.eclipse.gemoc.executionframework.event.manager;
  * implemented by Faezeh
  */
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +39,28 @@ public class K3RuleExecutor implements IMetalanguageRuleExecutor{
 		try {
 			result = toCall.invoke(null, args.toArray());
 		} catch (Throwable e) {
-			e.printStackTrace();
+			if (e instanceof IllegalAccessException) {
+				System.out.println("IllegalAccessException -> '" + toCall.getName() +
+						"' method object is enforcing Java language access control and the underlying method is inaccessible");
+			}
+			else if (e instanceof IllegalArgumentException) {
+				System.out.println("IllegalArgumentException -> '" + toCall.getName() +
+						"' method is an instance method and the specified object argument is not an instance of the class or interface declaring the underlying method "
+						+ "(or of a subclass or implementor thereof); "
+						+ "if the number of actual and formal parameters differ; "
+						+ "if an unwrapping conversion for primitive arguments fails; "
+						+ "or if, after possible unwrapping, a parameter value cannot be converted to the corresponding formal parameter type by a method invocation conversion.");
+			}
+			else if (e instanceof InvocationTargetException) {
+				//e.printStackTrace();
+				System.out.println("InvocationTargetException -> thrown because of calling '" + toCall.getName() + "' method");
+			}
+			else if (e instanceof NullPointerException) {
+				System.out.println("NullPointerException -> the specified object is null and the '" + toCall.getName() + "' method is an instance method");
+			}
+			else if (e instanceof ExceptionInInitializerError) {
+				System.out.println("ExceptionInInitializerError -> the initialization provoked by '" + toCall.getName() + "' method fails.");
+			}
 		}
 		return result;
 	}
