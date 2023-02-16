@@ -117,7 +117,7 @@ public class DSLSpecificBranchCoverage {
 			//it means the explicit branch is covered and the implicit branch is not covered
 			return TDLCoverageUtil.NOT_COVERED;
 		}
-		//check if between two observation of the branching root or after the last observation, there is no explicit branch, then the implicit branch is covered
+		//check if between two observations of the branching root or after the last observation, there is no explicit branch, then the implicit branch is covered
 		for (int index2 = index1 + 1; index2 < allCoveredObjects.size(); index2++) {
 			EObject capturedObject = allCoveredObjects.get(index2);
 			//if there is an element between two occurrences of the branching root or after the last occurrence
