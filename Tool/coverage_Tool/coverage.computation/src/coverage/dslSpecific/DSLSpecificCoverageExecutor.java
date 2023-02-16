@@ -62,7 +62,7 @@ public class DSLSpecificCoverageExecutor {
 		tcDslSpecificCoverageReport.setCoverableClasses(TDLCoverageUtil.getInstance().getCoverableClasses());
 		tcDslSpecificCoverageReport.setObjects(testCaseCoverage.getAllModelObjects());
 		
-		//the initial coverage status is the one computed by the trace
+		//the initial coverage status is the one computed based on the trace
 		tcDslSpecificCoverageReport.setObjectCoverageStatus(testCaseCoverage.getTcObjectCoverageStatusByTrace());
 
 		//finding eobjects of each context
@@ -93,11 +93,21 @@ public class DSLSpecificCoverageExecutor {
 		}
 		
 		//if there are branchSpecification rules, compute branch coverage
-		if (!branchingRule_contextObjects.isEmpty()) {
+		if (!branchingRule_contextObjects.isEmpty() && noOverlapsExists()) {
 			updateObjectsCapturedByTrace();
 			TestCoverageReport tcBranchCoverageReport = (new DSLSpecificBranchCoverage(this)).runBranchCoverageComputation();
 			tcCoverageReports.add(tcBranchCoverageReport);
 		}
+	}
+
+	private boolean noOverlapsExists() {
+		int numOfContextObjects = (int) branchingRule_contextObjects.values().stream().count();
+		int numOfDistinctContextObjects = (int) branchingRule_contextObjects.values().stream().distinct().count();
+		if (numOfContextObjects == numOfDistinctContextObjects) {
+			return true;
+		}
+		System.out.println("There is an overlap between the BranchSpecification rules");
+		return false;
 	}
 
 	private boolean hasOnlyGenericRules() {
