@@ -1,6 +1,8 @@
 package arduino.semantics
 
 import arduino.ArduinoBoard
+
+
 import arduino.ArduinoCommunicationModule
 import arduino.BinaryBooleanExpression
 import arduino.BinaryIntegerExpression
@@ -47,7 +49,7 @@ import fr.inria.diverse.k3.al.annotationprocessor.Aspect
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import fr.inria.diverse.k3.al.annotationprocessor.Step
 import org.eclipse.emf.common.util.EList
-
+import static extension arduino.semantics.SketchAspect.*
 import static extension arduino.semantics.Block_ExecutableAspect.*
 import static extension arduino.semantics.BluetoothTransceiver_PushAspect.*
 import static extension arduino.semantics.BooleanVariable_EvaluableAspect.*
@@ -125,7 +127,7 @@ class Project_ExecutableAspect {
 	def void execute() {
 		val sketches = _self.sketches
 		//while(true) {
-			sketches.forEach[s|s.block.execute]
+			sketches.forEach[s|s.execute]
 		//}
 	}
 	
@@ -400,9 +402,10 @@ class Repeat_EvaluableAspect extends Control_EvaluableAspect {
 
 	@OverrideAspectMethod
 	def Boolean evaluate() {
+		println("iteration #" + _self.i + " called by" + _self.toString)
 		var Boolean resCond = false
 		resCond = (_self.i  < _self.iteration)
-		_self.i = _self.i+1
+		_self.i = _self.i + 1
 		return resCond
 	}
 
