@@ -2,6 +2,7 @@ package coverage.computation;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -13,8 +14,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.imt.tdl.utilities.DSLProcessor;
 
 import DSLSpecificCoverage.DomainSpecificCoverage;
@@ -28,20 +30,23 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	private DSLProcessor dslProcessor;
 	private Path DSLPath;
 	private EPackage metamodelRootElement;
-	private Set<String> coverableClasses_me = new HashSet<>();
-	private Set<String> extendedClassesWithoutStep_me = new HashSet<>();
-	private Set<String> coverableClasses_b = new HashSet<>();
-	private Set<String> extendedClassesWithoutStep_b = new HashSet<>();
+	private Set<String> extendedClassesWithoutStep = new HashSet<>();
+	private Set<String> coverableClasses = new HashSet<>();
 	
 	private List<EClass> classesWithDynamicFeatures = new ArrayList<>();
 	private List<EClass> dynamicClasses = new ArrayList<>();
 	
-	public static final String COVERED = "Covered";
-	public static final String NOT_COVERED = "Not_Covered";
-	public static final String NOT_TRACED = "Not_Traced";
+	public static final String COVERED = "covered";
+	public static final String NOT_COVERED = "not covered";
+	public static final String PARTLY_COVERED = "partly covered";
+	public static final String NOSTATUS = "no status";
+	
+	public static final String TRACEBASEDCOVERAGE = "basedOnTrace";
+	public static final String DSLSPECIFICCOVERAGE = "dslSpecific";
+	public static final String BRANCHCOVERAGE = "branchCoverage";
 	
 	private IDSLSpecificCoverage dslSpecificCoverageExtension;
-	private DomainSpecificCoverage dslSpecificCoverage;
+	private List<DomainSpecificCoverage> dslSpecificCoverages;
 	
 	private TDLTestSuiteCoverage testSuiteCoverage;
 
@@ -69,29 +74,26 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	}
 	
 	public void runCoverageComputation() {
-		coverableClasses_me.clear();
-		extendedClassesWithoutStep_me.clear();
-		coverableClasses_b.clear();
-		extendedClassesWithoutStep_b.clear();
+		extendedClassesWithoutStep.clear();
+		coverableClasses.clear();
 		dynamicClasses.clear();
 		classesWithDynamicFeatures.clear();
-		dslSpecificCoverage = null;
-		dslSpecificCoverageExtension = null;
 		
 		dslProcessor = new DSLProcessor(DSLPath);
 		dslProcessor.loadDSLMetaclasses();
 		metamodelRootElement = dslProcessor.getMetamodelRootElement();
 		findCoverableClassesFromDSLSemantics();
 		
+		dslSpecificCoverageExtension = null;
+		dslSpecificCoverages = null;
+		
 		testSuiteCoverage.calculateTSCoverage();
 	}
 	
 	private void findCoverableClassesFromDSLSemantics(){
 		dslProcessor.findDSLExtendedClasses();
-		extendedClassesWithoutStep_me.addAll(dslProcessor.getExtendedClassesWithoutStep());
-		coverableClasses_me.addAll(dslProcessor.getExtendedClassesWithStep());
-		extendedClassesWithoutStep_b.addAll(extendedClassesWithoutStep_me);
-		coverableClasses_b.addAll(coverableClasses_me);
+		coverableClasses.addAll(dslProcessor.getExtendedClassesWithStep());
+		extendedClassesWithoutStep.addAll(dslProcessor.getExtendedClassesWithoutStep());
 		checkInheritanceForNotCoverableClasses();
 	}
 	
@@ -100,21 +102,20 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	public void checkInheritanceForNotCoverableClasses() {
 		for (EClassifier clazz: metamodelRootElement.getEClassifiers()) {
 			String className = clazz.getName();
-			if (clazz instanceof EClass eclazz) {
-				if (!coverableClasses_me.contains(className) && 
-						!extendedClassesWithoutStep_me.contains(className)) {
-					checkInheritance(eclazz);
+			if (clazz instanceof EClass) {
+				if (!coverableClasses.contains(className) && 
+						!extendedClassesWithoutStep.contains(className)) {
+					checkInheritance((EClass) clazz);
 				}
-				checkDynamicAspectsOfClass(eclazz);	
+				checkDynamicAspectsOfClass((EClass) clazz);	
 			}
 		}	
 	}
 	
 	private void checkInheritance(EClass eClazz) {
 		for (EClass superClass:eClazz.getEAllSuperTypes()) {
-			if (coverableClasses_me.contains(superClass.getName())) {
-				coverableClasses_me.add(eClazz.getName());
-				coverableClasses_b.add(eClazz.getName());
+			if (coverableClasses.contains(superClass.getName())) {
+				coverableClasses.add(eClazz.getName());
 				break;
 			}
 		}
@@ -143,86 +144,15 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 		return (featureDynamicAnnotations != null && featureDynamicAnnotations.size() > 0);
 	}
 
-	public boolean isClassCoverable(EClass clazz, String metric) {
-		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
-			return coverableClasses_me.contains(clazz.getName());
-		}
-		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
-			return coverableClasses_b.contains(clazz.getName());
-		}
-		return false;
-	}
 	
-	//add a class and all of its sub classes
-	public void addCoverableClass(EClass clazz, String metric) {
-		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
-			if (!coverableClasses_me.contains(clazz.getName())) {
-				coverableClasses_me.add(clazz.getName());
-				List<String> notCoverableSubClasses = metamodelRootElement.getEClassifiers().stream().
-						filter(c -> c instanceof EClass).map(c -> (EClass) c).
-						filter(c -> c.getEAllSuperTypes().stream().
-								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-								&& !coverableClasses_me.contains(c.getName())
-								&& !extendedClassesWithoutStep_me.contains(c.getName())).
-						map (c -> c.getName()).collect(Collectors.toList());
-					coverableClasses_me.addAll(notCoverableSubClasses);
-			}
-		}
-		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
-			if (!coverableClasses_b.contains(clazz.getName())) {
-				coverableClasses_b.add(clazz.getName());
-				List<String> notCoverableSubClasses = metamodelRootElement.getEClassifiers().stream().
-						filter(c -> c instanceof EClass).map(c -> (EClass) c).
-						filter(c -> c.getEAllSuperTypes().stream().
-								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-								&& !coverableClasses_b.contains(c.getName())
-								&& !extendedClassesWithoutStep_b.contains(c.getName())).
-						map (c -> c.getName()).collect(Collectors.toList());
-					coverableClasses_b.addAll(notCoverableSubClasses);
-			}
-		}
+	public EPackage getMetamodelRootElement() {
+		return metamodelRootElement;
 	}
-	
-	public void removeCoverableClass(EClass clazz, String metric) {
-		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
-			if (coverableClasses_me.contains(clazz.getName())) {
-				coverableClasses_me.remove(clazz.getName());
-			}
-		}
-		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
-			if (coverableClasses_b.contains(clazz.getName())) {
-				coverableClasses_b.remove(clazz.getName());
-			}
-		}
+
+	public Set<String> getCoverableClasses() {
+		return coverableClasses;
 	}
-	//remove a class and all of its sub classes
-	public void removeCoverableClass_subClass(EClass clazz, String metric) {
-		if (metric == TDLTestCaseCoverage.MODELELEMENTCOVERAGE) {
-			if (coverableClasses_me.contains(clazz.getName())) {
-				coverableClasses_me.remove(clazz.getName());
-				List<String> coverableSubClasses = metamodelRootElement.getEClassifiers().stream().
-						filter(c -> c instanceof EClass).map(c -> (EClass) c).
-						filter(c -> c.getEAllSuperTypes().stream().
-								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-								&& coverableClasses_me.contains(c.getName())).
-						map (c -> c.getName()).collect(Collectors.toList());
-					coverableClasses_me.removeAll(coverableSubClasses);
-			}
-		}
-		else if (metric == TDLTestCaseCoverage.BRANCHCOVERAGE) {
-			if (coverableClasses_b.contains(clazz.getName())) {
-				coverableClasses_b.remove(clazz.getName());
-				List<String> coverableSubClasses = metamodelRootElement.getEClassifiers().stream().
-						filter(c -> c instanceof EClass).map(c -> (EClass) c).
-						filter(c -> c.getEAllSuperTypes().stream().
-								filter(sc -> sc.getName().equals(clazz.getName())).findAny().isPresent() 
-								&& coverableClasses_b.contains(c.getName())).
-						map (c -> c.getName()).collect(Collectors.toList());
-					coverableClasses_b.removeAll(coverableSubClasses);
-			}
-		}
-	}
-	
+
 	public List<EClass> getClassesWithDynamicFeatures() {
 		return classesWithDynamicFeatures;
 	}
@@ -231,11 +161,8 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 		return dynamicClasses;
 	}
 	
-	public DomainSpecificCoverage getDslSpecificCoverage() {
-		if (dslSpecificCoverage == null) {
-			findDSLSpecificCoverage();
-		}
-		return dslSpecificCoverage;
+	public List<DomainSpecificCoverage> getDslSpecificCoverages() {
+		return dslSpecificCoverages;
 	}
 	
 	public IDSLSpecificCoverage getDslSpecificCoverageExtension() {
@@ -246,38 +173,41 @@ private static TDLCoverageUtil instance = new TDLCoverageUtil();
 	}
 	
 	private void findDSLSpecificCoverage() {
+		dslSpecificCoverages = new ArrayList<>();
 		//check if there is a DSL-Specific coverage extension
 		DSLSpecificCoverageHandler dslSpecificCoverageHandler = new DSLSpecificCoverageHandler();
 		dslSpecificCoverageExtension = dslSpecificCoverageHandler.getDSLSpecificCoverage();
 		//1. if the rules are implemented in a java class, retrieve them using extension point
 		if (dslSpecificCoverageExtension != null &&
 				dslSpecificCoverageExtension.getDomainSpecificCoverage() != null) {
-			dslSpecificCoverage = dslSpecificCoverageExtension.getDomainSpecificCoverage();
+			dslSpecificCoverages.add(dslSpecificCoverageExtension.getDomainSpecificCoverage());
 		}
-		//2. else, check .dsl file for the path to the coverageRules.xmi file
+		//2. else, check .dsl file for the path to the coverageRules.cov file
 		else {
-			Resource coverageFileResource = loadDSLSpecificCoverageFile();
-			if (coverageFileResource != null) {
-				dslSpecificCoverage = (DomainSpecificCoverage) coverageFileResource.getContents().get(0);
+			List<String> coverageFilesPathes = getCoverageFilePath();
+			if (coverageFilesPathes != null) {
+				ResourceSet resSet = new ResourceSetImpl();
+				coverageFilesPathes.forEach(path -> resSet.getResource(URI.createPlatformPluginURI(path.trim(), false), true));
+				EcoreUtil.resolveAll(resSet);
+				resSet.getResources().forEach(r -> dslSpecificCoverages.add((DomainSpecificCoverage) r.getContents().get(0)));
 			}
 		}
 	}
+
 	
-	private Resource loadDSLSpecificCoverageFile() {
-		String coverageFilePath = getCoverageFilePath();
-		if (coverageFilePath != null) {
-			Resource coverageFileResource = (new ResourceSetImpl()).getResource(URI.createURI(coverageFilePath), true);
-			return coverageFileResource;
-		}
-		return null;
-	}
-	
-	private String getCoverageFilePath() {
+	private List<String> getCoverageFilePath() {
 		String path = dslProcessor.getPath2CoverageRules();
-		if (path != null) {
-			path = path.replaceFirst("resource", "plugin");
-			return path;
+		if (path == null) {
+			return null;
 		}
-		return null;
+		List<String> path2coverageFiles = new ArrayList<>();
+		if (path.contains(",")) {
+			//there are several coverage files
+			path2coverageFiles.addAll(Arrays.asList(path.split(",")));
+		}else {
+			//there is only one coverage file
+			path2coverageFiles.add(path);
+		}
+		return path2coverageFiles;
 	}
 }

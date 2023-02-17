@@ -72,6 +72,10 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 				return createDomainSpecificCoverageAdapter();
 			}
 			@Override
+			public Adapter caseImport(Import object) {
+				return createImportAdapter();
+			}
+			@Override
 			public Adapter caseContext(Context object) {
 				return createContextAdapter();
 			}
@@ -108,24 +112,20 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 				return createBranchSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseBranch(Branch object) {
-				return createBranchAdapter();
+			public Adapter caseExplicitBranch(ExplicitBranch object) {
+				return createExplicitBranchAdapter();
 			}
 			@Override
 			public Adapter caseCondition(Condition object) {
 				return createConditionAdapter();
 			}
 			@Override
-			public Adapter caseCoverageMetric(CoverageMetric object) {
-				return createCoverageMetricAdapter();
+			public Adapter caseImplicitBranch(ImplicitBranch object) {
+				return createImplicitBranchAdapter();
 			}
 			@Override
-			public Adapter caseModelElementCoverage(ModelElementCoverage object) {
-				return createModelElementCoverageAdapter();
-			}
-			@Override
-			public Adapter caseBranchCoverage(BranchCoverage object) {
-				return createBranchCoverageAdapter();
+			public Adapter caseBranch(Branch object) {
+				return createBranchAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -158,6 +158,20 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainSpecificCoverageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Import <em>Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see DSLSpecificCoverage.Import
+	 * @generated
+	 */
+	public Adapter createImportAdapter() {
 		return null;
 	}
 
@@ -288,16 +302,16 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Branch <em>Branch</em>}'.
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.ExplicitBranch <em>Explicit Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.Branch
+	 * @see DSLSpecificCoverage.ExplicitBranch
 	 * @generated
 	 */
-	public Adapter createBranchAdapter() {
+	public Adapter createExplicitBranchAdapter() {
 		return null;
 	}
 
@@ -316,44 +330,30 @@ public class DSLSpecificCoverageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.CoverageMetric <em>Coverage Metric</em>}'.
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.ImplicitBranch <em>Implicit Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.CoverageMetric
+	 * @see DSLSpecificCoverage.ImplicitBranch
 	 * @generated
 	 */
-	public Adapter createCoverageMetricAdapter() {
+	public Adapter createImplicitBranchAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.ModelElementCoverage <em>Model Element Coverage</em>}'.
+	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.Branch <em>Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.ModelElementCoverage
+	 * @see DSLSpecificCoverage.Branch
 	 * @generated
 	 */
-	public Adapter createModelElementCoverageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link DSLSpecificCoverage.BranchCoverage <em>Branch Coverage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see DSLSpecificCoverage.BranchCoverage
-	 * @generated
-	 */
-	public Adapter createBranchCoverageAdapter() {
+	public Adapter createBranchAdapter() {
 		return null;
 	}
 

@@ -104,8 +104,8 @@ public class K3EventManagerLauncher implements IEventBasedExecutionEngine{
 	
 	@Override
 	public void setUp(String MUTPath, String DSLPath){
-		this.MUTPath = MUTPath;
-		this.DSLPath = DSLPath;
+		this.MUTPath = MUTPath.replace("\\", "/");
+		this.DSLPath = "platform:/plugin/" + DSLPath.replace("\\", "/");;
 		dslProcessor = new DSLProcessor(Paths.get(DSLPath));
 		final String languageName = dslProcessor.getDSLName();
 		final String implemRelId = dslProcessor.getImplemRelId();
@@ -116,7 +116,7 @@ public class K3EventManagerLauncher implements IEventBasedExecutionEngine{
 		subtypeRelIds.add(subtypeRelId);
 		
 		try {
-			launchConf = getLaunchConfiguration(MUTPath, languageName, implRelIds, subtypeRelIds);
+			launchConf = getLaunchConfiguration(this.MUTPath, languageName, implRelIds, subtypeRelIds);
 			runConf = new EventBasedRunConfiguration(launchConf);
 		}catch (CoreException e) {
 			e.printStackTrace();

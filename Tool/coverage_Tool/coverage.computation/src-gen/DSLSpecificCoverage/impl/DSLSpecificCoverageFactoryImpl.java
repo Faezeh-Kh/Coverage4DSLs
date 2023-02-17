@@ -58,16 +58,16 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE: return createDomainSpecificCoverage();
+			case DSLSpecificCoveragePackage.IMPORT: return createImport();
 			case DSLSpecificCoveragePackage.CONTEXT: return createContext();
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED: return createCoverageOfReferenced();
 			case DSLSpecificCoveragePackage.COVERAGE_BY_CONTENT: return createCoverageByContent();
 			case DSLSpecificCoveragePackage.IGNORE: return createIgnore();
 			case DSLSpecificCoveragePackage.LIMITED_IGNORE: return createLimitedIgnore();
 			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: return createBranchSpecification();
-			case DSLSpecificCoveragePackage.BRANCH: return createBranch();
+			case DSLSpecificCoveragePackage.EXPLICIT_BRANCH: return createExplicitBranch();
 			case DSLSpecificCoveragePackage.CONDITION: return createCondition();
-			case DSLSpecificCoveragePackage.MODEL_ELEMENT_COVERAGE: return createModelElementCoverage();
-			case DSLSpecificCoveragePackage.BRANCH_COVERAGE: return createBranchCoverage();
+			case DSLSpecificCoveragePackage.IMPLICIT_BRANCH: return createImplicitBranch();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -115,6 +115,16 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public DomainSpecificCoverage createDomainSpecificCoverage() {
 		DomainSpecificCoverageImpl domainSpecificCoverage = new DomainSpecificCoverageImpl();
 		return domainSpecificCoverage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Import createImport() {
+		ImportImpl import_ = new ImportImpl();
+		return import_;
 	}
 
 	/**
@@ -182,9 +192,9 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Branch createBranch() {
-		BranchImpl branch = new BranchImpl();
-		return branch;
+	public ExplicitBranch createExplicitBranch() {
+		ExplicitBranchImpl explicitBranch = new ExplicitBranchImpl();
+		return explicitBranch;
 	}
 
 	/**
@@ -202,19 +212,9 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelElementCoverage createModelElementCoverage() {
-		ModelElementCoverageImpl modelElementCoverage = new ModelElementCoverageImpl();
-		return modelElementCoverage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BranchCoverage createBranchCoverage() {
-		BranchCoverageImpl branchCoverage = new BranchCoverageImpl();
-		return branchCoverage;
+	public ImplicitBranch createImplicitBranch() {
+		ImplicitBranchImpl implicitBranch = new ImplicitBranchImpl();
+		return implicitBranch;
 	}
 
 	/**

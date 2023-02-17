@@ -106,6 +106,29 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	public Condition getCondition() {
+		if (condition != null && condition.eIsProxy()) {
+			InternalEObject oldCondition = (InternalEObject)condition;
+			condition = (Condition)eResolveProxy(oldCondition);
+			if (condition != oldCondition) {
+				InternalEObject newCondition = (InternalEObject)condition;
+				NotificationChain msgs = oldCondition.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DSLSpecificCoveragePackage.RULE__CONDITION, null, null);
+				if (newCondition.eInternalContainer() == null) {
+					msgs = newCondition.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DSLSpecificCoveragePackage.RULE__CONDITION, null, msgs);
+				}
+				if (msgs != null) msgs.dispatch();
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DSLSpecificCoveragePackage.RULE__CONDITION, oldCondition, condition));
+			}
+		}
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition basicGetCondition() {
 		return condition;
 	}
 
@@ -168,7 +191,8 @@ public abstract class RuleImpl extends MinimalEObjectImpl.Container implements R
 			case DSLSpecificCoveragePackage.RULE__DESCRIPTION:
 				return getDescription();
 			case DSLSpecificCoveragePackage.RULE__CONDITION:
-				return getCondition();
+				if (resolve) return getCondition();
+				return basicGetCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

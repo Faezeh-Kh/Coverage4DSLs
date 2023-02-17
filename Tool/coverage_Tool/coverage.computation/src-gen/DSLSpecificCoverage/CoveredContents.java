@@ -36,7 +36,15 @@ public enum CoveredContents implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ONE(1, "ONE", "ONE");
+	ONE(1, "ONE", "ONE"), /**
+	 * The '<em><b>ANY</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ANY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ANY(2, "ANY", "ANY");
 
 	/**
 	 * The '<em><b>ALL</b></em>' literal value.
@@ -61,6 +69,17 @@ public enum CoveredContents implements Enumerator {
 	public static final int ONE_VALUE = 1;
 
 	/**
+	 * The '<em><b>ANY</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ANY
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ANY_VALUE = 2;
+
+	/**
 	 * An array of all the '<em><b>Covered Contents</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,6 +89,7 @@ public enum CoveredContents implements Enumerator {
 		new CoveredContents[] {
 			ALL,
 			ONE,
+			ANY,
 		};
 
 	/**
@@ -128,6 +148,7 @@ public enum CoveredContents implements Enumerator {
 		switch (value) {
 			case ALL_VALUE: return ALL;
 			case ONE_VALUE: return ONE;
+			case ANY_VALUE: return ANY;
 		}
 		return null;
 	}

@@ -4,13 +4,14 @@
     editorDirectory="/coverage.computation.editor/src-gen" modelPluginID="coverage.computation"
     modelName="DSLSpecificCoverage" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/coverage.computation.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    containmentProxies="true" complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true">
   <foreignModel>DSLSpecificCoverage.ecore</foreignModel>
   <genPackages prefix="DSLSpecificCoverage" disposableProviderFactory="true" ecorePackage="DSLSpecificCoverage.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//CoveredContents">
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ALL"/>
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//CoveredContents/ANY"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSLSpecificCoverage.ecore#//LimitationType">
       <genEnumLiterals ecoreEnumLiteral="DSLSpecificCoverage.ecore#//LimitationType/containedBy"/>
@@ -19,7 +20,13 @@
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//DomainSpecificCoverage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//DomainSpecificCoverage/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//DomainSpecificCoverage/metamodel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//DomainSpecificCoverage/coverageMetrics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//DomainSpecificCoverage/contexts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//DomainSpecificCoverage/imports"/>
+    </genClasses>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Import/importedNamespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Import/importURI"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//Import/importedRuleset"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Context">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//Context/metaclass"/>
@@ -46,23 +53,15 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//LimitedIgnore/containerMetaclass"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//BranchSpecification">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//BranchSpecification/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchSpecification/context"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchSpecification/branches"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchSpecification/condition"/>
     </genClasses>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Branch">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Branch/OCLQuery"/>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//ExplicitBranch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//ExplicitBranch/OCLQuery"/>
     </genClasses>
     <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Condition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSLSpecificCoverage.ecore#//Condition/OCLConstraint"/>
     </genClasses>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//CoverageMetric">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//CoverageMetric/contexts"/>
-    </genClasses>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//ModelElementCoverage"/>
-    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//BranchCoverage">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSLSpecificCoverage.ecore#//BranchCoverage/branchSpecifications"/>
-    </genClasses>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//ImplicitBranch"/>
+    <genClasses ecoreClass="DSLSpecificCoverage.ecore#//Branch"/>
   </genPackages>
 </genmodel:GenModel>

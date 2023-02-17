@@ -23,5 +23,6 @@ Require-Bundle: fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version
  org.imt.tdl.utilities;bundle-version="1.0.0",
  coverage.computation;bundle-version="1.0.0"
 Bundle-ClassPath: .
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.imt.k3tdl.interpreter
+Automatic-Module-Name: org.imt.k3tdl.tdlInterpreter

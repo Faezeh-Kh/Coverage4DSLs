@@ -9,25 +9,19 @@ DomainSpecificCoverage returns DomainSpecificCoverage:
 	name=EString
 	'{'
 		'import' 'metamodel' metamodel=[ecore::EPackage|EString]
-		coverageMetrics+=CoverageMetric ( "," coverageMetrics+=CoverageMetric)* 
+		('import' 'ruleset' imports+=Import ("," imports+=Import)*)?
+		contexts+=Context ( "," contexts+=Context)*
 	'}';
+	
+Import returns Import:
+	{Import}
+	('with' importedNamespace=ImportedFQN ('from' importURI=STRING)?) |
+	('from' importURI=STRING)|
+	(importedRuleset=[DomainSpecificCoverage|EString])
+	;
 
-CoverageMetric returns CoverageMetric:
-	ModelElementCoverage | BranchCoverage;
-	
-	
-ModelElementCoverage returns ModelElementCoverage:
-	'ModelElementCoverageRuleset'
-	'{'
-	 	contexts+=Context ( "," contexts+=Context)*
-	'}';
-	
-BranchCoverage returns BranchCoverage:
-	'BranchCoverageRuleset'
-	'{'
-	 	(contexts+=Context ( "," contexts+=Context)*)?
-	 	branchSpecifications+=BranchSpecification ("," branchSpecifications+=BranchSpecification)*
-	'}';
+QualifiedName: ID ('::' ID)*;
+ImportedFQN: QualifiedName ('::''*')?;
 	 
 EString returns ecore::EString:
 	STRING | ID;
@@ -39,50 +33,59 @@ Context returns Context:
 	'}';
 
 Rule returns Rule:
-	Ignore | CoverageOfReferenced | CoverageByContent | LimitedIgnore ;
+	Ignore | LimitedIgnore | CoverageOfReferenced | CoverageByContent | BranchSpecification;
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
-Ignore returns Ignore:
+Ignore returns Rule:
 	{Ignore} 
+	('when' condition=Condition)?
 	'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')'
-		('description' description=EString)?
-		('condition' condition=Condition)?;
+	('description' description=EString)?;
 	
-LimitedIgnore returns LimitedIgnore:
+LimitedIgnore returns Rule:
+	{LimitedIgnore}
+	('when' condition=Condition)?
 	'ignoreif' type=LimitationType
-		containerMetaclass+=[ecore::EClass|EString] ( "," containerMetaclass+=[ecore::EClass|EString])* 
-		('description' description=EString)?
-		('condition' condition=Condition)?;
+		containerMetaclass+=[ecore::EClass|EString] ( "," containerMetaclass+=[ecore::EClass|EString])*
+	('description' description=EString)?;
 	
-CoverageOfReferenced returns CoverageOfReferenced:
+CoverageOfReferenced returns Rule:
+	{CoverageOfReferenced}
+	('when' condition=Condition)?
 	'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*
-		('description' description=EString)?
-		('condition' condition=Condition)?;
+	('description' description=EString)?;
 	
-CoverageByContent returns CoverageByContent:
-	'covered' 'when' multiplicity=CoveredContents 
-		containmentReference=[ecore::EReference|EString] 'iscovered'
-		('description' description=EString)?
-		('condition' condition=Condition)?;
+CoverageByContent returns Rule:
+	{CoverageByContent}
+	('when' condition=Condition)?
+	'covered' 'when' multiplicity=CoveredContents (containmentReference=[ecore::EReference|EString])? 'iscovered'
+	('description' description=EString)?;
 		
 
-BranchSpecification returns BranchSpecification:
-	context=[ecore::EClass|EString] 'has' 'branches' '{' 
-		('description' description=EString)?
-		('condition' condition=Condition)?
+BranchSpecification returns Rule:
+	{BranchSpecification}
+	('when' condition=Condition)?
+	'{' 
 		branches += Branch (',' branches += Branch)* 
+		('description' description=EString)?
 	'}';
 
 Branch returns Branch:
-	'queryBranch' OCLQuery=EString;
-	
+	ExplicitBranch| ImplicitBranch;
+
+ExplicitBranch returns ExplicitBranch: 
+	'branch' OCLQuery=EString;
+
+ImplicitBranch returns ImplicitBranch: 
+	{ImplicitBranch} 'branch' 'else';
+
 Condition returns Condition:
 	OCLConstraint=EString;
 	
 enum CoveredContents returns CoveredContents:
-	ALL = 'ALL' | ONE = 'ONE';
+	ALL = 'ALL' | ONE = 'ONE' | ANY = 'anyContent';
 
 enum LimitationType returns LimitationType:
 	containedBy = 'containedBy' | notContainedBy = 'notContainedBy';

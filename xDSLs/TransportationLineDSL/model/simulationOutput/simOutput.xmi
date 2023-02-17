@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tll:System
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tll="http://www.example.org/tll"
+    id="IAFPlant">
+  <area id="Area1"
+      store="//@area.0/@component.9"
+      buffer="//@area.0/@component.8">
+    <component
+        xsi:type="tll:Turntable"
+        id="t1"
+        processingTime="500"
+        uncertainty="10"
+        neighbour="//@area.0/@component.1"/>
+    <component
+        xsi:type="tll:Conveyor"
+        id="c1"
+        processingTime="200"
+        uncertainty="40"
+        neighbour="//@area.0/@component.2 //@area.0/@component.0"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="t2"
+        processingTime="500"
+        uncertainty="100"
+        neighbour="//@area.0/@component.3 //@area.0/@component.1"/>
+    <component
+        xsi:type="tll:Machine"
+        id="m1"
+        processingTime="1000"
+        uncertainty="150"
+        neighbour="//@area.0/@component.4 //@area.0/@component.2"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="t3"
+        processingTime="500"
+        uncertainty="100"
+        neighbour="//@area.0/@component.5 //@area.0/@component.3"/>
+    <component
+        xsi:type="tll:Conveyor"
+        id="c2"
+        processingTime="200"
+        uncertainty="40"
+        neighbour="//@area.0/@component.6 //@area.0/@component.4"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="t4"
+        processingTime="500"
+        uncertainty="100"
+        neighbour="//@area.0/@component.7 //@area.0/@component.5"/>
+    <component
+        xsi:type="tll:Conveyor"
+        id="c3"
+        processingTime="200"
+        uncertainty="40"
+        neighbour="//@area.0/@component.0 //@area.0/@component.6"/>
+    <component
+        xsi:type="tll:WaitingQueue"
+        id="buffer"
+        processingTime="20"
+        uncertainty="2"
+        entry="//@area.0/@component.0"/>
+    <component
+        xsi:type="tll:StorageQueue"
+        id="store"
+        processingTime="20"
+        uncertainty="2"
+        exit="//@area.0/@component.6">
+      <finalItems
+          id="2059a8dd-c151-4ebf-972b-26f385e24e3d"
+          isProcessed="true"
+          history="//@area.0/@component.1 //@area.0/@component.2 //@area.0/@component.3 //@area.0/@component.4 //@area.0/@component.5 //@area.0/@component.6"/>
+      <finalItems
+          id="87bc84e2-d4bb-4bb9-bd38-edfbf444484b"
+          isProcessed="true"
+          history="//@area.0/@component.1 //@area.0/@component.2 //@area.0/@component.3 //@area.0/@component.4 //@area.0/@component.5 //@area.0/@component.6"/>
+    </component>
+    <itemGen
+        frequency="50"/>
+    <log>InputBuffer.createItem()-/IAFPlant/Area1/buffer,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-37-1037-522</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t1,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-37-1037-523</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/c1,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-37-1037-524</log>
+    <log>InputBuffer.createItem()-/IAFPlant/Area1/buffer,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-38-1038-031</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t1,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-38-1038-031</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t2,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-38-1038-534</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/c1,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-38-1038-742</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/m1,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-39-1039-246</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t2,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-39-1039-744</log>
+    <log>Item.setIsProcessed(true)-/IAFPlant/Area1/m1,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-39-1039-941</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t3,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-39-1039-942</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/m1,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-40-1040-965</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/c2,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-41-1041-404</log>
+    <log>Item.setIsProcessed(true)-/IAFPlant/Area1/m1,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-41-1041-896</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t3,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-41-1041-896</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t4,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-42-1042-776</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/c2,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-43-1043-015</log>
+    <log>Store.removeItem()-/IAFPlant/Area1/store,2059a8dd-c151-4ebf-972b-26f385e24e3d,2023-01-11-11-10-43-1043-449</log>
+    <log>Component.setHostedItem()-/IAFPlant/Area1/t4,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-43-1043-450</log>
+    <log>Store.removeItem()-/IAFPlant/Area1/store,87bc84e2-d4bb-4bb9-bd38-edfbf444484b,2023-01-11-11-10-43-1043-635</log>
+  </area>
+  <simconfig
+      timeout="350"/>
+</tll:System>

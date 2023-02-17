@@ -53,9 +53,9 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 
-import coverage.computation.ObjectCoverageStatus;
 import coverage.computation.TDLCoverageUtil;
 import coverage.computation.TDLTestSuiteCoverage;
+import coverage.report.ObjectCoverageStatus;
 
 public class TDLCoverageView extends ViewPart{
 
@@ -71,6 +71,8 @@ public class TDLCoverageView extends ViewPart{
 
 	private static final Color GRAY = new Color(Display.getCurrent(), 237, 237, 237);
 	
+	private static final Color WHITE = new Color(Display.getCurrent(), 255, 255, 255);
+	
 	private static int coverageTypeFilterIndex = -1;
 	private static int coverageStatusFilterIndex = -1;
 	private static int elementFilterIndex = -1;
@@ -78,7 +80,7 @@ public class TDLCoverageView extends ViewPart{
 	
 	@Override
 	public void createPartControl(Composite parent) {
-		if (TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTsObjectCoveragePercentage() == 0) {
+		if (!TDLCoverageUtil.getInstance().getTestSuiteCoverage().isCoverageComputed()) {
 			TDLCoverageUtil.getInstance().runCoverageComputation();
 		}
 		Composite contents = new Group(parent, SWT.NULL);
@@ -102,14 +104,12 @@ public class TDLCoverageView extends ViewPart{
 	    coverageTypeFilter.setText("Coverage Types Filters");
 		gd = new GridData();
 		gd.verticalAlignment = SWT.ON_TOP;
-		gd.widthHint = 250;
+		gd.widthHint = 500;
 		coverageTypeFilter.setLayoutData(gd);
-        final Combo coverageTypeFilterCombo = new Combo(coverageTypeFilter, SWT.NONE);
-        coverageTypeFilterCombo.add("Model Element Coverage");
-        List<ObjectCoverageStatus> branchCoverageInfos = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfBranches();
-        if (branchCoverageInfos != null) {
-        	coverageTypeFilterCombo.add("Branch Coverage");
-        }
+		final Combo coverageTypeFilterCombo = new Combo(coverageTypeFilter, SWT.NONE);
+		TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageReports()
+			.forEach(r -> coverageTypeFilterCombo.add(r.getReportTitle()));
+		
         coverageTypeFilterCombo.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -125,14 +125,16 @@ public class TDLCoverageView extends ViewPart{
 	    coverageStatusFilter.setText("Coverage Status Filters");
 		gd = new GridData();
 		gd.verticalAlignment = SWT.ON_TOP;
-		gd.widthHint = 250;
+		gd.widthHint = 500;
 		coverageStatusFilter.setLayoutData(gd);
         final Combo coverageStatusFilterCombo = new Combo(coverageStatusFilter, SWT.NONE);
         coverageStatusFilterCombo.add("All");
         coverageStatusFilterCombo.add("Covered");
+        coverageStatusFilterCombo.add("Partly-Covered");
+        coverageStatusFilterCombo.add("Covered & Partly-Covered");
         coverageStatusFilterCombo.add("Not-Covered");
         coverageStatusFilterCombo.add("Covered & Not-Covered");
-        coverageStatusFilterCombo.add("Not Coverable");
+        coverageStatusFilterCombo.add("Without Status");
         coverageStatusFilterCombo.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -148,15 +150,16 @@ public class TDLCoverageView extends ViewPart{
 	    elementFilter.setText("Type of Model Element");
 		gd = new GridData();
 		gd.verticalAlignment = SWT.ON_TOP;
-		gd.widthHint = 250;
+		gd.widthHint = 500;
 		elementFilter.setLayoutData(gd);
         final Combo elementFilterCombo = new Combo(elementFilter, SWT.NONE);
         elementFilterCombo.add("All");
         //add the meta-classes included in the coverage information as filter
-        List<ObjectCoverageStatus> objectCoverageInfos = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfModelObjects();
+        List<ObjectCoverageStatus> objectCoverageInfosByTrace = TDLCoverageUtil.getInstance()
+        		.getTestSuiteCoverage().getTsCoverageInfo(TDLCoverageUtil.TRACEBASEDCOVERAGE);
         Set<EClass> metaClasses = new HashSet<EClass>();
         classFilters.clear();
-        for (ObjectCoverageStatus cInfo: objectCoverageInfos) {
+        for (ObjectCoverageStatus cInfo: objectCoverageInfosByTrace) {
         	metaClasses.add(cInfo.getMetaclass());      	
         }
         metaClasses.remove(null);
@@ -193,8 +196,8 @@ public class TDLCoverageView extends ViewPart{
 				if (item == null || item.getData() == null) {
 					//do nothing
 				}
-				else if (item.getData() instanceof ObjectCoverageStatus objectCoverage) {
-					EObject eobjectToOpen = objectCoverage.getModelObject();		
+				else if (item.getData() instanceof ObjectCoverageStatus) {
+					EObject eobjectToOpen = ((ObjectCoverageStatus) item.getData()).getModelObject();		
 					IFile fileToOpen = ResourcesPlugin.getWorkspace().getRoot().getFile(
 							new Path(eobjectToOpen.eResource().getURI().toPlatformString(true)));
 					IEditorDescriptor desc = PlatformUI.getWorkbench().getEditorRegistry().
@@ -202,20 +205,23 @@ public class TDLCoverageView extends ViewPart{
 					IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 					try {
 						IEditorPart editor = page.openEditor(new FileEditorInput(fileToOpen), desc.getId());
-						if (editor instanceof EcoreEditor ecoreEditor) {
-							TreeViewer tviewer = (TreeViewer) ecoreEditor.getViewer();
+						if (editor instanceof EcoreEditor) {
+							TreeViewer tviewer = (TreeViewer) ((EcoreEditor) editor).getViewer();
 							ResourceSet resSet =(ResourceSet) tviewer.getInput();
 							EObject eobjectToOpen2 = resSet.getResources().get(0).getEObject(
 									eobjectToOpen.eResource().getURIFragment(eobjectToOpen));
 							tviewer.setSelection(new StructuredSelection(eobjectToOpen2));
-						}else if (editor instanceof XtextEditor xtextEditor) {
+						}else if (editor instanceof XtextEditor) {
 							//TODO: how to reveal the object in the xtext editor
 						}
 						
 					} catch (PartInitException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
+					} catch (NullPointerException e) {
+						System.out.println("Cannot find the related editor to open the object");
 					}
+					
 				}
 			}
 		});
@@ -231,7 +237,7 @@ public class TDLCoverageView extends ViewPart{
 		modelColumn.setText("Model Element");
 		modelColumn.setWidth(150);
 		
-		int colNum = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTCCoverages().size();
+		int colNum = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getTcCoverages().size();
 		for (int i=0; i<colNum; i++) {
 			TreeColumn column = new TreeColumn(addressTree, SWT.LEFT);
 			column.setAlignment(SWT.CENTER);
@@ -263,13 +269,17 @@ public class TDLCoverageView extends ViewPart{
 			if (parentElement instanceof List<?>) {
 				return ((List<?>) parentElement).toArray();
 			}
-			if (parentElement instanceof TDLTestSuiteCoverage tsCoverage) {
-				if (coverageTypeFilterIndex == 0) {
-					return tsCoverage.getCoverageOfModelObjects().toArray();
+			if (parentElement instanceof ObjectCoverageStatus && coverageTypeFilterIndex != -1) {
+				ObjectCoverageStatus coverageInfo = (ObjectCoverageStatus) parentElement;
+				TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+				if (tsCoverage.getInfo_childrenInfos() != null &&
+						tsCoverage.getInfo_childrenInfos().get(coverageInfo) != null) {
+					return tsCoverage.getInfo_childrenInfos().get(coverageInfo).toArray();
 				}
-				else if(coverageTypeFilterIndex == 1) {
-					return tsCoverage.getCoverageOfBranches().toArray();
-				}
+			}
+			if(coverageTypeFilterIndex != -1) {
+				TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+				return tsCoverage.getTsCoverageInfos().get(coverageTypeFilterIndex).toArray();
 			}
 			return new Object[0]; 
 		}
@@ -279,15 +289,7 @@ public class TDLCoverageView extends ViewPart{
 			if (element instanceof String) {
 				return (String) element;
 			}
-			if (element instanceof TDLTestSuiteCoverage) {
-				if (coverageTypeFilterIndex == 0) {
-					return "Test Suite Model Element Coverage";
-				}
-				else if(coverageTypeFilterIndex == 1) {
-					return "Test Suite Branch Coverage";
-				}
-			}
-			return null;
+			return TDLCoverageUtil.getInstance().getTestSuiteCoverage();
 		}
 
 		@Override
@@ -295,12 +297,15 @@ public class TDLCoverageView extends ViewPart{
 			if (element instanceof List<?>) {
 				return ((List<?>) element).size() > 0;
 			}
-			if (element instanceof TDLTestSuiteCoverage tsCoverage) {
-				if (coverageTypeFilterIndex == 0) {
-					return tsCoverage.getCoverageOfModelObjects().size() > 0;
-				}
-				else if(coverageTypeFilterIndex == 1) {
-					return tsCoverage.getCoverageOfBranches().size() > 0;
+			if (element instanceof TDLTestSuiteCoverage && coverageTypeFilterIndex != -1) {
+				return ((TDLTestSuiteCoverage) element).getTsCoverageInfos().get(coverageTypeFilterIndex).size()>0;
+			}
+			if (element instanceof ObjectCoverageStatus && coverageTypeFilterIndex != -1) {
+				ObjectCoverageStatus coverageInfo = (ObjectCoverageStatus) element;
+				TDLTestSuiteCoverage tsCoverage = TDLCoverageUtil.getInstance().getTestSuiteCoverage();
+				if (tsCoverage.getInfo_childrenInfos() != null && 
+						tsCoverage.getInfo_childrenInfos().get(coverageInfo) != null) {
+					return true;
 				}
 			}
 			return false;
@@ -341,7 +346,7 @@ public class TDLCoverageView extends ViewPart{
 
 		@Override
 		public Color getBackground(Object element, int columnIndex) {
-			if (element instanceof ObjectCoverageStatus cInfo) {
+			if (element instanceof ObjectCoverageStatus) {
 				switch(columnIndex) {
 				case 0:
 					//the column containing metaclasses
@@ -350,17 +355,21 @@ public class TDLCoverageView extends ViewPart{
 					//the column containing model elements
 					return null;
 				default:
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
 					String colText = cInfo.getCoverage().get(columnIndex-2);
 					if (colText == TDLCoverageUtil.COVERED) {
 						return GREEN;
 					}
-					else if (colText == TDLCoverageUtil.NOT_TRACED) {
+					else if (colText == TDLCoverageUtil.PARTLY_COVERED) {
 						return YELLOW;
 					}
 					else if (colText == TDLCoverageUtil.NOT_COVERED) {
 						return RED;
 					}
-					else return GRAY;
+					else if (colText == TDLCoverageUtil.NOSTATUS) {
+						return GRAY;
+					}
+					else return WHITE;
 				}
 			}
 			return null;
@@ -374,14 +383,15 @@ public class TDLCoverageView extends ViewPart{
 		@Override
 		public String getColumnText(Object element, int columnIndex) {
 			String columnText = "";
-			if (element instanceof String result) {
+			if (element instanceof String) {
 				switch (columnIndex) {
 				case 0:
-					columnText = result;
+					columnText = (String) element;
 					break;
 				}
 			}
-			if (element instanceof ObjectCoverageStatus cInfo) {
+			if (element instanceof ObjectCoverageStatus) {
+				ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
 				switch(columnIndex) {
 				case 0:
 					if (cInfo.getMetaclass() != null) {
@@ -394,16 +404,19 @@ public class TDLCoverageView extends ViewPart{
 						columnText = this.eObjectLabelProvider(cInfo.getModelObject()).replaceAll("\\s", "");
 						columnText = columnText.substring(metaclassName.length());
 					}
-					break;
+					break;	
 				default:
 					columnText = cInfo.getCoverage().get(columnIndex-2);
 					if (columnText == TDLCoverageUtil.COVERED) {
 						columnText = "C";
 					} 
+					else if (columnText == TDLCoverageUtil.PARTLY_COVERED) {
+						columnText = "PC";
+					}
 					else if (columnText == TDLCoverageUtil.NOT_COVERED) {
 						columnText = "NC";
 					}
-					else if (columnText == TDLCoverageUtil.NOT_TRACED) {
+					else if (columnText == TDLCoverageUtil.NOSTATUS) {
 						columnText = "-";
 					}
 					break;
@@ -433,18 +446,32 @@ public class TDLCoverageView extends ViewPart{
 	private class CoverageTypeFilter extends ViewerFilter {
 		@Override
 		public boolean select(Viewer viewer, Object parentElement, Object element) {
-			if (coverageTypeFilterIndex == -1 || coverageTypeFilterIndex == 0) {
-				return true;
-			}
-			else if (coverageTypeFilterIndex == 1){
-				if (element instanceof ObjectCoverageStatus cInfo) {
-					List<ObjectCoverageStatus> branchCoverageInfos = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfBranches();
-					if (cInfo.getModelObject() != null) {
-						return branchCoverageInfos.stream().anyMatch(info -> info.getModelObject() == cInfo.getModelObject());
-					}
-				}
-			}
-			return false;
+//			if (coverageTypeFilterIndex == -1 || coverageTypeFilterIndex == 0) {
+//				return true;
+//			}
+//			else if (coverageTypeFilterIndex == 1){
+//				if (element instanceof ObjectCoverageStatus cInfo) {
+//					List<ObjectCoverageStatus> objectCoverageInfos4me = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfModelObjects4me();
+//					if (cInfo.getModelObject() != null) {
+//						return objectCoverageInfos4me.stream().anyMatch(info -> info.getModelObject() == cInfo.getModelObject());
+//					}
+//					else {
+//						return true;
+//					}
+//				}
+//			}
+//			else if (coverageTypeFilterIndex == 2){
+//				if (element instanceof ObjectCoverageStatus cInfo) {
+//					List<ObjectCoverageStatus> branchCoverageInfos = TDLCoverageUtil.getInstance().getTestSuiteCoverage().getCoverageOfBranches();
+//					if (cInfo.getModelObject() != null) {
+//						return branchCoverageInfos.stream().anyMatch(info -> info.getModelObject() == cInfo.getModelObject());
+//					}
+//					else {
+//						return true;
+//					}
+//				}
+//			}
+			return true;
 		}
 	}
 	
@@ -456,25 +483,42 @@ public class TDLCoverageView extends ViewPart{
 				return true;
 			}
 			else if (coverageStatusFilterIndex == 1) {//covered elements
-				if (element instanceof ObjectCoverageStatus cInfo) {
+				if (element instanceof ObjectCoverageStatus) {
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
 					//the last element of the coverage is related to the test suite
 					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.COVERED;
 				}
 			}
 			else if (coverageStatusFilterIndex == 2) {//not covered elements
-				if (element instanceof ObjectCoverageStatus cInfo) {
+				if (element instanceof ObjectCoverageStatus) {
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
+					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.PARTLY_COVERED;
+				}
+			}
+			else if (coverageStatusFilterIndex == 3) {//not covered elements
+				if (element instanceof ObjectCoverageStatus) {
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
+					String coverage = cInfo.getCoverage().get(cInfo.getCoverage().size()-1);
+					return  (coverage == TDLCoverageUtil.COVERED || coverage == TDLCoverageUtil.PARTLY_COVERED);
+				}
+			}
+			else if (coverageStatusFilterIndex == 4) {//not covered elements
+				if (element instanceof ObjectCoverageStatus) {
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
 					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOT_COVERED;
 				}
 			}
-			else if (coverageStatusFilterIndex == 3) {//covered and not covered elements
-				if (element instanceof ObjectCoverageStatus cInfo) {
+			else if (coverageStatusFilterIndex == 5) {//covered and not covered elements
+				if (element instanceof ObjectCoverageStatus) {
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
 					String coverage = cInfo.getCoverage().get(cInfo.getCoverage().size()-1);
 					return  (coverage == TDLCoverageUtil.COVERED || coverage == TDLCoverageUtil.NOT_COVERED);
 				}
 			}
-			else if (coverageStatusFilterIndex == 4) {//elements that are not coverable
-				if (element instanceof ObjectCoverageStatus cInfo) {
-					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOT_TRACED;
+			else if (coverageStatusFilterIndex == 6) {//elements that are not coverable
+				if (element instanceof ObjectCoverageStatus) {
+					ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
+					return cInfo.getCoverage().get(cInfo.getCoverage().size()-1) == TDLCoverageUtil.NOSTATUS;
 				}
 			}
 			return false;
@@ -488,7 +532,8 @@ private class ElementFilter extends ViewerFilter {
 		if (elementFilterIndex == -1 || elementFilterIndex == 0) {
 			return true;
 		}else {
-			if (element instanceof ObjectCoverageStatus cInfo) {
+			if (element instanceof ObjectCoverageStatus) {
+				ObjectCoverageStatus cInfo = (ObjectCoverageStatus) element;
 				if (cInfo.getMetaclass() == null) {
 					return false;
 				}else {

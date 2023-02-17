@@ -121,7 +121,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 */
 	public EList<Rule> getRules() {
 		if (rules == null) {
-			rules = new EObjectContainmentEList<Rule>(Rule.class, this, DSLSpecificCoveragePackage.CONTEXT__RULES);
+			rules = new EObjectContainmentEList.Resolving<Rule>(Rule.class, this, DSLSpecificCoveragePackage.CONTEXT__RULES);
 		}
 		return rules;
 	}

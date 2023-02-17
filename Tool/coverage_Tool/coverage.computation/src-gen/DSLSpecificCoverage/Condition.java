@@ -28,7 +28,7 @@ public interface Condition extends EObject {
 	 * @return the value of the '<em>OCL Constraint</em>' attribute.
 	 * @see #setOCLConstraint(String)
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getCondition_OCLConstraint()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getOCLConstraint();

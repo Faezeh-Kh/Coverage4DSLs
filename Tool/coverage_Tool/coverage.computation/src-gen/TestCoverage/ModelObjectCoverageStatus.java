@@ -2,6 +2,7 @@
  */
 package TestCoverage;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link TestCoverage.ModelObjectCoverageStatus#getModelObject <em>Model Object</em>}</li>
  *   <li>{@link TestCoverage.ModelObjectCoverageStatus#getCoverageStatus <em>Coverage Status</em>}</li>
+ *   <li>{@link TestCoverage.ModelObjectCoverageStatus#getRelatedObjectCoverageStatus <em>Related Object Coverage Status</em>}</li>
  * </ul>
  *
  * @see TestCoverage.TestCoveragePackage#getModelObjectCoverageStatus()
@@ -68,5 +70,17 @@ public interface ModelObjectCoverageStatus extends EObject {
 	 * @generated
 	 */
 	void setCoverageStatus(CoverageStatus value);
+
+	/**
+	 * Returns the value of the '<em><b>Related Object Coverage Status</b></em>' containment reference list.
+	 * The list contents are of type {@link TestCoverage.ModelObjectCoverageStatus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Related Object Coverage Status</em>' containment reference list.
+	 * @see TestCoverage.TestCoveragePackage#getModelObjectCoverageStatus_RelatedObjectCoverageStatus()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ModelObjectCoverageStatus> getRelatedObjectCoverageStatus();
 
 } // ModelObjectCoverageStatus

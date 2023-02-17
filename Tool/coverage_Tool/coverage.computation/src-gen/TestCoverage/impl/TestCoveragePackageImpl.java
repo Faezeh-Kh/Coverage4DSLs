@@ -231,6 +231,15 @@ public class TestCoveragePackageImpl extends EPackageImpl implements TestCoverag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getModelObjectCoverageStatus_RelatedObjectCoverageStatus() {
+		return (EReference)modelObjectCoverageStatusEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCoverageStatus() {
 		return coverageStatusEEnum;
 	}
@@ -277,6 +286,7 @@ public class TestCoveragePackageImpl extends EPackageImpl implements TestCoverag
 		modelObjectCoverageStatusEClass = createEClass(MODEL_OBJECT_COVERAGE_STATUS);
 		createEReference(modelObjectCoverageStatusEClass, MODEL_OBJECT_COVERAGE_STATUS__MODEL_OBJECT);
 		createEAttribute(modelObjectCoverageStatusEClass, MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS);
+		createEReference(modelObjectCoverageStatusEClass, MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS);
 
 		// Create enums
 		coverageStatusEEnum = createEEnum(COVERAGE_STATUS);
@@ -329,12 +339,14 @@ public class TestCoveragePackageImpl extends EPackageImpl implements TestCoverag
 		initEClass(modelObjectCoverageStatusEClass, ModelObjectCoverageStatus.class, "ModelObjectCoverageStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModelObjectCoverageStatus_ModelObject(), ecorePackage.getEObject(), null, "modelObject", null, 1, 1, ModelObjectCoverageStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelObjectCoverageStatus_CoverageStatus(), this.getCoverageStatus(), "coverageStatus", null, 1, 1, ModelObjectCoverageStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelObjectCoverageStatus_RelatedObjectCoverageStatus(), this.getModelObjectCoverageStatus(), null, "relatedObjectCoverageStatus", null, 0, -1, ModelObjectCoverageStatus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(coverageStatusEEnum, CoverageStatus.class, "CoverageStatus");
 		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.COVERED);
 		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.NOTCOVERED);
-		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.NOTTRACED);
+		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.PARTLYCOVERED);
+		addEEnumLiteral(coverageStatusEEnum, CoverageStatus.NOSTATUS);
 
 		// Create resource
 		createResource(eNS_URI);

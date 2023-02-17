@@ -51,7 +51,7 @@ public interface Rule extends EObject {
 	 * @return the value of the '<em>Condition</em>' containment reference.
 	 * @see #setCondition(Condition)
 	 * @see DSLSpecificCoverage.DSLSpecificCoveragePackage#getRule_Condition()
-	 * @model containment="true"
+	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
 	Condition getCondition();

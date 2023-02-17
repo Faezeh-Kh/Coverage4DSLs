@@ -31,6 +31,15 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	DomainSpecificCoverage createDomainSpecificCoverage();
 
 	/**
+	 * Returns a new object of class '<em>Import</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Import</em>'.
+	 * @generated
+	 */
+	Import createImport();
+
+	/**
 	 * Returns a new object of class '<em>Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,13 +94,13 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	BranchSpecification createBranchSpecification();
 
 	/**
-	 * Returns a new object of class '<em>Branch</em>'.
+	 * Returns a new object of class '<em>Explicit Branch</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Branch</em>'.
+	 * @return a new object of class '<em>Explicit Branch</em>'.
 	 * @generated
 	 */
-	Branch createBranch();
+	ExplicitBranch createExplicitBranch();
 
 	/**
 	 * Returns a new object of class '<em>Condition</em>'.
@@ -103,22 +112,13 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	Condition createCondition();
 
 	/**
-	 * Returns a new object of class '<em>Model Element Coverage</em>'.
+	 * Returns a new object of class '<em>Implicit Branch</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Model Element Coverage</em>'.
+	 * @return a new object of class '<em>Implicit Branch</em>'.
 	 * @generated
 	 */
-	ModelElementCoverage createModelElementCoverage();
-
-	/**
-	 * Returns a new object of class '<em>Branch Coverage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Branch Coverage</em>'.
-	 * @generated
-	 */
-	BranchCoverage createBranchCoverage();
+	ImplicitBranch createImplicitBranch();
 
 	/**
 	 * Returns the package supported by this factory.

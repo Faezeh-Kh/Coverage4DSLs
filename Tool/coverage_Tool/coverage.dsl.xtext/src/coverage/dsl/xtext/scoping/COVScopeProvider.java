@@ -15,11 +15,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 
-import DSLSpecificCoverage.BranchCoverage;
-import DSLSpecificCoverage.BranchSpecification;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.CoverageByContent;
-import DSLSpecificCoverage.CoverageMetric;
 import DSLSpecificCoverage.CoverageOfReferenced;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.DomainSpecificCoverage;
@@ -44,7 +41,7 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 			return Scopes.scopeFor(allPackages);			
 		}
 		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getContext_Metaclass())) {
-			Collection<EClass> allClasses = ((DomainSpecificCoverage)((CoverageMetric)((Context) context).eContainer()).eContainer())
+			Collection<EClass> allClasses = ((DomainSpecificCoverage)((Context) context).eContainer())
 												.getMetamodel().getEClassifiers().stream()
 												.filter(EClass.class::isInstance)
 												.map(EClass.class::cast)
@@ -52,7 +49,7 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 			return Scopes.scopeFor(allClasses);
 		}
 		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getLimitedIgnore_ContainerMetaclass())) {
-		Collection<EClass> allClasses = ((DomainSpecificCoverage)((CoverageMetric)((Context)((LimitedIgnore) context).eContainer()).eContainer()).eContainer())
+		Collection<EClass> allClasses = ((DomainSpecificCoverage)((Context)((LimitedIgnore) context).eContainer()).eContainer())
 											.getMetamodel().getEClassifiers().stream()
 											.filter(EClass.class::isInstance)
 											.map(EClass.class::cast)
@@ -68,25 +65,6 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 			EList<EReference> containments = ((Context)((CoverageByContent) context).eContainer())
 												.getMetaclass().getEAllContainments();
 			return Scopes.scopeFor(containments);
-		}
-		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getBranchSpecification_Context())) {
-			if (context instanceof BranchSpecification) {
-				Collection<EClass> allClasses = ((DomainSpecificCoverage)((BranchCoverage)((BranchSpecification) context).eContainer()).eContainer())
-						.getMetamodel().getEClassifiers().stream()
-						.filter(EClass.class::isInstance)
-						.map(EClass.class::cast)
-						.collect(Collectors.toCollection(BasicEList::new));
-				return Scopes.scopeFor(allClasses);
-			}
-			if (context instanceof BranchCoverage) {
-				Collection<EClass> allClasses = ((DomainSpecificCoverage)((BranchCoverage) context).eContainer())
-						.getMetamodel().getEClassifiers().stream()
-						.filter(EClass.class::isInstance)
-						.map(EClass.class::cast)
-						.collect(Collectors.toCollection(BasicEList::new));
-				return Scopes.scopeFor(allClasses);
-			}
-			
 		}
 		return super.getScope(context, reference);
 	}
