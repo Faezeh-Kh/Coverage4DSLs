@@ -11,7 +11,15 @@ def: hasInclusionRule : Boolean =
 def: hasExclusionRule : Boolean = 
 	self.rules->exists(r | r.oclIsTypeOf(ExclusionRule)) 
 	
-inv RepeatedContextIncExcCriteria('Context cannot have both Inclusion and Exclusion rules'): 
-	(hasInclusionRule and hasExclusionRule) = false
+inv repeatedContextIncExcCriteria('Context cannot have both Inclusion and Exclusion rules'): 
+	(hasInclusionRule and hasExclusionRule) = false implies null
 
+context BranchSpecification
+	
+inv atLeastOneExplicitBranch('BranchSpecification rule must have at least one ExplicitBranch'):
+	self.branches->exists(b | b.oclIsTypeOf(ExplicitBranch)) = false implies null
+
+inv onlyOneImplicitBranch('BranchSpecification rule must have at most one ImplicitBranch'):
+	self.branches->select(b | b.oclIsTypeOf(ImplicitBranch))->size() > 1 implies null
+		
 endpackage
