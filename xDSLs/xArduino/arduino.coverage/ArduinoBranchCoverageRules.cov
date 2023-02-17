@@ -3,7 +3,7 @@ ruleset ArduinoBranchCoverage{
 	import metamodel arduino
 	import ruleset from "/arduino.coverage/ArduinoModelElementCoverageRules.cov"
 
-	context If{
+	context If {
 		when "self.elseBlock <> null"{
 			branch "self.block",
 			branch "self.elseBlock"
@@ -13,10 +13,10 @@ ruleset ArduinoBranchCoverage{
 			branch else
 		}
 	},
-	context While{
+	context While {
 		{
 			branch "self.block",
-			branch else
+			branch else 
 		}
 	}
 }

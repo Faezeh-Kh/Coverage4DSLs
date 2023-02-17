@@ -20,6 +20,7 @@ ruleset ArduinoModelElementCoverage{
 	//ignore physical-related elements from coverage computation
 	context Board{
 		ignore (subtypes true)
+		
 	},
 	context Pin{
 		ignore (subtypes true)

@@ -1,0 +1,17 @@
+import 'platform:/plugin/coverage.computation/model/DSLSpecificCoverage.ecore'
+
+
+package DSLSpecificCoverage
+
+context Context
+
+def: hasInclusionRule : Boolean = 
+	self.rules->exists(r | r.oclIsTypeOf(InclusionRule)) 
+	
+def: hasExclusionRule : Boolean = 
+	self.rules->exists(r | r.oclIsTypeOf(ExclusionRule)) 
+	
+inv RepeatedContextIncExcCriteria('Context cannot have both Inclusion and Exclusion rules'): 
+	(hasInclusionRule and hasExclusionRule) = false
+
+endpackage
