@@ -4,11 +4,11 @@ ruleset ArduinoBranchCoverage{
 	import ruleset from "/arduino.coverage/ArduinoModelElementCoverageRules.cov"
 
 	context If {
-		when "self.elseBlock <> null"{
+		when "self.elseB lock <> null"{
 			branch "self.block",
 			branch "self.elseBlock"
 		}, 
-		when "self.elseBlock = null"{
+		when "self.e lseBlock = null"{
 			branch "self.block",
 			branch else
 		}

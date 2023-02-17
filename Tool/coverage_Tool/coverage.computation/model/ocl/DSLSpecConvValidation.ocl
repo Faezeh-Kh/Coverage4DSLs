@@ -12,7 +12,7 @@ def: hasExclusionRule : Boolean =
 	self.rules->exists(r | r.oclIsTypeOf(ExclusionRule)) 
 	
 inv repeatedContextIncExcCriteria('Context cannot have both Inclusion and Exclusion rules'): 
-	(hasInclusionRule and hasExclusionRule) = false implies null
+	(hasInclusionRule and hasExclusionRule) = true implies null
 
 context BranchSpecification
 	
