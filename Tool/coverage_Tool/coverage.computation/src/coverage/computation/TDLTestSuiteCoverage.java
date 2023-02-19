@@ -189,7 +189,7 @@ public class TDLTestSuiteCoverage {
 	public TestCoverageReport getTsCoverageRepot(String reportTitle) {
 		try {
 			return coverageReports.stream()
-					.filter(r -> r.getReportTitle().equals(reportTitle)).findFirst().get();
+					.filter(r -> r.getReportTitle().startsWith(reportTitle)).findFirst().get();
 		}
 		catch (NoSuchElementException e) {
 			return null;
@@ -199,7 +199,7 @@ public class TDLTestSuiteCoverage {
 	public List<ObjectCoverageStatus> getTsCoverageInfo(String reportTitle) {
 		try {
 			return tsCoverageInfos.get(coverageReports.indexOf(getTsCoverageRepot(reportTitle)));
-		}catch (NoSuchElementException e) {
+		}catch (Exception e) {
 			return getTsCoverageInfo(TDLCoverageUtil.TRACEBASEDCOVERAGE);
 		}
 	}
