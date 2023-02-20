@@ -29,6 +29,7 @@ import DSLSpecificCoverage.LimitedIgnore;
  * on how and when to use it.
  */
 public class COVScopeProvider extends AbstractCOVScopeProvider {
+	
 	@Override
 	public IScope getScope(EObject context, EReference reference) {
 		if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getDomainSpecificCoverage_Metamodel())) {
@@ -55,7 +56,7 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 											.map(EClass.class::cast)
 											.collect(Collectors.toCollection(BasicEList::new));
 		return Scopes.scopeFor(allClasses);
-	}
+		}
 		else if (reference.equals(DSLSpecificCoveragePackage.eINSTANCE.getCoverageOfReferenced_Reference())) {
 			EList<EReference> references = ((Context)((CoverageOfReferenced) context).eContainer())
 												.getMetaclass().getEAllReferences();
@@ -68,4 +69,5 @@ public class COVScopeProvider extends AbstractCOVScopeProvider {
 		}
 		return super.getScope(context, reference);
 	}
+	
 }

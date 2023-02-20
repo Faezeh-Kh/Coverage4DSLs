@@ -15,10 +15,10 @@ import DSLSpecificCoverage.DomainSpecificCoverage
 // transitive imports management inspired from
 // https://blogs.itemis.com/en/in-five-minutes-to-transitive-imports-within-a-dsl-with-xtext
 class COVResourceDescriptionStrategy extends DefaultResourceDescriptionStrategy {
-
+		
 	public val static String USER_KEY_IMPORT_URIS = "IMPORT_URIS";
-	public val static String SEPARATOR_CHAR = ",";
-
+	public val static String SEPARATOR_CHAR = ",";	
+	
 	@Inject
 	ImportUriResolver uriResolver
 
