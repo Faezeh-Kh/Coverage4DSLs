@@ -139,9 +139,9 @@ public class DSLSpecificBranchCoverage {
 				}
 				index1 = index2;
 			}
-			else if (index2 == allCoveredObjects.size()-1) {
-				//at the point, there is only one element after the last occurrence of the branching root
-				//if it is not an explicit branch, then the implicit branch is covered
+			if (index2 == allCoveredObjects.size()-1) {
+				//if we reached the end of the list, there is either one element after the last occurrence
+				//of the branching root or the last element is a branching root
 				if (!branchingRoot_branches.get(branchingRoot).stream().anyMatch(xb -> xb == capturedObject)) {
 					return TDLCoverageUtil.COVERED;
 				}
