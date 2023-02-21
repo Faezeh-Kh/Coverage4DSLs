@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -289,8 +290,9 @@ public class DSLSpecificCoverageExecutor {
 	
 	private void coverContainerIfAnyContaineeCovered(EObject container) {
 		String coverageStatus = "";
-		while (container.eAllContents().hasNext()) {
-			EObject containee = container.eAllContents().next();
+		TreeIterator<EObject> iterator = container.eAllContents();
+		while (iterator.hasNext()) {
+			EObject containee = iterator.next();
 			coverageStatus = tcDslSpecificCoverageReport.getObjectCoverage(containee);
 			if (coverageStatus == TDLCoverageUtil.COVERED) {
 				tcDslSpecificCoverageReport.setObjectCoverage(container, coverageStatus);
