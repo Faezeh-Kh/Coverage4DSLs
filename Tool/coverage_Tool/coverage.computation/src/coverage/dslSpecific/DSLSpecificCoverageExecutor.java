@@ -148,35 +148,34 @@ public class DSLSpecificCoverageExecutor {
 			List<EObject> validObjects = eObjects.stream()
 					.filter(object -> isRuleConditionSatisfied(rule.getCondition(), object))
 					.collect(Collectors.toList());
-			if (validObjects.isEmpty()) {
-				break;
-			}
-			if (rule instanceof Ignore) {
-				Ignore ignoreRule = (Ignore) rule;
-				updateCoverableClasses(ignoreRule);
-				validObjects.forEach(object -> runIgnoreRule(ignoreRule, object));
-			}
-			else if (rule instanceof LimitedIgnore) {
-				LimitedIgnore limitedIgnoreRule = (LimitedIgnore) rule;
-				validObjects.forEach(object -> runLimitedIgnoreRule(limitedIgnoreRule, object));
-			}
-			else if (rule instanceof CoverageOfReferenced) {
-				CoverageOfReferenced refRule = (CoverageOfReferenced) rule;
-				updateCoverableClasses(refRule);
-				validObjects.forEach(object -> inferReferenceCoverage(refRule, object));
-			}
-			else if (rule instanceof CoverageByContent) {
-				CoverageByContent containmentRule = (CoverageByContent) rule;
-				updateCoverableClasses(containmentRule);
-				validObjects.forEach(object -> inferContainerCoverage(containmentRule, object));
-			}
-			else if (rule instanceof BranchSpecification) {
-				BranchSpecification branchRule = (BranchSpecification) rule; 
-				if (!validObjects.isEmpty()) {
-					if (branchingRule_contextObjects.get(branchRule) == null) {
-						branchingRule_contextObjects.put(branchRule, new LinkedHashSet<>());
+			if (!validObjects.isEmpty()) {
+				if (rule instanceof Ignore) {
+					Ignore ignoreRule = (Ignore) rule;
+					updateCoverableClasses(ignoreRule);
+					validObjects.forEach(object -> runIgnoreRule(ignoreRule, object));
+				}
+				else if (rule instanceof LimitedIgnore) {
+					LimitedIgnore limitedIgnoreRule = (LimitedIgnore) rule;
+					validObjects.forEach(object -> runLimitedIgnoreRule(limitedIgnoreRule, object));
+				}
+				else if (rule instanceof CoverageOfReferenced) {
+					CoverageOfReferenced refRule = (CoverageOfReferenced) rule;
+					updateCoverableClasses(refRule);
+					validObjects.forEach(object -> inferReferenceCoverage(refRule, object));
+				}
+				else if (rule instanceof CoverageByContent) {
+					CoverageByContent containmentRule = (CoverageByContent) rule;
+					updateCoverableClasses(containmentRule);
+					validObjects.forEach(object -> inferContainerCoverage(containmentRule, object));
+				}
+				else if (rule instanceof BranchSpecification) {
+					BranchSpecification branchRule = (BranchSpecification) rule; 
+					if (!validObjects.isEmpty()) {
+						if (branchingRule_contextObjects.get(branchRule) == null) {
+							branchingRule_contextObjects.put(branchRule, new LinkedHashSet<>());
+						}
+						branchingRule_contextObjects.get(branchRule).addAll(validObjects);
 					}
-					branchingRule_contextObjects.get(branchRule).addAll(validObjects);
 				}
 			}
 		}
