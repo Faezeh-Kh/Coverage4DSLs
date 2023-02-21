@@ -12,4 +12,6 @@ public class COVStandaloneSetup extends COVStandaloneSetupGenerated {
 	public static void doSetup() {
 		new COVStandaloneSetup().createInjectorAndDoEMFRegistration();
 	}
+	
+	
 }

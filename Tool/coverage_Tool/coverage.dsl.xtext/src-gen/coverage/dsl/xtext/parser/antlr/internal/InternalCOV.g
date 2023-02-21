@@ -623,36 +623,6 @@ ruleRule returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleEBoolean
-entryRuleEBoolean returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEBooleanRule()); }
-	iv_ruleEBoolean=ruleEBoolean
-	{ $current=$iv_ruleEBoolean.current.getText(); }
-	EOF;
-
-// Rule EBoolean
-ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		kw='true'
-		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getEBooleanAccess().getTrueKeyword_0());
-		}
-		    |
-		kw='false'
-		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getEBooleanAccess().getFalseKeyword_1());
-		}
-	)
-;
-
 // Entry rule entryRuleIgnore
 entryRuleIgnore returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getIgnoreRule()); }
@@ -1247,20 +1217,19 @@ ruleBranchSpecification returns [EObject current=null]
 			}
 			(
 				(
+					lv_description_8_0=RULE_STRING
 					{
-						newCompositeNode(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_5_1_0());
+						newLeafNode(lv_description_8_0, grammarAccess.getBranchSpecificationAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0());
 					}
-					lv_description_8_0=ruleEString
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getBranchSpecificationRule());
+							$current = createModelElement(grammarAccess.getBranchSpecificationRule());
 						}
-						set(
+						setWithLastConsumed(
 							$current,
 							"description",
 							lv_description_8_0,
-							"coverage.dsl.xtext.COV.EString");
-						afterParserOrEnumRuleCall();
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
@@ -1289,20 +1258,20 @@ ruleBranch returns [EObject current=null]
 }:
 	(
 		{
-			newCompositeNode(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_0());
+			newCompositeNode(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_0());
 		}
-		this_ExplicitBranch_0=ruleExplicitBranch
+		this_ImplicitBranch_0=ruleImplicitBranch
 		{
-			$current = $this_ExplicitBranch_0.current;
+			$current = $this_ImplicitBranch_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_1());
+			newCompositeNode(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_1());
 		}
-		this_ImplicitBranch_1=ruleImplicitBranch
+		this_ExplicitBranch_1=ruleExplicitBranch
 		{
-			$current = $this_ImplicitBranch_1.current;
+			$current = $this_ExplicitBranch_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -1330,20 +1299,19 @@ ruleExplicitBranch returns [EObject current=null]
 		}
 		(
 			(
+				lv_OCLQuery_1_0=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0());
+					newLeafNode(lv_OCLQuery_1_0, grammarAccess.getExplicitBranchAccess().getOCLQuerySTRINGTerminalRuleCall_1_0());
 				}
-				lv_OCLQuery_1_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getExplicitBranchRule());
+						$current = createModelElement(grammarAccess.getExplicitBranchRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"OCLQuery",
 						lv_OCLQuery_1_0,
-						"coverage.dsl.xtext.COV.EString");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
@@ -1401,22 +1369,51 @@ ruleCondition returns [EObject current=null]
 }:
 	(
 		(
+			lv_OCLConstraint_0_0=RULE_STRING
 			{
-				newCompositeNode(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0());
+				newLeafNode(lv_OCLConstraint_0_0, grammarAccess.getConditionAccess().getOCLConstraintSTRINGTerminalRuleCall_0());
 			}
-			lv_OCLConstraint_0_0=ruleEString
 			{
 				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getConditionRule());
+					$current = createModelElement(grammarAccess.getConditionRule());
 				}
-				set(
+				setWithLastConsumed(
 					$current,
 					"OCLConstraint",
 					lv_OCLConstraint_0_0,
-					"coverage.dsl.xtext.COV.EString");
-				afterParserOrEnumRuleCall();
+					"org.eclipse.xtext.common.Terminals.STRING");
 			}
 		)
+	)
+;
+
+// Entry rule entryRuleEBoolean
+entryRuleEBoolean returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getEBooleanRule()); }
+	iv_ruleEBoolean=ruleEBoolean
+	{ $current=$iv_ruleEBoolean.current.getText(); }
+	EOF;
+
+// Rule EBoolean
+ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		kw='true'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getEBooleanAccess().getTrueKeyword_0());
+		}
+		    |
+		kw='false'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getEBooleanAccess().getFalseKeyword_1());
+		}
 	)
 ;
 

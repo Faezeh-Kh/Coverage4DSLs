@@ -637,89 +637,12 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleRule"
 
 
-    // $ANTLR start "entryRuleEBoolean"
-    // InternalCOV.g:228:1: entryRuleEBoolean : ruleEBoolean EOF ;
-    public final void entryRuleEBoolean() throws RecognitionException {
-        try {
-            // InternalCOV.g:229:1: ( ruleEBoolean EOF )
-            // InternalCOV.g:230:1: ruleEBoolean EOF
-            {
-             before(grammarAccess.getEBooleanRule()); 
-            pushFollow(FOLLOW_1);
-            ruleEBoolean();
-
-            state._fsp--;
-
-             after(grammarAccess.getEBooleanRule()); 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleEBoolean"
-
-
-    // $ANTLR start "ruleEBoolean"
-    // InternalCOV.g:237:1: ruleEBoolean : ( ( rule__EBoolean__Alternatives ) ) ;
-    public final void ruleEBoolean() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalCOV.g:241:2: ( ( ( rule__EBoolean__Alternatives ) ) )
-            // InternalCOV.g:242:2: ( ( rule__EBoolean__Alternatives ) )
-            {
-            // InternalCOV.g:242:2: ( ( rule__EBoolean__Alternatives ) )
-            // InternalCOV.g:243:3: ( rule__EBoolean__Alternatives )
-            {
-             before(grammarAccess.getEBooleanAccess().getAlternatives()); 
-            // InternalCOV.g:244:3: ( rule__EBoolean__Alternatives )
-            // InternalCOV.g:244:4: rule__EBoolean__Alternatives
-            {
-            pushFollow(FOLLOW_2);
-            rule__EBoolean__Alternatives();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getEBooleanAccess().getAlternatives()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleEBoolean"
-
-
     // $ANTLR start "entryRuleIgnore"
-    // InternalCOV.g:253:1: entryRuleIgnore : ruleIgnore EOF ;
+    // InternalCOV.g:228:1: entryRuleIgnore : ruleIgnore EOF ;
     public final void entryRuleIgnore() throws RecognitionException {
         try {
-            // InternalCOV.g:254:1: ( ruleIgnore EOF )
-            // InternalCOV.g:255:1: ruleIgnore EOF
+            // InternalCOV.g:229:1: ( ruleIgnore EOF )
+            // InternalCOV.g:230:1: ruleIgnore EOF
             {
              before(grammarAccess.getIgnoreRule()); 
             pushFollow(FOLLOW_1);
@@ -745,21 +668,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleIgnore"
-    // InternalCOV.g:262:1: ruleIgnore : ( ( rule__Ignore__Group__0 ) ) ;
+    // InternalCOV.g:237:1: ruleIgnore : ( ( rule__Ignore__Group__0 ) ) ;
     public final void ruleIgnore() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:266:2: ( ( ( rule__Ignore__Group__0 ) ) )
-            // InternalCOV.g:267:2: ( ( rule__Ignore__Group__0 ) )
+            // InternalCOV.g:241:2: ( ( ( rule__Ignore__Group__0 ) ) )
+            // InternalCOV.g:242:2: ( ( rule__Ignore__Group__0 ) )
             {
-            // InternalCOV.g:267:2: ( ( rule__Ignore__Group__0 ) )
-            // InternalCOV.g:268:3: ( rule__Ignore__Group__0 )
+            // InternalCOV.g:242:2: ( ( rule__Ignore__Group__0 ) )
+            // InternalCOV.g:243:3: ( rule__Ignore__Group__0 )
             {
              before(grammarAccess.getIgnoreAccess().getGroup()); 
-            // InternalCOV.g:269:3: ( rule__Ignore__Group__0 )
-            // InternalCOV.g:269:4: rule__Ignore__Group__0
+            // InternalCOV.g:244:3: ( rule__Ignore__Group__0 )
+            // InternalCOV.g:244:4: rule__Ignore__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Ignore__Group__0();
@@ -792,11 +715,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleLimitedIgnore"
-    // InternalCOV.g:278:1: entryRuleLimitedIgnore : ruleLimitedIgnore EOF ;
+    // InternalCOV.g:253:1: entryRuleLimitedIgnore : ruleLimitedIgnore EOF ;
     public final void entryRuleLimitedIgnore() throws RecognitionException {
         try {
-            // InternalCOV.g:279:1: ( ruleLimitedIgnore EOF )
-            // InternalCOV.g:280:1: ruleLimitedIgnore EOF
+            // InternalCOV.g:254:1: ( ruleLimitedIgnore EOF )
+            // InternalCOV.g:255:1: ruleLimitedIgnore EOF
             {
              before(grammarAccess.getLimitedIgnoreRule()); 
             pushFollow(FOLLOW_1);
@@ -822,21 +745,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLimitedIgnore"
-    // InternalCOV.g:287:1: ruleLimitedIgnore : ( ( rule__LimitedIgnore__Group__0 ) ) ;
+    // InternalCOV.g:262:1: ruleLimitedIgnore : ( ( rule__LimitedIgnore__Group__0 ) ) ;
     public final void ruleLimitedIgnore() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:291:2: ( ( ( rule__LimitedIgnore__Group__0 ) ) )
-            // InternalCOV.g:292:2: ( ( rule__LimitedIgnore__Group__0 ) )
+            // InternalCOV.g:266:2: ( ( ( rule__LimitedIgnore__Group__0 ) ) )
+            // InternalCOV.g:267:2: ( ( rule__LimitedIgnore__Group__0 ) )
             {
-            // InternalCOV.g:292:2: ( ( rule__LimitedIgnore__Group__0 ) )
-            // InternalCOV.g:293:3: ( rule__LimitedIgnore__Group__0 )
+            // InternalCOV.g:267:2: ( ( rule__LimitedIgnore__Group__0 ) )
+            // InternalCOV.g:268:3: ( rule__LimitedIgnore__Group__0 )
             {
              before(grammarAccess.getLimitedIgnoreAccess().getGroup()); 
-            // InternalCOV.g:294:3: ( rule__LimitedIgnore__Group__0 )
-            // InternalCOV.g:294:4: rule__LimitedIgnore__Group__0
+            // InternalCOV.g:269:3: ( rule__LimitedIgnore__Group__0 )
+            // InternalCOV.g:269:4: rule__LimitedIgnore__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__LimitedIgnore__Group__0();
@@ -869,11 +792,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCoverageOfReferenced"
-    // InternalCOV.g:303:1: entryRuleCoverageOfReferenced : ruleCoverageOfReferenced EOF ;
+    // InternalCOV.g:278:1: entryRuleCoverageOfReferenced : ruleCoverageOfReferenced EOF ;
     public final void entryRuleCoverageOfReferenced() throws RecognitionException {
         try {
-            // InternalCOV.g:304:1: ( ruleCoverageOfReferenced EOF )
-            // InternalCOV.g:305:1: ruleCoverageOfReferenced EOF
+            // InternalCOV.g:279:1: ( ruleCoverageOfReferenced EOF )
+            // InternalCOV.g:280:1: ruleCoverageOfReferenced EOF
             {
              before(grammarAccess.getCoverageOfReferencedRule()); 
             pushFollow(FOLLOW_1);
@@ -899,21 +822,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCoverageOfReferenced"
-    // InternalCOV.g:312:1: ruleCoverageOfReferenced : ( ( rule__CoverageOfReferenced__Group__0 ) ) ;
+    // InternalCOV.g:287:1: ruleCoverageOfReferenced : ( ( rule__CoverageOfReferenced__Group__0 ) ) ;
     public final void ruleCoverageOfReferenced() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:316:2: ( ( ( rule__CoverageOfReferenced__Group__0 ) ) )
-            // InternalCOV.g:317:2: ( ( rule__CoverageOfReferenced__Group__0 ) )
+            // InternalCOV.g:291:2: ( ( ( rule__CoverageOfReferenced__Group__0 ) ) )
+            // InternalCOV.g:292:2: ( ( rule__CoverageOfReferenced__Group__0 ) )
             {
-            // InternalCOV.g:317:2: ( ( rule__CoverageOfReferenced__Group__0 ) )
-            // InternalCOV.g:318:3: ( rule__CoverageOfReferenced__Group__0 )
+            // InternalCOV.g:292:2: ( ( rule__CoverageOfReferenced__Group__0 ) )
+            // InternalCOV.g:293:3: ( rule__CoverageOfReferenced__Group__0 )
             {
              before(grammarAccess.getCoverageOfReferencedAccess().getGroup()); 
-            // InternalCOV.g:319:3: ( rule__CoverageOfReferenced__Group__0 )
-            // InternalCOV.g:319:4: rule__CoverageOfReferenced__Group__0
+            // InternalCOV.g:294:3: ( rule__CoverageOfReferenced__Group__0 )
+            // InternalCOV.g:294:4: rule__CoverageOfReferenced__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__CoverageOfReferenced__Group__0();
@@ -946,11 +869,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCoverageByContent"
-    // InternalCOV.g:328:1: entryRuleCoverageByContent : ruleCoverageByContent EOF ;
+    // InternalCOV.g:303:1: entryRuleCoverageByContent : ruleCoverageByContent EOF ;
     public final void entryRuleCoverageByContent() throws RecognitionException {
         try {
-            // InternalCOV.g:329:1: ( ruleCoverageByContent EOF )
-            // InternalCOV.g:330:1: ruleCoverageByContent EOF
+            // InternalCOV.g:304:1: ( ruleCoverageByContent EOF )
+            // InternalCOV.g:305:1: ruleCoverageByContent EOF
             {
              before(grammarAccess.getCoverageByContentRule()); 
             pushFollow(FOLLOW_1);
@@ -976,21 +899,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCoverageByContent"
-    // InternalCOV.g:337:1: ruleCoverageByContent : ( ( rule__CoverageByContent__Group__0 ) ) ;
+    // InternalCOV.g:312:1: ruleCoverageByContent : ( ( rule__CoverageByContent__Group__0 ) ) ;
     public final void ruleCoverageByContent() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:341:2: ( ( ( rule__CoverageByContent__Group__0 ) ) )
-            // InternalCOV.g:342:2: ( ( rule__CoverageByContent__Group__0 ) )
+            // InternalCOV.g:316:2: ( ( ( rule__CoverageByContent__Group__0 ) ) )
+            // InternalCOV.g:317:2: ( ( rule__CoverageByContent__Group__0 ) )
             {
-            // InternalCOV.g:342:2: ( ( rule__CoverageByContent__Group__0 ) )
-            // InternalCOV.g:343:3: ( rule__CoverageByContent__Group__0 )
+            // InternalCOV.g:317:2: ( ( rule__CoverageByContent__Group__0 ) )
+            // InternalCOV.g:318:3: ( rule__CoverageByContent__Group__0 )
             {
              before(grammarAccess.getCoverageByContentAccess().getGroup()); 
-            // InternalCOV.g:344:3: ( rule__CoverageByContent__Group__0 )
-            // InternalCOV.g:344:4: rule__CoverageByContent__Group__0
+            // InternalCOV.g:319:3: ( rule__CoverageByContent__Group__0 )
+            // InternalCOV.g:319:4: rule__CoverageByContent__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__CoverageByContent__Group__0();
@@ -1023,11 +946,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleBranchSpecification"
-    // InternalCOV.g:353:1: entryRuleBranchSpecification : ruleBranchSpecification EOF ;
+    // InternalCOV.g:328:1: entryRuleBranchSpecification : ruleBranchSpecification EOF ;
     public final void entryRuleBranchSpecification() throws RecognitionException {
         try {
-            // InternalCOV.g:354:1: ( ruleBranchSpecification EOF )
-            // InternalCOV.g:355:1: ruleBranchSpecification EOF
+            // InternalCOV.g:329:1: ( ruleBranchSpecification EOF )
+            // InternalCOV.g:330:1: ruleBranchSpecification EOF
             {
              before(grammarAccess.getBranchSpecificationRule()); 
             pushFollow(FOLLOW_1);
@@ -1053,21 +976,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBranchSpecification"
-    // InternalCOV.g:362:1: ruleBranchSpecification : ( ( rule__BranchSpecification__Group__0 ) ) ;
+    // InternalCOV.g:337:1: ruleBranchSpecification : ( ( rule__BranchSpecification__Group__0 ) ) ;
     public final void ruleBranchSpecification() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:366:2: ( ( ( rule__BranchSpecification__Group__0 ) ) )
-            // InternalCOV.g:367:2: ( ( rule__BranchSpecification__Group__0 ) )
+            // InternalCOV.g:341:2: ( ( ( rule__BranchSpecification__Group__0 ) ) )
+            // InternalCOV.g:342:2: ( ( rule__BranchSpecification__Group__0 ) )
             {
-            // InternalCOV.g:367:2: ( ( rule__BranchSpecification__Group__0 ) )
-            // InternalCOV.g:368:3: ( rule__BranchSpecification__Group__0 )
+            // InternalCOV.g:342:2: ( ( rule__BranchSpecification__Group__0 ) )
+            // InternalCOV.g:343:3: ( rule__BranchSpecification__Group__0 )
             {
              before(grammarAccess.getBranchSpecificationAccess().getGroup()); 
-            // InternalCOV.g:369:3: ( rule__BranchSpecification__Group__0 )
-            // InternalCOV.g:369:4: rule__BranchSpecification__Group__0
+            // InternalCOV.g:344:3: ( rule__BranchSpecification__Group__0 )
+            // InternalCOV.g:344:4: rule__BranchSpecification__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__BranchSpecification__Group__0();
@@ -1100,11 +1023,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleBranch"
-    // InternalCOV.g:378:1: entryRuleBranch : ruleBranch EOF ;
+    // InternalCOV.g:353:1: entryRuleBranch : ruleBranch EOF ;
     public final void entryRuleBranch() throws RecognitionException {
         try {
-            // InternalCOV.g:379:1: ( ruleBranch EOF )
-            // InternalCOV.g:380:1: ruleBranch EOF
+            // InternalCOV.g:354:1: ( ruleBranch EOF )
+            // InternalCOV.g:355:1: ruleBranch EOF
             {
              before(grammarAccess.getBranchRule()); 
             pushFollow(FOLLOW_1);
@@ -1130,21 +1053,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBranch"
-    // InternalCOV.g:387:1: ruleBranch : ( ( rule__Branch__Alternatives ) ) ;
+    // InternalCOV.g:362:1: ruleBranch : ( ( rule__Branch__Alternatives ) ) ;
     public final void ruleBranch() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:391:2: ( ( ( rule__Branch__Alternatives ) ) )
-            // InternalCOV.g:392:2: ( ( rule__Branch__Alternatives ) )
+            // InternalCOV.g:366:2: ( ( ( rule__Branch__Alternatives ) ) )
+            // InternalCOV.g:367:2: ( ( rule__Branch__Alternatives ) )
             {
-            // InternalCOV.g:392:2: ( ( rule__Branch__Alternatives ) )
-            // InternalCOV.g:393:3: ( rule__Branch__Alternatives )
+            // InternalCOV.g:367:2: ( ( rule__Branch__Alternatives ) )
+            // InternalCOV.g:368:3: ( rule__Branch__Alternatives )
             {
              before(grammarAccess.getBranchAccess().getAlternatives()); 
-            // InternalCOV.g:394:3: ( rule__Branch__Alternatives )
-            // InternalCOV.g:394:4: rule__Branch__Alternatives
+            // InternalCOV.g:369:3: ( rule__Branch__Alternatives )
+            // InternalCOV.g:369:4: rule__Branch__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Branch__Alternatives();
@@ -1177,11 +1100,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleExplicitBranch"
-    // InternalCOV.g:403:1: entryRuleExplicitBranch : ruleExplicitBranch EOF ;
+    // InternalCOV.g:378:1: entryRuleExplicitBranch : ruleExplicitBranch EOF ;
     public final void entryRuleExplicitBranch() throws RecognitionException {
         try {
-            // InternalCOV.g:404:1: ( ruleExplicitBranch EOF )
-            // InternalCOV.g:405:1: ruleExplicitBranch EOF
+            // InternalCOV.g:379:1: ( ruleExplicitBranch EOF )
+            // InternalCOV.g:380:1: ruleExplicitBranch EOF
             {
              before(grammarAccess.getExplicitBranchRule()); 
             pushFollow(FOLLOW_1);
@@ -1207,21 +1130,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleExplicitBranch"
-    // InternalCOV.g:412:1: ruleExplicitBranch : ( ( rule__ExplicitBranch__Group__0 ) ) ;
+    // InternalCOV.g:387:1: ruleExplicitBranch : ( ( rule__ExplicitBranch__Group__0 ) ) ;
     public final void ruleExplicitBranch() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:416:2: ( ( ( rule__ExplicitBranch__Group__0 ) ) )
-            // InternalCOV.g:417:2: ( ( rule__ExplicitBranch__Group__0 ) )
+            // InternalCOV.g:391:2: ( ( ( rule__ExplicitBranch__Group__0 ) ) )
+            // InternalCOV.g:392:2: ( ( rule__ExplicitBranch__Group__0 ) )
             {
-            // InternalCOV.g:417:2: ( ( rule__ExplicitBranch__Group__0 ) )
-            // InternalCOV.g:418:3: ( rule__ExplicitBranch__Group__0 )
+            // InternalCOV.g:392:2: ( ( rule__ExplicitBranch__Group__0 ) )
+            // InternalCOV.g:393:3: ( rule__ExplicitBranch__Group__0 )
             {
              before(grammarAccess.getExplicitBranchAccess().getGroup()); 
-            // InternalCOV.g:419:3: ( rule__ExplicitBranch__Group__0 )
-            // InternalCOV.g:419:4: rule__ExplicitBranch__Group__0
+            // InternalCOV.g:394:3: ( rule__ExplicitBranch__Group__0 )
+            // InternalCOV.g:394:4: rule__ExplicitBranch__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ExplicitBranch__Group__0();
@@ -1254,11 +1177,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleImplicitBranch"
-    // InternalCOV.g:428:1: entryRuleImplicitBranch : ruleImplicitBranch EOF ;
+    // InternalCOV.g:403:1: entryRuleImplicitBranch : ruleImplicitBranch EOF ;
     public final void entryRuleImplicitBranch() throws RecognitionException {
         try {
-            // InternalCOV.g:429:1: ( ruleImplicitBranch EOF )
-            // InternalCOV.g:430:1: ruleImplicitBranch EOF
+            // InternalCOV.g:404:1: ( ruleImplicitBranch EOF )
+            // InternalCOV.g:405:1: ruleImplicitBranch EOF
             {
              before(grammarAccess.getImplicitBranchRule()); 
             pushFollow(FOLLOW_1);
@@ -1284,21 +1207,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleImplicitBranch"
-    // InternalCOV.g:437:1: ruleImplicitBranch : ( ( rule__ImplicitBranch__Group__0 ) ) ;
+    // InternalCOV.g:412:1: ruleImplicitBranch : ( ( rule__ImplicitBranch__Group__0 ) ) ;
     public final void ruleImplicitBranch() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:441:2: ( ( ( rule__ImplicitBranch__Group__0 ) ) )
-            // InternalCOV.g:442:2: ( ( rule__ImplicitBranch__Group__0 ) )
+            // InternalCOV.g:416:2: ( ( ( rule__ImplicitBranch__Group__0 ) ) )
+            // InternalCOV.g:417:2: ( ( rule__ImplicitBranch__Group__0 ) )
             {
-            // InternalCOV.g:442:2: ( ( rule__ImplicitBranch__Group__0 ) )
-            // InternalCOV.g:443:3: ( rule__ImplicitBranch__Group__0 )
+            // InternalCOV.g:417:2: ( ( rule__ImplicitBranch__Group__0 ) )
+            // InternalCOV.g:418:3: ( rule__ImplicitBranch__Group__0 )
             {
              before(grammarAccess.getImplicitBranchAccess().getGroup()); 
-            // InternalCOV.g:444:3: ( rule__ImplicitBranch__Group__0 )
-            // InternalCOV.g:444:4: rule__ImplicitBranch__Group__0
+            // InternalCOV.g:419:3: ( rule__ImplicitBranch__Group__0 )
+            // InternalCOV.g:419:4: rule__ImplicitBranch__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ImplicitBranch__Group__0();
@@ -1331,11 +1254,11 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCondition"
-    // InternalCOV.g:453:1: entryRuleCondition : ruleCondition EOF ;
+    // InternalCOV.g:428:1: entryRuleCondition : ruleCondition EOF ;
     public final void entryRuleCondition() throws RecognitionException {
         try {
-            // InternalCOV.g:454:1: ( ruleCondition EOF )
-            // InternalCOV.g:455:1: ruleCondition EOF
+            // InternalCOV.g:429:1: ( ruleCondition EOF )
+            // InternalCOV.g:430:1: ruleCondition EOF
             {
              before(grammarAccess.getConditionRule()); 
             pushFollow(FOLLOW_1);
@@ -1361,21 +1284,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCondition"
-    // InternalCOV.g:462:1: ruleCondition : ( ( rule__Condition__OCLConstraintAssignment ) ) ;
+    // InternalCOV.g:437:1: ruleCondition : ( ( rule__Condition__OCLConstraintAssignment ) ) ;
     public final void ruleCondition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:466:2: ( ( ( rule__Condition__OCLConstraintAssignment ) ) )
-            // InternalCOV.g:467:2: ( ( rule__Condition__OCLConstraintAssignment ) )
+            // InternalCOV.g:441:2: ( ( ( rule__Condition__OCLConstraintAssignment ) ) )
+            // InternalCOV.g:442:2: ( ( rule__Condition__OCLConstraintAssignment ) )
             {
-            // InternalCOV.g:467:2: ( ( rule__Condition__OCLConstraintAssignment ) )
-            // InternalCOV.g:468:3: ( rule__Condition__OCLConstraintAssignment )
+            // InternalCOV.g:442:2: ( ( rule__Condition__OCLConstraintAssignment ) )
+            // InternalCOV.g:443:3: ( rule__Condition__OCLConstraintAssignment )
             {
              before(grammarAccess.getConditionAccess().getOCLConstraintAssignment()); 
-            // InternalCOV.g:469:3: ( rule__Condition__OCLConstraintAssignment )
-            // InternalCOV.g:469:4: rule__Condition__OCLConstraintAssignment
+            // InternalCOV.g:444:3: ( rule__Condition__OCLConstraintAssignment )
+            // InternalCOV.g:444:4: rule__Condition__OCLConstraintAssignment
             {
             pushFollow(FOLLOW_2);
             rule__Condition__OCLConstraintAssignment();
@@ -1405,6 +1328,83 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "ruleCondition"
+
+
+    // $ANTLR start "entryRuleEBoolean"
+    // InternalCOV.g:453:1: entryRuleEBoolean : ruleEBoolean EOF ;
+    public final void entryRuleEBoolean() throws RecognitionException {
+        try {
+            // InternalCOV.g:454:1: ( ruleEBoolean EOF )
+            // InternalCOV.g:455:1: ruleEBoolean EOF
+            {
+             before(grammarAccess.getEBooleanRule()); 
+            pushFollow(FOLLOW_1);
+            ruleEBoolean();
+
+            state._fsp--;
+
+             after(grammarAccess.getEBooleanRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleEBoolean"
+
+
+    // $ANTLR start "ruleEBoolean"
+    // InternalCOV.g:462:1: ruleEBoolean : ( ( rule__EBoolean__Alternatives ) ) ;
+    public final void ruleEBoolean() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCOV.g:466:2: ( ( ( rule__EBoolean__Alternatives ) ) )
+            // InternalCOV.g:467:2: ( ( rule__EBoolean__Alternatives ) )
+            {
+            // InternalCOV.g:467:2: ( ( rule__EBoolean__Alternatives ) )
+            // InternalCOV.g:468:3: ( rule__EBoolean__Alternatives )
+            {
+             before(grammarAccess.getEBooleanAccess().getAlternatives()); 
+            // InternalCOV.g:469:3: ( rule__EBoolean__Alternatives )
+            // InternalCOV.g:469:4: rule__EBoolean__Alternatives
+            {
+            pushFollow(FOLLOW_2);
+            rule__EBoolean__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getEBooleanAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleEBoolean"
 
 
     // $ANTLR start "ruleCoveredContents"
@@ -1747,41 +1747,6 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
                     }
 
                 }
-                else if ( (LA3_1==RULE_ID) ) {
-                    switch ( input.LA(3) ) {
-                    case 36:
-                        {
-                        alt3=3;
-                        }
-                        break;
-                    case 29:
-                        {
-                        alt3=1;
-                        }
-                        break;
-                    case 35:
-                        {
-                        alt3=2;
-                        }
-                        break;
-                    case 37:
-                        {
-                        alt3=4;
-                        }
-                        break;
-                    case 19:
-                        {
-                        alt3=5;
-                        }
-                        break;
-                    default:
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 3, 8, input);
-
-                        throw nvae;
-                    }
-
-                }
                 else {
                     NoViableAltException nvae =
                         new NoViableAltException("", 3, 1, input);
@@ -1935,22 +1900,32 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Rule__Alternatives"
 
 
-    // $ANTLR start "rule__EBoolean__Alternatives"
-    // InternalCOV.g:596:1: rule__EBoolean__Alternatives : ( ( 'true' ) | ( 'false' ) );
-    public final void rule__EBoolean__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Branch__Alternatives"
+    // InternalCOV.g:596:1: rule__Branch__Alternatives : ( ( ruleImplicitBranch ) | ( ruleExplicitBranch ) );
+    public final void rule__Branch__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:600:1: ( ( 'true' ) | ( 'false' ) )
+            // InternalCOV.g:600:1: ( ( ruleImplicitBranch ) | ( ruleExplicitBranch ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==11) ) {
-                alt4=1;
-            }
-            else if ( (LA4_0==12) ) {
-                alt4=2;
+            if ( (LA4_0==39) ) {
+                int LA4_1 = input.LA(2);
+
+                if ( (LA4_1==40) ) {
+                    alt4=1;
+                }
+                else if ( (LA4_1==RULE_STRING) ) {
+                    alt4=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 4, 1, input);
+
+                    throw nvae;
+                }
             }
             else {
                 NoViableAltException nvae =
@@ -1960,10 +1935,89 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalCOV.g:601:2: ( 'true' )
+                    // InternalCOV.g:601:2: ( ruleImplicitBranch )
                     {
-                    // InternalCOV.g:601:2: ( 'true' )
-                    // InternalCOV.g:602:3: 'true'
+                    // InternalCOV.g:601:2: ( ruleImplicitBranch )
+                    // InternalCOV.g:602:3: ruleImplicitBranch
+                    {
+                     before(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_0()); 
+                    pushFollow(FOLLOW_2);
+                    ruleImplicitBranch();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalCOV.g:607:2: ( ruleExplicitBranch )
+                    {
+                    // InternalCOV.g:607:2: ( ruleExplicitBranch )
+                    // InternalCOV.g:608:3: ruleExplicitBranch
+                    {
+                     before(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_1()); 
+                    pushFollow(FOLLOW_2);
+                    ruleExplicitBranch();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Branch__Alternatives"
+
+
+    // $ANTLR start "rule__EBoolean__Alternatives"
+    // InternalCOV.g:617:1: rule__EBoolean__Alternatives : ( ( 'true' ) | ( 'false' ) );
+    public final void rule__EBoolean__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalCOV.g:621:1: ( ( 'true' ) | ( 'false' ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==11) ) {
+                alt5=1;
+            }
+            else if ( (LA5_0==12) ) {
+                alt5=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 5, 0, input);
+
+                throw nvae;
+            }
+            switch (alt5) {
+                case 1 :
+                    // InternalCOV.g:622:2: ( 'true' )
+                    {
+                    // InternalCOV.g:622:2: ( 'true' )
+                    // InternalCOV.g:623:3: 'true'
                     {
                      before(grammarAccess.getEBooleanAccess().getTrueKeyword_0()); 
                     match(input,11,FOLLOW_2); 
@@ -1975,10 +2029,10 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalCOV.g:607:2: ( 'false' )
+                    // InternalCOV.g:628:2: ( 'false' )
                     {
-                    // InternalCOV.g:607:2: ( 'false' )
-                    // InternalCOV.g:608:3: 'false'
+                    // InternalCOV.g:628:2: ( 'false' )
+                    // InternalCOV.g:629:3: 'false'
                     {
                      before(grammarAccess.getEBooleanAccess().getFalseKeyword_1()); 
                     match(input,12,FOLLOW_2); 
@@ -2004,95 +2058,6 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__EBoolean__Alternatives"
-
-
-    // $ANTLR start "rule__Branch__Alternatives"
-    // InternalCOV.g:617:1: rule__Branch__Alternatives : ( ( ruleExplicitBranch ) | ( ruleImplicitBranch ) );
-    public final void rule__Branch__Alternatives() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalCOV.g:621:1: ( ( ruleExplicitBranch ) | ( ruleImplicitBranch ) )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==39) ) {
-                int LA5_1 = input.LA(2);
-
-                if ( ((LA5_1>=RULE_STRING && LA5_1<=RULE_ID)) ) {
-                    alt5=1;
-                }
-                else if ( (LA5_1==40) ) {
-                    alt5=2;
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 5, 1, input);
-
-                    throw nvae;
-                }
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
-
-                throw nvae;
-            }
-            switch (alt5) {
-                case 1 :
-                    // InternalCOV.g:622:2: ( ruleExplicitBranch )
-                    {
-                    // InternalCOV.g:622:2: ( ruleExplicitBranch )
-                    // InternalCOV.g:623:3: ruleExplicitBranch
-                    {
-                     before(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_0()); 
-                    pushFollow(FOLLOW_2);
-                    ruleExplicitBranch();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalCOV.g:628:2: ( ruleImplicitBranch )
-                    {
-                    // InternalCOV.g:628:2: ( ruleImplicitBranch )
-                    // InternalCOV.g:629:3: ruleImplicitBranch
-                    {
-                     before(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_1()); 
-                    pushFollow(FOLLOW_2);
-                    ruleImplicitBranch();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Branch__Alternatives"
 
 
     // $ANTLR start "rule__CoveredContents__Alternatives"
@@ -6445,7 +6410,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:2067:1: ( rule__Ignore__Group_1__0__Impl rule__Ignore__Group_1__1 )
             // InternalCOV.g:2068:2: rule__Ignore__Group_1__0__Impl rule__Ignore__Group_1__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__Ignore__Group_1__0__Impl();
 
             state._fsp--;
@@ -7526,7 +7491,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:2418:1: ( rule__LimitedIgnore__Group_1__0__Impl rule__LimitedIgnore__Group_1__1 )
             // InternalCOV.g:2419:2: rule__LimitedIgnore__Group_1__0__Impl rule__LimitedIgnore__Group_1__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__LimitedIgnore__Group_1__0__Impl();
 
             state._fsp--;
@@ -8522,7 +8487,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:2742:1: ( rule__CoverageOfReferenced__Group_1__0__Impl rule__CoverageOfReferenced__Group_1__1 )
             // InternalCOV.g:2743:2: rule__CoverageOfReferenced__Group_1__0__Impl rule__CoverageOfReferenced__Group_1__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__CoverageOfReferenced__Group_1__0__Impl();
 
             state._fsp--;
@@ -9655,7 +9620,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:3120:1: ( rule__CoverageByContent__Group_1__0__Impl rule__CoverageByContent__Group_1__1 )
             // InternalCOV.g:3121:2: rule__CoverageByContent__Group_1__0__Impl rule__CoverageByContent__Group_1__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__CoverageByContent__Group_1__0__Impl();
 
             state._fsp--;
@@ -10565,7 +10530,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:3417:1: ( rule__BranchSpecification__Group_1__0__Impl rule__BranchSpecification__Group_1__1 )
             // InternalCOV.g:3418:2: rule__BranchSpecification__Group_1__0__Impl rule__BranchSpecification__Group_1__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__BranchSpecification__Group_1__0__Impl();
 
             state._fsp--;
@@ -10875,7 +10840,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:3525:1: ( rule__BranchSpecification__Group_5__0__Impl rule__BranchSpecification__Group_5__1 )
             // InternalCOV.g:3526:2: rule__BranchSpecification__Group_5__0__Impl rule__BranchSpecification__Group_5__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__BranchSpecification__Group_5__0__Impl();
 
             state._fsp--;
@@ -11030,7 +10995,7 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
             // InternalCOV.g:3579:1: ( rule__ExplicitBranch__Group__0__Impl rule__ExplicitBranch__Group__1 )
             // InternalCOV.g:3580:2: rule__ExplicitBranch__Group__0__Impl rule__ExplicitBranch__Group__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_16);
             rule__ExplicitBranch__Group__0__Impl();
 
             state._fsp--;
@@ -12764,25 +12729,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BranchSpecification__DescriptionAssignment_5_1"
-    // InternalCOV.g:4222:1: rule__BranchSpecification__DescriptionAssignment_5_1 : ( ruleEString ) ;
+    // InternalCOV.g:4222:1: rule__BranchSpecification__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__BranchSpecification__DescriptionAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:4226:1: ( ( ruleEString ) )
-            // InternalCOV.g:4227:2: ( ruleEString )
+            // InternalCOV.g:4226:1: ( ( RULE_STRING ) )
+            // InternalCOV.g:4227:2: ( RULE_STRING )
             {
-            // InternalCOV.g:4227:2: ( ruleEString )
-            // InternalCOV.g:4228:3: ruleEString
+            // InternalCOV.g:4227:2: ( RULE_STRING )
+            // InternalCOV.g:4228:3: RULE_STRING
             {
-             before(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_5_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_5_1_0()); 
+             before(grammarAccess.getBranchSpecificationAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
+            match(input,RULE_STRING,FOLLOW_2); 
+             after(grammarAccess.getBranchSpecificationAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
 
             }
 
@@ -12805,25 +12766,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExplicitBranch__OCLQueryAssignment_1"
-    // InternalCOV.g:4237:1: rule__ExplicitBranch__OCLQueryAssignment_1 : ( ruleEString ) ;
+    // InternalCOV.g:4237:1: rule__ExplicitBranch__OCLQueryAssignment_1 : ( RULE_STRING ) ;
     public final void rule__ExplicitBranch__OCLQueryAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:4241:1: ( ( ruleEString ) )
-            // InternalCOV.g:4242:2: ( ruleEString )
+            // InternalCOV.g:4241:1: ( ( RULE_STRING ) )
+            // InternalCOV.g:4242:2: ( RULE_STRING )
             {
-            // InternalCOV.g:4242:2: ( ruleEString )
-            // InternalCOV.g:4243:3: ruleEString
+            // InternalCOV.g:4242:2: ( RULE_STRING )
+            // InternalCOV.g:4243:3: RULE_STRING
             {
-             before(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0()); 
+             before(grammarAccess.getExplicitBranchAccess().getOCLQuerySTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FOLLOW_2); 
+             after(grammarAccess.getExplicitBranchAccess().getOCLQuerySTRINGTerminalRuleCall_1_0()); 
 
             }
 
@@ -12846,25 +12803,21 @@ public class InternalCOVParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__OCLConstraintAssignment"
-    // InternalCOV.g:4252:1: rule__Condition__OCLConstraintAssignment : ( ruleEString ) ;
+    // InternalCOV.g:4252:1: rule__Condition__OCLConstraintAssignment : ( RULE_STRING ) ;
     public final void rule__Condition__OCLConstraintAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCOV.g:4256:1: ( ( ruleEString ) )
-            // InternalCOV.g:4257:2: ( ruleEString )
+            // InternalCOV.g:4256:1: ( ( RULE_STRING ) )
+            // InternalCOV.g:4257:2: ( RULE_STRING )
             {
-            // InternalCOV.g:4257:2: ( ruleEString )
-            // InternalCOV.g:4258:3: ruleEString
+            // InternalCOV.g:4257:2: ( RULE_STRING )
+            // InternalCOV.g:4258:3: RULE_STRING
             {
-             before(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0()); 
+             before(grammarAccess.getConditionAccess().getOCLConstraintSTRINGTerminalRuleCall_0()); 
+            match(input,RULE_STRING,FOLLOW_2); 
+             after(grammarAccess.getConditionAccess().getOCLConstraintSTRINGTerminalRuleCall_0()); 
 
             }
 

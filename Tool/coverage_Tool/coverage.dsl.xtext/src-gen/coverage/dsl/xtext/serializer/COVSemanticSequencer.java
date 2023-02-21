@@ -87,7 +87,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     BranchSpecification returns BranchSpecification
 	 *
 	 * Constraint:
-	 *     (condition=Condition? branches+=Branch branches+=Branch* description=EString?)
+	 *     (condition=Condition? branches+=Branch branches+=Branch* description=STRING?)
 	 * </pre>
 	 */
 	protected void sequence_BranchSpecification(ISerializationContext context, BranchSpecification semanticObject) {
@@ -101,7 +101,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Condition returns Condition
 	 *
 	 * Constraint:
-	 *     OCLConstraint=EString
+	 *     OCLConstraint=STRING
 	 * </pre>
 	 */
 	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {
@@ -110,7 +110,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.CONDITION__OCL_CONSTRAINT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0(), semanticObject.getOCLConstraint());
+		feeder.accept(grammarAccess.getConditionAccess().getOCLConstraintSTRINGTerminalRuleCall_0(), semanticObject.getOCLConstraint());
 		feeder.finish();
 	}
 	
@@ -180,7 +180,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ExplicitBranch returns ExplicitBranch
 	 *
 	 * Constraint:
-	 *     OCLQuery=EString
+	 *     OCLQuery=STRING
 	 * </pre>
 	 */
 	protected void sequence_ExplicitBranch(ISerializationContext context, ExplicitBranch semanticObject) {
@@ -189,7 +189,7 @@ public class COVSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DSLSpecificCoveragePackage.Literals.EXPLICIT_BRANCH__OCL_QUERY));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0(), semanticObject.getOCLQuery());
+		feeder.accept(grammarAccess.getExplicitBranchAccess().getOCLQuerySTRINGTerminalRuleCall_1_0(), semanticObject.getOCLQuery());
 		feeder.finish();
 	}
 	

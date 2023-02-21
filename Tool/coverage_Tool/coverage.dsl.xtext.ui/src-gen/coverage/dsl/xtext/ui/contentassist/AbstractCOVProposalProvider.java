@@ -124,9 +124,6 @@ public abstract class AbstractCOVProposalProvider extends TerminalsProposalProvi
 	public void complete_Rule(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
-	public void complete_EBoolean(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		// subclasses may override
-	}
 	public void complete_Ignore(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
@@ -158,6 +155,9 @@ public abstract class AbstractCOVProposalProvider extends TerminalsProposalProvi
 		// subclasses may override
 	}
 	public void complete_LimitationType(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
+	public void complete_EBoolean(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
 }

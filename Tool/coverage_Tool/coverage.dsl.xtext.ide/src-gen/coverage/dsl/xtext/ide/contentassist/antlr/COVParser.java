@@ -34,8 +34,8 @@ public class COVParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getImportAccess().getAlternatives(), "rule__Import__Alternatives");
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 			builder.put(grammarAccess.getRuleAccess().getAlternatives(), "rule__Rule__Alternatives");
-			builder.put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 			builder.put(grammarAccess.getBranchAccess().getAlternatives(), "rule__Branch__Alternatives");
+			builder.put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 			builder.put(grammarAccess.getCoveredContentsAccess().getAlternatives(), "rule__CoveredContents__Alternatives");
 			builder.put(grammarAccess.getLimitationTypeAccess().getAlternatives(), "rule__LimitationType__Alternatives");
 			builder.put(grammarAccess.getDomainSpecificCoverageAccess().getGroup(), "rule__DomainSpecificCoverage__Group__0");

@@ -27,5 +27,6 @@ ruleset ArduinoModelElementCoverage{
 	},
 	context Module{
 		ignore (subtypes true)
+		//,  when "OCLConstraint" covered when ALL iscovered
 	}
 }

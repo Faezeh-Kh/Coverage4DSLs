@@ -31,7 +31,7 @@ public class COVValidator extends AbstractCOVValidator {
 		URI basicSpecValOclURI = URI.createURI(Activator.getDefault().getBundle().getResource("model/ocl/DSLSpecConvValidation.ocl").toString());
 		
 		//Register
-		//registrar.register(ePackageDSLCov, new CompleteOCLEObjectValidator(ePackageDSLCov, basicSpecValOclURI));		
+		registrar.register(ePackageDSLCov, new CompleteOCLEObjectValidator(ePackageDSLCov, basicSpecValOclURI));		
 	}
 	
 	

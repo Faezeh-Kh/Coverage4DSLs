@@ -224,31 +224,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleEBoolean
-entryRuleEBoolean
-:
-{ before(grammarAccess.getEBooleanRule()); }
-	 ruleEBoolean
-{ after(grammarAccess.getEBooleanRule()); } 
-	 EOF 
-;
-
-// Rule EBoolean
-ruleEBoolean 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getEBooleanAccess().getAlternatives()); }
-		(rule__EBoolean__Alternatives)
-		{ after(grammarAccess.getEBooleanAccess().getAlternatives()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleIgnore
 entryRuleIgnore
 :
@@ -474,6 +449,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleEBoolean
+entryRuleEBoolean
+:
+{ before(grammarAccess.getEBooleanRule()); }
+	 ruleEBoolean
+{ after(grammarAccess.getEBooleanRule()); } 
+	 EOF 
+;
+
+// Rule EBoolean
+ruleEBoolean 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getEBooleanAccess().getAlternatives()); }
+		(rule__EBoolean__Alternatives)
+		{ after(grammarAccess.getEBooleanAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Rule CoveredContents
 ruleCoveredContents
 	@init {
@@ -593,6 +593,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Branch__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_0()); }
+		ruleImplicitBranch
+		{ after(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_1()); }
+		ruleExplicitBranch
+		{ after(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__EBoolean__Alternatives
 	@init {
 		int stackSize = keepStackSize();
@@ -608,27 +629,6 @@ rule__EBoolean__Alternatives
 		{ before(grammarAccess.getEBooleanAccess().getFalseKeyword_1()); }
 		'false'
 		{ after(grammarAccess.getEBooleanAccess().getFalseKeyword_1()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Branch__Alternatives
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_0()); }
-		ruleExplicitBranch
-		{ after(grammarAccess.getBranchAccess().getExplicitBranchParserRuleCall_0()); }
-	)
-	|
-	(
-		{ before(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_1()); }
-		ruleImplicitBranch
-		{ after(grammarAccess.getBranchAccess().getImplicitBranchParserRuleCall_1()); }
 	)
 ;
 finally {
@@ -4225,9 +4225,9 @@ rule__BranchSpecification__DescriptionAssignment_5_1
 	}
 :
 	(
-		{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_5_1_0()); }
-		ruleEString
-		{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionEStringParserRuleCall_5_1_0()); }
+		{ before(grammarAccess.getBranchSpecificationAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getBranchSpecificationAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); }
 	)
 ;
 finally {
@@ -4240,9 +4240,9 @@ rule__ExplicitBranch__OCLQueryAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0()); }
-		ruleEString
-		{ after(grammarAccess.getExplicitBranchAccess().getOCLQueryEStringParserRuleCall_1_0()); }
+		{ before(grammarAccess.getExplicitBranchAccess().getOCLQuerySTRINGTerminalRuleCall_1_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getExplicitBranchAccess().getOCLQuerySTRINGTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -4255,9 +4255,9 @@ rule__Condition__OCLConstraintAssignment
 	}
 :
 	(
-		{ before(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0()); }
-		ruleEString
-		{ after(grammarAccess.getConditionAccess().getOCLConstraintEStringParserRuleCall_0()); }
+		{ before(grammarAccess.getConditionAccess().getOCLConstraintSTRINGTerminalRuleCall_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getConditionAccess().getOCLConstraintSTRINGTerminalRuleCall_0()); }
 	)
 ;
 finally {

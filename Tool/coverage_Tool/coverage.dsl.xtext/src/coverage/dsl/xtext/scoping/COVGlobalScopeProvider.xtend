@@ -24,7 +24,7 @@ class COVGlobalScopeProvider extends ImportUriGlobalScopeProvider{
 
 	@Inject
 	IResourceScopeCache cache;
-
+	
 	override protected getImportedUris(Resource resource) {
 		return cache.get(COVGlobalScopeProvider.getSimpleName(), resource,
 			new Provider<LinkedHashSet<URI>>() {

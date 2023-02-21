@@ -681,8 +681,8 @@ public class DSLSpecificCoveragePackageImpl extends EPackageImpl implements DSLS
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainSpecificCoverageEClass, DomainSpecificCoverage.class, "DomainSpecificCoverage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainSpecificCoverage_Name(), ecorePackage.getEString(), "name", null, 1, 1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainSpecificCoverage_Metamodel(), theEcorePackage.getEPackage(), null, "metamodel", null, 1, 1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainSpecificCoverage_Contexts(), this.getContext(), null, "contexts", null, 1, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainSpecificCoverage_Metamodel(), theEcorePackage.getEPackage(), null, "metamodel", null, 0, 1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainSpecificCoverage_Contexts(), this.getContext(), null, "contexts", null, 0, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainSpecificCoverage_Imports(), this.getImport(), null, "imports", null, 0, -1, DomainSpecificCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

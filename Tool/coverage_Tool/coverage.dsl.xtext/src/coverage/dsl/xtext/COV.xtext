@@ -33,59 +33,66 @@ Context returns Context:
 	'}';
 
 Rule returns Rule:
-	Ignore | LimitedIgnore | CoverageOfReferenced | CoverageByContent | BranchSpecification;
+	Ignore |
+	LimitedIgnore |
+	CoverageOfReferenced |
+	CoverageByContent |
+	BranchSpecification;
 
-EBoolean returns ecore::EBoolean:
-	'true' | 'false';
-
-Ignore returns Rule:
+Ignore returns Ignore:
 	{Ignore} 
 	('when' condition=Condition)?
 	'ignore' '(' ('subtypes' ignoreSubtypes=EBoolean)? ')'
 	('description' description=EString)?;
 	
-LimitedIgnore returns Rule:
+LimitedIgnore returns LimitedIgnore:
 	{LimitedIgnore}
 	('when' condition=Condition)?
 	'ignoreif' type=LimitationType
 		containerMetaclass+=[ecore::EClass|EString] ( "," containerMetaclass+=[ecore::EClass|EString])*
 	('description' description=EString)?;
 	
-CoverageOfReferenced returns Rule:
+CoverageOfReferenced returns CoverageOfReferenced:
 	{CoverageOfReferenced}
 	('when' condition=Condition)?
 	'covers' reference+=[ecore::EReference|EString] ("," reference+=[ecore::EReference|EString])*
 	('description' description=EString)?;
 	
-CoverageByContent returns Rule:
+CoverageByContent returns CoverageByContent:
 	{CoverageByContent}
 	('when' condition=Condition)?
 	'covered' 'when' multiplicity=CoveredContents (containmentReference=[ecore::EReference|EString])? 'iscovered'
 	('description' description=EString)?;
 		
 
-BranchSpecification returns Rule:
+BranchSpecification returns BranchSpecification:
 	{BranchSpecification}
 	('when' condition=Condition)?
 	'{' 
 		branches += Branch (',' branches += Branch)* 
-		('description' description=EString)?
+		('description' description=STRING)?
 	'}';
-
+	
 Branch returns Branch:
-	ExplicitBranch| ImplicitBranch;
+	ImplicitBranch | ExplicitBranch;
 
 ExplicitBranch returns ExplicitBranch: 
-	'branch' OCLQuery=EString;
+	'branch' OCLQuery=STRING;
 
 ImplicitBranch returns ImplicitBranch: 
-	{ImplicitBranch} 'branch' 'else';
+	{ImplicitBranch} 
+	'branch' 'else'   
+	;
 
 Condition returns Condition:
-	OCLConstraint=EString;
+	OCLConstraint=STRING;
 	
 enum CoveredContents returns CoveredContents:
 	ALL = 'ALL' | ONE = 'ONE' | ANY = 'anyContent';
 
 enum LimitationType returns LimitationType:
 	containedBy = 'containedBy' | notContainedBy = 'notContainedBy';
+	
+	
+EBoolean returns ecore::EBoolean:
+	'true' | 'false';
