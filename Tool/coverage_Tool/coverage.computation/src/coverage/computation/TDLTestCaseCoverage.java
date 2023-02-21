@@ -71,26 +71,21 @@ public class TDLTestCaseCoverage {
 	private void calculateCoverageBasedOnTrace(Object rootStep) {
 		//System.out.println("Execution Trace:");
 		if (rootStep instanceof SmallStep<?>) {
-			SequentialStep<?, ?> containerStep = (SequentialStep<?, ?>) (((SmallStep<?>) rootStep).eContainer());
-			if (containerStep.getMseoccurrence() != null) {
-				EObject object = containerStep.getMseoccurrence().getMse().getCaller();
+			SmallStep<?> smallStep = (SmallStep<?>) rootStep;
+			if (smallStep.getMseoccurrence() != null) {
+				EObject object = smallStep.getMseoccurrence().getMse().getCaller();
 				objectsCapturedByTrace.add(object);
 				tcCoverageByTraceReport.setObjectCoverage(object, TDLCoverageUtil.COVERED);
 			}
 		}
 		else if (rootStep instanceof SequentialStep<?, ?>) {
 			SequentialStep<?, ?> seqStep = (SequentialStep<?, ?>) rootStep;
-			//if the sequential step does not have any substep/small substep, we should add its caller
-			if (!seqStep.getSubSteps().stream().anyMatch(s -> s instanceof SmallStep<?>)) {
-				if (seqStep.getMseoccurrence() != null) {
-					EObject object = seqStep.getMseoccurrence().getMse().getCaller();
-					objectsCapturedByTrace.add(object);
-					tcCoverageByTraceReport.setObjectCoverage(object, TDLCoverageUtil.COVERED);
-				}
+			if (seqStep.getMseoccurrence() != null) {
+				EObject object = seqStep.getMseoccurrence().getMse().getCaller();
+				objectsCapturedByTrace.add(object);
+				tcCoverageByTraceReport.setObjectCoverage(object, TDLCoverageUtil.COVERED);
 			}
-			for (int i=0; i < seqStep.getSubSteps().size(); i++) {
-				calculateCoverageBasedOnTrace(seqStep.getSubSteps().get(i));
-			}
+			seqStep.getSubSteps().forEach(s -> calculateCoverageBasedOnTrace(s));
 		}
 	}
 	
