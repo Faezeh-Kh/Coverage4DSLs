@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.imt.tdl.utilities.DSLProcessor;
-
 import DSLSpecificCoverage.DomainSpecificCoverage;
 import coverage.dslSpecific.DSLSpecificCoverageHandler;
 import coverage.dslSpecific.IDSLSpecificCoverage;

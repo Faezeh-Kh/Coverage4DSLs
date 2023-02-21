@@ -13,7 +13,7 @@ ruleset ArduinoBranchCoverage{
 			branch else
 		}
 	},
-	context While {
+	context Whil e {
 		{
 			branch "self.block",
 			branch else 

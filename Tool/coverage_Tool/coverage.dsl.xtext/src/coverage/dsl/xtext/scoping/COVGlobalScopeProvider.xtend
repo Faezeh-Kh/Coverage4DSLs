@@ -15,6 +15,8 @@ import coverage.dsl.xtext.resource.COVResourceDescriptionStrategy
 import DSLSpecificCoverage.DSLSpecificCoveragePackage
 
 class COVGlobalScopeProvider extends ImportUriGlobalScopeProvider{
+	
+	
 	static final Splitter SPLITTER = Splitter.on(coverage.dsl.xtext.resource.COVResourceDescriptionStrategy.SEPARATOR_CHAR);
 
 	@Inject
@@ -60,5 +62,5 @@ class COVGlobalScopeProvider extends ImportUriGlobalScopeProvider{
 		]
 		uniqueImportURIs
 	}
-	
+	 
 }
