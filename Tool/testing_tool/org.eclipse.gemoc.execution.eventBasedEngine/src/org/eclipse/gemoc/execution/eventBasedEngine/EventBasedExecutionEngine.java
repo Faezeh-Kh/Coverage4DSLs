@@ -128,22 +128,20 @@ public class EventBasedExecutionEngine extends
 
 	@Override
 	public void executeStep(Object caller, final StepCommand command, String className, String methodName) {
-		executeOperation(caller, new Object[0], className, methodName, new Callable<Optional<Object>>() {
+		executeOperation(caller, new Object[0], className, methodName, new Runnable() {
 			@Override
-			public Optional<Object> call() {
+			public void run() {
 				command.execute();
-				return Optional.empty();
 			}
 		});
 	}
 	
 	@Override
 	public void executeStep(Object caller, Object[] parameters, StepCommand command, String className, String methodName) {
-		executeOperation(caller, parameters, className, methodName, new Callable<Optional<Object>>() {
+		executeOperation(caller, parameters, className, methodName, new Runnable() {
 			@Override
-			public Optional<Object> call() {
+			public void run() {
 				command.execute();
-				return Optional.empty();
 			}
 		});
 	}
