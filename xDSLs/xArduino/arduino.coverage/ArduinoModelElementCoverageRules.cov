@@ -27,7 +27,5 @@ ruleset ArduinoModelElementCoverage{
 	},
 	context Module{
 		ignore (subtypes true)
-		//Comment: Error  cannot have both Inclusion and Exclusion rules
-		//,  when "OCLConstraint" covered when ALL iscovered
 	}
 }
