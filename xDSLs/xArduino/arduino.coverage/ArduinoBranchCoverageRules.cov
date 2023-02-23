@@ -1,5 +1,7 @@
 ruleset ArduinoBranchCoverage {
 	import metamodel arduino
+	import ruleset from "/arduino.coverage/ArduinoModelElementCoverageRules.cov"
+	
 	context If {
 		when "self.elseBlock <> null" {
 			branch "self.block",
@@ -7,9 +9,8 @@ ruleset ArduinoBranchCoverage {
 			
 		}, 
 		when "self.elseBlock = null"{
-			branch "self.block",//Comment this Error: one explicit branch
+			branch "self.block",
 			branch else
-			//,branch  else//Comment this Error: one implicit branch
 		} 
 	},
 	context While {
