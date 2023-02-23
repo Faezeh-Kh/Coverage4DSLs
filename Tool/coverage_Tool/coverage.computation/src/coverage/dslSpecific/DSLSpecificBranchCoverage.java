@@ -104,6 +104,11 @@ public class DSLSpecificBranchCoverage {
 
 	private String computeImplicitBranchCoverage(EObject branchingRoot) {
 		List<EObject> allCoveredObjects = dslSpecificCoverageExecutor.getObjectsCapturedByTrace_extended();
+		int firstRootIndexInTrace = allCoveredObjects.indexOf(branchingRoot);
+		if (firstRootIndexInTrace == -1) {
+			//the branching root is not covered, so its branches are also not-covered
+			return  TDLCoverageUtil.NOT_COVERED;
+		} 
 		//if there is no covered explicit branch, the implicit branch is covered
 		if (!branchingRoot_branches.get(branchingRoot).stream()
 				.anyMatch(xb -> getExplicitBranchCoverage(branchingRoot, xb) == TDLCoverageUtil.COVERED)) {
