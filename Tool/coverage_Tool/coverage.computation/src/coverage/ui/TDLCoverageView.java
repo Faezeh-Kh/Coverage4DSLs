@@ -101,7 +101,7 @@ public class TDLCoverageView extends ViewPart{
 		Group coverageTypeFilter = new Group(filter, SWT.NULL);
 	    layout = new GridLayout();
 	    coverageTypeFilter.setLayout(layout);
-	    coverageTypeFilter.setText("Coverage Types Filters");
+	    coverageTypeFilter.setText("Coverage Metrics Filters");
 		gd = new GridData();
 		gd.verticalAlignment = SWT.ON_TOP;
 		gd.widthHint = 500;

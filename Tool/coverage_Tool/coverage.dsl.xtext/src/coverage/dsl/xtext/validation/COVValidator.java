@@ -4,6 +4,7 @@
 package coverage.dsl.xtext.validation;
 
 import org.eclipse.emf.common.util.URI;
+
 import org.eclipse.ocl.xtext.completeocl.validation.CompleteOCLEObjectValidator;
 import org.eclipse.xtext.validation.EValidatorRegistrar;
 

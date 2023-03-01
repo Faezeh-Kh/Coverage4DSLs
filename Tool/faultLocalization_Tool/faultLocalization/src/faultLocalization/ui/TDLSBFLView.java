@@ -235,38 +235,38 @@ public class TDLSBFLView extends ViewPart{
 			column.setWidth(60);
 		}
 		
-		TreeColumn NCF = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NCF.setAlignment(SWT.CENTER);
-		NCF.setText("NCF");
-		NCF.setWidth(50);
-		TreeColumn NUF = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NUF.setAlignment(SWT.CENTER);
-		NUF.setText("NUF");
-		NUF.setWidth(50);
-		TreeColumn NCS = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NCS.setAlignment(SWT.CENTER);
-		NCS.setText("NCS");
-		NCS.setWidth(50);
-		TreeColumn NUS = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NUS.setAlignment(SWT.CENTER);
-		NUS.setText("NUS");
-		NUS.setWidth(50);
-		TreeColumn NC = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NC.setAlignment(SWT.CENTER);
-		NC.setText("NC");
-		NC.setWidth(50);
-		TreeColumn NU = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NU.setAlignment(SWT.CENTER);
-		NU.setText("NU");
-		NU.setWidth(50);
-		TreeColumn NS = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NS.setAlignment(SWT.CENTER);
-		NS.setText("NS");
-		NS.setWidth(50);
-		TreeColumn NF = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
-		NF.setAlignment(SWT.CENTER);
-		NF.setText("NF");
-		NF.setWidth(50);
+//		TreeColumn NCF = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NCF.setAlignment(SWT.CENTER);
+//		NCF.setText("NCF");
+//		NCF.setWidth(50);
+//		TreeColumn NUF = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NUF.setAlignment(SWT.CENTER);
+//		NUF.setText("NUF");
+//		NUF.setWidth(50);
+//		TreeColumn NCS = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NCS.setAlignment(SWT.CENTER);
+//		NCS.setText("NCS");
+//		NCS.setWidth(50);
+//		TreeColumn NUS = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NUS.setAlignment(SWT.CENTER);
+//		NUS.setText("NUS");
+//		NUS.setWidth(50);
+//		TreeColumn NC = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NC.setAlignment(SWT.CENTER);
+//		NC.setText("NC");
+//		NC.setWidth(50);
+//		TreeColumn NU = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NU.setAlignment(SWT.CENTER);
+//		NU.setText("NU");
+//		NU.setWidth(50);
+//		TreeColumn NS = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NS.setAlignment(SWT.CENTER);
+//		NS.setText("NS");
+//		NS.setWidth(50);
+//		TreeColumn NF = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
+//		NF.setAlignment(SWT.CENTER);
+//		NF.setText("NF");
+//		NF.setWidth(50);
 		
 		TreeColumn susp = new TreeColumn(addressTree, SWT.LEFT | SWT.BOLD);
 		susp.setAlignment(SWT.CENTER);
@@ -419,38 +419,38 @@ public class TDLSBFLView extends ViewPart{
 					if (sbflMeasures.getMetaclass() == null) {
 						columnText = "";
 					}else {
+//						if (columnIndex == sbflOperandsStartIndex) {
+//							columnText = sbflMeasures.getNCF() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 1) {
+//							columnText = sbflMeasures.getNUF() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 2) {
+//							columnText = sbflMeasures.getNCS() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 3) {
+//							columnText = sbflMeasures.getNUS() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 4) {
+//							columnText = sbflMeasures.getNC() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 5) {
+//							columnText = sbflMeasures.getNU() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 6) {
+//							columnText = sbflMeasures.getNS() + "";
+//						}
+//						else if (columnIndex == sbflOperandsStartIndex + 7) {
+//							columnText = sbflMeasures.getNF() + "";
+//						}
 						if (columnIndex == sbflOperandsStartIndex) {
-							columnText = sbflMeasures.getNCF() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 1) {
-							columnText = sbflMeasures.getNUF() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 2) {
-							columnText = sbflMeasures.getNCS() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 3) {
-							columnText = sbflMeasures.getNUS() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 4) {
-							columnText = sbflMeasures.getNC() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 5) {
-							columnText = sbflMeasures.getNU() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 6) {
-							columnText = sbflMeasures.getNS() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 7) {
-							columnText = sbflMeasures.getNF() + "";
-						}
-						else if (columnIndex == sbflOperandsStartIndex + 8) {
 							if (sbflMeasures.getSusp().get(sbflMeasures.currentTechnique) == null) {
 								columnText = "";
 							}else {
 								columnText = sbflMeasures.getSusp().get(sbflMeasures.currentTechnique) + "";
 							}	
 						}
-						else if (columnIndex == sbflOperandsStartIndex + 9) {
+						else if (columnIndex == sbflOperandsStartIndex + 1) {
 							if (sbflMeasures.getRank().get(sbflMeasures.currentTechnique) == null) {
 								columnText = "";
 							}else {
