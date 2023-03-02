@@ -1,5 +1,5 @@
-# From Coverage Computation to Fault Localization for Executable DSLs
-This repository contains the tool and the evaluation data of our paper titled ["From Coverage Computation to Fault Localization: A Generic Framework for Domain-Specific Languages", published by SLE 2022](https://dl.acm.org/doi/10.1145/3567512.3567532).
+# Coverage for DSLs
+This repository contains the tool and the evaluation data of our paper titled "A Language-Parametric Test Coverage Framework for Domain-Specific Languages", submitted to Journal of Systems and Software (JSS).
 
 ## Introduction
 A multitude of Domain-Specific Languages (DSLs) are available nowadays to describe the dynamic aspects of systems as *behavioral models*
@@ -24,7 +24,7 @@ Finally, we investigate the application of the computed coverage measurements fo
 
 This repository contains our provided tool built atop the Eclipse GEMOC Studio.
 We also conducted an empirical evaluation of our approach for four different xDSLs to assess its applicability. 
-In total, we wrote 297 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
+In total, we wrote 301 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
 We injected faults into these executable models using [WODEL model mutation tool](https://gomezabajo.github.io/Wodel/) and we executed our approach for 1252 mutants of the executable models.
 We observed that meaningful coverage matrices can be automatically constructed for the test suites of all examined mutants and that it allows the application of existing SBFL techniques for successfully tracking the faulty model elements, thus demonstrating the usefulness of the generically computed coverage measurements.
 
