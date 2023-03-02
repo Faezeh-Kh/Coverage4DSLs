@@ -32,7 +32,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 1.	*Tool*: a set of eclipse plugins
 - **coverage_Tool**: the coverage computation tool (`coverage.computation` plugin) and the textual syntax of the DSL-Specific Coverage metalanguage.
 - **faultLocalization_Tool**: the fault localization tool (`faultLocalization` plugin).
-- **testing_tool**: the plugins of our testing framework that are used for the definition and execution of the test cases for executable models (To access the latest version of them, use the [main repository](https://gitlab.univ-nantes.fr/naomod/faezeh-public/xtdl)).
+- **testing_tool**: the plugins of our testing framework that are used for the definition and execution of the test cases for executable models (To access the latest version of them, use the [main repository](https://github.com/lowcomote/Testing4DSLs)).
 2. *xDSLs*: the implementation of four Executable Domain-Specific Languages (xDSLs) of our case study, including:
     
     2.1. **xFSM** (taken from [GEMOC official samples](https://github.com/eclipse/gemoc-studio/tree/master/official_samples/K3FSM))
@@ -60,7 +60,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 
 4. *Evaluation*: 
 - a tool for evaluating both coverage and fault localization tools (`org.imt.sbfl.evaluation` plugin) to answer the first and the third research questions of the paper.
-- *Data4CodeCover*: the equivalent java implementation of the xMiniJava models (taken from [here](https://www.cambridge.org/resources/052182060X/#programs)), and the JUnit tests corresponding to the xMiniJava tests. This data is used to compute the statement coverage of the JUnit tests with [CodeCover](http://codecover.org/index.html) tool to answer the second research question of the paper.
+- *minijava-junittests-JaCoCo*: the equivalent java implementation of the xMiniJava models (taken from [here](https://www.cambridge.org/resources/052182060X/#programs)), and the JUnit tests corresponding to the xMiniJava tests. This data is used to compute statement and branch coverage of the JUnit tests with [JaCoCo](https://www.eclemma.org/jacoco/) tool to answer the second research question of the paper.
 - An Excel file containing detailed data of the paper’s evaluation.
 
 ## Setup
@@ -68,7 +68,7 @@ To use the tool, you can either use the virtual machine provided in [this Zenodo
 
 **Requirements**: 
 - *Operating System*: Windows 10
-- Java 16
+- Java 11
 - GEMOC Studio Version 3.5.0: https://gemoc.org/download.html
 - TDL: https://tdl.etsi.org/eclipse/latest/ (TDL Metamodel Version 1.4.0)
 - Epsilon: http://download.eclipse.org/epsilon/updates/2.4/
@@ -83,7 +83,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
     If it shows an error related to the incompatible java versions, you need to edit the `.ini` file (the `GemocSudio configuration settings` file as shown in the above picture under the `GemocStudio application`) and add the path of your installed java using `-vm` key right before the `-vmargs` key. For example,
     
         -vm
-        C:/Program Files/Java/jdk-16.0.2/bin/javaw.exe
+        C:/Program Files/Java/jdk-11.0.11/bin/javaw.exe
         -vmargs
         ...
 
@@ -127,17 +127,17 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
     **Note**: The `workspace data location` defines the path to the workspace of the newly opened Eclipse instance.  
 
-3. In the new Eclipse instance, import those projects from the `xModels_Tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `xModels_Tests/XArduino-data` directory as follows:
-- `Arduino.RunningExample_Model` project containing `runningExample_withDefect.model` that is an example Arduino xModel. It has a defect since the alarm is not ringing as expected when the sensor detects an obstacle (it is highlighted in red where alarm1 is mistakenly set to 1).
+3. In the new Eclipse instance, import those projects from the `xModels_Tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `xModels_Tests` directory as follows:
+- `RunningExample_Model` project containing `sensorAlarm_withBug.model` that is an example Arduino xModel. It has a defect since the alarm is not ringing as expected when the sensor detects an obstacle (it is highlighted in red where alarm1 is mistakenly set to 0).
     
     <p align="center">
         <img src="Screenshots/xArduino-model.jpg"  width="40%" height="40%">
     </p>
 
-    **NOTE**: Please note that the model is an XMI file and there is no graphical model in the `Arduino.RunningExample_Model` project such as the one shown in the above figure. We use the above figure just to make it more understandable for this tutorial. 
-    To open the model using Tree editor, right-click on the `runningExample_withDefect.model` file, `Open with` -> `Other` -> `Sample Reflective Ecore Model Editor` -> `OK`.
+    **NOTE**: Please note that the model is an XMI file and there is no graphical model in the `RunningExample_Model` project such as the one shown in the above figure. We use the above figure just to make it more understandable for this tutorial. 
+    To open the model using Tree editor, right-click on the `sensorAlarm_withBug.model` file, `Open with` -> `Other` -> `Sample Reflective Ecore Model Editor` -> `OK`.
 
-- `Arduino.RunningExample_Test` project containing:
+- `RunningExample_Test` project containing:
 
     a)	`testSuite.tdlan2`: a test suite for the model comprising 4 test cases, one of those briefly drawn in the following Figure and completely shown in the next tool screenshot using TDL textual syntax.
     
@@ -145,11 +145,9 @@ After downloading GEMOC Studio, unzip the folder and run it:
         <img src="Screenshots/xArduino-test.jpg"  width="40%" height="40%">
     </p>
 
-    b)	`result_coverage/../testReport.xmi`: the result of test suite execution on the model.
+    b)	`test-report`: containing the result of test suite execution on the model.
     
-    c)	`result_coverage/../testCoverage.xmi`: the result of coverage computation for the executed test suite.
-
-    d) a copy of the executed test suite and a copy of the executed model under test for each executed test case. The elements of these copied models are referenced by the `testReport.xmi` and the `testCoverage.xmi` files. We copy them to make the report and the coverage files independent from the future changes of the test suite and the tested model.
+    c)	`test-coverage`: containing the result of coverage computation for the executed test suite.
 
     **NOTE**: The two files explained in (b) and (c) are indeed the output of our tool. We provided them here to be used during the evaluation of the tool, to check if the tool behaves as expected.
 
@@ -157,7 +155,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
         <img src="Screenshots/importModel&tests.png">
     </p>
 
-4. Run the test suite on the model by right clicking on the launcher file `/Arduino.RunningExample_Test/launcher/run-test.launch`-> `Run As` -> `run-test`.
+4. Run the test suite on the model by right clicking on the launcher file `/RunningExample_Test/launcher/run-test.launch`-> `Run As` -> `run-test`.
 
     <p align="center">
         <img src="Screenshots/howToRunTest.png">
