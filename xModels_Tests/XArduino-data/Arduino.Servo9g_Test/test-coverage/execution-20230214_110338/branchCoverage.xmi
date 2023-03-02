@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TestCoverage="http://coverage.metamodel/TestCoverage" coveragePercentage="100.0">
+  <testSuite href="testSuite.tdlan2#/"/>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.3"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="100.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.4"/>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="100.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.5"/>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0/@block"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0/@elseBlock"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@sketches.0/@block/@instructions.0"/>
+  </tsObjectCoverageStatus>
+</TestCoverage:TestSuiteCoverage>

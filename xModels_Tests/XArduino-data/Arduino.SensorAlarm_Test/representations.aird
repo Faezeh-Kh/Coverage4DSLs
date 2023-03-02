@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_2tF5wESkEe2M68ktjbqJFg" version="15.0.0.202201261500">
   <semanticResources>testSuite.tdlan2</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/modelUnderTest_test1.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/modelUnderTest_test2.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/modelUnderTest_test3.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/modelUnderTest_test4.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135858/testSuite.tdlan2</semanticResources>
 </viewpoint:DAnalysis>

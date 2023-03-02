@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_FXCBYGlpEeymCpqPpiNlzQ" version="14.5.1.202106111100">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_FXCBYGlpEeymCpqPpiNlzQ" version="15.0.0.202201261500">
   <semanticResources>testSuite.tdlan2</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/modelUnderTest_test1.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/modelUnderTest_test2.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/modelUnderTest_test3.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/modelUnderTest_test4.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191206/testSuite.tdlan2</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220819_204933/testSuite.tdlan2</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220819_204933/testReport.xmi</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220819_204933/modelUnderTest_test1.xmi</semanticResources>
@@ -15,4 +8,22 @@
   <semanticResources>gemoc-gen/execution/execution-20220819_204933/modelUnderTest_test3.xmi</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220819_204933/modelUnderTest_test4.xmi</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220819_204933/testCoverage.xmi</semanticResources>
+  <semanticResources>test-report/execution-20230223_153828/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-report/execution-20230223_153828/testReport.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test2_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test3_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test4_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test1_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test2_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test3_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test4_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test1_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test2_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test3_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/testedModels/mut_test4_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_153828/branchCoverage.xmi</semanticResources>
 </viewpoint:DAnalysis>

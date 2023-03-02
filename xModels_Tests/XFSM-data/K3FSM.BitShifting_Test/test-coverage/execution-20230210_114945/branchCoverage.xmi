@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TestCoverage="http://coverage.metamodel/TestCoverage" coveragePercentage="100.0">
+  <testSuite href="testSuite.tdlan2#/"/>
+  <testCaseCoverages coveragePercentage="33.33">
+    <testCase href="testSuite.tdlan2#//@packagedElement.3"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.4"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.5"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.6"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.7"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test5_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="33.33">
+    <testCase href="testSuite.tdlan2#//@packagedElement.8"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test6_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.9"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.10"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test8_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.11"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test9_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.12"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test10_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.13"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test11_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="50.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.14"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test12_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.15"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test13_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.16"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test14_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.17"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="66.67">
+    <testCase href="testSuite.tdlan2#//@packagedElement.18"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.0"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.0/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.1"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.1/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.0"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test16_basedOnTrace.xmi#//@ownedStates.2/@outgoingTransitions.1"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@ownedStates.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@ownedStates.1"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@ownedStates.2"/>
+  </tsObjectCoverageStatus>
+</TestCoverage:TestSuiteCoverage>

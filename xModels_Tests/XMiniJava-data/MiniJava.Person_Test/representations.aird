@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_M8LN0GlpEeymCpqPpiNlzQ" version="14.5.1.202106111100">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_M8LN0GlpEeymCpqPpiNlzQ" version="15.0.0.202201261500">
   <semanticResources>testSuite.tdlan2</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test1.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test2.xminijava</semanticResources>
@@ -20,26 +20,74 @@
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test17.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test18.xminijava</semanticResources>
   <semanticResources>platform:/resource/xMiniJava_models/person_junitTests_xminijava/Person_test19.xminijava</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test1.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test10.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test11.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test12.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test13.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test14.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test15.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test16.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test17.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test18.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test19.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test2.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test3.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test4.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test5.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test6.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test7.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test8.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/modelUnderTest_test9.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20220819_191347/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165851/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165851/testedModels/mut.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165851/basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165851/dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165851/branchCoverage.xmi</semanticResources>
+  <semanticResources>test-report/execution-20230223_165851/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-report/execution-20230223_165851/testReport.xmi</semanticResources>
+  <semanticResources>test-report/execution-20230223_165945/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-report/execution-20230223_165945/testReport.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testSuite.tdlan2</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test2_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test3_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test4_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test5_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test6_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test7_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test8_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test9_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test10_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test11_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test12_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test13_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test14_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test15_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test16_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test17_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test18_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test19_basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/basedOnTrace.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test1_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test2_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test3_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test4_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test5_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test6_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test7_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test8_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test9_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test10_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test11_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test12_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test13_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test14_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test15_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test16_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test17_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test18_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test19_dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/dslSpecific_MiniJavaModelElementCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test1_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test2_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test3_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test4_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test5_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test6_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test7_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test8_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test9_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test10_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test11_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test12_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test13_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test14_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test15_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test16_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test17_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test18_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/testedModels/mut_test19_branchCoverage.xmi</semanticResources>
+  <semanticResources>test-coverage/execution-20230223_165945/branchCoverage.xmi</semanticResources>
 </viewpoint:DAnalysis>

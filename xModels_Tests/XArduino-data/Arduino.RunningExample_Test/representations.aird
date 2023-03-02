@@ -13,11 +13,5 @@
   <semanticResources>result_coverage/execution-20220809_195336/modelUnderTest_test6.xmi</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220813_193848/testSuite.tdlan2</semanticResources>
   <semanticResources>gemoc-gen/execution/execution-20220926_175630/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/modelUnderTest_test1.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/modelUnderTest_test2.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/modelUnderTest_test3.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/modelUnderTest_test4.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/testCoverage.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/testReport.xmi</semanticResources>
-  <semanticResources>result_coverage/execution-20221005_135024/testSuite.tdlan2</semanticResources>
+  <semanticResources>gemoc-gen/execution/execution-20230219_205236/testSuite.tdlan2</semanticResources>
 </viewpoint:DAnalysis>

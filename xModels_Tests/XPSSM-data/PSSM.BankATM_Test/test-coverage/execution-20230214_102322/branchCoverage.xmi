@@ -1,0 +1,2281 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TestCoverage="http://coverage.metamodel/TestCoverage" coveragePercentage="100.0">
+  <testSuite href="testSuite.tdlan2#/"/>
+  <testCaseCoverages>
+    <testCase href="testSuite.tdlan2#//@packagedElement.0"/>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages>
+    <testCase href="testSuite.tdlan2#//@packagedElement.1"/>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="5.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.2"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="5.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.3"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="10.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.4"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="10.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.5"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="10.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.6"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.7"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.8"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="10.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.9"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.10"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.11"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="20.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.12"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="20.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.13"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test7_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="10.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.14"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test15_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.15"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.16"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="20.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.17"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="15.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.18"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test19_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="20.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.19"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test20_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="20.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.20"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test21_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="30.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.21"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="30.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.22"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="30.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.23"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="30.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.24"/>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.10"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.9"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.8"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.4"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.5"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.5"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.7"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.6"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.11"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.13"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@transitions.12"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.1"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.2"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="PARTLYCOVERED">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+      <relatedObjectCoverageStatus coverageStatus="NOTCOVERED">
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.3"/>
+      </relatedObjectCoverageStatus>
+      <relatedObjectCoverageStatus>
+        <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@transitions.4"/>
+      </relatedObjectCoverageStatus>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.2"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.3"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.4"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.5"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.1/@regions.0/@vertice.2"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.2"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.3/@regions.0/@vertice.2"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@statemachine/@regions.0/@vertice.6/@regions.0/@vertice.4/@regions.0/@vertice.3"/>
+  </tsObjectCoverageStatus>
+</TestCoverage:TestSuiteCoverage>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TestCoverage:TestSuiteCoverage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TestCoverage="http://coverage.metamodel/TestCoverage" coveragePercentage="100.0">
+  <testSuite href="testSuite.tdlan2#/"/>
+  <testCaseCoverages coveragePercentage="83.33">
+    <testCase href="testSuite.tdlan2#//@packagedElement.3"/>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@params.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@receiver"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@args.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="100.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.4"/>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut_test2_basedOnTrace.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@params.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@receiver"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@args.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="83.33">
+    <testCase href="testSuite.tdlan2#//@packagedElement.5"/>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut_test3_basedOnTrace.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@params.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOTCOVERED">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@receiver"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@args.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <testCaseCoverages coveragePercentage="100.0">
+    <testCase href="testSuite.tdlan2#//@packagedElement.6"/>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut_test4_basedOnTrace.xmi#/"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@params.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@receiver"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@args.0"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus>
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.2"/>
+    </tcObjectCoverageStatus>
+    <tcObjectCoverageStatus coverageStatus="NOSTATUS">
+      <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+    </tcObjectCoverageStatus>
+  </testCaseCoverages>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#/"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@classes.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@params.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@typeRef"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.0/@value"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@receiver"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@elseBlock/@statements.0/@value/@right/@args.0"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@left"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@expression/@right"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus>
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.2"/>
+  </tsObjectCoverageStatus>
+  <tsObjectCoverageStatus coverageStatus="NOSTATUS">
+    <modelObject href="testedModels/mut.xmi#//@classes.0/@members.0/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+  </tsObjectCoverageStatus>
+</TestCoverage:TestSuiteCoverage>

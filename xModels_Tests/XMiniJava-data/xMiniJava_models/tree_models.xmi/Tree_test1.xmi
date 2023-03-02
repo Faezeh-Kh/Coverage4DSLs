@@ -508,22 +508,24 @@
                       <expression xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.5/@assignee"/>
                       <thenBlock>
                         <statements xsi:type="xminiJava:IfStatement">
-                          <expression xsi:type="xminiJava:And">
-                            <left xsi:type="xminiJava:Not">
-                              <expression xsi:type="xminiJava:MethodCall" method="//@classes.1/@members.13">
-                                <receiver xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.0/@assignee"/>
-                              </expression>
-                            </left>
-                            <right xsi:type="xminiJava:Not">
-                              <expression xsi:type="xminiJava:MethodCall" method="//@classes.1/@members.15">
-                                <receiver xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.0/@assignee"/>
-                              </expression>
-                            </right>
+                          <expression xsi:type="xminiJava:Not">
+                            <expression xsi:type="xminiJava:MethodCall" method="//@classes.1/@members.13">
+                              <receiver xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.0/@assignee"/>
+                            </expression>
                           </expression>
                           <thenBlock>
-                            <statements xsi:type="xminiJava:Assignment">
-                              <assignee xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.4/@assignee"/>
-                              <value xsi:type="xminiJava:BoolConstant" value="true"/>
+                            <statements xsi:type="xminiJava:IfStatement">
+                              <expression xsi:type="xminiJava:Not">
+                                <expression xsi:type="xminiJava:MethodCall" method="//@classes.1/@members.15">
+                                  <receiver xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.0/@assignee"/>
+                                </expression>
+                              </expression>
+                              <thenBlock>
+                                <statements xsi:type="xminiJava:Assignment">
+                                  <assignee xsi:type="xminiJava:SymbolRef" symbol="//@classes.1/@members.19/@body/@statements.4/@assignee"/>
+                                  <value xsi:type="xminiJava:BoolConstant" value="true"/>
+                                </statements>
+                              </thenBlock>
                             </statements>
                           </thenBlock>
                           <elseBlock>
