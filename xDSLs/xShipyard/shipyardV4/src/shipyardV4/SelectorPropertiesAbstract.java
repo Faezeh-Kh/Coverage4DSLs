@@ -1,0 +1,18 @@
+/**
+ */
+package shipyardV4;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Selector Properties Abstract</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see shipyardV4.ShipyardV4Package#getSelectorPropertiesAbstract()
+ * @model abstract="true"
+ * @generated
+ */
+public interface SelectorPropertiesAbstract extends EObject {
+} // SelectorPropertiesAbstract

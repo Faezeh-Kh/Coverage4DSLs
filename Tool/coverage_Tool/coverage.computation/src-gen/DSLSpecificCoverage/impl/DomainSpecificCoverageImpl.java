@@ -5,6 +5,7 @@ package DSLSpecificCoverage.impl;
 import DSLSpecificCoverage.Context;
 import DSLSpecificCoverage.DSLSpecificCoveragePackage;
 import DSLSpecificCoverage.DomainSpecificCoverage;
+import DSLSpecificCoverage.Import;
 
 import java.util.Collection;
 
@@ -32,8 +33,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getName <em>Name</em>}</li>
- *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getContexts <em>Contexts</em>}</li>
  *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getMetamodel <em>Metamodel</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getContexts <em>Contexts</em>}</li>
+ *   <li>{@link DSLSpecificCoverage.impl.DomainSpecificCoverageImpl#getImports <em>Imports</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,6 +62,16 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getMetamodel() <em>Metamodel</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMetamodel()
+	 * @generated
+	 * @ordered
+	 */
+	protected EPackage metamodel;
+
+	/**
 	 * The cached value of the '{@link #getContexts() <em>Contexts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,14 +82,14 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	protected EList<Context> contexts;
 
 	/**
-	 * The cached value of the '{@link #getMetamodel() <em>Metamodel</em>}' reference.
+	 * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMetamodel()
+	 * @see #getImports()
 	 * @generated
 	 * @ordered
 	 */
-	protected EPackage metamodel;
+	protected EList<Import> imports;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,18 +136,6 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Context> getContexts() {
-		if (contexts == null) {
-			contexts = new EObjectContainmentEList<Context>(Context.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS);
-		}
-		return contexts;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EPackage getMetamodel() {
 		if (metamodel != null && metamodel.eIsProxy()) {
 			InternalEObject oldMetamodel = (InternalEObject)metamodel;
@@ -174,11 +174,37 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Context> getContexts() {
+		if (contexts == null) {
+			contexts = new EObjectContainmentEList.Resolving<Context>(Context.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS);
+		}
+		return contexts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Import> getImports() {
+		if (imports == null) {
+			imports = new EObjectContainmentEList.Resolving<Import>(Import.class, this, DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS);
+		}
+		return imports;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
 				return ((InternalEList<?>)getContexts()).basicRemove(otherEnd, msgs);
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
+				return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -193,11 +219,13 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				return getName();
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				return getContexts();
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
 				if (resolve) return getMetamodel();
 				return basicGetMetamodel();
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
+				return getContexts();
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
+				return getImports();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,12 +242,16 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				setName((String)newValue);
 				return;
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
+				setMetamodel((EPackage)newValue);
+				return;
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
 				getContexts().clear();
 				getContexts().addAll((Collection<? extends Context>)newValue);
 				return;
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
-				setMetamodel((EPackage)newValue);
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
+				getImports().clear();
+				getImports().addAll((Collection<? extends Import>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,11 +268,14 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
+				setMetamodel((EPackage)null);
+				return;
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
 				getContexts().clear();
 				return;
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
-				setMetamodel((EPackage)null);
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
+				getImports().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -256,10 +291,12 @@ public class DomainSpecificCoverageImpl extends MinimalEObjectImpl.Container imp
 		switch (featureID) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
-				return contexts != null && !contexts.isEmpty();
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__METAMODEL:
 				return metamodel != null;
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__CONTEXTS:
+				return contexts != null && !contexts.isEmpty();
+			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE__IMPORTS:
+				return imports != null && !imports.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

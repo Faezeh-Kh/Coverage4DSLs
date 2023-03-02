@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class IgnoreImpl extends RuleImpl implements Ignore {
+public class IgnoreImpl extends ExclusionRuleImpl implements Ignore {
 	/**
 	 * The default value of the '{@link #isIgnoreSubtypes() <em>Ignore Subtypes</em>}' attribute.
 	 * <!-- begin-user-doc -->

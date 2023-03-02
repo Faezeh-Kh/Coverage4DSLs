@@ -31,6 +31,15 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	DomainSpecificCoverage createDomainSpecificCoverage();
 
 	/**
+	 * Returns a new object of class '<em>Import</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Import</em>'.
+	 * @generated
+	 */
+	Import createImport();
+
+	/**
 	 * Returns a new object of class '<em>Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,15 +47,6 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	 * @generated
 	 */
 	Context createContext();
-
-	/**
-	 * Returns a new object of class '<em>Ignore</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ignore</em>'.
-	 * @generated
-	 */
-	Ignore createIgnore();
 
 	/**
 	 * Returns a new object of class '<em>Coverage Of Referenced</em>'.
@@ -67,13 +67,58 @@ public interface DSLSpecificCoverageFactory extends EFactory {
 	CoverageByContent createCoverageByContent();
 
 	/**
-	 * Returns a new object of class '<em>Conditional Ignore</em>'.
+	 * Returns a new object of class '<em>Ignore</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conditional Ignore</em>'.
+	 * @return a new object of class '<em>Ignore</em>'.
 	 * @generated
 	 */
-	ConditionalIgnore createConditionalIgnore();
+	Ignore createIgnore();
+
+	/**
+	 * Returns a new object of class '<em>Limited Ignore</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Limited Ignore</em>'.
+	 * @generated
+	 */
+	LimitedIgnore createLimitedIgnore();
+
+	/**
+	 * Returns a new object of class '<em>Branch Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Branch Specification</em>'.
+	 * @generated
+	 */
+	BranchSpecification createBranchSpecification();
+
+	/**
+	 * Returns a new object of class '<em>Explicit Branch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Explicit Branch</em>'.
+	 * @generated
+	 */
+	ExplicitBranch createExplicitBranch();
+
+	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
+
+	/**
+	 * Returns a new object of class '<em>Implicit Branch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implicit Branch</em>'.
+	 * @generated
+	 */
+	ImplicitBranch createImplicitBranch();
 
 	/**
 	 * Returns the package supported by this factory.

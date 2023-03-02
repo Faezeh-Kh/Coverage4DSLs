@@ -6,14 +6,19 @@ import TestCoverage.CoverageStatus;
 import TestCoverage.ModelObjectCoverageStatus;
 import TestCoverage.TestCoveragePackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link TestCoverage.impl.ModelObjectCoverageStatusImpl#getModelObject <em>Model Object</em>}</li>
  *   <li>{@link TestCoverage.impl.ModelObjectCoverageStatusImpl#getCoverageStatus <em>Coverage Status</em>}</li>
+ *   <li>{@link TestCoverage.impl.ModelObjectCoverageStatusImpl#getRelatedObjectCoverageStatus <em>Related Object Coverage Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +65,16 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected CoverageStatus coverageStatus = COVERAGE_STATUS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRelatedObjectCoverageStatus() <em>Related Object Coverage Status</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelatedObjectCoverageStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ModelObjectCoverageStatus> relatedObjectCoverageStatus;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,6 +159,32 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ModelObjectCoverageStatus> getRelatedObjectCoverageStatus() {
+		if (relatedObjectCoverageStatus == null) {
+			relatedObjectCoverageStatus = new EObjectContainmentEList<ModelObjectCoverageStatus>(ModelObjectCoverageStatus.class, this, TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS);
+		}
+		return relatedObjectCoverageStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS:
+				return ((InternalEList<?>)getRelatedObjectCoverageStatus()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -151,6 +193,8 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 				return basicGetModelObject();
 			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS:
 				return getCoverageStatus();
+			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS:
+				return getRelatedObjectCoverageStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,6 +204,7 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -168,6 +213,10 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 				return;
 			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS:
 				setCoverageStatus((CoverageStatus)newValue);
+				return;
+			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS:
+				getRelatedObjectCoverageStatus().clear();
+				getRelatedObjectCoverageStatus().addAll((Collection<? extends ModelObjectCoverageStatus>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,6 +236,9 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS:
 				setCoverageStatus(COVERAGE_STATUS_EDEFAULT);
 				return;
+			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS:
+				getRelatedObjectCoverageStatus().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,6 +255,8 @@ public class ModelObjectCoverageStatusImpl extends MinimalEObjectImpl.Container 
 				return modelObject != null;
 			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS:
 				return coverageStatus != COVERAGE_STATUS_EDEFAULT;
+			case TestCoveragePackage.MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS:
+				return relatedObjectCoverageStatus != null && !relatedObjectCoverageStatus.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tll:System
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tll="http://www.example.org/tll"
+    xsi:schemaLocation="http://www.example.org/tll tll.ecore"
+    id="IAFPlant">
+  <area id="Area1"
+      store="//@area.0/@component.10"
+      buffer="//@area.0/@component.9">
+    <component
+        xsi:type="tll:Turntable"
+        id="t1"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.1"/>
+    <component
+        xsi:type="tll:Conveyor"
+        id="c1"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.2 //@area.0/@component.0"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="t2"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.3 //@area.0/@component.1"/>
+    <component
+        xsi:type="tll:Machine"
+        id="m1"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.4 //@area.0/@component.2"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="t3"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.5 //@area.0/@component.3"/>
+    <component
+        xsi:type="tll:Conveyor"
+        id="c2"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.6 //@area.0/@component.4"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="t4"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.7 //@area.0/@component.5"/>
+    <component
+        xsi:type="tll:Conveyor"
+        id="c3"
+        processingTime="1"
+        uncertainty="1"
+        neighbour="//@area.0/@component.8 //@area.0/@component.6"/>
+    <component
+        xsi:type="tll:Turntable"
+        id="sink"
+        processingTime="1"
+        uncertainty="1"/>
+    <component
+        xsi:type="tll:WaitingQueue"
+        id="buffer"
+        processingTime="20"
+        uncertainty="2"
+        entry="//@area.0/@component.0">
+      <bufferedItems
+          id="item1"/>
+    </component>
+    <component
+        xsi:type="tll:StorageQueue"
+        id="store"
+        processingTime="20"
+        uncertainty="2"
+        exit="//@area.0/@component.6"/>
+    <itemGen
+        frequency="100000"/>
+  </area>
+  <simconfig
+      timeout="100"/>
+</tll:System>

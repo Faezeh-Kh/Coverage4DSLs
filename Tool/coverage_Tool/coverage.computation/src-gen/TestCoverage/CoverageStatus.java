@@ -39,14 +39,22 @@ public enum CoverageStatus implements Enumerator {
 	NOTCOVERED(1, "NOTCOVERED", "NOTCOVERED"),
 
 	/**
-	 * The '<em><b>NOTTRACED</b></em>' literal object.
+	 * The '<em><b>PARTLYCOVERED</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NOTTRACED_VALUE
+	 * @see #PARTLYCOVERED_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	NOTTRACED(2, "NOTTRACED", "NOTTRACED");
+	PARTLYCOVERED(2, "PARTLYCOVERED", "PARTLYCOVERED"), /**
+	 * The '<em><b>NOSTATUS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NOSTATUS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NOSTATUS(3, "NOSTATUS", "NOSTATUS");
 
 	/**
 	 * The '<em><b>COVERED</b></em>' literal value.
@@ -71,15 +79,26 @@ public enum CoverageStatus implements Enumerator {
 	public static final int NOTCOVERED_VALUE = 1;
 
 	/**
-	 * The '<em><b>NOTTRACED</b></em>' literal value.
+	 * The '<em><b>PARTLYCOVERED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NOTTRACED
+	 * @see #PARTLYCOVERED
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NOTTRACED_VALUE = 2;
+	public static final int PARTLYCOVERED_VALUE = 2;
+
+	/**
+	 * The '<em><b>NOSTATUS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NOSTATUS
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NOSTATUS_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Coverage Status</b></em>' enumerators.
@@ -91,7 +110,8 @@ public enum CoverageStatus implements Enumerator {
 		new CoverageStatus[] {
 			COVERED,
 			NOTCOVERED,
-			NOTTRACED,
+			PARTLYCOVERED,
+			NOSTATUS,
 		};
 
 	/**
@@ -150,7 +170,8 @@ public enum CoverageStatus implements Enumerator {
 		switch (value) {
 			case COVERED_VALUE: return COVERED;
 			case NOTCOVERED_VALUE: return NOTCOVERED;
-			case NOTTRACED_VALUE: return NOTTRACED;
+			case PARTLYCOVERED_VALUE: return PARTLYCOVERED;
+			case NOSTATUS_VALUE: return NOSTATUS;
 		}
 		return null;
 	}

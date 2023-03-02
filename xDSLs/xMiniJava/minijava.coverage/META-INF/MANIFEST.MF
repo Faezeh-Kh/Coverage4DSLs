@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Coverage
 Bundle-SymbolicName: minijava.coverage;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-16
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.imt.xminijava.coverage
 Require-Bundle: coverage.computation;bundle-version="1.0.0",
  org.eclipse.emf.transaction;bundle-version="1.9.1",

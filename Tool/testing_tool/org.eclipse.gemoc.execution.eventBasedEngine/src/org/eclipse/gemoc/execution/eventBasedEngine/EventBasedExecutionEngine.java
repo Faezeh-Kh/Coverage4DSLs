@@ -11,6 +11,8 @@
 package org.eclipse.gemoc.execution.eventBasedEngine;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.Callable;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;

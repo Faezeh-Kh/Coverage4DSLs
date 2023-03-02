@@ -3,9 +3,18 @@
  */
 package coverage.dsl.xtext;
 
+import org.eclipse.xtext.parser.antlr.IReferableElementsUnloader;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class COVRuntimeModule extends AbstractCOVRuntimeModule {
+	
+	/*
+	 * It seems this is the issue
+	 * https://github.com/diverse-project/melange/issues/96
+	 * **/
+	public Class<? extends IReferableElementsUnloader> bindIReferableElementsUnloader() {
+		return IReferableElementsUnloader.NullUnloader.class;
+	}
 }

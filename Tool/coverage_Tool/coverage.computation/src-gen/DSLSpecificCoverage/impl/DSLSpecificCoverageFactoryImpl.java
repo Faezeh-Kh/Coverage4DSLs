@@ -58,11 +58,16 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case DSLSpecificCoveragePackage.DOMAIN_SPECIFIC_COVERAGE: return createDomainSpecificCoverage();
+			case DSLSpecificCoveragePackage.IMPORT: return createImport();
 			case DSLSpecificCoveragePackage.CONTEXT: return createContext();
-			case DSLSpecificCoveragePackage.IGNORE: return createIgnore();
 			case DSLSpecificCoveragePackage.COVERAGE_OF_REFERENCED: return createCoverageOfReferenced();
 			case DSLSpecificCoveragePackage.COVERAGE_BY_CONTENT: return createCoverageByContent();
-			case DSLSpecificCoveragePackage.CONDITIONAL_IGNORE: return createConditionalIgnore();
+			case DSLSpecificCoveragePackage.IGNORE: return createIgnore();
+			case DSLSpecificCoveragePackage.LIMITED_IGNORE: return createLimitedIgnore();
+			case DSLSpecificCoveragePackage.BRANCH_SPECIFICATION: return createBranchSpecification();
+			case DSLSpecificCoveragePackage.EXPLICIT_BRANCH: return createExplicitBranch();
+			case DSLSpecificCoveragePackage.CONDITION: return createCondition();
+			case DSLSpecificCoveragePackage.IMPLICIT_BRANCH: return createImplicitBranch();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,8 +83,8 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 		switch (eDataType.getClassifierID()) {
 			case DSLSpecificCoveragePackage.COVERED_CONTENTS:
 				return createCoveredContentsFromString(eDataType, initialValue);
-			case DSLSpecificCoveragePackage.CONDITION_TYPE:
-				return createConditionTypeFromString(eDataType, initialValue);
+			case DSLSpecificCoveragePackage.LIMITATION_TYPE:
+				return createLimitationTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -95,8 +100,8 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 		switch (eDataType.getClassifierID()) {
 			case DSLSpecificCoveragePackage.COVERED_CONTENTS:
 				return convertCoveredContentsToString(eDataType, instanceValue);
-			case DSLSpecificCoveragePackage.CONDITION_TYPE:
-				return convertConditionTypeToString(eDataType, instanceValue);
+			case DSLSpecificCoveragePackage.LIMITATION_TYPE:
+				return convertLimitationTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -117,9 +122,9 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Context createContext() {
-		ContextImpl context = new ContextImpl();
-		return context;
+	public Import createImport() {
+		ImportImpl import_ = new ImportImpl();
+		return import_;
 	}
 
 	/**
@@ -127,9 +132,9 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Ignore createIgnore() {
-		IgnoreImpl ignore = new IgnoreImpl();
-		return ignore;
+	public Context createContext() {
+		ContextImpl context = new ContextImpl();
+		return context;
 	}
 
 	/**
@@ -157,9 +162,59 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConditionalIgnore createConditionalIgnore() {
-		ConditionalIgnoreImpl conditionalIgnore = new ConditionalIgnoreImpl();
-		return conditionalIgnore;
+	public Ignore createIgnore() {
+		IgnoreImpl ignore = new IgnoreImpl();
+		return ignore;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LimitedIgnore createLimitedIgnore() {
+		LimitedIgnoreImpl limitedIgnore = new LimitedIgnoreImpl();
+		return limitedIgnore;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BranchSpecification createBranchSpecification() {
+		BranchSpecificationImpl branchSpecification = new BranchSpecificationImpl();
+		return branchSpecification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExplicitBranch createExplicitBranch() {
+		ExplicitBranchImpl explicitBranch = new ExplicitBranchImpl();
+		return explicitBranch;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImplicitBranch createImplicitBranch() {
+		ImplicitBranchImpl implicitBranch = new ImplicitBranchImpl();
+		return implicitBranch;
 	}
 
 	/**
@@ -187,8 +242,8 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConditionType createConditionTypeFromString(EDataType eDataType, String initialValue) {
-		ConditionType result = ConditionType.get(initialValue);
+	public LimitationType createLimitationTypeFromString(EDataType eDataType, String initialValue) {
+		LimitationType result = LimitationType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -198,7 +253,7 @@ public class DSLSpecificCoverageFactoryImpl extends EFactoryImpl implements DSLS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConditionTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertLimitationTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

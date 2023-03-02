@@ -144,11 +144,22 @@ class IfStatementAspect extends StatementAspect {
 @Aspect(className=WhileStatement)
 class WhileStatementAspect extends StatementAspect {
 	@OverrideAspectMethod
-	@Step
 	def void evaluateStatement(State state) {
 		while ((_self.condition.evaluateExpression(state) as BooleanValue).value) {
-			_self.block.evaluateStatement(state)
+			_self.executeWhileBlock(true, state)
 		}
+		_self.executeWhileBlock(false, state)
+	}
+	
+
+	
+	@Step 
+	def boolean executeWhileBlock(Boolean condition, State state){
+		if (condition){
+			_self.block.evaluateStatement(state)
+			return true
+		}
+		return false
 	}
 }
 

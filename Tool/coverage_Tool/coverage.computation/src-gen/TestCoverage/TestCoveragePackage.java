@@ -205,13 +205,22 @@ public interface TestCoveragePackage extends EPackage {
 	int MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Related Object Coverage Status</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Model Object Coverage Status</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_OBJECT_COVERAGE_STATUS_FEATURE_COUNT = 2;
+	int MODEL_OBJECT_COVERAGE_STATUS_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Model Object Coverage Status</em>' class.
@@ -363,6 +372,17 @@ public interface TestCoveragePackage extends EPackage {
 	EAttribute getModelObjectCoverageStatus_CoverageStatus();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link TestCoverage.ModelObjectCoverageStatus#getRelatedObjectCoverageStatus <em>Related Object Coverage Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Related Object Coverage Status</em>'.
+	 * @see TestCoverage.ModelObjectCoverageStatus#getRelatedObjectCoverageStatus()
+	 * @see #getModelObjectCoverageStatus()
+	 * @generated
+	 */
+	EReference getModelObjectCoverageStatus_RelatedObjectCoverageStatus();
+
+	/**
 	 * Returns the meta object for enum '{@link TestCoverage.CoverageStatus <em>Coverage Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -496,6 +516,14 @@ public interface TestCoveragePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODEL_OBJECT_COVERAGE_STATUS__COVERAGE_STATUS = eINSTANCE.getModelObjectCoverageStatus_CoverageStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>Related Object Coverage Status</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_OBJECT_COVERAGE_STATUS__RELATED_OBJECT_COVERAGE_STATUS = eINSTANCE.getModelObjectCoverageStatus_RelatedObjectCoverageStatus();
 
 		/**
 		 * The meta object literal for the '{@link TestCoverage.CoverageStatus <em>Coverage Status</em>}' enum.
