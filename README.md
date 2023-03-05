@@ -48,13 +48,13 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - <u>Abstract Syntax</u>: containing the `Ecore` metamodel of the xDSL and the java code generated from it using the `.genmodel` file.
 - <u>Operational Semantics</u>: containing the interpreter of the xDSL implemented in `Xtend`.
 - <u>Behavioral Interface</u>: containing a `.bi` file that is the interface of the xDSL and a java class that do the setups, so GEMOC engines can find and use the interface (Please note that only *xArduino* and *xPSSM* have such an interface)
-- <u>Coverage Rules</u>: definition of a set of DSL-Specific coverage rules in a `.cov` file (Please note that the *xFSM* does not have any coverage rule)
+- <u>Coverage Rules</u>: definition of a set of DSL-Specific coverage rules in a `.cov` file
 - <u>Executable DSL</u>: containing a `.dsl` file that specifies the name of the xdsl, the path to the `.ecore` file, the list of execution rules of the operational semantics, the id of the behavioral interface project, and the path to the coverage rules.
 - <u>Mutation Operators</u>: containing a `.mutator` file which includes the mutation operators defined for the xDSL using [WODEL language](https://gomezabajo.github.io/Wodel/)
 
     **NOTE**: Currently, we do not provide any graphical syntax for the xDSLs.
 
-3.	*xModels_Tests*: the executable models conforming to each xDSL, a set of mutants generated for each of them (by applying the provided mutation operators using WODEL mutant generator), and a test project containing a test suite along with its execution result and its coverage report (under `result_coverage` directory).
+3.	*xModels_Tests*: the executable models conforming to each xDSL, a set of mutants generated for each of them (by applying the provided mutation operators using WODEL mutant generator), and a test project containing a test suite along with its execution result (under `test-report` directory) and its coverage report (under `test-coverage` directory).
 
     **NOTE**: There are also Excel files containing data related to the evaluation of the `fault localization` component.
 
@@ -64,7 +64,7 @@ We observed that meaningful coverage matrices can be automatically constructed f
 - An Excel file containing detailed data of the paper’s evaluation.
 
 ## Setup
-To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://zenodo.org/record/7250227) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md) or you can follow the setup instruction described below:
+To use the tool, please follow the setup instruction described below:
 
 **Requirements**: 
 - *Operating System*: Windows 10
@@ -104,7 +104,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
 1. Install Epsilon using the provided update site (http://download.eclipse.org/epsilon/updates/2.4/) in the same way described in the previous step.
    
-5.	An empty workspace will be shown. You should first download the content of this repository as a Zip file and unzip it to get access to its content on your machine. Afterward, import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Tool** directory) -> `Select Folder` -> `Finish`.
+5.	An empty workspace will be shown. You should first clone this repository or download its content as a Zip file and unzip it to get access to its content on your machine. Afterward, import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Tool** directory) -> `Select Folder` -> `Finish`.
 
 <p align="center">
     <img src="Screenshots/importProjects.png"  width="70%" height="70%">
@@ -113,13 +113,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 **NOTE**: In our case study, we experimented our tool on four xDSLs. In this document, we will show how to run the experiment for the xArduino as it was also the running example of the paper. Nevertheless, you can follow the same steps for the other xDSLs.
 
 ## Usage
-1.	Import the xArduino implementation from the `xDSLs/xArduino` directory in the same way described in the previous step. At the end, your project explorer should be as following picture:
-
-<p align="center">
-    <img src="Screenshots/projectExplorer.png"  width="40%" height="50%">
-</p>
-
-2. To deploy the tool and the xArduino DSL, we should run this workspace using `Eclipse Application` run configuration. To do this, follow: `Run` -> `Run Configurations` -> choose `Eclipse Application` from the list of available configurations and double click to create an instance of it. You can optionally change the default name and the `workspace data location` of this configuration instance. Finally, press `Run` to open a new Eclipse instance.
+1. To deploy the tool, we should run this workspace using `Eclipse Application` run configuration. To do this, follow: `Run` -> `Run Configurations` -> choose `Eclipse Application` from the list of available configurations and double click to create an instance of it. You can optionally change the default name and the `workspace data location` of this configuration instance. Finally, press `Run` to open a new Eclipse instance.
 
     <p align="center">
         <img src="Screenshots/runConfiguration.png"  width="80%" height="60%">
@@ -127,11 +121,34 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
     **Note**: The `workspace data location` defines the path to the workspace of the newly opened Eclipse instance.  
 
-3. In the new Eclipse instance, import those projects from the `xModels_Tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `xModels_Tests` directory as follows:
+2.	In the newly opened workspace, import the xArduino implementation from the `xDSLs/xArduino` directory in the same way described earlier. In the `arduino.coverage` project, you can see two `.cov` files containing the coverage rules for the xArduino that we have defined using our proposed metalanguage. 
+
+    <p align="center">
+        <img src="Screenshots/cov-files.png"  width="80%" height="50%">
+    </p>
+
+    **Note**: You will probably see several errors in the .cov files because the workspace does not recognize the xArduino metamodel. To resolve the errors, you should register the metamodel. 
+    Find the metamodel from `arduino.abstractsyntax/model/arduino.core` -> right click and select `Register EPackages`
+
+    <p align="center">
+        <img src="Screenshots/register-metamodel.jpg"  width="60%" height="50%">
+    </p>
+
+    Then, by pressing `Ctrl + space` shortcut key next to the metamodel name in the .cov files, it will resolve all the errors.  
+
+    **Note**: You can define new coverage rules in the existing .cov files (or create new .cov files and add new rules in them). When writing coverage rules, the `Ctrl + space` shortcut key provides suggestions for auto-completion. In case of a constraint violation, you will see the errors with appropriate descriptions in the `Problems` view.  
+
+    <p align="center">
+        <img src="Screenshots/static-check.jpg"  width="80%" height="50%">
+    </p>
+
+3. To deploy the xArduino DSL, we should run this workspace using `Eclipse Application` run configuration as described in the previous step.
+
+4. In the new Eclipse instance, import those projects from the `xModels_Tests` directory that you would like to try the tool for them. Here, we imported the projects related to the running example of the paper from the `xModels_Tests` directory as follows:
 - `RunningExample_Model` project containing `sensorAlarm_withBug.model` that is an example Arduino xModel. It has a defect since the alarm is not ringing as expected when the sensor detects an obstacle (it is highlighted in red where alarm1 is mistakenly set to 0).
     
     <p align="center">
-        <img src="Screenshots/xArduino-model.jpg"  width="40%" height="40%">
+        <img src="Screenshots/xArduino-model.jpg"  width="50%" height="40%">
     </p>
 
     **NOTE**: Please note that the model is an XMI file and there is no graphical model in the `RunningExample_Model` project such as the one shown in the above figure. We use the above figure just to make it more understandable for this tutorial. 
@@ -139,7 +156,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
 - `RunningExample_Test` project containing:
 
-    a)	`testSuite.tdlan2`: a test suite for the model comprising 4 test cases, one of those briefly drawn in the following Figure and completely shown in the next tool screenshot using TDL textual syntax.
+    a)	`testSuite.tdlan2`: a test suite for the model comprising 5 test cases, one of those briefly drawn in the following Figure and completely shown in the next tool screenshot using TDL textual syntax.
     
     <p align="center">
         <img src="Screenshots/xArduino-test.jpg"  width="40%" height="40%">
@@ -149,20 +166,20 @@ After downloading GEMOC Studio, unzip the folder and run it:
     
     c)	`test-coverage`: containing the result of coverage computation for the executed test suite.
 
-    **NOTE**: The two files explained in (b) and (c) are indeed the output of our tool. We provided them here to be used during the evaluation of the tool, to check if the tool behaves as expected.
+    **NOTE**: The files in `test-coverage` directory are indeed the output of our tool. We provided them here to be used during the evaluation of the tool, to check if the tool behaves as expected.
 
     <p align="center">
         <img src="Screenshots/importModel&tests.png">
     </p>
 
-4. Run the test suite on the model by right clicking on the launcher file `/RunningExample_Test/launcher/run-test.launch`-> `Run As` -> `run-test`.
+1. Run the test suite on the model by right clicking on the launcher file `/RunningExample_Test/launcher/run-test.launch`-> `Run As` -> `run-test`.
 
     <p align="center">
         <img src="Screenshots/howToRunTest.png">
     </p>
 
     **NOTE**: We provided this launcher file for the sake of usage simplicity. If you had a new test suite and you would like to run it using the tool, the following steps must be followed:
-    Right-click on your test suite (.tdlan2 file) -> `Run As` -> `Run Configurations...` -> select `Executable model with GEMOC Java engine` from the list of configurations on the left pane -> double click to create an instance of it -> `Browse` to locate your test suite file and set it as the `Model to execute` -> from the list of `Languages`, select `org.imt.xtdl.XTdl` that is the testing language of [[1]](https://faezeh-kh.github.io/publication/sosym22/) -> `Browse` to set the value of `Main method` and `Main model element path` (there will be only one option to select)
+    Right-click on your test suite (.tdlan2 file) -> `Run As` -> `Run Configurations...` -> select `Executable model with GEMOC Java engine` from the list of configurations on the left pane -> double click to create an instance of it -> `Browse` to locate your test suite file and set it as the `Model to execute` -> from the list of `Languages`, select `org.imt.tdl.XTdl` that is the testing language of [[1]](https://faezeh-kh.github.io/publication/sosym22/) -> `Browse` to set the value of `Main method` and `Main model element path` (there will be only one option to select)
 
     <p align="center">
         <img src="Screenshots/testRunConfiguration.png" width="60%" height="40%">
@@ -183,7 +200,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
     </p>
 
     A message as *“Test suite execution has been finished successfully.”* must be shown followed by the coverage computation result. 
-    Also, you can see a new folder as "gemoc-gen" under `Arduino.RunningExample_Test` project which contains the execution result (i.e., the files described above in 3.b, 3.c, and 3.d steps).
+    Also, you can see the `test-coverage` folder under `RunningExample_Test` project which contains the coverage computation result.
 
     <p align="center">
         <img src="Screenshots/testExecution.png">
@@ -197,10 +214,15 @@ After downloading GEMOC Studio, unzip the folder and run it:
     <p align="center">
         <img src="Screenshots/testResultView.png" width="70%" height="40%">
     </p>
-- *Coverage*
+- *Coverage*: using the `Coverage Metrics Filters`, you can select the coverage matrix to be shown.
     <p align="center">
-        <img src="Screenshots/testCoverageView.png" width="70%" height="40%">
+        <img src="Screenshots/coverage-view-trace.png" width="70%" height="40%">
     </p>
+
+    <p align="center">
+        <img src="Screenshots/coverage-view-element.png" width="70%" height="40%">
+    </p>
+
 - *Fault Localization*: At first that no SBFL technique is selected, the `Susp` and `Rank` columns are empty.
   
     <p align="center">
