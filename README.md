@@ -2,31 +2,40 @@
 This repository contains the tool and the evaluation data of our paper titled "A Language-Parametric Test Coverage Framework for Domain-Specific Languages", submitted to Journal of Systems and Software (JSS).
 
 ## Introduction
-A multitude of Domain-Specific Languages (DSLs) are available nowadays to describe the dynamic aspects of systems as *behavioral models*
-(such as state machines, activity diagrams, and process models).
-For such DSLs, the modeling environment should not only support creating and executing behavioral models, but also dynamic Verification and Validation (V&V) techniques to assess as early as possible the correctness of the developed models. As these techniques need model execution, we focus in this paper on DSLs with operational semantics, referred to as *executable DSLs (xDSLs)*.
-
-A very prominent dynamic V&V technique is testing, which involves executing systems and observing whether they act as expected. 
-Some testing approaches are already proposed for xDSLs which allow defining test suites for executable models.
-To test models efficiently, we need both to evaluate the quality of the defined test cases, and to localize the model's faults when test cases fail.
-Both of these concerns can be addressed by measuring the *coverage* of each executed test case, i.e., the model elements involved in the test case execution. 
-In the realm of programming languages, both coverage metrics and coverage-based fault localization techniques, such as Spectrum-Based Fault Localization (SBFL), have existed for a long time.
-However, to our knowledge, these concerns are still understudied when it comes to xDSLs, for which coverage tools still have to be manually developed.
-
-In this paper, we propose a generic framework for coverage computation and fault localization of domain-specific executable models which is applicable to a wide range of xDSLs.
-Considering a test suite for an executable model, we analyze the model's execution traces to extract its covered elements which compose the coverage matrix for the test suite.
-In addition, our proposed framework allows language engineers (who are in charge of designing xDSLs) to customize the generic coverage measurements for their xDSLs. 
-Finally, we investigate the application of the computed coverage measurements for fault localization in executable models based on SBFL techniques. In particular, we reuse an existing collection of SBFL techniques [[1]](https://doi.org/10.1145/3241744) for calculating the suspiciousness-based ranking of elements of executable models.
+The following Figure displays an overview of our proposed framework.
+Two actors are involved: a language engineer (at the top left corner) who defines an xDSL, and a domain expert (at the top right corner) who defines models (using the xDSL) and test cases for them.
+We assume there is an existing testing framework (at the center) that (1) provides facilities for writing and executing test cases for models; and (2) produces the results of the test cases along with the resulting execution trace for the tested model (such as [our previous work](https://github.com/lowcomote/Testing4DSLs)).
 
 <p align="center">
     <img src="Screenshots/Overview.jpg"  width="100%" height="80%">
 </p>
 
+Then, test coverage is computed in two phases realized by the *Model Coverage Computation* component of the framework (at the bottom left):
+The first phase, called *Generic measurement*, computes test coverage based on the *model element coverage* criterion.
+It is an off-the-shelf approach that only requires two existing sources of information.
+First, from the definition of the given xDSL, it recognizes which classes of the abstract syntax are used by each execution rule of the operational semantics.
+This is required to recognize what are the `traceable` elements of the model, i.e., elements whose execution will be captured in the trace.
+Second, it analyzes the execution trace of the tested model to extract the model elements that are captured in the trace, meaning that they are `covered` by the test case.
+Accordingly, the `traceable` elements that are not captured in the trace are indeed `not-covered` by the test case.
+The final output is an *element coverage matrix* containing a list of model elements along with their coverage status.
+
+The second phase, called *DSL-specific measurement,* allows the language engineers to define DSL-specific coverage rules for their xDSLs using a dedicated *metalanguage* (at the bottom left corner).
+Two main types of rules can be defined for a given xDSL: customization rules to achieve an intended *model element coverage* measurement, and specification rules to adapt *branch coverage* metric for the xDSL.
+The proposed approach applies the coverage rules on the generic coverage measurements and produces one coverage matrix per coverage ruleset.
+ 
+Lastly, we showcase possibilities offered by coverage measurements in two ways:  
+(i) test quality evaluation by calculating the coverage percentage for each constructed coverage matrix and visualizing the results for the user (on the bottom right corner); and 
+(ii) model fault localization (in the center) based on SBFL techniques by calculating the suspiciousness-based ranking of the model's elements using the test results produced by the test execution engine and the element coverage matrix constructed by our *Model Coverage Computation* component.
+Such ranking helps in debugging the model as it directly positions the location of the faults.
+
+This work is an extended and thoroughly improved version of our previous work on the matter ([link to the paper](https://doi.org/10.1145/3567512.3567532), [link to the tool](https://doi.org/10.5281/zenodo.7260980)).
+New contents include conditional coverage rules, the validation of coverage rules, the branch coverage metric, an extended evaluation and extended explanations.
+
 This repository contains our provided tool built atop the Eclipse GEMOC Studio.
 We also conducted an empirical evaluation of our approach for four different xDSLs to assess its applicability. 
 In total, we wrote 301 test cases for 21 executable models with sizes ranging from 7 to 571 elements.
 We injected faults into these executable models using [WODEL model mutation tool](https://gomezabajo.github.io/Wodel/) and we executed our approach for 1252 mutants of the executable models.
-We observed that meaningful coverage matrices can be automatically constructed for the test suites of all examined mutants and that it allows the application of existing SBFL techniques for successfully tracking the faulty model elements, thus demonstrating the usefulness of the generically computed coverage measurements.
+We observed that (i) meaningful coverage matrices for both *model element coverage* and *branch coverage* metrics can be automatically constructed for the test suites of all examined models; and (ii) the model element coverage of the generated mutants allows the application of existing SBFL techniques for successfully tracking the faulty model elements, thus demonstrating the usefulness of the generically computed model element coverage measurements.
 
 ## Overview
 1.	*Tool*: a set of eclipse plugins
@@ -221,6 +230,10 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
     <p align="center">
         <img src="Screenshots/coverage-view-element.png" width="70%" height="40%">
+    </p>
+
+    <p align="center">
+        <img src="Screenshots/coverage-view-branch.png" width="70%" height="40%">
     </p>
 
 - *Fault Localization*: At first that no SBFL technique is selected, the `Susp` and `Rank` columns are empty.
