@@ -106,7 +106,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 3.	You need to install TDL using the provided update site (https://tdl.etsi.org/eclipse/latest/). To do this, go to the `Help` menu and select `Install new Software`. Add the TDL update site and click on `Next`. Accept the license and follow the steps. At the end, it asks to restart the workspace.
 
     <p align="center">
-        <img src="Screenshots/installTDL.png"  width="70%" height="50%">
+        <img src="Screenshots/installTDL.png"  width="90%" height="50%">
     </p>
     
     You may receive an error as "Cannot perform the operation" for two plugins: `converters to/from TDL` and `TDL graphical editor`. In this case, Eclipse will suggest skipping their installation and installing everything else. You can continue with this option as these two plugins are not necessary for our tool.
@@ -116,7 +116,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 5.	An empty workspace will be shown. You should first clone this repository or download its content as a Zip file and unzip it to get access to its content on your machine. Afterward, import the projects from the `Tool` directory using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Tool** directory) -> `Select Folder` -> `Finish`.
 
 <p align="center">
-    <img src="Screenshots/importProjects.png"  width="70%" height="70%">
+    <img src="Screenshots/importProjects.png"  width="100%" height="70%">
 </p>
   
 **NOTE**: In our case study, we experimented our tool on four xDSLs. In this document, we will show how to run the experiment for the xArduino as it was also the running example of the paper. Nevertheless, you can follow the same steps for the other xDSLs.
@@ -133,14 +133,14 @@ After downloading GEMOC Studio, unzip the folder and run it:
 2.	In the newly opened workspace, import the xArduino implementation from the `xDSLs/xArduino` directory in the same way described earlier. In the `arduino.coverage` project, you can see two `.cov` files containing the coverage rules for the xArduino that we have defined using our proposed metalanguage. 
 
     <p align="center">
-        <img src="Screenshots/cov-files.png"  width="80%" height="50%">
+        <img src="Screenshots/cov-files.png"  width="100%" height="50%">
     </p>
 
     **Note**: You will probably see several errors in the .cov files because the workspace does not recognize the xArduino metamodel. To resolve the errors, you should register the metamodel. 
     Find the metamodel from `arduino.abstractsyntax/model/arduino.core` -> right click and select `Register EPackages`
 
     <p align="center">
-        <img src="Screenshots/register-metamodel.jpg"  width="60%" height="50%">
+        <img src="Screenshots/register-metamodel.jpg"  width="40%" height="40%">
     </p>
 
     Then, by pressing `Ctrl + space` shortcut key next to the metamodel name in the .cov files, it will resolve all the errors.  
@@ -148,7 +148,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
     **Note**: You can define new coverage rules in the existing .cov files (or create new .cov files and add new rules in them). When writing coverage rules, the `Ctrl + space` shortcut key provides suggestions for auto-completion. In case of a constraint violation, you will see the errors with appropriate descriptions in the `Problems` view.  
 
     <p align="center">
-        <img src="Screenshots/static-check.jpg"  width="80%" height="50%">
+        <img src="Screenshots/static-check.jpg"  width="100%" height="50%">
     </p>
 
 3. To deploy the xArduino DSL, we should run this workspace using `Eclipse Application` run configuration as described in the previous step.
@@ -191,13 +191,13 @@ After downloading GEMOC Studio, unzip the folder and run it:
     Right-click on your test suite (.tdlan2 file) -> `Run As` -> `Run Configurations...` -> select `Executable model with GEMOC Java engine` from the list of configurations on the left pane -> double click to create an instance of it -> `Browse` to locate your test suite file and set it as the `Model to execute` -> from the list of `Languages`, select `org.imt.tdl.XTdl` that is the testing language of [[1]](https://faezeh-kh.github.io/publication/sosym22/) -> `Browse` to set the value of `Main method` and `Main model element path` (there will be only one option to select)
 
     <p align="center">
-        <img src="Screenshots/testRunConfiguration.png" width="60%" height="40%">
+        <img src="Screenshots/testRunConfiguration.png" width="90%" height="40%">
     </p>
 
     From the `Engine Addons` tab, you can request the tool to save the test execution result and the test coverage measurements as XMI files.
 
     <p align="center">
-        <img src="Screenshots/addOns.png" width="60%" height="40%">
+        <img src="Screenshots/addOns.png" width="90%" height="40%">
     </p>
 
     Finally, press `Run` to execute the test suite.
@@ -217,7 +217,7 @@ After downloading GEMOC Studio, unzip the folder and run it:
 
 6. Our tool also provides a set of graphical views to display the results. You can open each one of them from the `Window` menu -> `Show View` -> `Other` -> `TDL`.
    <p align="center">
-        <img src="Screenshots/views.png" width="30%" height="40%">
+        <img src="Screenshots/views.png" width="40%" height="40%">
     </p>
 - *Test Results*
     <p align="center">
@@ -225,26 +225,26 @@ After downloading GEMOC Studio, unzip the folder and run it:
     </p>
 - *Coverage*: using the `Coverage Metrics Filters`, you can select the coverage matrix to be shown.
     <p align="center">
-        <img src="Screenshots/coverage-view-trace.png" width="70%" height="40%">
+        <img src="Screenshots/coverage-view-trace.png" width="100%" height="40%">
     </p>
 
     <p align="center">
-        <img src="Screenshots/coverage-view-element.png" width="70%" height="40%">
+        <img src="Screenshots/coverage-view-element.png" width="100%" height="40%">
     </p>
 
     <p align="center">
-        <img src="Screenshots/coverage-view-branch.png" width="70%" height="40%">
+        <img src="Screenshots/coverage-view-branch.png" width="100%" height="40%">
     </p>
 
 - *Fault Localization*: At first that no SBFL technique is selected, the `Susp` and `Rank` columns are empty.
   
     <p align="center">
-        <img src="Screenshots/flView-initial.png" width="70%" height="40%">
+        <img src="Screenshots/flView-initial.png" width="80%" height="40%">
     </p>
 
     Once you select a technique from the list (e.g., here we selected `phi` technique), the suspiciousness score and the rank of each model element will be calculated and immediately shown in the view. Here based on `phi` technique, the score of the faulty element is 1.0 and its rank is 1.
     <p align="center">
-        <img src="Screenshots/flView-final.png" width="70%" height="40%">
+        <img src="Screenshots/flView-final.png" width="80%" height="40%">
     </p>
 
 ## Acknowledgment
