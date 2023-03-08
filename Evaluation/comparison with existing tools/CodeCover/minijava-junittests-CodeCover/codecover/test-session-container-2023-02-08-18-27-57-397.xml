@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1675877277397" TestSessionContainerId="a403ee01-a904-4a58-90ee-be81b9b73daf" version="1.0">
+<SrcFileList>
+<SrcFile Content="package classes;&#13;&#10;&#13;&#10;public class Example {&#13;&#10;&#9;public void function(int x) {&#13;&#10;&#9;&#9;while (x==0 || x==-1) {&#13;&#10;&#9;&#9;&#9;x++;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;//&#9;public void function(int x) {&#13;&#10;//&#9;&#9;if (x&lt;-1) {&#13;&#10;//&#9;&#9;&#9;x = -x;&#13;&#10;//&#9;&#9;}&#13;&#10;//&#9;&#9;if (x == -1) {&#13;&#10;//&#9;&#9;&#9;x = 1;&#13;&#10;//&#9;&#9;}else {&#13;&#10;//&#9;&#9;&#9;x = x +1;&#13;&#10;//&#9;&#9;}&#13;&#10;//&#9;}&#13;&#10;&#9;&#13;&#10;//&#9;public void b(int x) {&#13;&#10;//&#9;&#9;for (int i=0; i&lt;2; i++) {&#13;&#10;//&#9;&#9;&#9;if (x != i) {&#13;&#10;//&#9;&#9;&#9;&#9;x+=2;&#13;&#10;//&#9;&#9;&#9;}&#13;&#10;//&#9;&#9;}&#13;&#10;//&#9;}&#13;&#10;}&#13;&#10;" Filename="Example.java" Intrnl_Id="1"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList>
+<BoolOp Arity="2" Intrnl_Id="2" Name="conditional or (||)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="00" Value="false"/>
+<MapEntry BoolAssgnmnt="01" Value="true"/>
+<MapEntry BoolAssgnmnt="12" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+</BoolOpList>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="package" IntrnlName="package" Intrnl_Id="3"/>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="4"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="5"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="6"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="20" HierarchyLvlTypeId="6" Intrnl_Id="7" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="19" HierarchyLvlTypeId="3" Intrnl_Id="8" Name="classes">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="18" HierarchyLvlTypeId="5" Intrnl_Id="9" Name="Example">
+<Header>
+<Loc EndOffset="40" SrcFileId="1" StartOffset="20"/>
+</Header>
+<LocList>
+<Loc EndOffset="384" SrcFileId="1" StartOffset="20"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="17" HierarchyLvlTypeId="4" Intrnl_Id="10" Name="function">
+<Header>
+<Loc EndOffset="72" SrcFileId="1" StartOffset="45"/>
+</Header>
+<LocList>
+<Loc EndOffset="119" SrcFileId="1" StartOffset="45"/>
+</LocList>
+<StmntSeq Intrnl_Id="11">
+<LocList>
+<Loc EndOffset="115" SrcFileId="1" StartOffset="78"/>
+</LocList>
+<LoopStmnt CovItemId="S1" CovItemPrefix="classes.Example.java" Intrnl_Id="12" MltplExecId="L1-2" MltplExecPrefix="classes.Example.java" NvrExecId="L1-0" NvrExecPrefix="classes.Example.java" OnceExecutedId="L1-1" OnceExecutedPrefix="classes.Example.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="13">
+<LocList>
+<Loc EndOffset="110" SrcFileId="1" StartOffset="106"/>
+</LocList>
+<BasicStmnt CovItemId="S2" CovItemPrefix="classes.Example.java" Intrnl_Id="14">
+<LocList>
+<Loc EndOffset="110" SrcFileId="1" StartOffset="106"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<Keyword EndOffset="83" SrcFileId="1" StartOffset="78"/>
+<LocList>
+<Loc EndOffset="115" SrcFileId="1" StartOffset="78"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="classes.Example.java" Intrnl_Id="15">
+<OpTerm BooleanOpId="2" Intrnl_Id="16">
+<BasicBoolTerm Intrnl_Id="17">
+<LocList>
+<Loc EndOffset="89" SrcFileId="1" StartOffset="85"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="18">
+<LocList>
+<Loc EndOffset="98" SrcFileId="1" StartOffset="93"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="92" SrcFileId="1" StartOffset="90"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</LoopStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+<TestSession Comment="" Date="1675877318606" Name="Feb 8, 2023 6:28:38 PM">
+<TestCase Comment="" Date="1675877318547" Name="tests.ExampleTest:test">
+<CovList>
+<CovPrefix CovItemPrefix="classes.Example.java">
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="classes.Example.java">
+<AssgnmntListEntry Length="2" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+<MapEntry BoolAssgnmnt="12" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1675878026816" Name="Feb 8, 2023 6:40:26 PM">
+<TestCase Comment="" Date="1675877318547" Name="tests.ExampleTest:test">
+<CovList>
+<CovPrefix CovItemPrefix="classes.Example.java">
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="classes.Example.java">
+<AssgnmntListEntry Length="2" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+<MapEntry BoolAssgnmnt="12" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1675878086188" Name="Feb 8, 2023 6:41:26 PM">
+<TestCase Comment="" Date="1675877318547" Name="tests.ExampleTest:test">
+<CovList>
+<CovPrefix CovItemPrefix="classes.Example.java">
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="classes.Example.java">
+<AssgnmntListEntry Length="2" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+<MapEntry BoolAssgnmnt="12" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+</TestSessionContainer>
