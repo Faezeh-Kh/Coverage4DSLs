@@ -14,17 +14,18 @@ ruleset MiniJavaBranchCoverage{
 			branch "self.thenBlock",
 			branch else
 		}
-	},
-	context WhileStatement{
-		{
-			branch "self.block",
-			branch else
-		}
-	},
-	context ForStatement{
-		{
-			branch "self.block",
-			branch else
-		}
-	} 
+	}
+	//the rules for while and for must be removed for CodeCover
+//	context WhileStatement{
+//		{
+//			branch "self.block",
+//			branch else
+//		}
+//	},
+//	context ForStatement{
+//		{
+//			branch "self.block",
+//			branch else
+//		}
+//	} 
 }
