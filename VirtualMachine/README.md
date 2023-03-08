@@ -1,5 +1,5 @@
 We created a virtual machine using [Oracle VM VirtualBox](https://www.virtualbox.org/) and set it up for easy use of the tool on the windows 10 OS.
-You can access the virtual machine from [this Zenodo repository](https://zenodo.org/record/7261557).
+You can access the virtual machine from [this Zenodo repository](https://doi.org/10.5281/zenodo.7705853).
 Please note that the virtual machine has all the contents for running the tool of this repository (it is on the desktop in a folder named `Coverage4DSLs`).
 
 # Setup
@@ -15,11 +15,7 @@ Please note that the virtual machine has all the contents for running the tool o
     <img src="Screenshots/selectWorkspace.jpg"  width="60%" height="50%">
 </p>
 
-3.	An empty workspace will be shown. Import the projects from the `Coverage4DSLs\Tool` directory (which is on the desktop) using `Import projects` option shown in the `Project Explorer` or from `File` menu -> `Import` -> `Existing Projects into Workspace` -> `Select Root Directory` (browse to the **Coverage4DSLs\Tool** directory) -> `Select Folder` -> `Finish`.
-
-<p align="center">
-    <img src="Screenshots/importProjects.jpg"  width="70%" height="70%">
-</p>
+The workspace has all the required projects and a run configuration is already set up.
 
 # Usage
 Please refer to the README file of the tool: https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/README.md#usage
