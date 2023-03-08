@@ -73,7 +73,7 @@ We observed that (i) meaningful coverage matrices for both *model element covera
 - An Excel file containing detailed data of the paper’s evaluation.
 
 ## Setup
-To use the tool, please follow the setup instruction described below:
+To use the tool, you can either use the virtual machine provided in [this Zenodo repository](https://doi.org/10.5281/zenodo.7705853) by following the steps written [here](https://github.com/Faezeh-Kh/Coverage4DSLs/blob/main/VirtualMachine/README.md) or you can follow the setup instruction described below:
 
 **Requirements**: 
 - *Operating System*: Windows 10
